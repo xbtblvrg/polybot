@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key><string>com.belavarga.polymarket.wallet-copy-a689-forward-paper</string>
+  <key>WorkingDirectory</key><string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/nice</string><string>-n</string><string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>scripts/run_wallet_live_tracker.py</string>
+    <string>--registry</string><string>configs/wallet_copy/wallets.json</string>
+    <string>--wallet-address</string><string>0xa6896d11f76dfa2820662c1f441496f51553559b</string>
+    <string>--wallet-name</string><string>a689_forward</string>
+    <string>--state</string><string>data/research/a689_forward_live_tracking_state.json</string>
+    <string>--event-log</string><string>data/research/a689_forward_live_tracking_events.jsonl</string>
+    <string>--paper-state</string><string>data/research/a689_forward_paper_state.json</string>
+    <string>--paper-event-log</string><string>data/research/a689_forward_paper_events.jsonl</string>
+    <string>--tracker-time-replay-paper-state</string><string>data/research/a689_forward_tracker_time_replay_paper_state.json</string>
+    <string>--tracker-time-replay-paper-event-log</string><string>data/research/a689_forward_tracker_time_replay_paper_events.jsonl</string>
+    <string>--single-wallet-exact-copy-paper-state</string><string>data/research/a689_forward_single_wallet_exact_copy_paper_state.json</string>
+    <string>--single-wallet-exact-copy-paper-event-log</string><string>data/research/a689_forward_single_wallet_exact_copy_paper_events.jsonl</string>
+    <string>--all-order-exact-copy-paper-state</string><string>data/research/a689_forward_all_order_exact_copy_paper_state.json</string>
+    <string>--all-order-exact-copy-paper-event-log</string><string>data/research/a689_forward_all_order_exact_copy_paper_events.jsonl</string>
+    <string>--all-order-tactic-replay-paper-state</string><string>data/research/a689_forward_all_order_tactic_replay_paper_state.json</string>
+    <string>--all-order-tactic-replay-paper-event-log</string><string>data/research/a689_forward_all_order_tactic_replay_paper_events.jsonl</string>
+    <string>--profit-policy-state</string><string>configs/wallet_copy/a689_forward_profit_policy.json</string>
+    <string>--track-blocked-profit-policy</string><string>--profit-policy-candidate-only</string>
+    <string>--limit</string><string>100</string><string>--pages</string><string>1</string>
+    <string>--data-api-timeout-s</string><string>2</string><string>--data-api-retries</string><string>1</string>
+    <string>--data-api-trade-query-keys</string><string>user,proxyWallet</string>
+    <string>--include-activity</string><string>--max-poll-runtime-s</string><string>45</string>
+    <string>--iterations</string><string>2000</string><string>--poll-interval-s</string><string>10</string>
+    <string>--max-runtime-s</string><string>7500</string>
+    <string>--wallet-fraction</string><string>0.10</string><string>--max-order-usd</string><string>8</string>
+    <string>--min-order-usd</string><string>1</string><string>--enable-clob-books</string>
+    <string>--admission-mode</string><string>--strict-mirror-coverage</string>
+    <string>--no-use-profit-search-scope</string><string>--parallel-data-api-sources</string>
+    <string>--parallel-wallet-fetches</string><string>1</string>
+    <string>--clob-timeout-s</string><string>1</string><string>--gamma-timeout-s</string><string>1</string>
+    <string>--market-ws-jsonl</string><string>data/research/clob_market_ws_events.jsonl</string>
+    <string>--rtds-activity-jsonl</string><string>data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl</string>
+    <string>--max-book-slippage-bps</string><string>250</string><string>--no-use-global-tracker-lock</string>
+  </array>
+  <key>RunAtLoad</key><true/><key>KeepAlive</key><true/><key>ThrottleInterval</key><integer>10</integer>
+  <key>StandardOutPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/a689_forward.launchd.out</string>
+  <key>StandardErrorPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/a689_forward.launchd.err</string>
+  <key>EnvironmentVariables</key><dict><key>PYTHONUNBUFFERED</key><string>1</string></dict>
+</dict>
+</plist>

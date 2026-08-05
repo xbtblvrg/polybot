@@ -1,0 +1,53 @@
+{
+  "current_probe": {
+    "candidate_id": null,
+    "fresh_candidate_intents": null,
+    "fresh_candidate_intents_after_expected_fee_gate": null,
+    "fresh_candidate_intents_after_toxicity_protection": null,
+    "path": null,
+    "status": null
+  },
+  "decision": "KEEP_A689",
+  "denial_reasons": [
+    "f418_current_probe_after_expected_fee_gate_zero",
+    "f418_current_probe_after_toxicity_protection_zero",
+    "no_exact_f418_live_execution_rows_in_6h_after_timestamp_filter"
+  ],
+  "flow_stage": "ROTATE/DEFEND",
+  "generated_at": "2026-07-21T05:39:18.099945Z",
+  "kind": "f418_trailing_6h_would_accept_counterfactual",
+  "live_mutation_authorized": false,
+  "log_scan": [
+    {
+      "exact_source_wallet_rows_in_6h": 0,
+      "exact_source_wallet_rows_without_parseable_ts_ignored": 0,
+      "path": "data/research/wallet_copy_live_execution_events.jsonl",
+      "sample_rows": [],
+      "taxonomy_counts": {}
+    },
+    {
+      "exact_source_wallet_rows_in_6h": 0,
+      "exact_source_wallet_rows_without_parseable_ts_ignored": 0,
+      "path": "data/research/wallet_copy_live_guard_events.jsonl",
+      "sample_rows": [],
+      "taxonomy_counts": {}
+    }
+  ],
+  "lookback_end": "2026-07-21T05:39:00.659400Z",
+  "lookback_hours": 6,
+  "lookback_start": "2026-07-20T23:39:00.659400Z",
+  "reason": "would_accept_below_2_under_unchanged_bars",
+  "routing_shadow_member_evidence": {
+    "fresh_candidate_intents": 1,
+    "fresh_candidate_intents_after_expected_fee_gate": 0,
+    "fresh_candidate_intents_after_toxicity_protection": 0,
+    "route_denied": false,
+    "route_denied_reason": "",
+    "status": "CORRECTION"
+  },
+  "rule": "Fable 2026-07-21T05:45Z: swap only if trailing-6h f418 would-accept >=2 at unchanged entry-price-band/window fill/window time caps.",
+  "schema_version": 1,
+  "swap_threshold": 2,
+  "wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "would_accept_count": 0
+}

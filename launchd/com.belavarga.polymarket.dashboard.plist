@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Read-only dashboard szerver (operator, 2026-07-14): localhost:8777.
+     Biztonságos azonnal betölteni: nem ír semmit, kulcsot nem lát,
+     csak 127.0.0.1-en figyel. Betöltés: launchctl load -w <ez a fájl> -->
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.dashboard</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/python3</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/serve_dashboard.py</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+  <key>ThrottleInterval</key>
+  <integer>10</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/logs/dashboard.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/logs/dashboard.launchd.err</string>
+</dict>
+</plist>

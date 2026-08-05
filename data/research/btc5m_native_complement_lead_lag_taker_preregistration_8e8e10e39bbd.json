@@ -1,0 +1,83 @@
+{
+  "activation": {
+    "arbiter": "scripts/arbitrate_btc5m_promoted_cells.py",
+    "legacy_pid_88943_watched_output": "data/research/btc5m_cross_exchange_promoted_cell_latest.json",
+    "pin": "singular_1usd_nonrefreshing_3600s"
+  },
+  "adverse_selection_reserve_per_share": 0.01,
+  "calibration_cutoff_s": 1784999700,
+  "checksum": "017ae2a326c57520aaec05792578df8bd97285ab1041b65ac16a1b95bb52eb48",
+  "economic_edge": "native_cross_outcome_sell_sweep_complement_lag",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "entry_window_s": [
+    30,
+    180
+  ],
+  "execution_mode": "taker",
+  "features": {
+    "leader_min_microprice_fall": 0.01,
+    "leader_min_notional_usd": 50.0,
+    "leader_min_pre_event_visible_bid_consumption": 0.2,
+    "leader_min_recorded_bid_levels": 2,
+    "leader_min_sell_sign_imbalance": 0.6,
+    "leader_sell_event_window_s": 3.0,
+    "opposite_continuous_lag_s": [
+      0.25,
+      2.0
+    ],
+    "opposite_max_reprice_fraction": 0.5,
+    "p_fair": "1-leader_post_event_microprice"
+  },
+  "fee": "exact_embedded_buy_fee",
+  "fill_model": "contemporaneous_observed_executable_opposite_ask_and_size_v1",
+  "forward_start_s": 1785001200,
+  "generation_checksum": "8e8e10e39bbd488000c3186d356434e95ac57b443b3c37f1cc258261be938bf5",
+  "immutable": true,
+  "integrity": {
+    "book_receipt": [
+      "receipt_sequence",
+      "receipt_timestamp_s",
+      "book_hash"
+    ],
+    "matched_no_trade_pnl": "sum_of_immutable_empty_cash_flow_rows",
+    "max_dual_token_book_receipt_gap_s": 5.0,
+    "parity": "derived_from_immutable_terminal_intent_and_execution",
+    "reducer_reproducibility": "two_independent_canonical_output_checksums",
+    "trade_identity": "transactionHash_or_id",
+    "trade_times": [
+      "exchange_timestamp_s",
+      "receipt_timestamp_s"
+    ]
+  },
+  "kind": "btc5m_native_complement_lead_lag_taker_preregistration",
+  "live_orders_allowed": false,
+  "matched_baseline": "checksum_frozen_no_trade_leader_sell_cohort",
+  "method": "btc5m_native_complement_lead_lag_taker_v1",
+  "model_checksum": "8e8e10e39bbd488000c3186d356434e95ac57b443b3c37f1cc258261be938bf5",
+  "one_intent_per_window": true,
+  "order_usd": 1.0,
+  "paper_only": true,
+  "promotion": {
+    "actual_executable_depth": true,
+    "permanent_resolved": 50,
+    "positive_incremental_vs_no_trade": true,
+    "positive_post_cost_and_both_halves": true,
+    "raw_input_equals_terminal": true,
+    "resolved": 10,
+    "two_run_checksum_idempotence": true,
+    "zero_sequence_lookahead_identity_parity_disagreement": true
+  },
+  "registered_before_forward_outcome_inspection": true,
+  "schema_version": 1,
+  "slippage_reserve_per_share": 0.005,
+  "source_schema": "immutable_trade_receipts_plus_gap_bounded_dual_token_book_receipts_v2",
+  "terminal_clock": {
+    "max_complete_windows": 12,
+    "required_isolated_resolutions": 10,
+    "twelfth_terminal_deadline_s": 1785004770,
+    "zero_intent_complete_windows": 2
+  }
+}

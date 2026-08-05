@@ -1,0 +1,41 @@
+{
+  "basis": {
+    "filled_notional": "daily_scorecard.today.per_member[c50d].cost_usd actual basis",
+    "pnl": "daily_scorecard.today.per_member[c50d].pnl_usd actual basis",
+    "submittable_demand": "c50d_sub_floor_demand gap_gte_min_live.sum_demand_usd",
+    "submitted_notional": "sum wallet_copy_live_execution_state.orders[].requested_size_usd for c50d submitted on day"
+  },
+  "capture": {
+    "filled_capture_pct_vs_submittable_demand": 35.325854,
+    "submitted_capture_pct_vs_submittable_demand": 50.576409
+  },
+  "day_utc": "2026-07-15",
+  "demand": {
+    "sub_floor_gap_lt_1_usd": 13.179114,
+    "submittable_gap_gte_1_usd": 117.050619,
+    "total_gap_usd": 130.229733
+  },
+  "edge": {
+    "realized_edge_pct": 2.812971,
+    "realized_pnl_per_filled_dollar": 0.028129708
+  },
+  "flow_stage": "LIVE/MEASURE",
+  "generated_at": "2026-07-15T14:03:19.757960+00:00",
+  "orders": {
+    "count": 31,
+    "filled_notional_usd": 41.349131,
+    "pnl_usd": 1.163139,
+    "status_counts": {
+      "FILLED": 21,
+      "REJECTED": 10
+    },
+    "submitted_notional_usd": 59.2
+  },
+  "scaling_to_100_usd_day": {
+    "assumption": "linear edge scaling; reporting-only sizing math, not an eligibility decision",
+    "c50d_sized_sources_by_full_submittable_demand": 30.371137,
+    "c50d_sized_sources_by_today_filled_notional": 85.974247,
+    "required_filled_notional_usd_at_realized_edge": 3554.960413
+  },
+  "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0"
+}

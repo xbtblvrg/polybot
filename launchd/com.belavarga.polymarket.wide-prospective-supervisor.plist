@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.belavarga.polymarket.wide-prospective-supervisor</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/nice</string>
+		<string>-n</string>
+		<string>15</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_wide_prospective_supervisor.py</string>
+		<string>--duration-s</string>
+		<string>1800</string>
+		<string>--score-interval-s</string>
+		<string>30</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PYTHONUNBUFFERED</key>
+		<string>1</string>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<dict>
+		<key>SuccessfulExit</key>
+		<false/>
+	</dict>
+	<key>ThrottleInterval</key>
+	<integer>30</integer>
+	<key>StandardOutPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_prospective_supervisor.launchd.out</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_prospective_supervisor.launchd.err</string>
+</dict>
+</plist>

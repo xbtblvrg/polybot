@@ -1,0 +1,40 @@
+{
+  "schema_version": 1,
+  "kind": "82c8_park_reconciliation",
+  "flow_stage": "DEFEND/PROMOTE",
+  "generated_at": "2026-07-31T10:25:00Z",
+  "wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77",
+  "terminal_outcome": "STANDS",
+  "terminal_outcome_status": "PARK_COMMITTED",
+  "vacated_reason": "UNFED_CLOCK_CANNOT_MATURE",
+  "replacement_reason": "PARK_SEAT_EVIDENCE_BAR_NOT_CROSSED_AT_DEADLINE",
+  "window_closed_at": "2026-07-31T06:44:50.331867Z",
+  "deadline_at": "2026-07-31T06:44:50.331867Z",
+  "terminal_executed_at": "2026-07-31T06:45:02.613320Z",
+  "delta_s": 12.28,
+  "promotion_resolved_fill_gate": 30,
+  "resolved_at_deadline": null,
+  "resolved_at_deadline_measured": false,
+  "resolved_at_deadline_reason": "binding unfed (0) and lane unsampled at deadline; stop_writer true since 06:45:02.613320Z",
+  "post_deadline_series": [
+    {
+      "cut": "09:36:57.149535Z",
+      "resolved": 16,
+      "elapsed_h": 50.939671,
+      "post_fee_usd": 12.434373
+    },
+    {
+      "cut": "09:49:28.609085Z",
+      "resolved": 29,
+      "elapsed_h": 51.077299,
+      "post_fee_usd": 8.405451
+    }
+  ],
+  "observed_marginal_post_fee_usd_per_fill": -0.309917,
+  "superseded_fable_claim": "7.54 resolved/day, gap 14, ~44.6h, 'never going to make 30' — falsified by the 09:49:28Z cut at 94.5 resolved/h",
+  "deadline_extension_allowed": false,
+  "park_reopened": false,
+  "cooloff_touched": false,
+  "live_authority": false,
+  "promotion_authority": false
+}

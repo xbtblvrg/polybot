@@ -1,0 +1,48 @@
+{
+  "flow_stage": "LEARN/LIVE/DEFEND",
+  "generated_at": "2026-07-14T07:24:00Z",
+  "kind": "weekly_verdict",
+  "source_daily_scorecards": [
+    "data/research/wallet_copy_daily_scorecard_2026-07-06.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-07.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-08.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-09.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-10.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-11.json",
+    "data/research/wallet_copy_daily_scorecard_2026-07-12.json"
+  ],
+  "summary": {
+    "cost_usd": 1590.307419,
+    "denominator_windows": 2016,
+    "filled_windows_pct": 25.347222,
+    "fills": 733,
+    "orders": 1127,
+    "payout_usd": 1577.149098,
+    "pnl_usd": -13.158321,
+    "rejects": 393,
+    "resolved_fills": 732,
+    "roi_pct": -0.827407,
+    "submitted_windows": 556,
+    "submitted_windows_pct": 27.579365,
+    "windows_filled": 511
+  },
+  "target": {
+    "bankroll_baseline_usd": 335.0,
+    "phase1_min_pct": 3.0,
+    "phase1_min_usd": 10.05,
+    "phase1_outcome_band_pct": "3-5",
+    "stretch_weekly_band_pct": "10-15",
+    "stretch_weekly_band_usd": [
+      33.5,
+      50.25
+    ]
+  },
+  "verdict": {
+    "gap_to_phase1_min_usd": -23.208321,
+    "gap_to_stretch_min_usd": -46.658321,
+    "status": "FAIL",
+    "summary": "Week 2026-07-06..2026-07-12 closed negative and below both the current Phase 1 positive-week target and the 10-15% weekly stretch band."
+  },
+  "week_end_utc": "2026-07-12",
+  "week_start_utc": "2026-07-06"
+}

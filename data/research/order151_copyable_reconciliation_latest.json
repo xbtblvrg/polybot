@@ -1,0 +1,84 @@
+{
+  "fix": "qualification now requires f2_gate_comparable and fails closed on the historical multi-generation replay",
+  "flow_stage": "MEASURE/ROTATE",
+  "fresh_definition": "orders actually emitted COPYABLE_EXACT_POLICY_PAPER_FILL in rolling 1800 seconds",
+  "historical_definition": "counterfactual own-fingerprint replay pooled across source_run_ids",
+  "kind": "order151_copyable_reconciliation",
+  "rows": [
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:12:18.747621+00:00",
+      "historical_counterfactual_copyable": 16,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x4c9497941333332d29f1c235dd23200f3623ffad",
+      "wide_policy_fingerprint": "e6d0000861d94c31c1ae3be7ebdfe05c25978ab030413e9ce11c70456c762b0e"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 20,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "53791c40b7cc8ba9d6300f068a8e02e0f5bfda41724a151ed079ae5ecddb343e"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 11,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "538b6b5a3fe49bd6d82b6eb399873c19af77ab6d43c45e2a958e617920453074"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 16,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "6dde1dc38c9f381b586c64977df7848b6ed52630d90217b7d7c874b962bc848f"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 11,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "731393132525421d99ecd0a6b19641b5aa9a1a0781496113bb10447412bd0b12"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 6,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "81feedc6ac94479ba944d8bea7e9da8f575bc124bc79ff9bf8cb526c4a33027b"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 27,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "cf14c0d7eb4a4739c5bd8c090114b30d91a57f1b71c263809e81bfcbda3d0117"
+    },
+    {
+      "fresh_emitted_copyable_30m": 0,
+      "fresh_latest_receipt_at": "2026-08-02T08:28:14.640409+00:00",
+      "historical_counterfactual_copyable": 32,
+      "historical_run_count": 4,
+      "same_definition_and_window": false,
+      "wallet": "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b",
+      "wide_policy_fingerprint": "dee3a70eaf4a2404d6435f24bf50a430ad1abdb40b0512632005b1b41da5659e"
+    }
+  ],
+  "schema_version": 1,
+  "verdict": "NO_NUMERIC_CONTRADICTION_DIFFERENT_WINDOW_AND_DEFINITION",
+  "wrong_report": "order149_rotation_qualification_latest.json"
+}

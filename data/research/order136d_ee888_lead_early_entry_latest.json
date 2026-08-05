@@ -1,0 +1,109 @@
+{
+  "all_time": {
+    "rows": [
+      {
+        "discarded": 8184,
+        "early_entry_rate": 0.871177611,
+        "first_event_ts": "2026-07-16T14:58:55Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:56:06Z",
+        "n": 82540,
+        "stream": "guard",
+        "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+      }
+    ]
+  },
+  "direction_id": "2026-08-01T14:57Z-fable-order136-d-amended",
+  "filters": {
+    "action": "BUY",
+    "asset": "BTC",
+    "duration": "5m",
+    "early_entry": "window_time_s < 60",
+    "min_n": 20,
+    "row_type": "trade",
+    "valid_window_time_s": "0 <= window_time_s < 300",
+    "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+  },
+  "flow_stage": "DISCOVER/LEARN",
+  "formula": "window_time_s = event_ts - integer suffix of btc-updown-5m-<epoch>",
+  "generated_at": "2026-08-01T15:26:43.000903Z",
+  "inputs": {
+    "guard": {
+      "filtered_rows": 90724,
+      "invalid_json_or_schema": 0,
+      "path": "data/research/wallet_copy_live_guard_wallet_events.jsonl",
+      "rows_read": 807254
+    },
+    "watch_tier": {
+      "filtered_rows": 0,
+      "invalid_json_or_schema": 0,
+      "path": "data/research/wallet_copy_watch_tier_wallet_events.jsonl",
+      "rows_read": 792336
+    }
+  },
+  "kind": "order136d_observed_universe_early_entry_ranking",
+  "last_7d": {
+    "rows": [
+      {
+        "discarded": 1866,
+        "early_entry_rate": 0.748062731,
+        "first_event_ts": "2026-07-25T22:30:52Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:56:06Z",
+        "n": 10840,
+        "stream": "guard",
+        "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+      }
+    ]
+  },
+  "lead_gate_verification": {
+    "checks": {
+      "f1_measured_positive_regime_cell": false,
+      "f2_fresh_rows_and_own_policy_copyable": false,
+      "f3_not_enabled_or_cooloff_or_fading": true,
+      "f4_external_liveness": true
+    },
+    "eligible": false,
+    "evidence": {
+      "f3": {
+        "active": false,
+        "cooloff_active": false,
+        "temporal_classification": "WEEKDAY-ONLY"
+      },
+      "regime": {
+        "pnl_usd": -31.051657,
+        "resolved_trades": 632,
+        "roi_pct": -3.078566
+      },
+      "source": {
+        "btc5m_buys_30m": 0,
+        "latest_trade_age_h": 1.387759,
+        "policy_compatible_inband_buy_rows_24h": 3,
+        "probe_generated_at": "2026-08-01T15:19:22.681536+00:00"
+      },
+      "venue_executable_regime": {
+        "pnl_usd": -29.044182,
+        "resolved_trades": 493,
+        "roi_pct": -3.790776
+      }
+    },
+    "regime": "weekend",
+    "rule": "F1 current-regime and venue-executable n>=200/PnL>0/ROI>0; F2 fresh BUYs>=10 plus policy-compatible rows>0; F3 inactive/no-cooloff/not-FADING; F4 external age<=24h",
+    "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+  },
+  "pool_coverage": {
+    "coverage_ratio": 0.0,
+    "intersection_wallets": [],
+    "observed_intersection_pool": 0,
+    "observed_wallets": 1,
+    "pool_wallets": 134
+  },
+  "quality_bars_changed": false,
+  "recency": {
+    "cutoff": "2026-07-25T15:26:43.000903Z",
+    "days": 7.0,
+    "through": "2026-08-01T15:26:43.000903Z"
+  },
+  "report_only": true,
+  "schema_version": 1
+}

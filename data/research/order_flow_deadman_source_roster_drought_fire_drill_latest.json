@@ -1,0 +1,238 @@
+{
+  "cases": {
+    "generation_rollover": {
+      "b_terminal_taxonomy": {
+        "COPYABLE_EXACT_POLICY_PAPER_FILL": 1,
+        "REFUSED_METADATA_MISSING": 1
+      },
+      "copyables_after_ttl": 0,
+      "copyables_at_exact_ttl": 1,
+      "identity_deduped_generation_count": 2,
+      "incomplete_generation_excluded": true,
+      "positive_a_survives_b": 1,
+      "status": "PASS"
+    },
+    "incomplete_terminal_coverage": {
+      "accepted_order_idle_s": 1801.0,
+      "can_trade": true,
+      "candidate_evidence": {
+        "selected": {
+          "eligible": true,
+          "wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "direct_source": {
+        "checksum": "synthetic-direct",
+        "current_attempted_buy_rows": 12,
+        "input_equals_terminal": false,
+        "packet_age_s": 1.0,
+        "per_wallet": {
+          "0xdddddddddddddddddddddddddddddddddddddddd": {
+            "attempts": 12,
+            "copyable": 8
+          }
+        },
+        "ready": false,
+        "status": "PASS"
+      },
+      "firing": false,
+      "live_build_authorized": false,
+      "max_idle_s": 1800.0,
+      "mechanical_escalation": "NONE",
+      "rule": "can_trade-or-live-build-authorized + accepted idle >=1800s + zero runtime source rows + fresh fully reconciled nonzero direct WIDE BUY supply",
+      "runtime_fresh_rows": 0,
+      "status": "CLEAR",
+      "unmodeled_check_candidates": 0,
+      "unmodeled_check_names": []
+    },
+    "no_eligible_target": {
+      "accepted_order_idle_s": 1801.0,
+      "can_trade": true,
+      "candidate_evidence": {
+        "selected": null,
+        "status": "NO_ADMISSIBLE_TARGET"
+      },
+      "direct_source": {
+        "checksum": "synthetic-direct",
+        "current_attempted_buy_rows": 12,
+        "input_equals_terminal": true,
+        "packet_age_s": 1.0,
+        "per_wallet": {
+          "0xdddddddddddddddddddddddddddddddddddddddd": {
+            "attempts": 12,
+            "copyable": 8
+          }
+        },
+        "ready": true,
+        "status": "PASS"
+      },
+      "firing": true,
+      "live_build_authorized": false,
+      "max_idle_s": 1800.0,
+      "mechanical_escalation": "RUNG_C_METHOD_SWITCH_DUE",
+      "rule": "can_trade-or-live-build-authorized + accepted idle >=1800s + zero runtime source rows + fresh fully reconciled nonzero direct WIDE BUY supply",
+      "runtime_fresh_rows": 0,
+      "status": "INCIDENT_SOURCE_ROSTER_DROUGHT",
+      "unmodeled_check_candidates": 0,
+      "unmodeled_check_names": []
+    },
+    "stale_wide": {
+      "accepted_order_idle_s": 1801.0,
+      "can_trade": true,
+      "candidate_evidence": {
+        "selected": {
+          "eligible": true,
+          "wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "direct_source": {
+        "checksum": "synthetic-direct",
+        "current_attempted_buy_rows": 12,
+        "input_equals_terminal": true,
+        "packet_age_s": 31.0,
+        "per_wallet": {
+          "0xdddddddddddddddddddddddddddddddddddddddd": {
+            "attempts": 12,
+            "copyable": 8
+          }
+        },
+        "ready": false,
+        "status": "PASS"
+      },
+      "firing": false,
+      "live_build_authorized": false,
+      "max_idle_s": 1800.0,
+      "mechanical_escalation": "NONE",
+      "rule": "can_trade-or-live-build-authorized + accepted idle >=1800s + zero runtime source rows + fresh fully reconciled nonzero direct WIDE BUY supply",
+      "runtime_fresh_rows": 0,
+      "status": "CLEAR",
+      "unmodeled_check_candidates": 0,
+      "unmodeled_check_names": []
+    },
+    "successful_pin_consumption": {
+      "candidate": {
+        "eligible": true,
+        "paper_policy_id": "p",
+        "policy": {
+          "max_order_usd": 1.0,
+          "policy_id": "p"
+        },
+        "wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+      },
+      "member": {
+        "candidate_id": "policy_choke_rung_direct_dddddddddd",
+        "candidate_type": "SINGLE_WALLET",
+        "copy_size_usd": 1.0,
+        "enabled": true,
+        "kill_line": null,
+        "max_order_usd": 1.0,
+        "operator_emergency_seat": null,
+        "policy": {
+          "max_order_usd": 1.0,
+          "policy_id": "p"
+        },
+        "policy_id": "p",
+        "source_liveness_evidence": null,
+        "source_wallet": "0xdddddddddddddddddddddddddddddddddddddddd",
+        "status": "POLICY_CHOKE_RUNG_DIRECT_EMERGENCY_ADMISSION",
+        "summary": {
+          "direction_id": "2026-07-20T15:32Z-fable-rung-b-closure",
+          "evidence": {
+            "eligible": true,
+            "paper_policy_id": "p",
+            "policy": {
+              "max_order_usd": 1.0,
+              "policy_id": "p"
+            },
+            "wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+          }
+        }
+      },
+      "policy_choke_rung_b_refusal": {
+        "arm_count_utc_day": 1,
+        "arm_count_utc_day_source": "same_utc_day_unique_policy_choke_rung_b_pin_timestamps",
+        "arm_events_utc_day": [
+          {
+            "armed_at": "2026-08-05T04:40:49.470077+00:00",
+            "event_kind": "ARM",
+            "source": "active_selection_pin.created_at"
+          }
+        ],
+        "armed_at": "2026-08-05T04:40:49.470077+00:00",
+        "expires_at": "2026-08-05T05:40:49.470077+00:00",
+        "frontier_candidate_count": null,
+        "frontier_eligible_count": null,
+        "live_mutation": false,
+        "measurement_only": true,
+        "record_key_is_legacy_alias": true,
+        "record_key_scope": "all_policy_choke_supply_rungs",
+        "refusal_basis": "UNMEASURED_NO_FRONTIER_EVIDENCE",
+        "refusal_basis_source": "policy_choke.actuator.rung_b_candidate_evidence.eligible_count",
+        "refused_by": "fable-D26-3/D27-3",
+        "renew_count_utc_day": "UNMEASURED_NO_RENEW_EVENT_LOG",
+        "renew_count_utc_day_source": "UNMEASURED_NO_RENEW_EVENT_LOG",
+        "renew_events_utc_day": [],
+        "supply_rung": "DIRECT"
+      },
+      "selection_pin": {
+        "candidate_id": "policy_choke_rung_direct_dddddddddd",
+        "created_at": "2026-08-05T04:40:49.470077+00:00",
+        "direction_id": "2026-07-20T15:32Z-fable-rung-b-closure",
+        "enabled": true,
+        "expires_at": "2026-08-05T05:40:49.470077+00:00",
+        "kill_line": null,
+        "operator_emergency_seat": null,
+        "pin_id": "policy-choke-rung-b",
+        "reason": "POLICY_CHOKE rung DIRECT emergency admission under own evidenced policy",
+        "source_liveness_evidence": null,
+        "source_wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+      },
+      "single_submitter_invariant": "run_wallet_copy_live_guard.py remains the only order submitter",
+      "status": "RUNG_DIRECT_DRY_RUN_PASS",
+      "ttl_s": 3600
+    },
+    "terminal_park_exclusion": {
+      "excluded": true,
+      "reason": "terminal_park",
+      "status": "PASS"
+    },
+    "zero_runtime_positive_wide": {
+      "accepted_order_idle_s": 1801.0,
+      "can_trade": true,
+      "candidate_evidence": {
+        "selected": {
+          "eligible": true,
+          "wallet": "0xdddddddddddddddddddddddddddddddddddddddd"
+        }
+      },
+      "direct_source": {
+        "checksum": "synthetic-direct",
+        "current_attempted_buy_rows": 12,
+        "input_equals_terminal": true,
+        "packet_age_s": 1.0,
+        "per_wallet": {
+          "0xdddddddddddddddddddddddddddddddddddddddd": {
+            "attempts": 12,
+            "copyable": 8
+          }
+        },
+        "ready": true,
+        "status": "PASS"
+      },
+      "firing": true,
+      "live_build_authorized": false,
+      "max_idle_s": 1800.0,
+      "mechanical_escalation": "DIRECT_SOURCE_SELECTION_PIN",
+      "rule": "can_trade-or-live-build-authorized + accepted idle >=1800s + zero runtime source rows + fresh fully reconciled nonzero direct WIDE BUY supply",
+      "runtime_fresh_rows": 0,
+      "status": "INCIDENT_SOURCE_ROSTER_DROUGHT",
+      "unmodeled_check_candidates": 0,
+      "unmodeled_check_names": []
+    }
+  },
+  "checked_at": "2026-08-05T04:40:49.470077+00:00",
+  "flow_stage": "LIVE/ROTATE/SELF-DEV",
+  "kind": "source_roster_drought_fire_drill",
+  "quality_bars_unchanged": true,
+  "verdict": "PASS"
+}

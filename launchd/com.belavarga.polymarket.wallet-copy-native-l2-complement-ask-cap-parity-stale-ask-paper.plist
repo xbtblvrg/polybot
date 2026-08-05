@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.wallet-copy-native-l2-complement-ask-cap-parity-stale-ask-paper</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/nice</string>
+    <string>-n</string>
+    <string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_btc5m_native_l2_complement_ask_cap_parity_stale_ask.py</string>
+    <string>--watch</string>
+    <string>--interval-s</string>
+    <string>2</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <false/>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_native_l2_complement_ask_cap_parity_stale_ask.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_native_l2_complement_ask_cap_parity_stale_ask.launchd.err</string>
+</dict>
+</plist>

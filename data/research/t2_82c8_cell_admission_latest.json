@@ -1,0 +1,106 @@
+{
+  "blocker_sweep": {
+    "action": "CLEAR_FOR_EXACT_CELL_ONLY",
+    "blocker": "82c8_terminal_red_clock",
+    "classification": "CONVENIENT",
+    "evidence": {
+      "clock_start_exact": false,
+      "execution_status": "PARK_COMMITTED",
+      "source_binding_exact": false,
+      "wallet_present": false
+    },
+    "evidence_pointer": "data/research/82c8_terminal_decision_latest.json",
+    "wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77",
+    "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+  },
+  "defects": [],
+  "direction_id": "2026-07-28T17:58Z-fable-t2-82c8-cell-admission",
+  "flow_stage": "LIVE/PROMOTE/DEFEND",
+  "generated_at": "2026-07-28T18:57:52.691360+00:00",
+  "kind": "t2_82c8_cell_admission",
+  "member": {
+    "auto_degrade_replaces_existing_wallet": true,
+    "candidate_id": "cell_scoped_e4debe50da77_bac25bed",
+    "candidate_type": "SINGLE_WALLET",
+    "cell_scoped_admission": {
+      "activated_at": "2026-07-28T18:57:52.691360+00:00",
+      "direction_id": "2026-07-28T17:58Z-fable-t2-82c8-cell-admission",
+      "evidence_artifact": "data/research/wide_policy_fingerprint_evidence_latest.json",
+      "first_slice_kill": {
+        "action": "AUTO_DISABLE_CELL",
+        "min_resolved_fills": 3,
+        "pnl_lte_usd": 0.0
+      },
+      "fixed_policy_full_stream_rescore": {
+        "f1_deficits": [],
+        "f1_pass": true,
+        "first_half_post_fee_pnl_usd": 77.114456,
+        "observed_fills": 1656,
+        "post_fee_pnl_usd": 199.748204,
+        "resolved": 1498,
+        "resolved_cost_usd": 1498.0,
+        "roi_pct": 13.334326,
+        "second_half_post_fee_pnl_usd": 122.633748
+      },
+      "move_slice_keys": [
+        "000-060|<=0.25",
+        "060-120|0.25-0.50",
+        "060-120|0.50-0.75",
+        "120-180|0.25-0.50",
+        "120-180|0.50-0.75",
+        "120-180|<=0.25",
+        "180-240|0.25-0.50",
+        "180-240|>0.75",
+        "240-300|0.50-0.75"
+      ],
+      "per_cell_loss_line_usd": -4.0,
+      "status": "ACTIVE",
+      "terminal_artifact": "data/research/82c8_terminal_decision_latest.json",
+      "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+    },
+    "enabled": true,
+    "maker_min_share_base_request_cap_usd": 1.0,
+    "maker_min_share_funding_cap_usd": 2.5,
+    "maker_min_share_original_policy_cap_usd": 4.0,
+    "max_order_usd": 1.0,
+    "max_price": 1.0,
+    "policy": {
+      "maker_min_share_base_request_cap_usd": 1.0,
+      "maker_min_share_funding_cap_usd": 2.5,
+      "maker_min_share_original_policy_cap_usd": 4.0,
+      "max_order_usd": 1.0,
+      "max_price": 1.0,
+      "max_seconds_from_open": 300.0,
+      "min_order_usd": 1.0,
+      "min_price": 0.0,
+      "min_seconds_from_open": 0.0,
+      "move_slice_keys": [
+        "000-060|<=0.25",
+        "060-120|0.25-0.50",
+        "060-120|0.50-0.75",
+        "120-180|0.25-0.50",
+        "120-180|0.50-0.75",
+        "120-180|<=0.25",
+        "180-240|0.25-0.50",
+        "180-240|>0.75",
+        "240-300|0.50-0.75"
+      ],
+      "policy_id": "wide_cell_scoped_bac25beda563",
+      "wallet_fraction": 0.1
+    },
+    "policy_id": "wide_cell_scoped_bac25beda563",
+    "queue_position": 5e-05,
+    "rolling_loss_trigger_usd": -4.0,
+    "source_wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77",
+    "status": "PASS",
+    "summary": {
+      "copyintent_parity_preserved": true,
+      "direction_id": "2026-07-28T17:58Z-fable-t2-82c8-cell-admission",
+      "promotion_basis": "Fable-ruled exact fingerprint cell",
+      "single_submitter_preserved": true
+    },
+    "wallet_fraction": 0.1
+  },
+  "schema_version": 1,
+  "status": "PASS"
+}

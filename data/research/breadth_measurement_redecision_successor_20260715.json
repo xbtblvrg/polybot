@@ -1,0 +1,41 @@
+{
+  "adjudicated_at": "2026-07-15T20:10:00Z",
+  "commitment_id": "breadth_measurement_redecision_successor_20260715",
+  "direction_id": "2026-07-14T08:55Z-fable-overdue-adjudication",
+  "disposition": "MEASUREMENT_INSUFFICIENT_FAIL_CLOSE",
+  "flow_stage": "PROMOTE/LIVE/DEFEND",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "reason": "Successor check found neither c50d nor 141d reached the n>=10 resolved simulated copy trigger; keep the prior fail-close disposition and do not admit either lane.",
+  "summary": {
+    "admitted_now": 0,
+    "fail_close": true,
+    "lane_count": 2,
+    "trigger_met": false
+  },
+  "evidence_sources": [
+    "data/research/breadth_temporal_measurement_state.json",
+    "data/research/breadth_measurement_redecision_20260714.json",
+    "data/research/wallet_copy_live_execution_probe_rtds_live_band_e2542ab40de0.json",
+    "data/research/wallet_copy_live_guard_selected_candidate_override.rtds_live_band_4cce12f40f59.json",
+    "data/research/wallet_copy_live_guard_selected_candidate_override.runtime_auto_degrade_c50d0f25cb.json"
+  ],
+  "wallets": [
+    {
+      "candidate_id": "rtds_live_band_e2542ab40de0",
+      "measurement_status": "ENROLLED_MEASUREMENT_ONLY",
+      "resolved_simulated_copies": 0,
+      "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+      "trigger": "n>=10 resolved simulated copies",
+      "trigger_met": false
+    },
+    {
+      "candidate_id": "rtds_live_band_4cce12f40f59",
+      "measurement_status": "ENROLLED_MEASUREMENT_ONLY",
+      "resolved_simulated_copies": 0,
+      "source_wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59",
+      "trigger": "n>=10 resolved simulated copies",
+      "trigger_met": false
+    }
+  ]
+}

@@ -1,0 +1,219 @@
+{
+  "candidate_id": "cohort_alive_admit_f418d3a1",
+  "counterfactual_gate_since_non_admissible_boundary": {
+    "acceptable_boundary_from_fable": "2026-07-15T00:11Z fresh-pid boundary",
+    "boundary_iso": "2026-07-15T00:11:00Z",
+    "gate_pass": false,
+    "post_fee_would_pnl_status": "NO_SAMPLE_NOT_POSITIVE",
+    "post_fee_would_pnl_usd": 0.0,
+    "probe_events": "data/research/wallet_copy_live_execution_probe_cohort_alive_admit_f418d3a1.events.jsonl",
+    "probe_fresh_candidate_intents": 0,
+    "probe_generated_at": "2026-07-15T01:44:11.274940+00:00",
+    "probe_source_events": 0,
+    "probe_state": "data/research/wallet_copy_live_execution_probe_cohort_alive_admit_f418d3a1.json",
+    "probe_status": "LIVE_ARMED_NO_FRESH_INTENTS",
+    "rows_after_boundary": 0
+  },
+  "decision": "DO_NOT_ACTIVATE; do not submit readmission to live because fresh liveness and counterfactual gates do not pass",
+  "denial_reasons": [
+    "zero_source_active_windows_since_2026-07-15T00:00Z",
+    "zero_post_0011_counterfactual_rows_under_current_policy",
+    "updated_lifetime_live_record_negative"
+  ],
+  "flow_stage": "PROMOTE/LEARN/LIVE/DEFEND",
+  "fresh_liveness": {
+    "current_tail_scan_24h_artifact": "data/research/source_active_windows_f418_24h_20260715T0140Z.json",
+    "current_tail_scan_24h_rows_seen": 0,
+    "known_btc5m_buy_rows_24h_lower_bound_from_20260714T1742_liveness_artifact": 217,
+    "known_btc5m_buy_windows_24h_lower_bound_from_20260714T1742_liveness_artifact": 6,
+    "last_observed_buy_iso_from_liveness_artifacts": "2026-07-14T17:43:03Z",
+    "last_observed_buy_lag_s": 28869.458,
+    "latest_temporal_event_iso": "2026-07-14T17:59:47Z",
+    "latest_temporal_event_lag_s": 27865.458,
+    "member_since_midnight_artifact": "data/research/member_source_active_windows_f418_since_midnight_20260715.json",
+    "required_by_fable": [
+      "last_buy_lag",
+      "buys_24h",
+      "source_active_windows_since_2026-07-15T00:00Z"
+    ],
+    "since_midnight_artifact": "data/research/source_active_windows_f418_since_midnight_20260715T0140Z.json",
+    "since_midnight_summary": {
+      "btc5m_buy_rows_since": 0,
+      "btc5m_buy_windows_since": 0,
+      "policy_eligible_rows": 0,
+      "policy_eligible_tally_status": "PENDING",
+      "policy_eligible_windows": 0,
+      "required_source_active_windows": 1,
+      "source_active_rows": 0,
+      "source_active_tally_status": "PENDING",
+      "source_active_windows": 0
+    },
+    "source_active_windows_since_midnight": 0
+  },
+  "generated_at": "2026-07-15T01:44:12.457580Z",
+  "invariants": {
+    "copyintent_parity_change": false,
+    "guard_code_touched": false,
+    "launchd_restart_requested": false,
+    "live_orders_allowed_change": false,
+    "paper_only_research_packet": true,
+    "single_submitter_change": false
+  },
+  "kind": "f418_readmission_packet",
+  "mechanism_if_future_packet_passes": {
+    "copyintent_parity_preserved": true,
+    "current_runtime_note": "current state still lists f418 under one-shot-style status; this packet does not increase runtime members or restart guard",
+    "durable_registry_admission_required": true,
+    "retired_pattern": "no one-shot restart tokens such as FABLE_1232",
+    "runtime_presence_now": {
+      "active_set_members": [
+        {
+          "candidate_id": "cohort_alive_admit_f418d3a1",
+          "candidate_type": "SINGLE_WALLET",
+          "is_current_cycle_member": false,
+          "max_order_usd": 1.0,
+          "max_price": 0.5,
+          "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+          "rolling_loss_trigger_usd": -16.0,
+          "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+          "status": "FABLE_1232_COHORT_ALIVE_ADMISSION_WIRED_FOR_SINGLE_POST_13Z_RESTART",
+          "wallet_fraction": 0.1
+        }
+      ],
+      "active_set_runtime_members": [
+        {
+          "candidate_id": "cohort_alive_admit_f418d3a1",
+          "drip_max_tranche_usd": null,
+          "enabled": true,
+          "late_window_stop_s": null,
+          "max_order_usd": 1.0,
+          "max_price": null,
+          "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+          "queue_position": null,
+          "role": "member",
+          "rolling_loss_trigger_usd": -16.0,
+          "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+          "temporal_slice_evaluation": {
+            "active_slices": [
+              "weekday"
+            ],
+            "classification": "FADING",
+            "evaluated_slices": [
+              {
+                "label": "PROVEN-POSITIVE",
+                "label_reason": "n=1724 >= min_trades=5; roi=1.932881 > 0",
+                "pnl_usd": 1281.6553,
+                "resolved_trades": 1724,
+                "roi_pct": 1.932881,
+                "slice": "weekday"
+              }
+            ],
+            "excluded": false,
+            "reason": "no_active_temporal_slice_proven_negative",
+            "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+            "state": "/Users/belavarga/claudecode/polymarket-agent/data/research/wallet_temporal_profitability_latest.json"
+          }
+        }
+      ]
+    },
+    "single_submitter_preserved": true
+  },
+  "next_action": "Ask Fable to accept by-rule denial digits; proceed to R8 paper-lane seed only if Fable does not override.",
+  "operator_live_authority": "OP-LIVE-20260703-BELA unchanged; no live mutation in this packet",
+  "pre_stated_future_decision_rule_if_fable_ever_allows_activation": {
+    "evict_if": "rolling live PnL <= 0 at 20 fills or fresh liveness/counterfactual evidence remains absent at 72h",
+    "keep_if": "positive post-fee live/counterfactual PnL and no structural invariant violation",
+    "keep_until": "72h_or_20_fills_whichever_first"
+  },
+  "prior_live_record_faced": {
+    "ledger_order_rows": 13,
+    "ledger_status_counts": {
+      "FILLED": 9,
+      "REJECTED": 4
+    },
+    "old_direction_reference": "Fable cited 10 orders/7 fills/3 rejects/-5.283319 at 2026-07-14T16:59Z; updated scorecard is worse and is used here.",
+    "source": "data/research/wallet_copy_daily_scorecard_2026-07-15.json:lifetime_pnl_truth.by_member",
+    "updated_lifetime_digits": {
+      "cost_usd": 20.116211,
+      "fills": 9,
+      "orders": 13,
+      "payout_usd": 10.382893,
+      "pnl_usd": -9.733318,
+      "rejects": 4,
+      "resolved_fill_rate_pct": 100.0,
+      "resolved_fills": 9,
+      "roi_pct": -48.385444,
+      "unresolved_fills": 0
+    }
+  },
+  "schema_version": 1,
+  "sizing_if_future_packet_passes": {
+    "max_order_usd": 1.0,
+    "max_price": 0.5,
+    "overlay_class": "same probe overlay class as prior f418 admission, but durable registry only",
+    "runtime_member_increase": 1,
+    "wallet_fraction": 0.1
+  },
+  "source_of_truth": "docs/agents/HANDOFF.md latest Fable 2026-07-15T01:38Z DIRECTION",
+  "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "status": "DENIED_BY_RULE_NO_FRESH_LIVENESS",
+  "temporal_positive_case_against_prior_record": {
+    "all": {
+      "actual_minus_required_win_rate_pp": 1.07814,
+      "avg_loss_per_loser_abs_usd": 34.093497,
+      "avg_win_per_winner_usd": 34.8604,
+      "first_event_ts": "2026-07-02T09:51:32Z",
+      "gap_in_sigma": 0.895366,
+      "gap_sigma_pp": 1.204133,
+      "latest_event_age_h": 7.663632,
+      "latest_event_ts": "2026-07-14T17:59:47Z",
+      "loss_abs_pnl_usd": 29081.7529,
+      "losses": 853,
+      "pnl_usd": 1281.6553,
+      "required_win_rate_at_payoff_shape_pct": 49.443902,
+      "resolved_trades": 1724,
+      "roi_pct": 1.932881,
+      "stake_usd": 66308.0347,
+      "unique_windows": 77,
+      "win_pnl_usd": 30363.4082,
+      "win_rate_pct": 50.522042,
+      "wins": 871
+    },
+    "case_result": "insufficient_for_activation_without_fresh_liveness_and_positive_counterfactual",
+    "classification": "FADING",
+    "classification_reason": "historical ROI positive, recent resolved sample non-positive",
+    "profitable_hour_bands": [
+      "weekday:07",
+      "weekday:08",
+      "weekday:10",
+      "weekday:11",
+      "weekday:12",
+      "weekday:13",
+      "weekday:14",
+      "weekday:15",
+      "weekday:16",
+      "weekday:17"
+    ],
+    "recent": {
+      "actual_minus_required_win_rate_pp": -0.676922,
+      "avg_loss_per_loser_abs_usd": 51.343084,
+      "avg_win_per_winner_usd": 49.971444,
+      "first_event_ts": "2026-07-14T17:46:23Z",
+      "gap_in_sigma": -0.09574,
+      "gap_sigma_pp": 7.07042,
+      "latest_event_age_h": 7.663632,
+      "latest_event_ts": "2026-07-14T17:59:47Z",
+      "loss_abs_pnl_usd": 1283.5771,
+      "losses": 25,
+      "pnl_usd": -34.291,
+      "required_win_rate_at_payoff_shape_pct": 50.676922,
+      "resolved_trades": 50,
+      "roi_pct": -1.408665,
+      "stake_usd": 2434.291,
+      "unique_windows": 3,
+      "win_pnl_usd": 1249.2861,
+      "win_rate_pct": 50.0,
+      "wins": 25
+    }
+  }
+}

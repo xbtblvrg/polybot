@@ -1,0 +1,41 @@
+{
+  "candidate_id": "e5-delayed-offset-side-selective-maker-shadow",
+  "decision_rule": {
+    "chronological_holdout_required": true,
+    "minimum_resolved_per_selected_cell": 50,
+    "required_copyintent_parity_violations": 0,
+    "required_direct_fallback_orders": 0,
+    "required_post_fee_pnl_usd": "greater_than_zero",
+    "selected_cells": [
+      "60_180s_UP",
+      "60_180s_DOWN",
+      "180_270s_UP",
+      "180_270s_DOWN"
+    ]
+  },
+  "execution_contract": {
+    "cancel_before_close_s": 30,
+    "execution_role": "maker",
+    "fixed_shares": 5,
+    "live_orders_allowed": false,
+    "max_price": 0.5,
+    "min_window_offset_s": 60,
+    "no_direct_fallback": true,
+    "order_type": "GTC_POST_ONLY",
+    "paper_only": true,
+    "sizing_policy_id": "fixed_shares_5",
+    "window_offset_max_exclusive_s": 270
+  },
+  "flow_stage": "LEARN/PROMOTE",
+  "historical_hypothesis": {
+    "paper_0_60s_pnl_usd": -2.317311,
+    "paper_180_270s_pnl_usd": 16.113158,
+    "paper_60_180s_pnl_usd": 19.992534,
+    "primary_question": "Can the profitable later-offset cells survive prospectively by side under actual post-only book evidence?"
+  },
+  "kind": "experiment_preregistration",
+  "live_reentry_authority": "new primary-Fable ruling only",
+  "preregistered_at": "2026-07-24T04:05:00Z",
+  "resolution_source": "canonical Polymarket Gamma resolved outcome",
+  "status": "PREREGISTERED_BEFORE_PROSPECTIVE_OUTPUT"
+}

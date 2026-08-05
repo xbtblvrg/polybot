@@ -1,0 +1,49 @@
+{
+  "budget_to_min_ratio": {
+    "count": 0
+  },
+  "decision_rule": {
+    "adopt_if": "bind_rows>=10 over 24h and round_up_would_pnl_usd>=0 on resolved eligible rows",
+    "direction": "2026-07-16T04:24Z fable DIRECTION replacement order",
+    "live_path_mutated": false,
+    "round_up_clamp": "submit size=effective_min_usd only when window_budget_usd>=0.75*effective_min_usd; skip otherwise"
+  },
+  "dominant_skip_reason_counts": {},
+  "effective_min_usd": {
+    "count": 0
+  },
+  "flow_stage": "LIVE/MEASURE/DEFEND",
+  "generated_at": "2026-07-18T02:53:35.885523+00:00",
+  "guard_state": "data/research/wallet_copy_live_guard_state.json",
+  "kind": "budget_bind_margin_packet",
+  "lookback_hours": 24.0,
+  "lookback_start_iso": "2026-07-17T02:53:35.885523Z",
+  "participation_skip_category_counts": {},
+  "pre_ruled_action": "KEEP_CURRENT_BEHAVIOR",
+  "resolutions": "data/research/btc_resolutions_from_btcusdt_ticks.jsonl",
+  "rows_scanned": 1326,
+  "sample_rows": [],
+  "schema_version": 1,
+  "summary": {
+    "bind_rows": 0,
+    "decision_bind_gate_met": false,
+    "decision_pnl_gate_met": false,
+    "distinct_windows": 0,
+    "per_source_wallet": {},
+    "resolved_rows": 0,
+    "round_up_eligible_rows": 0,
+    "round_up_losses": 0,
+    "round_up_resolved_rows": 0,
+    "round_up_skipped_rows": 0,
+    "round_up_unresolved_rows": 0,
+    "round_up_wins": 0,
+    "round_up_would_cost_usd": 0,
+    "round_up_would_pnl_usd": 0,
+    "round_up_would_roi_pct": 0.0,
+    "wallet_eligible_orders": 0
+  },
+  "verdict": "KEEP_CURRENT_BEHAVIOR_DEMOTE_DRIP_MIN_ONE_LINER",
+  "window_budget_usd": {
+    "count": 0
+  }
+}

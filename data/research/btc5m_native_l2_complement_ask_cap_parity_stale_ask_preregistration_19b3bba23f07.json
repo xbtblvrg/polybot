@@ -1,0 +1,68 @@
+{
+  "activation": {
+    "arbiter": "scripts/arbitrate_btc5m_promoted_cells.py",
+    "legacy_guard_watched_output": "data/research/btc5m_cross_exchange_promoted_cell_latest.json",
+    "pin": "singular_1usd_nonrefreshing_3600s"
+  },
+  "calibration_method": "one_minus_complement_best_ask_to_executable_same_outcome_ask",
+  "checksum": "b42ca1318aabfb2e3522d536077252c016336a2674719cc9a28877e0de3f7f63",
+  "costs": {
+    "adverse_selection_per_share": 0.01,
+    "fee": "exact_embedded_buy_fee",
+    "slippage_per_share": 0.005
+  },
+  "economic_edge": "native_receipt_clock_complement_ask_cap_fair_vs_same_outcome_ask",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "entry_window_s": [
+    30,
+    180
+  ],
+  "features": {
+    "max_receipt_gap_s": 5.0,
+    "min_dual_book_overlap_s": 0.0,
+    "min_executable_depth_usd": 1.0,
+    "min_net_cross_edge_per_share": 0.0
+  },
+  "fill_model": "contemporaneous_observed_btc_executable_ask_and_size",
+  "forward_start_s": 1785014100,
+  "generation_checksum": "19b3bba23f07b705858aab981cc0728b9e5f906b70aba2f56754e57be43a4390",
+  "immutable": true,
+  "kind": "btc5m_native_l2_cross_outcome_parity_stale_ask_preregistration",
+  "live_orders_allowed": false,
+  "market_identity": {
+    "outcomes": [
+      "Up",
+      "Down"
+    ],
+    "target": "btc-updown-5m-{window}"
+  },
+  "matched_baseline": "same_cross_outcome_parity_event_windows_with_immutable_empty_btc_cash_flows",
+  "method": "btc5m_native_l2_complement_ask_cap_parity_stale_ask_v1",
+  "model_checksum": "19b3bba23f07b705858aab981cc0728b9e5f906b70aba2f56754e57be43a4390",
+  "one_intent_per_window": true,
+  "order_usd": 1.0,
+  "paper_only": true,
+  "promotion": {
+    "positive_increment_vs_matched_no_trade": true,
+    "positive_post_cost_total_and_halves": true,
+    "raw_equals_terminal": true,
+    "single_guard_accepted_order_within_two_post_activation_windows": true,
+    "zero_identity_clock_lookahead_parity_disagreement": true
+  },
+  "registered_before_forward_outcome_inspection": true,
+  "schema_version": 1,
+  "signal_rule": "fair_outcome_equals_one_minus_complement_best_ask; strictly_positive_post_cost_edge; higher_net_edge_wins; exact_equal_edge_abstains",
+  "source_schema": "immutable_gap_bounded_dual_outcome_l2_receipts_v1",
+  "terminal_clock": {
+    "integrity_disagreement_park": true,
+    "max_complete_windows": 6,
+    "negative_rolling_pnl_park": true,
+    "required_resolutions": 10,
+    "sixth_terminal_deadline_s": 1785015870,
+    "zero_intent_complete_windows": 2
+  },
+  "training_cutoff_s": 1785013500
+}

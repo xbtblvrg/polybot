@@ -1,0 +1,434 @@
+{
+  "byte_count": 20866162,
+  "counters": {
+    "all_non_denied_members_accounted_this_cycle": true,
+    "all_non_denied_members_evaluated_this_cycle": true,
+    "attribution_literal_dedupe": {
+      "dedupe_rule": "drop retained .rows duplicates with identical window/wallet/intent/observed_ts/direction/price/size",
+      "duplicate_rows_dropped": 0,
+      "duplicate_windows": 0,
+      "examples": {
+        "row_count": 0
+      }
+    },
+    "attribution_rule": "earliest_observed_ts_then_lexicographic_wallet",
+    "attribution_stability": {
+      "attribution_rule": "earliest_observed_ts_then_lexicographic_wallet",
+      "changed_window_count": 0,
+      "changed_windows": {
+        "row_count": 0
+      },
+      "common_measured_windows": 466,
+      "comparison_elapsed_s": 620.938299,
+      "comparison_generated_at": "2026-07-31T08:24:29.057473+00:00",
+      "comparison_measured_member_split": {
+        "0x40138697bf1a0d655593f3be6237d60c1dc7ab35": 3,
+        "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": 1,
+        "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f": 1,
+        "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": 5,
+        "0x5e4aa0f176014729f5168e821ce614484fbebe6b": 8,
+        "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": 2,
+        "0x86de0516011e2ad7ce3abdc13577de8608db55c3": 3,
+        "0xac0586732786905d285959613f1813bc89246729": 5,
+        "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": 5,
+        "0xd9189593701e94574ee140295a2ff6042317813b": 27,
+        "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": 22,
+        "0xe6db20932faf0f9780acf75d95c74c9984407dac": 55,
+        "0xe88db6a8c559410a627a528264a441206ad03db1": 1,
+        "0xf07fabf154d537b266916d53f12a4bef7b06c118": 2,
+        "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": 324,
+        "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": 2
+      },
+      "comparison_measured_unique_windows": 466,
+      "current_generated_at": "2026-07-31T08:34:49.995772+00:00",
+      "current_measured_member_split": {
+        "0x40138697bf1a0d655593f3be6237d60c1dc7ab35": 3,
+        "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": 1,
+        "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f": 1,
+        "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": 5,
+        "0x5e4aa0f176014729f5168e821ce614484fbebe6b": 8,
+        "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": 2,
+        "0x86de0516011e2ad7ce3abdc13577de8608db55c3": 3,
+        "0xac0586732786905d285959613f1813bc89246729": 5,
+        "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": 5,
+        "0xd9189593701e94574ee140295a2ff6042317813b": 27,
+        "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": 22,
+        "0xe6db20932faf0f9780acf75d95c74c9984407dac": 55,
+        "0xe88db6a8c559410a627a528264a441206ad03db1": 1,
+        "0xf07fabf154d537b266916d53f12a4bef7b06c118": 2,
+        "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": 324,
+        "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": 2
+      },
+      "current_measured_unique_windows": 466,
+      "member_split_identical": true,
+      "min_interval_s": 600.0,
+      "rule": "deterministic per-window attribution must be unchanged on overlapping measured windows across two report refreshes >=10 minutes apart",
+      "snapshots": {
+        "row_count": 24
+      },
+      "status": "PASS"
+    },
+    "copyintent_parity_conflicts": 0,
+    "copyintent_parity_status": "PASS",
+    "coverage_accounted_member_count": 1,
+    "cycle_samples": 2500,
+    "denied_signal_count_latest_cycle": 0,
+    "evaluated_member_count": 1,
+    "extra_member_split": {
+      "0x3048d65321be3497164cdfc2996f94f98a2e7537": 1,
+      "0x40138697bf1a0d655593f3be6237d60c1dc7ab35": 3,
+      "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": 1,
+      "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f": 1,
+      "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": 6,
+      "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e": 1,
+      "0x5e4aa0f176014729f5168e821ce614484fbebe6b": 23,
+      "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": 4,
+      "0x80be724a3511017be131fdcd188296128fea7ee7": 1,
+      "0x86de0516011e2ad7ce3abdc13577de8608db55c3": 4,
+      "0xa6896d11f76dfa2820662c1f441496f51553559b": 1,
+      "0xac0586732786905d285959613f1813bc89246729": 15,
+      "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419": 1,
+      "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": 9,
+      "0xd9189593701e94574ee140295a2ff6042317813b": 49,
+      "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": 32,
+      "0xe6db20932faf0f9780acf75d95c74c9984407dac": 143,
+      "0xe88db6a8c559410a627a528264a441206ad03db1": 1,
+      "0xf07fabf154d537b266916d53f12a4bef7b06c118": 4,
+      "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": 413,
+      "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": 3
+    },
+    "extra_would_submit_post_fee_measurement": {
+      "by_member": {
+        "0x3048d65321be3497164cdfc2996f94f98a2e7537": {
+          "field_count": 29
+        },
+        "0x40138697bf1a0d655593f3be6237d60c1dc7ab35": {
+          "field_count": 29
+        },
+        "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": {
+          "field_count": 29
+        },
+        "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f": {
+          "field_count": 29
+        },
+        "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": {
+          "field_count": 29
+        },
+        "0x5e4aa0f176014729f5168e821ce614484fbebe6b": {
+          "field_count": 29
+        },
+        "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": {
+          "field_count": 29
+        },
+        "0x80be724a3511017be131fdcd188296128fea7ee7": {
+          "field_count": 29
+        },
+        "0x86de0516011e2ad7ce3abdc13577de8608db55c3": {
+          "field_count": 29
+        },
+        "0xa6896d11f76dfa2820662c1f441496f51553559b": {
+          "field_count": 29
+        },
+        "0xac0586732786905d285959613f1813bc89246729": {
+          "field_count": 29
+        },
+        "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": {
+          "field_count": 29
+        },
+        "0xd9189593701e94574ee140295a2ff6042317813b": {
+          "field_count": 29
+        },
+        "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": {
+          "field_count": 29
+        },
+        "0xe6db20932faf0f9780acf75d95c74c9984407dac": {
+          "field_count": 29
+        },
+        "0xe88db6a8c559410a627a528264a441206ad03db1": {
+          "field_count": 29
+        },
+        "0xf07fabf154d537b266916d53f12a4bef7b06c118": {
+          "field_count": 29
+        },
+        "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": {
+          "field_count": 29
+        },
+        "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": {
+          "field_count": 29
+        }
+      },
+      "expected_edge_absence_reason": "no upstream expected_edge or expected_edge_after_buffer field on intent, metadata, or drift_buffer",
+      "expected_edge_absence_reasons": {
+        "no upstream expected_edge or expected_edge_after_buffer field on intent, metadata, or drift_buffer": 550,
+        "unknown": 47
+      },
+      "expected_edge_avg": null,
+      "expected_edge_calibration_basis": "realized_paper_pnl_vs_expected_fee_per_member",
+      "expected_edge_count": 0,
+      "expected_edge_missing_count": 597,
+      "expected_edge_status": "NOT_AVAILABLE_NO_UPSTREAM_INPUT",
+      "expected_edge_sum": 0.0,
+      "expected_fee_usd_all_rows_sum": 30.273816,
+      "expected_fee_usd_sum": 25.264526,
+      "expected_fee_usd_unmeasured_resolved_sum": 0.260802,
+      "expected_fee_usd_unresolved_sum": 4.748488,
+      "fee_gated_intents": 597,
+      "losses": 264,
+      "measurable_resolved_intents": 466,
+      "measured_unique_windows": 466,
+      "paper_pnl_usd": -34.217401,
+      "pnl_measurement_gap_reasons": {
+        "missing_market_resolution_in_resolution_feed": 89,
+        "missing_side_or_outcome_on_measurement_row": 42
+      },
+      "post_fee_pnl_usd": -59.481927,
+      "pre_fee_pnl_usd": -34.217401,
+      "regime_counts": {
+        "weekday": 440,
+        "weekend": 157
+      },
+      "resolved_intents": 508,
+      "resolved_unique_windows": 508,
+      "unique_windows": 597,
+      "unmeasured_resolved_intents": 42,
+      "unresolved_intents": 89,
+      "unresolved_unique_windows": 89,
+      "wins": 202
+    },
+    "extra_would_submit_windows": 716,
+    "fee_gate_calibration_latest_cycle": {
+      "by_member": {},
+      "expected_edge_absence_reasons": {},
+      "expected_edge_avg": null,
+      "expected_edge_calibration_basis": "realized_paper_pnl_vs_expected_fee_per_member",
+      "expected_edge_count": 0,
+      "expected_edge_missing_count": 0,
+      "expected_edge_status": "NO_FEE_GATED_ROWS",
+      "expected_edge_sum": 0.0,
+      "expected_fee_usd_all_rows_sum": 0.0,
+      "expected_fee_usd_sum": 0.0,
+      "expected_fee_usd_unmeasured_resolved_sum": 0.0,
+      "expected_fee_usd_unresolved_sum": 0.0,
+      "fee_gated_intents": 0,
+      "losses": 0,
+      "measurable_resolved_intents": 0,
+      "measured_unique_windows": 0,
+      "paper_pnl_usd": 0.0,
+      "pnl_measurement_gap_reasons": {},
+      "post_fee_pnl_usd": 0.0,
+      "pre_fee_pnl_usd": 0.0,
+      "regime_counts": {},
+      "resolved_intents": 0,
+      "resolved_unique_windows": 0,
+      "unique_windows": 0,
+      "unmeasured_resolved_intents": 0,
+      "unresolved_intents": 0,
+      "unresolved_unique_windows": 0,
+      "wins": 0
+    },
+    "fee_gate_calibration_retained": {
+      "by_member": {
+        "0x00033f1089ff061813850e5135483bed39ce3b49": {
+          "field_count": 29
+        },
+        "0x1015bb260154f51e5f432cb0a3227c1619fcbac8": {
+          "field_count": 29
+        },
+        "0x1160696549a6e3e5d9b4a7ccaed0403902307d8a": {
+          "field_count": 29
+        },
+        "0x13e0d447520ebe7f8eeaf7817211201b2c585204": {
+          "field_count": 29
+        },
+        "0x2d7c9298b64713de86402bd8a41695e31865a945": {
+          "field_count": 29
+        },
+        "0x3048d65321be3497164cdfc2996f94f98a2e7537": {
+          "field_count": 29
+        },
+        "0x32de91fa203321fa7735e7854f2b1c844e71ce9d": {
+          "field_count": 29
+        },
+        "0x4c9497941333332d29f1c235dd23200f3623ffad": {
+          "field_count": 29
+        },
+        "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": {
+          "field_count": 29
+        },
+        "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": {
+          "field_count": 29
+        },
+        "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": {
+          "field_count": 29
+        },
+        "0x82c857cb4d18e919c1b7d3c6865be4debe50da77": {
+          "field_count": 29
+        },
+        "0x86de0516011e2ad7ce3abdc13577de8608db55c3": {
+          "field_count": 29
+        },
+        "0x9d57c42e847173d06841703825d3fe2299e456ea": {
+          "field_count": 29
+        },
+        "0xa3e0985f2d0b3209a52f171660287863690d095d": {
+          "field_count": 29
+        },
+        "0xa6896d11f76dfa2820662c1f441496f51553559b": {
+          "field_count": 29
+        },
+        "0xb27bc932bf8110d8f78e55da7d5f0497a18b5b82": {
+          "field_count": 29
+        },
+        "0xbf337426aa856996b8bb79b238345dd1a0276bf7": {
+          "field_count": 29
+        },
+        "0xc1b4bfdc36eaa5c09e7231c61e5e44c5463f624f": {
+          "field_count": 29
+        },
+        "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": {
+          "field_count": 29
+        },
+        "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1": {
+          "field_count": 29
+        },
+        "0xcb7cec22f03dec4b8cabee902143c46645b3b03f": {
+          "field_count": 29
+        },
+        "0xf3531b23b504cf0aed4ff21325232b2a2d496685": {
+          "field_count": 29
+        },
+        "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": {
+          "field_count": 29
+        }
+      },
+      "expected_edge_absence_reason": "no upstream expected_edge or expected_edge_after_buffer field on intent, metadata, or drift_buffer",
+      "expected_edge_absence_reasons": {
+        "no upstream expected_edge or expected_edge_after_buffer field on intent, metadata, or drift_buffer": 5000
+      },
+      "expected_edge_avg": null,
+      "expected_edge_calibration_basis": "realized_paper_pnl_vs_expected_fee_per_member",
+      "expected_edge_count": 0,
+      "expected_edge_missing_count": 5000,
+      "expected_edge_status": "NOT_AVAILABLE_NO_UPSTREAM_INPUT",
+      "expected_edge_sum": 0.0,
+      "expected_fee_usd_all_rows_sum": 212.063699,
+      "expected_fee_usd_sum": 184.963706,
+      "expected_fee_usd_unmeasured_resolved_sum": 0.0,
+      "expected_fee_usd_unresolved_sum": 27.099993,
+      "fee_gated_intents": 5000,
+      "losses": 2402,
+      "measurable_resolved_intents": 4152,
+      "measured_unique_windows": 4152,
+      "paper_pnl_usd": -336.383908,
+      "pnl_measurement_gap_reasons": {
+        "missing_market_resolution_in_resolution_feed": 848
+      },
+      "post_fee_pnl_usd": -521.347614,
+      "pre_fee_pnl_usd": -336.383908,
+      "regime_counts": {
+        "weekday": 4737,
+        "weekend": 263
+      },
+      "resolved_intents": 4152,
+      "resolved_unique_windows": 4152,
+      "unique_windows": 5000,
+      "unmeasured_resolved_intents": 0,
+      "unresolved_intents": 848,
+      "unresolved_unique_windows": 848,
+      "wins": 1750
+    },
+    "filter_attrition_totals_latest_cycle": {
+      "fresh_candidate_intents": 0,
+      "fresh_candidate_intents_after_expected_fee_gate": 0,
+      "fresh_candidate_intents_after_toxicity_protection": 0,
+      "routeable_signals": 0,
+      "would_submit": 0
+    },
+    "live_flip_allowed": false,
+    "live_payload_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+    "live_payload_wallet_short": "0xc539...73d1",
+    "member_split": {
+      "0x00033f1089ff061813850e5135483bed39ce3b49": 1,
+      "0x3048d65321be3497164cdfc2996f94f98a2e7537": 34,
+      "0x40138697bf1a0d655593f3be6237d60c1dc7ab35": 4,
+      "0x4c9497941333332d29f1c235dd23200f3623ffad": 1,
+      "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": 18,
+      "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f": 1,
+      "0x568b079891fcc8bef2e557fa2a8a7ecca1700b3b": 21,
+      "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e": 2,
+      "0x5e4aa0f176014729f5168e821ce614484fbebe6b": 63,
+      "0x6663e52b3683832aa611b0c7e0e91bc654d368ca": 12,
+      "0x80be724a3511017be131fdcd188296128fea7ee7": 1,
+      "0x86de0516011e2ad7ce3abdc13577de8608db55c3": 11,
+      "0xa3e0985f2d0b3209a52f171660287863690d095d": 2,
+      "0xa6896d11f76dfa2820662c1f441496f51553559b": 444,
+      "0xac0586732786905d285959613f1813bc89246729": 43,
+      "0xb27bc932bf8110d8f78e55da7d5f0497a18b5b82": 1,
+      "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419": 1,
+      "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": 22,
+      "0xd9189593701e94574ee140295a2ff6042317813b": 109,
+      "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": 200,
+      "0xe6db20932faf0f9780acf75d95c74c9984407dac": 421,
+      "0xe88db6a8c559410a627a528264a441206ad03db1": 1,
+      "0xf07fabf154d537b266916d53f12a4bef7b06c118": 8,
+      "0xf3531b23b504cf0aed4ff21325232b2a2d496685": 1,
+      "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": 1875,
+      "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": 11
+    },
+    "min_validation_hours": 6.0,
+    "missing_non_denied_members": {
+      "row_count": 0
+    },
+    "next_action": "continue pre-registered Stage-2 clock until n>=30 or 20:30Z freeze; no live flip from min-hours alone",
+    "non_denied_runtime_members": 1,
+    "one_position_cap_suppressed_windows": 602,
+    "routing_mode": "shadow",
+    "routing_suppressed_signals": 1000,
+    "runtime_member_count": 1,
+    "runtime_selected_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+    "runtime_selected_wallet_short": "0xc539...73d1",
+    "runtime_selected_wallet_source": "selected_member",
+    "selected_member_would_submit_windows": 2448,
+    "selected_wallet_at_cycle": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+    "selected_wallet_at_cycle_short": "0xc539...73d1",
+    "selection_changes": 94,
+    "shadow_candidate_seat_count": 0,
+    "shadow_candidate_seat_wallets": {
+      "row_count": 0
+    },
+    "shadow_selected_wallet": null,
+    "shadow_selected_wallet_short": null,
+    "shadow_selected_wallets_latest_cycle": {
+      "row_count": 0
+    },
+    "shadow_selection_changes": 102,
+    "status": "ACCRUING_UNDER_PREREGISTERED_CLOCK",
+    "validation_buffer_elapsed_hours": 55.475196,
+    "validation_clock_started_at": "2026-07-11T04:43:34.495449Z",
+    "validation_elapsed_basis": "persisted_clock_started_at",
+    "validation_elapsed_hours": 483.854306,
+    "would_submit_windows": 3308
+  },
+  "flow_stage": "LIVE/LEARN/SELF-DEV",
+  "full_payload_policy": "local ignored state; verify integrity with sha256 before use",
+  "generated_at": "2026-07-31T08:35:22.212245+00:00",
+  "kind": "bounded_research_artifact_digest",
+  "preregistered_clock_fields": {
+    "summary.validation_clock_started_at": "2026-07-11T04:43:34.495449Z"
+  },
+  "row_count": 12512,
+  "schema_version": 1,
+  "sha256": "7f8375ad6ddb4e623397d0d2276ed349b7bc523ef17044c62d003391ad3147ae",
+  "source_artifact": "data/research/routing_shadow_validation_latest.json",
+  "source_generated_at": "2026-07-31T08:34:49.995772+00:00",
+  "source_status": null,
+  "top_level_list_counts": {
+    "copyintent_parity_conflicts": 0,
+    "cycle_samples": 2500,
+    "denied_signal_rows": 0,
+    "fee_gated_measurement_rows": 5000,
+    "member_evidence": 1,
+    "routing_suppressed_rows": 1000,
+    "rows": 3308
+  }
+}

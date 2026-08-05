@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.belavarga.polymarket.perp-basis-taker-generation</string>
+  <key>ProgramArguments</key><array><string>/usr/bin/nice</string><string>-n</string><string>15</string><string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string><string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_btc5m_perp_microstructure_lead.py</string><string>--family</string><string>perp_spot_basis_impulse_taker</string><string>--state</string><string>data/research/btc5m_perp_basis_taker_state.json</string><string>--raw-cache</string><string>data/research/btc5m_perp_microstructure_shared_raw_cache.json</string><string>--selector-state</string><string>data/research/btc5m_perp_basis_taker_selector.json</string><string>--raw-cache-read-only</string><string>--watch</string><string>--interval-s</string><string>1</string></array>
+  <key>WorkingDirectory</key><string>/Users/belavarga/claudecode/polymarket-agent</string><key>RunAtLoad</key><true/><key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>StandardOutPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_perp_basis_taker.out</string><key>StandardErrorPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_perp_basis_taker.err</string>
+</dict></plist>

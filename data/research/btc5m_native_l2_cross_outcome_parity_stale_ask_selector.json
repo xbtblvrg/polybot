@@ -1,0 +1,17 @@
+{
+  "active_capacity": false,
+  "cells": [],
+  "due": false,
+  "gate_pass": false,
+  "generated_at": "2026-07-25T20:32:19.972903+00:00",
+  "generation_checksum": "3e5a73494025b7fc0b85effa3c3d1a3efa7b03926727bfb4c1dbd889ca4199a3",
+  "historical_arbiter_only": true,
+  "kind": "btc5m_cross_exchange_promoted_cell_selector_terminal_tombstone",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "schema_version": 1,
+  "selected": null,
+  "status": "TERMINAL_PARK_NEGATIVE_ROLLING_PAPER_PNL",
+  "stop_writer": true,
+  "terminal_decision": "PARK_NEGATIVE_ROLLING_PAPER_PNL"
+}

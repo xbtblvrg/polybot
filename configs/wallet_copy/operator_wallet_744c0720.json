@@ -1,0 +1,26 @@
+{
+  "generated_at": "2026-06-25T01:38:41.294406+00:00",
+  "kind": "operator_wallet_scoped_registry",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "schema_version": 1,
+  "wallets": [
+    {
+      "address": "0x744c072005bde6ddab8764a7477f61d3d22ae37f",
+      "asset_allowlist": [
+        "BTC"
+      ],
+      "data_api": "https://data-api.polymarket.com",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "name": "egozic86",
+      "notes": "btc_5m_copy_candidate_from_handle_egozic86",
+      "tags": [
+        "operator_provided",
+        "btc_5m",
+        "candidate",
+        "handle_egozic86"
+      ]
+    }
+  ]
+}

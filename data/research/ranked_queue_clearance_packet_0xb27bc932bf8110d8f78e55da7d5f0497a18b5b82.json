@@ -1,0 +1,102 @@
+{
+  "clearance": {
+    "accrual_clock_active": false,
+    "evidence_feed_active": true,
+    "failed_gates": [
+      "attributable_reject_ratio_above_maximum",
+      "resolution_attachment_or_market_lifecycle"
+    ],
+    "hot_standby_ready": false,
+    "named_cause": "no_recoverable_ask_dominates_attributable_rejects",
+    "named_missing_gates": [
+      "attributable_reject_ratio_above_maximum",
+      "resolution_attachment_or_market_lifecycle",
+      "hot_standby_ready_not_proven"
+    ],
+    "next": "advance to the next ranked paper candidate; keep this wallet out of live admission",
+    "paper_disposition": "PARK_STRUCTURAL_NO_ASK_DOMINANT",
+    "readmission_rule": "future attributable no-ask share <= 0.5",
+    "ready_for_live": false,
+    "status": "ANALYZE_GATE_CLEARANCE_PENDING"
+  },
+  "copyability_score": 695.252309,
+  "exact_policy": {
+    "max_buy_price": 0.5,
+    "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+    "status": "REPLAYED_EXACT_POLICY_SHADOW_ONLY"
+  },
+  "exact_policy_post_fee_shadow": {
+    "expected_fee_usd": 2.156132,
+    "fee_formula": "fee_usd = rate * shares * price * (1 - price)",
+    "fee_rate": 0.069997697,
+    "gate_pass": true,
+    "minimum_resolved_orders": 50,
+    "post_fee_pnl_usd": 649.296177,
+    "post_fee_positive": true,
+    "pre_fee_pnl_usd": 651.452309,
+    "resolved_orders": 143,
+    "status": "PASS_50_RESOLVED_POST_FEE_POSITIVE"
+  },
+  "expected_edge": {
+    "basis": "paper_pnl_usd_per_resolved_exact_policy_order",
+    "copyability_fill_rate_pct": 27.037037,
+    "not_live_promotable": true,
+    "usd_per_resolved_order": 4.555611
+  },
+  "flow_stage": "PROMOTE/LEARN",
+  "fresh_flow": {
+    "bench_status": "BENCH_ALIVE_NOT_READY",
+    "latest_trade_age_h": 5.948075,
+    "remote_btc5m_buys_24h": 703
+  },
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "queue_rank": 11,
+  "replay_fill_backed": {
+    "attributable_reject_ratio": 0.708,
+    "candidate_clob_backed_orders": 146,
+    "filled_orders": 146,
+    "paper_orders": 540,
+    "paper_pnl_usd": 651.452309,
+    "prospective_reject_taxonomy": {
+      "attributable_rejects": 354,
+      "counts": {
+        "env": 0,
+        "latency": 0,
+        "no_ask": 287,
+        "other": 0,
+        "price": 67,
+        "slippage": 0
+      },
+      "dominant_all_reject_category": "no_ask",
+      "dominant_attributable_reject_category": "no_ask",
+      "environment_only_dominates_all_rejects": false,
+      "shares_of_all_rejects": {
+        "env": 0.0,
+        "latency": 0.0,
+        "no_ask": 0.810734,
+        "other": 0.0,
+        "price": 0.189266,
+        "slippage": 0.0
+      },
+      "shares_of_attributable_rejects": {
+        "env": 0.0,
+        "latency": 0.0,
+        "no_ask": 0.810734,
+        "other": 0.0,
+        "price": 0.189266,
+        "slippage": 0.0
+      },
+      "total_rejects": 354
+    },
+    "resolved_orders": 143,
+    "status": "FAIL_NO_CLOB_BACKED_POSITIVE_PAPER_REPLAY"
+  },
+  "risk_flags": {
+    "prior_demotion": false,
+    "prior_demotion_refs": [],
+    "toxicity_deny_cells": []
+  },
+  "universe_rank": 4,
+  "wallet": "0xb27bc932bf8110d8f78e55da7d5f0497a18b5b82"
+}

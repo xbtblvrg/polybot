@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "current_generation_f1_f4_fallout_audit",
+  "generated_at": "2026-07-25T14:34:26Z",
+  "flow_stage": "LIVE/ROTATE/OBSERVE/LEARN/PROMOTE",
+  "status": "RUNG_C_NO_ADMISSIBLE_TARGET",
+  "source_generation_checksum": "be0b50a6ae9efe82771ba3e77ea770e52ab9c16c90112c2257968c29cee8b31f",
+  "frontier_checksum": "b98e2fa91dbe3df1abb81068c8fd258efc6b5f545c00a2d80e3d7e36db26fd9d",
+  "frontier_key": "wallet|exact_policy_id|source_generation",
+  "candidate_count": 44,
+  "eligible_count": 0,
+  "refusal_counts": {
+    "own_evidenced_policy_available": 44,
+    "f1_measured_positive_regime_cell": 44,
+    "f2_fresh_own_source_buy_rows_gte_10": 21,
+    "f3_not_enabled_or_cooloff_or_fading": 0,
+    "f4_external_liveness": 0,
+    "active_temporal_not_proven_negative": 0,
+    "not_terminal_park_red_clock_or_measured_loser": 4
+  },
+  "active_temporal_join_defect_found": false,
+  "quality_bars_unchanged": true,
+  "selected": null,
+  "structural_selector_controls": true,
+  "evidence_source": "data/research/order_flow_deadman_state.json.policy_choke.actuator.candidate_evidence"
+}

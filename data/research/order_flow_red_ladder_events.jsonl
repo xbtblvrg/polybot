@@ -1,0 +1,1 @@
+{"event":"ORDER_FLOW_RED_OVER_FOUR_HOURS_BRAIN_FAILURE","flow_stage":"LIVE/ROTATE/SELF-DEV","recorded_at":"2026-07-25T10:49:00Z","accepted_order_liveness_ts":"2026-07-25T04:46:04.251169Z","method_switch_controlling":true,"once_key":"accepted-20260725T044604Z-over-4h","subordinate_work_only":"fixed_82c8_deadline_actuator","status":"RECORDED_ONCE"}

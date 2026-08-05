@@ -1,0 +1,111 @@
+{
+  "direction_id": "2026-07-14T20:42Z-fable-r2-trade-log-attribution",
+  "flow_stage": "LIVE/DEFEND/SELF-DEV",
+  "generated_at": "2026-07-14T20:50:49Z",
+  "kind": "trade_executor_lane_attribution",
+  "live_execution_events_at_2032": [
+    {
+      "alternate_detection_source": "polygon_orderfilled_ws_premerge",
+      "alternate_observed_ts": 1784061117.3922932,
+      "api_indexing_lag_s": 0.0,
+      "approved_suppression": true,
+      "copy_size_usd": 2.053599,
+      "dataapi_first_seen_ts": 1784061114.139735,
+      "detection_observed_ts": 1784061114.139735,
+      "detection_source": "polygon_orderfilled_ws_premerge",
+      "event": "wallet_copy_live_profit_latency_suppression_reject",
+      "event_ts": 1784061115.0,
+      "event_type": "FABLE_APPROVED_SUPPRESSION_REJECT",
+      "fable_direction": "2026-07-07T22:05:32Z",
+      "flow_stage": "LIVE/LEARN",
+      "intent_id": "ci_a21573562e4ad76139e5d391",
+      "latency_split_finding": null,
+      "latency_split_note": "poll_wait unavailable on CopyIntent; Data API first_seen split is ledgered for WS comparison",
+      "latency_split_status": "PASS",
+      "limit_price": 0.4207,
+      "market_slug": "btc-updown-5m-1784061000",
+      "observation_sources": [
+        "polygon_orderfilled_ws_premerge",
+        "rtds_activity"
+      ],
+      "observed_ts": 1784061114.139735,
+      "outcome": "Down",
+      "poll_wait_s": null,
+      "reject_reason": "window_time_gte_180s",
+      "shadow_counterfactual_retained": true,
+      "signal_age_s": 0.0,
+      "signal_age_suppress_gte_s": 60.0,
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "taxonomy": "window_time_gte_180s",
+      "taxonomy_tags": [
+        "window_time_gte_180s"
+      ],
+      "ts": "2026-07-14T20:32:19.932249+00:00",
+      "window_time_s": 139.932207,
+      "window_time_suppress_gte_s": 60.0
+    }
+  ],
+  "log_lines": [
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.95, limit_price=0.95, order_size=2.00",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.69, limit_price=0.7, order_size=2.80",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.85, limit_price=0.85, order_size=2.20",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.5, limit_price=0.5, order_size=4.00",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=1.075, copied_limit=0.43, limit_price=0.43, order_size=3.00",
+      "size_usd": 1.075,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.5, limit_price=0.5, order_size=5.00",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    },
+    {
+      "attributed_lane": "unit_test_or_paper_mock_trade_executor",
+      "line": "2026-07-14T20:32:02Z - src.trade_executor - INFO - Executing trade: market=0xcond, action=buy, outcome=YES, clob_side=BUY, token=yes-token..., size_usd=2.0, copied_limit=0.5, limit_price=0.5, order_size=5.00",
+      "size_usd": 2.0,
+      "unit_test_signature": true
+    }
+  ],
+  "next_action": "after code load, future Executing trade lines must show lane=live_guard, mock, clob_unlabeled, or caller-provided paper lane",
+  "schema_version": 1,
+  "source_artifacts": {
+    "live_execution_events": "data/research/wallet_copy_live_execution_events.jsonl",
+    "live_ledger": "data/research/wallet_copy_live_execution_state.json",
+    "wallet_copy_log": "logs/wallet_copy.log"
+  },
+  "status": "PASS_TEST_OR_PAPER_LINES_NO_LIVE_LEDGER_BYPASS",
+  "summary": {
+    "executing_trade_lines_203202z": 7,
+    "ledger_bypassing_submissions": 0,
+    "live_execution_event_rows_at_2032": 1,
+    "live_ledger_orders_at_2032": 0,
+    "logging_fix": "TradeExecutor Executing trade log now includes lane=<execution_lane>; live wallet-copy decisions set execution_lane=live_guard",
+    "only_live_guard_process_seen": true,
+    "single_live_guard_pid": 12881,
+    "size_usd_gt_1_lines": 7,
+    "unit_test_signature_lines": 7
+  }
+}

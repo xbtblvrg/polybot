@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "kind": "btc5m_multivenue_generation_terminal_decisions",
+  "decided_at": "2026-07-25T11:44:30Z",
+  "immutable": true,
+  "decisions": [
+    {
+      "generation_checksum": "87030ddd998990003bf49256824ddcc9a95e67ebb9e085a1e439f4f634dabe35",
+      "terminal_decision": "PARK_ZERO_INTENT_GENERATION",
+      "completed_windows": 6,
+      "deduplicated_terminals": 120,
+      "protected_skips": 120,
+      "signals": 75,
+      "positive_edge_intents": 0
+    },
+    {
+      "generation_checksum": "2c714bc050429e8c139521d7aa7e69a47bfd4dfd510456084a618ece61cf2c32",
+      "terminal_decision": "PARK_ZERO_INTENT_GENERATION",
+      "completed_windows": 6,
+      "deduplicated_terminals": 144,
+      "protected_skips": 144,
+      "signals": 96,
+      "positive_edge_intents": 0
+    }
+  ],
+  "rule": "terminal immutable evidence; no preregistration or history mutation"
+}

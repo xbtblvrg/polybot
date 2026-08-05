@@ -1,0 +1,63 @@
+{
+  "schema_version": 1,
+  "kind": "agy_flag_clock_schema_drift_check",
+  "flow_stage": "SELF-DEV/DEFEND",
+  "generated_at": "2026-07-14T08:47:32Z",
+  "source_direction": "2026-07-14T08:44Z fable DIRECTION ORDER 1",
+  "live_touch": false,
+  "status": "PASS_WITH_REMEDIATED_SCHEMA_DRIFT",
+  "agy_flag_check": {
+    "status": "QUOTA_DEGRADED_RESPECTED",
+    "agy_version_status": "CURRENT",
+    "installed_version": "1.1.1",
+    "latest_version": "1.1.1",
+    "latest_source": "manual_env_sweep",
+    "quota_status": "DEGRADED_QUOTA",
+    "degraded_until": "2026-07-20T01:55:26Z",
+    "smoke_result": "SMOKE_SATISFIED_RUNG_QUOTA_DEGRADED",
+    "verified_flags_from_smoke": [
+      "-p/--print",
+      "--prompt",
+      "--dangerously-skip-permissions",
+      "--print-timeout"
+    ],
+    "dry_run_wrapper_check": "PASS: run_agy_advisor.py built advisory prompt and secret scan path without invoking agy",
+    "next_action": "skip AGY fallback attempts until degraded_until, then run one tagged confirmatory smoke proving tag+rc0+append in a single post-pin run"
+  },
+  "clock_schema_drift_scan": {
+    "status": "PASS_AFTER_REMEDIATION",
+    "utc_now_checked": "2026-07-14T08:47:32Z",
+    "latest_handoff_heading": "2026-07-14T08:44Z fable DIRECTION",
+    "latest_handoff_not_future": true,
+    "pre_regen_digest_latest_direction": "2026-07-14T08:40Z fable DIRECTION",
+    "pre_regen_digest_drift": "STALE_BY_ONE_FABLE_DIRECTION",
+    "commitments_rows": 19,
+    "commitments_parse_errors": 0,
+    "late_rows_closed_by_this_packet": [
+      "agy_flag_check_mon18z_20260713",
+      "clock_schema_drift_mon18z_20260713"
+    ],
+    "clock_trip_dossier": {
+      "path": "data/research/clock_trip_dossier_20260715.json",
+      "kind": "clock_trip_dossier",
+      "trip_at": "2026-07-15T04:50:00Z",
+      "generated_at": "2026-07-14T05:28:50Z",
+      "clearance_candidates": 3,
+      "copyintent_parity_status": "PASS",
+      "schema_drift_detected": "missing schema_version",
+      "remediation": "added schema_version=1 to the tracked dossier artifact"
+    },
+    "deadman_at_scan": {
+      "status": "MEASURED_SOURCE_QUIET",
+      "can_trade": true,
+      "latest_order_ts": "2026-07-14T07:55:09.957989+00:00",
+      "fresh_stale_signal_rows": 258,
+      "approved_suppression_events": 258
+    },
+    "next_action": "regenerate state digest in this packet so the 08:44Z Fable direction and closed rows are reflected"
+  },
+  "verification": {
+    "dry_run": "python3 scripts/run_agy_advisor.py --mode tiebreak --task 'AGY flag posture dry-run check: verify wrapper builds advisory prompt without invoking AGY while quota is degraded.' --dry-run",
+    "targeted_tests": "python3 -m pytest -q tests/test_agy_advisor.py tests/test_state_digest.py tests/test_brainless_ops.py => 60 passed in 20.45s"
+  }
+}

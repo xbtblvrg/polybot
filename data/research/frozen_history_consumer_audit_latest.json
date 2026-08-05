@@ -1,0 +1,254 @@
+{
+  "current_successors": {
+    "append_only_stream": "data/research/wallet_copy_live_guard_wallet_events.jsonl",
+    "bounded_snapshot": "data/research/wallet_copy_live_guard_hot_history_state.json"
+  },
+  "flow_stage": "SELF-DEV/LEARN/PROMOTE",
+  "frozen_since": "2026-07-15T03:23:00Z",
+  "frozen_source": "data/research/wallet_copy_history_state.json",
+  "frozen_source_consumers": [
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/analyze_wallet_sweeper_profile.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/audit_frozen_history_consumers.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/audit_wallet_copy_learning_logs.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_btc5m_live_paper_fleet.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_non_active_wallet_signal_census.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_realtime_runtime_proof.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_rtds_premerge_equivalence_artifact.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_wallet_copy_winner_variation_siblings.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/build_wallet_temporal_profitability_registry.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "PRODUCER_OR_EXPORT_TOOL",
+      "impact": "maintains or exports historical evidence; it is not promotion-grade by itself",
+      "path": "scripts/export_wallet_copy_dataset.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "PRODUCER_OR_EXPORT_TOOL",
+      "impact": "maintains or exports historical evidence; it is not promotion-grade by itself",
+      "path": "scripts/merge_dataapi_active_set_events.py",
+      "reference_count": 6
+    },
+    {
+      "classification": "PRODUCER_OR_EXPORT_TOOL",
+      "impact": "maintains or exports historical evidence; it is not promotion-grade by itself",
+      "path": "scripts/merge_rtds_wallet_events.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/onboard_leaderboard_crypto_wallets.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_coverage_gap_diagnosis.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_coverage_gap_signal_supply_check.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_fill_toxicity.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_inventory_late_window_guard_cost.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_reject_taxonomy.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_routing_disambiguation.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/report_wallet_copy_wallets.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/run_wallet_copy_autonomous_repair.py",
+      "reference_count": 2
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/run_wallet_copy_hotlane_tick.py",
+      "reference_count": 2
+    },
+    {
+      "classification": "LIVE_PATH_SAFE_HOT_OVERRIDE",
+      "impact": "frozen reference is producer/warmup fallback only; default live_guard_hot_history=true replaces it before run args are built, so it cannot self-poison live selection",
+      "path": "scripts/run_wallet_copy_live_guard.py",
+      "reference_count": 2
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/run_wallet_copy_pipeline.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/run_wallet_copy_pipeline_resume.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/run_wallet_copy_profit_engine.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/select_wallet_copy_active_hotlane.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "RESEARCH_ONLY_STALE_TAINTED",
+      "impact": "historical prior only until rebuilt from a current source with an age stamp",
+      "path": "scripts/start_live_guard.sh",
+      "reference_count": 1
+    },
+    {
+      "classification": "LIBRARY_DEFAULT_REVIEW",
+      "impact": "callers must supply a current source before using output as forward evidence",
+      "path": "src/wallet_copy/hotlane.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "LIBRARY_DEFAULT_REVIEW",
+      "impact": "callers must supply a current source before using output as forward evidence",
+      "path": "src/wallet_copy/mission.py",
+      "reference_count": 1
+    },
+    {
+      "classification": "LIBRARY_DEFAULT_REVIEW",
+      "impact": "callers must supply a current source before using output as forward evidence",
+      "path": "src/wallet_copy/onboarding.py",
+      "reference_count": 1
+    }
+  ],
+  "generated_at": "2026-07-20T02:56:18.538390Z",
+  "kind": "frozen_history_consumer_audit",
+  "live_guard_reference_ruling": {
+    "classification": "LIVE_PATH_SAFE_HOT_OVERRIDE",
+    "impact": "frozen reference is producer/warmup fallback only; default live_guard_hot_history=true replaces it before run args are built, so it cannot self-poison live selection",
+    "path": "scripts/run_wallet_copy_live_guard.py",
+    "reference_count": 2
+  },
+  "promotion_lane": {
+    "forward_accumulator": "data/research/btc5m_structural_scalp_forward_source_events.jsonl",
+    "path": "scripts/run_btc5m_structural_scalp_paper_lane.py",
+    "promotion_packet_fails_closed_after_86400s": true,
+    "repointed_to_current_snapshot": true
+  },
+  "rule": "historical artifacts remain usable as historical priors only; no forward or promotion claim may admit without newest_source_event_age_s <= 86400",
+  "schema_version": 1,
+  "stale_tainted_standing_conclusions": [
+    {
+      "artifact": "data/research/alpha_decay_report.json",
+      "conclusion": "alpha-decay wallet selection",
+      "promotion_grade": false,
+      "status": "STALE_TAINTED_REBUILD_REQUIRED"
+    }
+  ],
+  "standing_conclusions": [
+    {
+      "artifact": "data/research/wallet_copy_followability_leaderboard_latest.json",
+      "conclusion": "followability ranking",
+      "promotion_grade": true,
+      "status": "CURRENT_REBUILT"
+    },
+    {
+      "artifact": "data/research/wallet_copy_full_universe_copyability_latest.json",
+      "conclusion": "full-universe copyability ranking",
+      "promotion_grade": true,
+      "status": "CURRENT_REBUILT"
+    },
+    {
+      "artifact": "data/research/btc5m_two_sided_prime_study_latest.json",
+      "conclusion": "two-sided/scalp OOS benchmark",
+      "promotion_grade": true,
+      "status": "CURRENT_REBUILT"
+    },
+    {
+      "artifact": "data/research/wallet_copy_strategy_decompiler_intake_latest.json",
+      "conclusion": "strategy-decompiler intake ranking",
+      "promotion_grade": true,
+      "status": "CURRENT_REBUILT"
+    },
+    {
+      "artifact": "data/research/alpha_decay_report.json",
+      "conclusion": "alpha-decay wallet selection",
+      "promotion_grade": false,
+      "status": "STALE_TAINTED_REBUILD_REQUIRED"
+    }
+  ],
+  "status": "PASS_FAIL_CLOSED"
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": 1,
+  "kind": "btc5m_cross_exchange_promoted_cell_selector_terminal_tombstone",
+  "generated_at": "2026-07-25T17:42:00Z",
+  "status": "TERMINAL_PARK_ZERO_INTENT_GENERATION",
+  "generation_checksum": "fa14803b71347ab9abf0feb96fcf851bb229a0d1c55c682c485e2ed4dca931d0",
+  "terminal_decision": "PARK_ZERO_INTENT_GENERATION",
+  "selected": null,
+  "cells": [],
+  "gate_pass": false,
+  "stop_writer": true,
+  "active_capacity": false,
+  "due": false,
+  "historical_arbiter_only": true,
+  "paper_only": true,
+  "live_orders_allowed": false
+}

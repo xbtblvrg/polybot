@@ -1,0 +1,142 @@
+{
+  "checked_count": 13,
+  "failure_count": 0,
+  "flow_stage": "LIVE/DEFEND/SELF-DEV",
+  "generated_at": "2026-07-29T07:12:10.700374Z",
+  "inventory": "data/research/research_capture_rotation_inventory.json",
+  "kind": "post_panic_integrity_audit",
+  "next_action": "refresh scorecard same-cut basis and continue 20:30Z packet prep",
+  "output": "data/research/post_panic_integrity_audit_latest.json",
+  "repair_count": 0,
+  "repair_enabled": false,
+  "rows": [
+    {
+      "exists": true,
+      "last_line_end": 2152229705,
+      "last_line_start": 2152227089,
+      "path": "data/research/polygon_orderfilled_ws_orderfilled_only.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2152229705,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 1615307180,
+      "last_line_start": 1615305793,
+      "path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+      "repair_action": "none",
+      "size_bytes": 1615307180,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 17186057966,
+      "last_line_start": 17186056555,
+      "path": "data/research/polygon_orderfilled_ws_shadow_resident.jsonl",
+      "repair_action": "none",
+      "size_bytes": 17186057966,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2150735648,
+      "last_line_start": 2150721731,
+      "path": "data/research/p0f_observation_live_tracking_events.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2150735648,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2147483129,
+      "last_line_start": 2147479416,
+      "path": "data/research/wallet_copy_live_guard_wallet_events.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2147483129,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 79475503,
+      "last_line_start": 78733837,
+      "path": "data/research/wallet_copy_live_guard_events.jsonl",
+      "repair_action": "none",
+      "size_bytes": 79475503,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2147483200,
+      "last_line_start": 2147482570,
+      "path": "data/research/dataapi_first_seen.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2147483200,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2147483278,
+      "last_line_start": 2147482675,
+      "path": "data/research/polygon_ws_dataapi_active_set_comparison.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2147483278,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2147481766,
+      "last_line_start": 2147479119,
+      "path": "data/research/wallet_copy_watch_tier_wallet_events.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2147481766,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "last_line_end": 2147483342,
+      "last_line_start": 2147482712,
+      "path": "data/research/watch_tier_first_seen.jsonl",
+      "repair_action": "none",
+      "size_bytes": 2147483342,
+      "source": "rotation_inventory",
+      "status": "PASS"
+    },
+    {
+      "exists": true,
+      "path": "data/research/runtime_logs/realtime_shadow_watch.out.log",
+      "repair_action": "none",
+      "size_bytes": 541714049,
+      "source": "rotation_inventory",
+      "status": "SKIP_NON_JSONL"
+    },
+    {
+      "exists": true,
+      "path": "data/research/wide_multiwallet_consensus.launchd.out",
+      "repair_action": "none",
+      "size_bytes": 357303858,
+      "source": "rotation_inventory",
+      "status": "SKIP_NON_JSONL"
+    },
+    {
+      "exists": true,
+      "last_line_end": 266929799,
+      "last_line_start": 266926893,
+      "path": "data/research/wallet_copy_live_execution_events.jsonl",
+      "repair_action": "none",
+      "size_bytes": 266929799,
+      "source": "day_ledger",
+      "status": "PASS"
+    }
+  ],
+  "schema_version": 1,
+  "status": "PASS"
+}

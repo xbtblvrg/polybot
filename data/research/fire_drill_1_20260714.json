@@ -1,0 +1,70 @@
+{
+  "artifact": "fire_drill_1_20260714",
+  "flow_stage": "DEFEND/SELF-DEV",
+  "generated_at": "2026-07-14T08:40:22Z",
+  "live_touch": false,
+  "notifications_suppressed_by_fixtures": true,
+  "source_direction": "2026-07-14T08:40Z-fable-fire-drill-next",
+  "status": "PASS",
+  "summary": {
+    "command": "python3 -m pytest -q tests/test_order_flow_deadman.py tests/test_brainless_live_guard_restart.py tests/test_codex_starvation_deadman.py tests/test_brainless_ops.py tests/test_live_change_discipline.py tests/test_state_digest.py",
+    "passed": 89,
+    "duration_s": 21.47
+  },
+  "monitors": [
+    {
+      "monitor": "order_flow_deadman",
+      "coverage": [
+        "order-flow incident fires",
+        "verified source-quiet class clears",
+        "fresh actionable guard-side halt fires",
+        "policy taxonomy alone stays source quiet",
+        "90min fresh-actionable backstop fires"
+      ],
+      "test_file": "tests/test_order_flow_deadman.py"
+    },
+    {
+      "monitor": "brainless_live_guard_restart",
+      "coverage": [
+        "deadman red path",
+        "measured source quiet does not restart",
+        "guard-side halt restart path"
+      ],
+      "test_file": "tests/test_brainless_live_guard_restart.py"
+    },
+    {
+      "monitor": "codex_starvation_deadman",
+      "coverage": [
+        "starvation detection",
+        "handoff escalation path"
+      ],
+      "test_file": "tests/test_codex_starvation_deadman.py"
+    },
+    {
+      "monitor": "commitment_deadman_and_brainless_ops",
+      "coverage": [
+        "commitments_overdue escalates to NOTIFY",
+        "brainless pulse summary records commitment status"
+      ],
+      "test_file": "tests/test_brainless_ops.py"
+    },
+    {
+      "monitor": "live_change_journal_enforcement",
+      "coverage": [
+        "journal required fields",
+        "append-only live change journal regression",
+        "golden/canary discipline helpers"
+      ],
+      "test_file": "tests/test_live_change_discipline.py"
+    },
+    {
+      "monitor": "state_digest_commitment_surface",
+      "coverage": [
+        "commitments_overdue appears in digest",
+        "digest exposes stale direction and live/deadman facts"
+      ],
+      "test_file": "tests/test_state_digest.py"
+    }
+  ],
+  "next_action": "Run agy_flag_check and clock_schema_drift rows next unless 13:00Z e6db auto-return verification or live ladder interrupts."
+}

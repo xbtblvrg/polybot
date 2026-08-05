@@ -1,0 +1,129 @@
+{
+  "admitted_wallets": [],
+  "capture_watch_wallets": [
+    {
+      "forward_only": true,
+      "move_slice_keys": [
+        "000-060|<=0.25",
+        "060-120|0.25-0.50",
+        "060-120|0.50-0.75",
+        "120-180|0.25-0.50",
+        "120-180|0.50-0.75",
+        "120-180|<=0.25",
+        "180-240|0.25-0.50",
+        "180-240|>0.75",
+        "240-300|0.50-0.75"
+      ],
+      "paper_measurement_only": true,
+      "promotion_authority": false,
+      "queue_rank": 0,
+      "slice_freeze": {
+        "forward_n": 0,
+        "reason": "fable_2026-07-30T08:34:00Z_forward_only_zero_retrospective_credit",
+        "retrospective_and_forward_may_be_summed": false,
+        "retrospective_n": 720,
+        "status": "FROZEN_FORWARD_ONLY_PAPER_LANE"
+      },
+      "wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77",
+      "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+    }
+  ],
+  "effective_at": "2026-07-30T08:33:31.388752+00:00",
+  "flow_stage": "LEARN/OBSERVE/PROMOTE",
+  "forward_only_gate": {
+    "both_halves_pnl_excluding_top_1_market_positive": true,
+    "forward_n_min": 200,
+    "retrospective_credit_allowed": false,
+    "venue_reachable_share_pct_min": 40.0
+  },
+  "generated_at": "2026-07-30T08:33:31.388752+00:00",
+  "kind": "wide_exact_policy_frozen_manifest",
+  "live_orders_allowed": false,
+  "manifest_id": "widemanifest_028b4f2f58fb5fa7e354b31df217e5f7",
+  "observation_deadline_at": "2026-07-31T08:33:31.388752+00:00",
+  "observation_window_s": 86400,
+  "paper_only": true,
+  "policy_family": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+  "promotion_admitted_wallets": [],
+  "schema_version": 1,
+  "score_run_id": "bac25_forward_only",
+  "terminal_outcome_on_deadline": {
+    "deadline_extension_allowed": false,
+    "live_authority": false,
+    "policy_family_outcomes_at_deadline": {
+      "full_sample": {
+        "condition": "forward_post_fee_pnl_usd<0 and forward_n>=200",
+        "live_authority": false,
+        "policy_family": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "promotion_authority": false,
+        "refuse_alias_reregistration": true,
+        "sample_branch": "n>=200",
+        "status": "MEASURED_NEGATIVE_FULL_SAMPLE",
+        "stop_writer": true,
+        "terminal": true,
+        "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+      },
+      "insufficient_sample": {
+        "condition": "forward_post_fee_pnl_usd<0 and forward_n<200",
+        "live_authority": false,
+        "policy_family": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "promotion_authority": false,
+        "refuse_alias_reregistration": true,
+        "sample_branch": "n<200",
+        "status": "MEASURED_NEGATIVE_INSUFFICIENT_SAMPLE",
+        "stop_writer": true,
+        "terminal": true,
+        "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+      },
+      "nonnegative_admissible": {
+        "condition": "forward_post_fee_pnl_usd>=0 and admission_eligible true",
+        "live_authority": false,
+        "promotion_authority": false,
+        "refuse_alias_reregistration": true,
+        "status": "MEASURED_ADMISSIBLE",
+        "stop_writer": true,
+        "terminal": true
+      },
+      "nonnegative_inadmissible": {
+        "condition": "forward_post_fee_pnl_usd>=0 and forward_n>=200 and admission_eligible false",
+        "live_authority": false,
+        "promotion_authority": false,
+        "reason_source": "lane.checks",
+        "refuse_alias_reregistration": true,
+        "status": "MEASURED_INADMISSIBLE_CONCENTRATION",
+        "stop_writer": true,
+        "terminal": true
+      },
+      "nonnegative_insufficient_sample": {
+        "condition": "forward_post_fee_pnl_usd>=0 and forward_n<200",
+        "live_authority": false,
+        "promotion_authority": false,
+        "reason_source": "lane.checks",
+        "refuse_alias_reregistration": true,
+        "status": "MEASURED_INADMISSIBLE_INSUFFICIENT_SAMPLE",
+        "stop_writer": true,
+        "terminal": true
+      },
+      "zero_intent_generation": {
+        "condition": "forward_n==0 at observation deadline",
+        "deadline_extension_allowed": false,
+        "live_authority": false,
+        "policy_family": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "promotion_authority": false,
+        "reason_source": [
+          "forward_n_eq_0"
+        ],
+        "refuse_alias_reregistration": true,
+        "status": "PARK_ZERO_INTENT_GENERATION",
+        "stop_writer": true,
+        "terminal": true,
+        "wide_policy_fingerprint": "bac25beda563430ef4f482544eccda250f4e3f7eb3bed91362fb70093dbc1fce"
+      }
+    },
+    "promotion_authority": false,
+    "reason_source": "lane.refusal_reasons_at_deadline",
+    "status": "PARK_FORWARD_EVIDENCE_REFUSED",
+    "stop_writer": true,
+    "terminal": true
+  }
+}

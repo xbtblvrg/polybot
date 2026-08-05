@@ -1,0 +1,69 @@
+{
+  "acceptance": {
+    "decision": "RETIRED_PERMANENT_NAMED_CONSTANT_NO_FURTHER_RETRACE",
+    "signed_sum_matches_residual_within_one_cent": true,
+    "unique_residual_tx_hash": null,
+    "unmapped_class": "unknown_account_value_identity_residual",
+    "unmapped_class_reason": "all USDC transfers in the window are classified as fill or redemption and other-counterparty rows are empty; the canonical residual is an account-value identity difference, the exact baseline balance sample failed with explorer 403, and multiple ordinary redemption txs are near the residual so no unique tx hash is admissible",
+    "within_20_rows": true
+  },
+  "canonical_cash_diff_residual_usd": 10.328578,
+  "enumerated_transfer_signed_sum_usd": -19.215448,
+  "flow_stage": "DEFEND/SELF-DEV",
+  "generated_at": "2026-07-31T12:20:29.908388+00:00",
+  "kind": "order109_usdc_transfer_ledger",
+  "ledger_row_count": 6,
+  "ledger_rows": [
+    {
+      "classification": "fill",
+      "enumeration": "complete",
+      "signed_sum_usd": -3527.155963,
+      "transfer_count": 2172
+    },
+    {
+      "classification": "redemption_payout",
+      "enumeration": "complete",
+      "signed_sum_usd": 3507.940515,
+      "transfer_count": 751
+    },
+    {
+      "classification": "fee",
+      "enumeration": "not_separable_from_matchOrders_fill_settlement_transfer",
+      "signed_sum_usd": 0.0,
+      "transfer_count": 0
+    },
+    {
+      "classification": "gas",
+      "enumeration": "not_a_usdc_transfer; Polygon gas is paid in native token",
+      "signed_sum_usd": 0.0,
+      "transfer_count": 0
+    },
+    {
+      "classification": "topup_or_withdrawal",
+      "enumeration": "complete_after_topup_baseline",
+      "signed_sum_usd": 0,
+      "transfer_count": 0
+    },
+    {
+      "classification": "unknown_account_value_identity_residual",
+      "enumeration": "UNENUMERABLE_AS_USDC_TRANSFER",
+      "reason": "all USDC transfers in the window are classified as fill or redemption and other-counterparty rows are empty; the canonical residual is an account-value identity difference, the exact baseline balance sample failed with explorer 403, and multiple ordinary redemption txs are near the residual so no unique tx hash is admissible",
+      "signed_sum_usd": 29.544026,
+      "transfer_count": 0
+    }
+  ],
+  "ledger_signed_sum_usd": 10.328578,
+  "raw_transfer_count": 2923,
+  "schema_version": 1,
+  "source_artifact": "data/research/wallet_copy_order109_usdc_transfer_audit_raw.json",
+  "source_status": "PASS_TX_HASH_OR_TIMESTAMP_SKEW_NAMED",
+  "window": {
+    "collateral_decimals": 6,
+    "collateral_token": "0xc011a7e12a19f7b1f670d46f03b03f3342e82dfb",
+    "end_iso": "2026-07-31T12:20:00Z",
+    "end_ts": 1785500400.0,
+    "start_iso": "2026-07-05T12:55:00Z",
+    "start_ts": 1783256100.0,
+    "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "band_end_s": 300.0,
+  "band_start_s": 240.0,
+  "candidate_id": "market_cohort_alive_94f98a2e7537",
+  "diagnostics": {
+    "lines_seen": 250000,
+    "not_rtds_btc5m_trade": 212578,
+    "other_wallet": 37196,
+    "outside_band": 147,
+    "rows_loaded": 250000
+  },
+  "generated_at": "2026-07-14T17:00:04.515979+00:00",
+  "kind": "member_source_active_windows_report",
+  "runtime_s": 1.419942,
+  "schema_version": 1,
+  "since_ts": 1784045040.0,
+  "source_active_windows": 3,
+  "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+  "target_met": false,
+  "target_windows": 6,
+  "windows": [
+    {
+      "candidate_id": "market_cohort_alive_94f98a2e7537",
+      "condition_id": "0xc8217b8e96849f19fa4e53b715fe3eff9ca69b244c20c88107f6442ffa8d4de1",
+      "first_event_ts": 1784048044.0,
+      "last_event_ts": 1784048056.0,
+      "market_slug": "btc-updown-5m-1784047800",
+      "max_seconds_from_open": 256.0,
+      "min_seconds_from_open": 244.0,
+      "outcomes": [
+        "Down",
+        "Up"
+      ],
+      "source_usd": 91.26812,
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "wallet_eligible_orders": 14,
+      "window_start_s": 1784047800.0
+    },
+    {
+      "candidate_id": "market_cohort_alive_94f98a2e7537",
+      "condition_id": "0x2cf4de789c45eb1d8d34120ff62ae03fc6ebf4a71db28a671e5c250eb7eb0a47",
+      "first_event_ts": 1784047750.0,
+      "last_event_ts": 1784047750.0,
+      "market_slug": "btc-updown-5m-1784047500",
+      "max_seconds_from_open": 250.0,
+      "min_seconds_from_open": 250.0,
+      "outcomes": [
+        "Up"
+      ],
+      "source_usd": 28.8,
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "wallet_eligible_orders": 2,
+      "window_start_s": 1784047500.0
+    },
+    {
+      "candidate_id": "market_cohort_alive_94f98a2e7537",
+      "condition_id": "0x7fad7707b55ef4f84c67b750655f3762ffd92c3d00e99ec4f007d1f58b2104be",
+      "first_event_ts": 1784047440.0,
+      "last_event_ts": 1784047482.0,
+      "market_slug": "btc-updown-5m-1784047200",
+      "max_seconds_from_open": 282.0,
+      "min_seconds_from_open": 240.0,
+      "outcomes": [
+        "Down",
+        "Up"
+      ],
+      "source_usd": 1465.217595,
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "wallet_eligible_orders": 63,
+      "window_start_s": 1784047200.0
+    }
+  ]
+}

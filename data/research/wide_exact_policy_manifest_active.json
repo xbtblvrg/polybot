@@ -1,0 +1,12 @@
+{
+  "kind": "wide_exact_policy_active_manifest_pointer",
+  "live_orders_allowed": false,
+  "manifest_id": "widemanifest_2896021da5c4db6a4b31d1fd30867957",
+  "manifest_path": "data/research/wide_exact_policy_manifest_wide_20260805T042354Z.json",
+  "paper_only": true,
+  "published_at_s": 1785903839.39615,
+  "schema_version": 1,
+  "source_alpha_age_h": 0.011937,
+  "source_alpha_report": "data/research/alpha_decay_report_wide_20260805T035214Z.json",
+  "source_alpha_status": "PASS_CURRENT_SOURCE"
+}

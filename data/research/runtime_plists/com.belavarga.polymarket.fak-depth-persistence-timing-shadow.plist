@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PATH</key>
+		<string>/Users/belavarga/.codex/packages/standalone/releases/0.144.6-aarch64-apple-darwin/codex-path:/Users/belavarga/.codex/packages/standalone/releases/0.144.6-aarch64-apple-darwin/codex-path:/Users/belavarga/.codex/tmp/arg0/codex-arg0z5JGEf:/opt/homebrew/bin:/usr/local/bin:/Users/belavarga/.local/bin:/Users/belavarga/bin:/usr/bin:/bin:/usr/sbin:/sbin</string>
+		<key>SSL_CERT_FILE</key>
+		<string>/opt/homebrew/lib/python3.14/site-packages/certifi/cacert.pem</string>
+	</dict>
+	<key>KeepAlive</key>
+	<true/>
+	<key>Label</key>
+	<string>com.belavarga.polymarket.fak-depth-persistence-timing-shadow</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/opt/homebrew/opt/python@3.14/bin/python3.14</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_fak_depth_persistence_timing_shadow_service.py</string>
+	</array>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>StandardErrorPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/runtime_logs/fak_depth_persistence_timing_shadow.err.log</string>
+	<key>StandardOutPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/runtime_logs/fak_depth_persistence_timing_shadow.out.log</string>
+	<key>ThrottleInterval</key>
+	<integer>10</integer>
+	<key>WorkingDirectory</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent</string>
+</dict>
+</plist>

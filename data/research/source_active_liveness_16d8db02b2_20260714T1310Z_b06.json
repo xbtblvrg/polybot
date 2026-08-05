@@ -1,0 +1,127 @@
+{
+  "band": {
+    "max_offset_s": 300.0,
+    "max_price": 0.5,
+    "min_offset_s": 0.0
+  },
+  "file_size_bytes": 202942123206,
+  "flow_stage": "LIVE/PROMOTE",
+  "generated_at": "2026-07-14T13:13:04.590340+00:00",
+  "kind": "source_active_windows_report_v1",
+  "latest_rows": [
+    {
+      "event_iso": "2026-07-14T13:00:53Z",
+      "event_ts": 1784034053.0,
+      "market_slug": "btc-updown-5m-1784034000",
+      "offset_s": 53.0,
+      "outcome": "Down",
+      "price": 0.67,
+      "received_iso": "2026-07-14T13:00:53.709725Z",
+      "received_ts": 1784034053.709725,
+      "size": 0.74,
+      "transaction_hash": "0x6e623b59657a4da3f46c58b28cef2d57806b0167eba775c1788c19fa58ed9496",
+      "window_start_s": 1784034000.0
+    },
+    {
+      "event_iso": "2026-07-14T13:00:53Z",
+      "event_ts": 1784034053.0,
+      "market_slug": "btc-updown-5m-1784034000",
+      "offset_s": 53.0,
+      "outcome": "Down",
+      "price": 0.67,
+      "received_iso": "2026-07-14T13:00:53.906526Z",
+      "received_ts": 1784034053.906526,
+      "size": 4.26,
+      "transaction_hash": "0x24fc303acfb7710daf947a62bb7d95767333e752a190c3fe1d2c4ad4c7a094c8",
+      "window_start_s": 1784034000.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:16Z",
+      "event_ts": 1784034376.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 76.0,
+      "outcome": "Up",
+      "price": 0.66,
+      "received_iso": "2026-07-14T13:06:16.584701Z",
+      "received_ts": 1784034376.584701,
+      "size": 5.0,
+      "transaction_hash": "0xe6559a8f0c2af9ade726c0b8d4ecab05b7e1e68e9924fcf0181042e498b422d3",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:16Z",
+      "event_ts": 1784034376.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 76.0,
+      "outcome": "Up",
+      "price": 0.66,
+      "received_iso": "2026-07-14T13:06:16.730948Z",
+      "received_ts": 1784034376.730948,
+      "size": 5.0,
+      "transaction_hash": "0xe6559a8f0c2af9ade726c0b8d4ecab05b7e1e68e9924fcf0181042e498b422d3",
+      "window_start_s": 1784034300.0
+    }
+  ],
+  "rtds_jsonl": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+  "scan_tail_bytes": 384000000,
+  "since_iso": "2026-07-13T13:13:04.603231Z",
+  "since_ts": 1783948384.603231,
+  "source_wallet": "0x16d8db02b2aca91e58f50275197836e4745ee437",
+  "summary": {
+    "btc5m_buy_rows_since": 4,
+    "btc5m_buy_windows_since": 2,
+    "policy_eligible_rows": 0,
+    "policy_eligible_tally_status": "PENDING",
+    "policy_eligible_windows": 0,
+    "required_source_active_windows": 1,
+    "source_active_rows": 4,
+    "source_active_tally_status": "PASS",
+    "source_active_windows": 2
+  },
+  "windows": [
+    {
+      "first_event_iso": "2026-07-14T13:00:53Z",
+      "first_policy_event_iso": "",
+      "first_policy_received_iso": "",
+      "first_received_iso": "2026-07-14T13:00:53.709725Z",
+      "last_event_iso": "2026-07-14T13:00:53Z",
+      "last_policy_event_iso": "",
+      "last_policy_received_iso": "",
+      "last_received_iso": "2026-07-14T13:00:53.906526Z",
+      "le_max_price_rows": 0,
+      "market_slug": "btc-updown-5m-1784034000",
+      "max_offset_s": 53.0,
+      "min_offset_s": 53.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.67
+      ],
+      "rows": 2,
+      "window_start_s": 1784034000.0
+    },
+    {
+      "first_event_iso": "2026-07-14T13:06:16Z",
+      "first_policy_event_iso": "",
+      "first_policy_received_iso": "",
+      "first_received_iso": "2026-07-14T13:06:16.584701Z",
+      "last_event_iso": "2026-07-14T13:06:16Z",
+      "last_policy_event_iso": "",
+      "last_policy_received_iso": "",
+      "last_received_iso": "2026-07-14T13:06:16.730948Z",
+      "le_max_price_rows": 0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "max_offset_s": 76.0,
+      "min_offset_s": 76.0,
+      "outcomes": [
+        "Up"
+      ],
+      "prices": [
+        0.66
+      ],
+      "rows": 2,
+      "window_start_s": 1784034300.0
+    }
+  ]
+}

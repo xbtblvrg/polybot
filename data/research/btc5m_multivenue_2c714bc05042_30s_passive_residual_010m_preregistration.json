@@ -1,0 +1,54 @@
+{
+  "calibration_error_margin": 0.03,
+  "cell_id": "multivenue_30s_passive_residual_010m",
+  "checksum": "998716eb34cd7621931a51f073bbafa8de3b316028b6bd8fe17667e81c15bfbb",
+  "clock_alignment_tolerance_s": 1.0,
+  "clock_resolution_s": 1,
+  "consensus_rule": "two_of_three_directional_agreement",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "execution_mode": "passive",
+  "execution_modes": [
+    "passive"
+  ],
+  "generation_checksum": "2c714bc050429e8c139521d7aa7e69a47bfd4dfd510456084a618ece61cf2c32",
+  "generation_family": "maker_first_residual",
+  "generation_id": "ttl-maker-first-residual-20260725",
+  "immutable": true,
+  "kind": "btc5m_multivenue_residual_cell_preregistration",
+  "live_orders_allowed": false,
+  "model_checksum": "2c714bc050429e8c139521d7aa7e69a47bfd4dfd510456084a618ece61cf2c32",
+  "offsets_s": [
+    15,
+    30,
+    45,
+    60
+  ],
+  "order_usd": 1.0,
+  "paper_only": true,
+  "passive_fill_model": "sequence_continuous_queue_depletion_v2",
+  "passive_fill_model_checksum": "fd8a5b17174a0616f5f77061e472ef550cbdaaf0e16620f9289c7ffaaa510f17",
+  "probability_calibration": "frozen_logistic_median_return_reference_sigma",
+  "reference_sigma_1s": 0.00012,
+  "registered_before_outcome_inspection": true,
+  "residual_definition": "consensus_probability_minus_executable_price",
+  "residual_threshold": 0.01,
+  "residual_thresholds": [
+    0.01,
+    0.02,
+    0.03,
+    0.04,
+    0.05
+  ],
+  "schema_version": 1,
+  "signal_offset_s": 30,
+  "slippage_margin": 0.005,
+  "training_cutoff": "2026-07-25T07:10:34Z",
+  "venues": [
+    "binance",
+    "coinbase",
+    "kraken"
+  ]
+}

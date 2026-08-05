@@ -1,0 +1,23 @@
+{
+  "adjudicated_at": "2026-07-14T08:59:50Z",
+  "commitment_id": "attribution_0x11c0_default_demote_20260713_12z",
+  "direction_id": "2026-07-13T07:46Z-fable-12z-attribution",
+  "disposition": "REPORTED_ZERO_LIVE_ATTRIBUTION_DEMOTION_DEFERRED_TO_FABLE",
+  "flow_stage": "LIVE/ROTATE/DEFEND",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "reason_not_demoted_by_this_packet": "The current research-development pass is no-live-touch and must not mutate live routing state; 0x11c0 remains a qualified active-set member until Fable ratifies demotion from this evidence packet.",
+  "runtime_state": {
+    "current_selected_wallet": "0xc03c7cc1478a750a59ce44183ede1b85e7606cd9",
+    "qualified_member_count": 4,
+    "wallet_present_in_runtime_roster": true
+  },
+  "source_wallet": "0x11c058db73b3c3c5322da3caf5e94c41486e34b0",
+  "summary": {
+    "live_orders_today": 0,
+    "live_fills_today": 0,
+    "live_pnl_today_usd": 0.0,
+    "packet_action": "HANDOFF_FOR_FABLE_RATIFICATION",
+    "preflight_latest_action": "PREPARED_NOT_ADMITTED"
+  }
+}

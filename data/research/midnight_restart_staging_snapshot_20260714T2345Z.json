@@ -1,0 +1,356 @@
+{
+  "deadman": {
+    "accepted_order_idle_s": 2704.039929,
+    "can_trade": true,
+    "consecutive_incidents": 0,
+    "deadman_warning": null,
+    "eligible_drought_status": "OK",
+    "failed_gates": [
+      "adjusted_consecutive_missed_lte_1:False",
+      "morning_bench_governed_until_expiry:False"
+    ],
+    "gated_quiet_classification": "MEASURED_SOURCE_QUIET",
+    "gated_quiet_status": "PASS",
+    "liveness_source": "accepted_order",
+    "liveness_ts": "2026-07-14T23:00:23.684448+00:00",
+    "status": "MEASURED_SOURCE_QUIET"
+  },
+  "digest_grade_basis": {
+    "latest_direction": "## 2026-07-14T23:34Z fable DIRECTION [LIVE/DEFEND] \u2014 hourly pulse under standing TRIGGERED, 11 min before the 23:45Z snapshot: digits identical to the 23:18Z ruling, sole submitter and both deadmen re-verified on disk; the only observed change (failed_gates null -> two diagnostic entries) is ruled reporting-only; 23:45Z snapshot and 00:00Z RESTART-PAYLOAD-20260715T0000Z hold verbatim",
+    "latest_status": "## 2026-07-14T23:14Z codex STATUS [LIVE/DEFEND/SELF-DEV]",
+    "material_used_present": true,
+    "note": "Digest carried direction, live/deadman/PnL/volume/routing/e6db facts; custom staging artifact adds member decomposition and guard-state latency details read directly from source artifacts.",
+    "state_digest_generated_at": "2026-07-14T23:46:10Z"
+  },
+  "e6db_verdict_input": {
+    "actual_minus_required_win_rate_pp": -5.7012,
+    "actual_win_rate": 0.44,
+    "actual_win_rate_pct": 44.0,
+    "avg_loss_per_loser_abs_usd": 2.399106,
+    "avg_win_per_winner_usd": 2.427949,
+    "basis": "response_filled_size_usd realized PnL; expected_fee_usd is diagnostic and not subtracted again",
+    "classification": "structural_negative_edge",
+    "day_utc": "2026-07-14",
+    "diagnostic_pre_expected_fee_pnl_usd": -9.47753,
+    "expected_fee_share_of_gross_pnl_swing_pct": 3.551348,
+    "expected_fee_share_of_realized_loss_pct": 31.123082,
+    "expected_fee_usd": 4.282566,
+    "fees_flip_sign": false,
+    "fills": 50,
+    "flat_windows": 0,
+    "flow_stage": "LIVE/DEFEND",
+    "gap_in_sigma": -0.806291,
+    "gap_sigma_pp": 7.070942,
+    "gross_loss_abs_usd": 67.174981,
+    "gross_win_pnl_usd": 53.414885,
+    "losing_windows": 28,
+    "pre_expected_fee_still_negative": true,
+    "realized_pnl_usd": -13.760096,
+    "required_win_rate_at_payoff_shape": 0.497012,
+    "required_win_rate_at_payoff_shape_pct": 49.701238,
+    "resolved_windows": 50,
+    "rule": "fee_drag if expected fees alone flip the sign; structural_negative_edge if pre-fee diagnostic remains negative and actual win rate trails required payoff-shape breakeven by more than 2pp; otherwise variance",
+    "source_wallet": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+    "winning_windows": 22
+  },
+  "flow_stage": "LIVE/DEFEND/ROTATE/SELF-DEV",
+  "generated_at": "2026-07-14T23:47:45.011207Z",
+  "guard": {
+    "active_set_evaluate_all_runtime_members_per_cycle": null,
+    "generated_at": "2026-07-14T23:47:17.471184+00:00",
+    "live_orders_allowed": true,
+    "paper_only": false,
+    "pid": 12881,
+    "runtime_selected_candidate": "rtds_live_band_e2542ab40de0",
+    "runtime_selected_wallet": null,
+    "status": "LIVE_GUARD_RUNNING"
+  },
+  "guard_loop_latency_baseline": {
+    "cycle_started_at": "2026-07-14T23:46:40.798391Z",
+    "digest_line": "guard_loop_profile: status=MEASURING_GUARD_CYCLE_CADENCE total_s=34.290312 target_lt=15.0 latency_trigger=TRIGGERED/40 scope=current_guard_pid pid=12881 historical=TRIGGERED/40 recent=[('2026-07-14T23:43:48.856416+00:00', 48.891646, 9.11653), ('2026-07-14T23:44:23.671913+00:00', 36.128143, 9.471407), ('2026-07-14T23:45:04.886596+00:00', 36.079104, 9.444649), ('2026-07-14T23:45:37.771207+00:00', 34.290312, 9.620739)] cadence={'flow_stage': 'LIVE/LEARN/SELF-DEV', 'guard_slow_path_every_n_cycles': 4, 'rule': 'detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced', 'self_feed_ledger_diff_cycle_offset': 0, 'self_feed_ledger_diff_due': True, 'self_feed_ledger_diff_every_n_cycles': 4, 'shadow_lanes_cycle_offset': 2, 'shadow_lanes_due': False, 'shadow_lanes_every_n_cycles': 4, 'watch_tier_dataapi_poller_cycle_offset': 1, 'watch_tier_dataapi_poller_due': False, 'watch_tier_dataapi_poller_every_n_cycles': 4} top_stages=[('active_set_dataapi_poller', 10.032285), ('active_set_rtds_premerge', 9.620739), ('active_set_live_execution_probes', 7.123999), ('self_feed_ledger_diff', 3.631747), ('live_execution', 1.719719), ('select_active_set_runtime', 1.14337), ('routing_shadow_validation', 0.50202), ('active_set_cap_step_revert_post_live', 0.333329)] speed_baseline=status=REGRESSION baseline=2026-07-10T18:34:19Z regressions=4:['guard_cycle_total_s', 'guard_cycle_recent_p50_s', 'guard_cycle_recent_p90_s', 'signal_age_p90_s'] guard=37.397605 signal_p90=93.292099 heartbeat=932.0 brainless=276.0 ask_fable=88.601489 digest=27.15239 signal_to_order_p90=66.202073",
+    "generated_at": "2026-07-14T23:47:17.471184+00:00",
+    "live_build_max_observed_age_s": 30.0,
+    "slow_path_cadence": {
+      "flow_stage": "LIVE/LEARN/SELF-DEV",
+      "guard_slow_path_every_n_cycles": 4,
+      "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+      "self_feed_ledger_diff_cycle_offset": 0,
+      "self_feed_ledger_diff_due": false,
+      "self_feed_ledger_diff_every_n_cycles": 4,
+      "shadow_lanes_cycle_offset": 2,
+      "shadow_lanes_due": true,
+      "shadow_lanes_every_n_cycles": 4,
+      "watch_tier_dataapi_poller_cycle_offset": 1,
+      "watch_tier_dataapi_poller_due": false,
+      "watch_tier_dataapi_poller_every_n_cycles": 4
+    },
+    "status": "MEASURING_GUARD_CYCLE_CADENCE",
+    "target_median_iteration_lt_s": 15.0,
+    "top_stage_timers": [
+      {
+        "duration_s": 13.839509,
+        "elapsed_s": 24.24607,
+        "name": "active_set_dataapi_poller"
+      },
+      {
+        "duration_s": 9.267102,
+        "elapsed_s": 10.406561,
+        "name": "active_set_rtds_premerge"
+      },
+      {
+        "duration_s": 9.235752,
+        "elapsed_s": 36.215765,
+        "name": "active_set_live_execution_probes"
+      },
+      {
+        "duration_s": 3.235932,
+        "elapsed_s": 40.637857,
+        "name": "guard_shadow_lanes"
+      },
+      {
+        "duration_s": 2.733943,
+        "elapsed_s": 26.980013,
+        "name": "live_execution"
+      },
+      {
+        "duration_s": 1.068722,
+        "elapsed_s": 1.075025,
+        "name": "select_active_set_runtime"
+      },
+      {
+        "duration_s": 0.455931,
+        "elapsed_s": 36.67238,
+        "name": "routing_shadow_validation"
+      },
+      {
+        "duration_s": 0.34747,
+        "elapsed_s": 37.054545,
+        "name": "self_feed_ledger_diff"
+      }
+    ],
+    "total_s_before_state_write": 40.637869
+  },
+  "id": "STAGING-SNAPSHOT-20260714T2345Z",
+  "inputs": {
+    "deadman_state": "data/research/order_flow_deadman_state.json",
+    "e6db_autopsy": "data/research/e6db_loser_autopsy_latest.json",
+    "guard_state": "data/research/wallet_copy_live_guard_state.json",
+    "member_decomposition": "data/research/wallet_copy_member_day_pnl_decomposition_latest.json",
+    "outflow_state": "data/research/wallet_outflow_deadman_state.json",
+    "routing_shadow": "data/research/routing_shadow_validation_latest.json",
+    "state_digest": "data/research/state_digest.json"
+  },
+  "kind": "midnight_restart_staging_snapshot",
+  "live_path_mutated": false,
+  "member_day_decomposition": {
+    "day_utc": "2026-07-14",
+    "generated_at": "2026-07-14T23:45:28.449624+00:00",
+    "nonzero_members_sorted_by_pnl": [
+      {
+        "candidate_id": "runtime_auto_degrade_e6db20932f",
+        "enabled": true,
+        "expected_fee_usd": 4.282566,
+        "fills": 50,
+        "latest_submitted_at": "2026-07-14T07:50:22.413526+00:00",
+        "orders": 61,
+        "pnl_usd": -13.760096,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "rejects": 11,
+        "resolved_fills": 50,
+        "source_wallet": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+        "source_wallet_short": "0xe6db...7dac"
+      },
+      {
+        "candidate_id": "cohort_alive_admit_f418d3a1",
+        "enabled": true,
+        "expected_fee_usd": 0.758715,
+        "fills": 9,
+        "latest_submitted_at": "2026-07-14T17:31:05.226570+00:00",
+        "orders": 13,
+        "pnl_usd": -9.733318,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "rejects": 4,
+        "resolved_fills": 9,
+        "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+        "source_wallet_short": "0xf418...95a3"
+      },
+      {
+        "candidate_id": "",
+        "enabled": false,
+        "expected_fee_usd": 0.599381,
+        "fills": 7,
+        "latest_submitted_at": "2026-07-14T17:05:39.310290+00:00",
+        "orders": 9,
+        "pnl_usd": -6.757607,
+        "policy_id": "",
+        "rejects": 2,
+        "resolved_fills": 7,
+        "source_wallet": "0xd9189593701e94574ee140295a2ff6042317813b",
+        "source_wallet_short": "0xd918...813b"
+      },
+      {
+        "candidate_id": "market_cohort_alive_0589b9dd4791",
+        "enabled": true,
+        "expected_fee_usd": 0.169281,
+        "fills": 2,
+        "latest_submitted_at": "2026-07-14T22:56:04.414761+00:00",
+        "orders": 3,
+        "pnl_usd": -0.188476,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "rejects": 1,
+        "resolved_fills": 2,
+        "source_wallet": "0xf54209347a46f0f19fbd011efe9d0589b9dd4791",
+        "source_wallet_short": "0xf542...4791"
+      },
+      {
+        "candidate_id": "",
+        "enabled": false,
+        "expected_fee_usd": 0.0,
+        "fills": 0,
+        "latest_submitted_at": "2026-07-14T11:55:56.557336+00:00",
+        "orders": 2,
+        "pnl_usd": 0.0,
+        "policy_id": "",
+        "rejects": 2,
+        "resolved_fills": 0,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "source_wallet_short": "0xa689...559b"
+      },
+      {
+        "candidate_id": "rtds_live_band_e2542ab40de0",
+        "enabled": true,
+        "expected_fee_usd": 0.336344,
+        "fills": 4,
+        "latest_submitted_at": "2026-07-14T16:50:49.881887+00:00",
+        "orders": 5,
+        "pnl_usd": 1.880994,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "rejects": 1,
+        "resolved_fills": 4,
+        "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+        "source_wallet_short": "0xc50d...0de0"
+      },
+      {
+        "candidate_id": "",
+        "enabled": false,
+        "expected_fee_usd": 0.425865,
+        "fills": 5,
+        "latest_submitted_at": "2026-07-14T17:53:10.496422+00:00",
+        "orders": 8,
+        "pnl_usd": 8.32866,
+        "policy_id": "",
+        "rejects": 3,
+        "resolved_fills": 5,
+        "source_wallet": "0xdf2c0702fc00be90bd795234a86e28f1ed39118a",
+        "source_wallet_short": "0xdf2c...118a"
+      }
+    ],
+    "total": {
+      "avg_filled_size_usd": 2.357687,
+      "avg_resolved_filled_size_usd": 2.357687,
+      "candidate_id": "",
+      "enabled": false,
+      "expected_fee_share_of_day_fee_pct": 100.0,
+      "expected_fee_share_of_filled_cost_pct": 3.620185,
+      "expected_fee_usd": 6.572152,
+      "filled_cost_usd": 181.541877,
+      "fills": 77,
+      "flat_fills": 0,
+      "latest_submitted_at": "2026-07-14T22:56:04.414761+00:00",
+      "loss_fills": 44,
+      "orders": 101,
+      "payout_usd": 161.312034,
+      "pnl_usd": -20.229843,
+      "policy_id": "",
+      "rejects": 24,
+      "resolved_cost_usd": 181.541877,
+      "resolved_expected_fee_share_of_day_fee_pct": 100.0,
+      "resolved_expected_fee_share_of_resolved_cost_pct": 3.620185,
+      "resolved_expected_fee_usd": 6.572152,
+      "resolved_fills": 77,
+      "source_wallet": "TOTAL",
+      "unresolved_fills": 0,
+      "win_fills": 33
+    }
+  },
+  "next_action": "At 2026-07-15T00:00Z freeze from this staging packet, render R6 verdict, apply any conditional allowlist before restart, enable eval-all in managed launchd restart, then write restart verification JSON.",
+  "outflow_deadman": {
+    "checked_at": "2026-07-14T23:45:28.039938Z",
+    "incident": false,
+    "status": "OK",
+    "unmatched_outflows": []
+  },
+  "pnl_and_volume": {
+    "adjusted_participation": {
+      "adjusted_active_windows": 2,
+      "adjusted_consecutive_missed_active_windows": 2,
+      "adjusted_incident_triggered": false,
+      "adjusted_missed_active_windows": 2,
+      "basis": "skip_taxonomy_current_generation",
+      "correct_skip_windows": 0,
+      "incident_threshold_windows": 6,
+      "measured_skip_windows": 0,
+      "no_signal_windows": 0,
+      "participation_equivalent_windows": 0,
+      "protected_skip_reason_counts": {
+        "window_time_gte_180s": 2
+      },
+      "protected_skip_windows": 2,
+      "skip_taxonomy_counts": {
+        "PROTECTED_SKIP": 2
+      },
+      "source_coverage_denominator_windows": 2,
+      "source_coverage_rate_pct": 100.0,
+      "source_coverage_windows": 2
+    },
+    "day_fills": 77,
+    "day_pnl_usd": -20.229843,
+    "defense_tripwires": null,
+    "denominator_windows": 288,
+    "incident_triggered": false,
+    "reconciled_actual_delta_usd": 7.255503,
+    "since_topup_actual_delta_usd": 6.291162,
+    "source_coverage": {
+      "basis": "skip_taxonomy_current_generation",
+      "covered_windows": 2,
+      "denominator_windows": 2,
+      "no_signal_windows": 0,
+      "rate_pct": 100.0
+    },
+    "windows_filled": 77,
+    "windows_submitted": 80
+  },
+  "reporting_only": true,
+  "snapshot_window": "2026-07-14T23:45Z",
+  "source_direction": "2026-07-14T23:34Z fable DIRECTION; 23:45Z snapshot and 00:00Z RESTART-PAYLOAD-20260715T0000Z hold verbatim",
+  "wave_routing_shadow_input": {
+    "copyintent_parity_conflicts": 0,
+    "copyintent_parity_status": "PASS",
+    "coverage_accounted_member_count": 17,
+    "extra_member_split": {
+      "0x3048d65321be3497164cdfc2996f94f98a2e7537": 1,
+      "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d": 1,
+      "0x5e4aa0f176014729f5168e821ce614484fbebe6b": 23,
+      "0xa6896d11f76dfa2820662c1f441496f51553559b": 1,
+      "0xac0586732786905d285959613f1813bc89246729": 15,
+      "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0": 1,
+      "0xd9189593701e94574ee140295a2ff6042317813b": 13,
+      "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": 8,
+      "0xe6db20932faf0f9780acf75d95c74c9984407dac": 143,
+      "0xf418d3a1a941292f9c8707d62a14980c5beb95a3": 6,
+      "0xf54209347a46f0f19fbd011efe9d0589b9dd4791": 2
+    },
+    "extra_would_submit_windows": 214,
+    "generated_at": "2026-07-14T23:47:17.014922+00:00",
+    "non_denied_runtime_members": 17,
+    "one_position_cap_suppressed_windows": 103,
+    "runtime_selected_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+    "runtime_selected_wallet_source": "selected_member",
+    "selected_member_would_submit_windows": 358,
+    "selection_changes": 184,
+    "status": "ACCRUING_UNDER_PREREGISTERED_CLOCK",
+    "validation_elapsed_basis": "persisted_clock_started_at",
+    "validation_elapsed_hours": 91.023067,
+    "would_submit_windows": 604
+  }
+}

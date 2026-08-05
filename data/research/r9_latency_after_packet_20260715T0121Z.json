@@ -1,0 +1,1287 @@
+{
+  "acceptance_bar": "20 consecutive fresh-pid cycles with guard_loop_profile.total_s_before_state_write < 30s",
+  "admission_expansion_freeze": "lifted_automatically_by_r9_closure",
+  "all_under_threshold": true,
+  "artifact": "r9_latency_after_packet",
+  "breach_cycles": [],
+  "current_guard_pid": 772,
+  "flow_stage": "LIVE/DEFEND/SELF-DEV",
+  "generated_at": "2026-07-15T01:22:18.211665Z",
+  "goal_s": 15.0,
+  "max_total_s": 27.73053,
+  "median_total_s": 21.3155195,
+  "min_total_s": 16.71999,
+  "pid": 772,
+  "sample_count": 20,
+  "samples": [
+    {
+      "cycle": 3,
+      "generated_at": "2026-07-15T01:14:19.898554+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 0,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": true,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.259421,
+          "elapsed_s": 10.340678,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.284433,
+          "elapsed_s": 17.700691,
+          "name": "guard_shadow_lanes"
+        },
+        {
+          "duration_s": 2.888284,
+          "elapsed_s": 13.228972,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.015377,
+          "elapsed_s": 1.019203,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.464353,
+          "elapsed_s": 13.693399,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.344724,
+          "elapsed_s": 14.416258,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.700704
+    },
+    {
+      "cycle": 4,
+      "generated_at": "2026-07-15T01:14:51.329851+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 0,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": true,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 11.546851,
+          "elapsed_s": 24.838475,
+          "name": "active_set_live_execution_probes"
+        },
+        {
+          "duration_s": 9.344752,
+          "elapsed_s": 10.559366,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 2.732246,
+          "elapsed_s": 13.291624,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.073107,
+          "elapsed_s": 1.0764,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.482096,
+          "elapsed_s": 25.321301,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.336499,
+          "elapsed_s": 25.693016,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 26.033532
+    },
+    {
+      "cycle": 5,
+      "generated_at": "2026-07-15T01:15:07.041769+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 6,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": true,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.458215,
+          "elapsed_s": 10.544225,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 4.054524,
+          "elapsed_s": 16.90034,
+          "name": "self_feed_ledger_diff"
+        },
+        {
+          "duration_s": 1.793316,
+          "elapsed_s": 12.337554,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.017526,
+          "elapsed_s": 1.023545,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.47275,
+          "elapsed_s": 12.810404,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.311114,
+          "elapsed_s": 17.211455,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.217315
+    },
+    {
+      "cycle": 6,
+      "generated_at": "2026-07-15T01:15:40.115658+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": true,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 6,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 13.505603,
+          "elapsed_s": 24.236659,
+          "name": "active_set_dataapi_poller"
+        },
+        {
+          "duration_s": 9.540885,
+          "elapsed_s": 10.731056,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.856336,
+          "elapsed_s": 26.092995,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.1169,
+          "elapsed_s": 1.123555,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.450206,
+          "elapsed_s": 26.54328,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.312665,
+          "elapsed_s": 27.205024,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 27.210959
+    },
+    {
+      "cycle": 7,
+      "generated_at": "2026-07-15T01:15:55.712842+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 6,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": true,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.391277,
+          "elapsed_s": 10.577586,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.270209,
+          "elapsed_s": 16.719975,
+          "name": "guard_shadow_lanes"
+        },
+        {
+          "duration_s": 1.70495,
+          "elapsed_s": 12.282547,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.051838,
+          "elapsed_s": 1.05817,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.44663,
+          "elapsed_s": 12.729262,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.368303,
+          "elapsed_s": 13.449766,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 16.71999
+    },
+    {
+      "cycle": 8,
+      "generated_at": "2026-07-15T01:16:28.998939+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 6,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": true,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 14.30448,
+          "elapsed_s": 26.515137,
+          "name": "active_set_live_execution_probes"
+        },
+        {
+          "duration_s": 9.33101,
+          "elapsed_s": 10.457044,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.753603,
+          "elapsed_s": 12.210657,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.057077,
+          "elapsed_s": 1.063756,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.54225,
+          "elapsed_s": 27.058149,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.316839,
+          "elapsed_s": 27.724271,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 27.73053
+    },
+    {
+      "cycle": 9,
+      "generated_at": "2026-07-15T01:16:44.803355+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 12,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": true,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.354279,
+          "elapsed_s": 10.477089,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.968049,
+          "elapsed_s": 16.876602,
+          "name": "self_feed_ledger_diff"
+        },
+        {
+          "duration_s": 1.834268,
+          "elapsed_s": 12.311368,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.051449,
+          "elapsed_s": 1.057181,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.558614,
+          "elapsed_s": 12.87007,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.320554,
+          "elapsed_s": 17.197156,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.203359
+    },
+    {
+      "cycle": 10,
+      "generated_at": "2026-07-15T01:17:14.903560+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": true,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 12,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 10.928136,
+          "elapsed_s": 21.374386,
+          "name": "active_set_dataapi_poller"
+        },
+        {
+          "duration_s": 9.348106,
+          "elapsed_s": 10.446251,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.715473,
+          "elapsed_s": 23.089859,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.029168,
+          "elapsed_s": 1.034866,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.477914,
+          "elapsed_s": 23.567859,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.350251,
+          "elapsed_s": 24.299197,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 24.305227
+    },
+    {
+      "cycle": 11,
+      "generated_at": "2026-07-15T01:17:31.749094+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 12,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": true,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.38613,
+          "elapsed_s": 10.503079,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.310697,
+          "elapsed_s": 17.863652,
+          "name": "guard_shadow_lanes"
+        },
+        {
+          "duration_s": 2.902101,
+          "elapsed_s": 13.405192,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.044545,
+          "elapsed_s": 1.051646,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.469216,
+          "elapsed_s": 13.87453,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.320322,
+          "elapsed_s": 14.552955,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.863664
+    },
+    {
+      "cycle": 12,
+      "generated_at": "2026-07-15T01:18:02.694938+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 12,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": true,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 10.955609,
+          "elapsed_s": 24.332896,
+          "name": "active_set_live_execution_probes"
+        },
+        {
+          "duration_s": 9.420799,
+          "elapsed_s": 10.708568,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 2.668709,
+          "elapsed_s": 13.377287,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.142198,
+          "elapsed_s": 1.149324,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.47612,
+          "elapsed_s": 24.809717,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.315002,
+          "elapsed_s": 25.228382,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 25.548876
+    },
+    {
+      "cycle": 13,
+      "generated_at": "2026-07-15T01:18:19.771359+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 18,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": true,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.630804,
+          "elapsed_s": 10.737387,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.644391,
+          "elapsed_s": 17.793142,
+          "name": "self_feed_ledger_diff"
+        },
+        {
+          "duration_s": 2.898965,
+          "elapsed_s": 13.636363,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.033768,
+          "elapsed_s": 1.040759,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.475924,
+          "elapsed_s": 14.112379,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.320116,
+          "elapsed_s": 18.113258,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 18.119388
+    },
+    {
+      "cycle": 14,
+      "generated_at": "2026-07-15T01:18:50.915011+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": true,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 18,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 10.420537,
+          "elapsed_s": 21.266813,
+          "name": "active_set_dataapi_poller"
+        },
+        {
+          "duration_s": 9.595012,
+          "elapsed_s": 10.846276,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.13571,
+          "elapsed_s": 24.402523,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.108106,
+          "elapsed_s": 1.113707,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.579605,
+          "elapsed_s": 24.98224,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.323676,
+          "elapsed_s": 25.421493,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 25.748094
+    },
+    {
+      "cycle": 15,
+      "generated_at": "2026-07-15T01:19:08.787177+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 18,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": true,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.971755,
+          "elapsed_s": 11.080545,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.788778,
+          "elapsed_s": 19.459014,
+          "name": "guard_shadow_lanes"
+        },
+        {
+          "duration_s": 3.218038,
+          "elapsed_s": 14.298595,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.039107,
+          "elapsed_s": 1.044909,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.545988,
+          "elapsed_s": 14.844689,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.394885,
+          "elapsed_s": 15.283273,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 19.459039
+    },
+    {
+      "cycle": 16,
+      "generated_at": "2026-07-15T01:19:41.804516+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 18,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": true,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 11.758968,
+          "elapsed_s": 25.694824,
+          "name": "active_set_live_execution_probes"
+        },
+        {
+          "duration_s": 9.716944,
+          "elapsed_s": 10.892226,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.043617,
+          "elapsed_s": 13.935856,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.103369,
+          "elapsed_s": 1.111084,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.465911,
+          "elapsed_s": 26.16167,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.373387,
+          "elapsed_s": 26.896626,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 26.902776
+    },
+    {
+      "cycle": 17,
+      "generated_at": "2026-07-15T01:19:58.282062+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 24,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": true,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.348924,
+          "elapsed_s": 10.616692,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.620904,
+          "elapsed_s": 17.254935,
+          "name": "self_feed_ledger_diff"
+        },
+        {
+          "duration_s": 2.492135,
+          "elapsed_s": 13.108837,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.198841,
+          "elapsed_s": 1.203867,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.484403,
+          "elapsed_s": 13.593342,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.325652,
+          "elapsed_s": 17.580587,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.586715
+    },
+    {
+      "cycle": 18,
+      "generated_at": "2026-07-15T01:20:27.006351+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": true,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 24,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.885477,
+          "elapsed_s": 20.310948,
+          "name": "active_set_dataapi_poller"
+        },
+        {
+          "duration_s": 9.31611,
+          "elapsed_s": 10.425471,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.717879,
+          "elapsed_s": 22.028827,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.041324,
+          "elapsed_s": 1.046454,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.457393,
+          "elapsed_s": 22.486306,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.32296,
+          "elapsed_s": 22.847687,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 23.172
+    },
+    {
+      "cycle": 19,
+      "generated_at": "2026-07-15T01:20:43.119174+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 24,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": true,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.782628,
+          "elapsed_s": 10.883198,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 3.394359,
+          "elapsed_s": 17.317841,
+          "name": "guard_shadow_lanes"
+        },
+        {
+          "duration_s": 1.833133,
+          "elapsed_s": 12.716344,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.032489,
+          "elapsed_s": 1.037277,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.479526,
+          "elapsed_s": 13.195951,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.347029,
+          "elapsed_s": 13.923481,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.317856
+    },
+    {
+      "cycle": 20,
+      "generated_at": "2026-07-15T01:21:13.618439+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 24,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": true,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 11.064287,
+          "elapsed_s": 23.748797,
+          "name": "active_set_live_execution_probes"
+        },
+        {
+          "duration_s": 9.66215,
+          "elapsed_s": 10.815905,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.868594,
+          "elapsed_s": 12.68451,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.084212,
+          "elapsed_s": 1.089465,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.44838,
+          "elapsed_s": 24.197923,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.319898,
+          "elapsed_s": 24.869669,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 24.875847
+    },
+    {
+      "cycle": 21,
+      "generated_at": "2026-07-15T01:21:29.560449+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": false,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 30,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": true,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 9.486518,
+          "elapsed_s": 10.674123,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 4.148243,
+          "elapsed_s": 17.246199,
+          "name": "self_feed_ledger_diff"
+        },
+        {
+          "duration_s": 1.835276,
+          "elapsed_s": 12.50941,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.117433,
+          "elapsed_s": 1.124416,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.487695,
+          "elapsed_s": 12.997193,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.325126,
+          "elapsed_s": 17.571325,
+          "name": "active_set_cap_step_revert_post_live"
+        }
+      ],
+      "total_s_before_state_write": 17.577332
+    },
+    {
+      "cycle": 22,
+      "generated_at": "2026-07-15T01:21:59.237672+00:00",
+      "over_threshold": false,
+      "pid": 772,
+      "slow_path_cadence": {
+        "active_set_dataapi_poller_cycle_offset": 1,
+        "active_set_dataapi_poller_due": true,
+        "active_set_dataapi_poller_every_n_cycles": 4,
+        "active_set_live_execution_probe_member_cap": 6,
+        "active_set_live_execution_probe_round_robin_offset": 30,
+        "active_set_live_execution_probes_cycle_offset": 3,
+        "active_set_live_execution_probes_due": false,
+        "active_set_live_execution_probes_every_n_cycles": 4,
+        "flow_stage": "LIVE/LEARN/SELF-DEV",
+        "guard_slow_path_every_n_cycles": 4,
+        "rule": "detect_build_gate_submit_hot_path_runs_every_cycle; reporting and shadow work are cadenced",
+        "self_feed_ledger_diff_cycle_offset": 0,
+        "self_feed_ledger_diff_due": false,
+        "self_feed_ledger_diff_every_n_cycles": 4,
+        "shadow_lanes_cycle_offset": 2,
+        "shadow_lanes_due": false,
+        "shadow_lanes_every_n_cycles": 4,
+        "watch_tier_dataapi_poller_cycle_offset": 0,
+        "watch_tier_dataapi_poller_due": false,
+        "watch_tier_dataapi_poller_every_n_cycles": 24,
+        "watch_tier_dataapi_poller_member_cap": 4,
+        "watch_tier_dataapi_poller_round_robin_offset": 0
+      },
+      "top_stage_timers": [
+        {
+          "duration_s": 10.166885,
+          "elapsed_s": 20.674955,
+          "name": "active_set_dataapi_poller"
+        },
+        {
+          "duration_s": 9.350373,
+          "elapsed_s": 10.508069,
+          "name": "active_set_rtds_premerge"
+        },
+        {
+          "duration_s": 1.783636,
+          "elapsed_s": 22.45859,
+          "name": "live_execution"
+        },
+        {
+          "duration_s": 1.092163,
+          "elapsed_s": 1.095052,
+          "name": "select_active_set_runtime"
+        },
+        {
+          "duration_s": 0.486407,
+          "elapsed_s": 22.945091,
+          "name": "routing_shadow_validation"
+        },
+        {
+          "duration_s": 0.321977,
+          "elapsed_s": 23.383538,
+          "name": "self_feed_ledger_diff"
+        }
+      ],
+      "total_s_before_state_write": 23.71154
+    }
+  ],
+  "samples_available_current_pid": 22,
+  "source_of_truth": "docs/agents/HANDOFF.md latest Fable 2026-07-15T00:41Z DIRECTION",
+  "status": "R9_LATENCY_CLOSED",
+  "structural_invariants": {
+    "live_orders_allowed": true,
+    "paper_only": false,
+    "single_live_guard": true
+  },
+  "threshold_s": 30.0
+}

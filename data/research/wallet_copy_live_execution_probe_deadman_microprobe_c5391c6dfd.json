@@ -1,0 +1,979 @@
+{
+  "admission_snapshot": {
+    "blockers": [],
+    "candidate_policy_id": "wf_0.02_cap_5_p_0.01_1_minusd_0_all_window",
+    "candidate_source_wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30",
+    "candidate_type": "SINGLE_WALLET",
+    "decision_status": "PASS",
+    "live_admission_status": "PASS",
+    "live_orders_allowed": false,
+    "live_tracker_truth_status": "PASS",
+    "operator_approval_id": "OP-LIVE-20260703-BELA",
+    "paper_only": true,
+    "runtime_live_paused": false,
+    "sizing_policy_id": ""
+  },
+  "blockers": [],
+  "candidate_id": "deadman_microprobe_c5391c6dfd",
+  "candidate_intent_summary": {
+    "base_intents": 0,
+    "candidate_build_events": 0,
+    "candidate_build_events_filtered": 0,
+    "candidate_build_events_filtered_reasons": {},
+    "candidate_build_events_filtered_samples": [],
+    "candidate_id": "deadman_microprobe_c5391c6dfd",
+    "candidate_intents": 0,
+    "candidate_intents_event_age_gt_max": 0,
+    "candidate_intents_event_age_missing": 0,
+    "candidate_intents_live_tradeable_window_open": 0,
+    "candidate_intents_market_closed_now": 0,
+    "candidate_intents_observed_after_market_close": 0,
+    "candidate_intents_observed_age_gt_live_build_max": 0,
+    "candidate_type": "SINGLE_WALLET",
+    "copy_model": "drip",
+    "drift_buffer": {
+      "blocked_intents": 0,
+      "blocker_counts": {},
+      "eligible_move_slices_loaded": 1,
+      "enabled": true,
+      "flow_stage": "LIVE",
+      "input_intents": 0,
+      "max_buffer_price": 0.05,
+      "output_intents": 0,
+      "profile_cache": {
+        "cache_hit": true,
+        "enabled": true,
+        "flow_stage": "LIVE",
+        "path": "data/research/alpha_decay_report.json",
+        "profiles_loaded": 21,
+        "signature": {
+          "mtime_ns": 1785818383803288080,
+          "size_bytes": 2209674
+        }
+      },
+      "profiles_loaded": 21,
+      "profiles_with_move_slices": 21,
+      "sample_decisions": [],
+      "status": "PASS"
+    },
+    "drip_max_tranche_usd": 2.5,
+    "drip_max_tranches_per_window": 12,
+    "drip_min_tranche_usd": 1.0,
+    "entry_price_band_gate": {
+      "blocked_bands": [
+        {
+          "max_price_exclusive": 0.7,
+          "min_price_inclusive": 0.5,
+          "n_resolved_windows": 50,
+          "post_fee_pnl_usd": -0.316572,
+          "slice": "[0.5,0.7)"
+        }
+      ],
+      "blocked_intents": 0,
+      "counterfactual_shadow": {
+        "decision_boundary": ">=100 resolved gated-flow windows or 7 days, whichever comes first",
+        "experiment_id": "entry-price-loss-band-gate-0.50-0.70-20260723",
+        "retained": true
+      },
+      "direction_id": "2026-07-23T21:30Z-fable-entry-price-band-gate-activation-0.50-0.70",
+      "enabled": true,
+      "experiment_id": "entry-price-loss-band-gate-0.50-0.70-20260723",
+      "filtered_intents": 0,
+      "filtered_intents_detail": [],
+      "flow_stage": "LIVE/LEARN/DEFEND",
+      "generated_at": "2026-07-23T21:30:00Z",
+      "input_intents": 0,
+      "inverted_shadow": false,
+      "output_intents": 0,
+      "path": "configs/wallet_copy/entry_price_band_gate.json",
+      "reason": null,
+      "rule": "block_only_fable_ruled_live_measured_post_fee_negative_entry_price_bands",
+      "sample_filtered_intents": [],
+      "sample_shadow_intents": [],
+      "shadow_experiment_id": "entry-price-loss-band-gate-readd-shadow-20260723",
+      "shadow_matched_intents": 0,
+      "shadow_mode": "inverted_post_removal",
+      "source_artifact": "data/research/fee_edge_decomposition_latest.json",
+      "status": "PASS",
+      "taxonomy_counts": {}
+    },
+    "expected_fee_capture_gate": {
+      "accounting_authority": false,
+      "buy_intents_with_fee_estimate": 0,
+      "enabled": true,
+      "expected_fee_sum_usd": 0.0,
+      "fee_rate": 0.0,
+      "fee_rate_pct": 0.0,
+      "flow_stage": "LIVE/SELF-DEV",
+      "formula": "fee_usd = rate * shares * price * (1 - price)",
+      "input_intents": 0,
+      "modeled_unvalidated": true,
+      "output_intents": 0,
+      "rule": "zero authoritative fee; measured receipt premium retained as a diagnostic only",
+      "sample_intents": [],
+      "source": "live_ledger.expected_vs_realized_fee.realized_fee_usd_nonnull_count_zero",
+      "status": "PASS",
+      "threshold_change": false
+    },
+    "fresh_candidate_intents": 0,
+    "fresh_candidate_intents_after_drift_buffer": 0,
+    "fresh_candidate_intents_after_entry_price_band_gate": 0,
+    "fresh_candidate_intents_after_expected_fee_gate": 0,
+    "fresh_candidate_intents_after_hard_entry_cap": 0,
+    "fresh_candidate_intents_after_hard_entry_floor": 0,
+    "fresh_candidate_intents_after_inventory_best_ask_gate": 0,
+    "fresh_candidate_intents_after_market_buy_precision_preflight": 0,
+    "fresh_candidate_intents_after_profit_latency_suppression": 0,
+    "fresh_candidate_intents_after_toxicity_protection": 0,
+    "fresh_candidate_intents_after_window_fill_cap": 0,
+    "fresh_candidate_intents_before_live_min": 0,
+    "fresh_candidate_intents_below_live_min_order": 0,
+    "fresh_intent_token_mapped_conditions": 0,
+    "history_events": 0,
+    "history_index": {
+      "enabled": true,
+      "file_size": 30926285,
+      "index_path": "data/research/wallet_copy_live_guard_hot_history_window_index.json",
+      "indexed_bytes": 0,
+      "indexed_file_pct": 0.0,
+      "indexed_spans": 0
+    },
+    "history_scope": "candidate_current_previous_and_indexed_future_btc5m_windows",
+    "history_token_mapped_conditions": 0,
+    "history_window_starts": [
+      1785904800,
+      1785905100
+    ],
+    "intent_build_feedstock_events": 0,
+    "inventory_best_ask_gate": {
+      "blocked_intents": 0,
+      "blocker_counts": {},
+      "blocker_taxonomy": {
+        "below_ruled_entry_floor": "gate best ask is below the one-tick-protected 0.26 probe floor",
+        "copy_model_outside_best_ask_floor_coverage": "live BUY copy model is outside the best-ask floor coverage set",
+        "inventory_best_ask_below_ruled_entry_floor": "legacy label superseded by below_ruled_entry_floor",
+        "stale_book_at_gate": "gate probe best ask was older than the ruled threshold at gate evaluation"
+      },
+      "book_cache_hits": 0,
+      "book_cache_ttl_s": 2.0,
+      "copy_model": "inventory_like",
+      "direct_clob_fallback_attempts": 0,
+      "direct_clob_fallback_errors": 0,
+      "direct_clob_fallback_passes": 0,
+      "direct_clob_primary_passes": 0,
+      "enabled": true,
+      "enforce_copy_model_coverage": true,
+      "flow_stage": "LIVE",
+      "gate_probe_best_ask_age_at_gate_s": {
+        "count": 0,
+        "max": null,
+        "median": null,
+        "min": null,
+        "p95": null,
+        "scope": "current_guard_cycle_all_gate_evaluations_including_abstains"
+      },
+      "generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+      "input_intents": 0,
+      "inventory_intents": 0,
+      "maker_fallback_candidates": 0,
+      "maker_fallback_enabled": true,
+      "maker_fallback_price_ceiling": 0.5,
+      "max_gate_probe_best_ask_age_at_gate_s": 1.0,
+      "output_intents": 0,
+      "passive_at_source_sealed": true,
+      "relay_503_fast_path": 0,
+      "relay_secondary_attempts": 0,
+      "relay_secondary_errors": 0,
+      "relay_secondary_passes": 0,
+      "relay_timeout_s": 0.3,
+      "runtime_profile": {
+        "book_cache_hits": 0,
+        "clob_book_fetch_concurrency": 1,
+        "direct_clob_primary_passes": 0,
+        "flow_stage": "SELF-DEV",
+        "relay_503_fast_path": 0,
+        "relay_retries": 1,
+        "relay_secondary_attempts": 0,
+        "relay_timeout_s": 0.3,
+        "substage_timers": [
+          {
+            "duration_s": 0.000561,
+            "name": "parallel_clob_book_fetch"
+          },
+          {
+            "duration_s": 2.6e-05,
+            "name": "apply_book_gate_decisions"
+          }
+        ],
+        "total_s": 0.000595
+      },
+      "sample_decisions": [],
+      "status": "PASS",
+      "threshold_independent_of_cache_ttl": true,
+      "timeout_s": 1.0
+    },
+    "inventory_pass_plans": 0,
+    "inventory_plans": 0,
+    "latest_candidate_intent_runtime": {},
+    "live_build_max_observed_age_s": 30.0,
+    "live_event_prefilter": {
+      "candidate_groups": 0,
+      "copy_model": "drip",
+      "drip_max_tranche_usd": 2.5,
+      "drip_min_tranche_usd": 1.0,
+      "enabled": true,
+      "feedstock_prefilter": {
+        "drop_counts": {},
+        "dropped_events": 0,
+        "enabled": true,
+        "input_events": 0,
+        "retained_events": 0,
+        "sample_dropped_events": []
+      },
+      "flow_stage": "LIVE",
+      "input_events": 0,
+      "inventory_window_participation": [],
+      "late_window_stop_s": 5.0,
+      "latest_source_event_runtime": {},
+      "live_build_max_observed_age_s": 30.0,
+      "max_converge_orders_per_window": 12,
+      "max_event_age_s": 30.0,
+      "min_live_floor_pin_direction_id": null,
+      "min_live_floor_pin_enabled": false,
+      "policy_reject_counts": {},
+      "retained_intents": 0,
+      "sample_filtered_events": [],
+      "sample_inventory_groups": [],
+      "signal_watermark_state": "data/research/wallet_copy_rtds_signal_watermarks.json",
+      "skip_counts": {},
+      "strong_tier_usage": {
+        "max_concurrent_windows": 2,
+        "max_windows_per_day": 6,
+        "strong_concurrent_window_keys": [],
+        "strong_concurrent_windows": 0,
+        "strong_window_keys_today": [],
+        "strong_windows_today": 0
+      },
+      "submitted_position_groups": 3102
+    },
+    "live_hard_entry_cap": {
+      "blocked_intents": 0,
+      "clamped_intents": 0,
+      "enabled": true,
+      "filtered_intents": 0,
+      "flow_stage": "LIVE",
+      "input_intents": 0,
+      "max_buy_price": 0.32,
+      "output_intents": 0,
+      "rule": "drop_live_buy_copyintents_above_active_hard_entry_cap_before_parity_or_submission",
+      "sample_clamped_intents": [],
+      "sample_filtered_intents": [],
+      "status": "PASS",
+      "taxonomy_counts": {}
+    },
+    "live_hard_entry_floor": {
+      "blocked_intents": 0,
+      "enabled": true,
+      "filtered_intents": 0,
+      "flow_stage": "LIVE",
+      "input_intents": 0,
+      "min_buy_price": 0.25,
+      "output_intents": 0,
+      "rule": "drop_live_buy_copyintents_below_active_hard_entry_floor_before_parity_or_submission",
+      "sample_filtered_intents": [],
+      "status": "PASS",
+      "taxonomy_counts": {}
+    },
+    "live_min_order_floor": {
+      "enabled": false,
+      "floored_intents": 0
+    },
+    "market_buy_precision_preflight": {
+      "blocked_intents": 0,
+      "enabled": true,
+      "filtered_intents": 0,
+      "filtered_intents_detail": [],
+      "flow_stage": "LIVE/LEARN/DEFEND",
+      "input_intents": 0,
+      "output_intents": 0,
+      "passive_at_source_sealed": true,
+      "passive_source_intents": 0,
+      "passive_source_intents_detail": [],
+      "rule": "suppress arithmetic-infeasible market BUYs; only maker-enabled, cap-clamped source-price intents may route as strict post-only GTC",
+      "sample_filtered_intents": [],
+      "sample_passive_source_intents": [],
+      "sample_taker_eligible_emitted": [],
+      "status": "PASS",
+      "taker_eligible_emitted": 0,
+      "taker_eligible_emitted_detail": [],
+      "taxonomy_counts": {}
+    },
+    "max_event_age_s": 30.0,
+    "max_intents": 6,
+    "min_live_order_usd": 0.0,
+    "policy": {
+      "maker_fallback_defense_cap_usd": 0.0,
+      "maker_min_share_base_request_cap_usd": 0.0,
+      "maker_min_share_funding_cap_usd": 0.0,
+      "maker_min_share_original_policy_cap_usd": 0.0,
+      "max_order_usd": 1.0,
+      "max_price": 0.25,
+      "max_seconds_from_open": 300.0,
+      "max_wallet_usdc": 0.0,
+      "min_order_usd": 1.0,
+      "min_price": 0.0,
+      "min_seconds_from_open": 0.0,
+      "min_wallet_usdc": 0.0,
+      "move_slice_keys": [],
+      "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+      "wallet_fraction": 0.1
+    },
+    "profit_latency_suppression": {
+      "blocked_intents": 0,
+      "enabled": true,
+      "filtered_intents": 0,
+      "filtered_intents_detail": [],
+      "flow_stage": "LIVE/LEARN",
+      "input_intents": 0,
+      "output_intents": 0,
+      "rule": "suppress_live_buy_copyintents_in_lossy_window_time_or_stale_signal_buckets_before_submission",
+      "sample_filtered_intents": [],
+      "sample_passed_intents": [],
+      "shadow_counterfactual": {
+        "basis": "filtered CopyIntent remains in arm-state diagnostics for suppressed-signal counterfactual pricing",
+        "re_enable_bar": ">=20 shadow-priced suppressed signals with positive aggregate counterfactual PnL",
+        "retained": true
+      },
+      "signal_age_suppress_gte_s": 60.0,
+      "status": "PASS",
+      "taxonomy_counts": {},
+      "window_time_suppress_gte_s": 60.0
+    },
+    "sample_candidate_runtime_intents": [],
+    "sample_intents": [],
+    "source_events": 0,
+    "source_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+    "status": "CORRECTION",
+    "toxicity_protection": {
+      "blocked_intents": 0,
+      "configured_cells": 16,
+      "criteria": {
+        "all_signals_min_count": 100,
+        "all_signals_roi_pct_lte": 0.0,
+        "live_positive_override_20260708_fable": {
+          "authority": "fable RULING M8 2026-07-08 (deny-cell counterfactual)",
+          "effect": "signals-based deny rules do not apply to the cell",
+          "our_fills_min_20_roi_gt": 0.0
+        },
+        "m8_auto_revert_20260708_fable": {
+          "authority": "fable DIRECTION 2026-07-08T01:56Z",
+          "effect": "re-deny 0x251c 25-50c bucket cell when n>=5 fills since 00:25Z and cumulative cell PnL<0"
+        },
+        "reject_reason": "toxicity_protection",
+        "scope": "source_wallet_x_price_bucket",
+        "tightened_20260707_fable": {
+          "authority": "fable DIRECTION 2026-07-07T21:20Z (bucket concentration)",
+          "our_fills_min_5_roi_lte": 0.0,
+          "signals_min_20_roi_lte": -50.0
+        }
+      },
+      "enabled": true,
+      "flow_stage": "LIVE",
+      "generated_at": "2026-07-11T19:51:11.808158Z",
+      "input_intents": 0,
+      "output_intents": 0,
+      "path": "configs/wallet_copy/toxicity_denylist.json",
+      "reject_reason": "toxicity_protection",
+      "rule": "guard_side_reject_source_wallet_x_price_bucket_x_direction_cells_with_negative_our_fill_roi",
+      "sample_filtered_intents": [],
+      "status": "PASS",
+      "taxonomy_counts": {}
+    },
+    "window_fill_cap": {
+      "blocked_intents": 0,
+      "enabled": true,
+      "fable_direction": "2026-07-11T08:21Z-fable-defend-cap1",
+      "filtered_intents": 0,
+      "filtered_intents_detail": [],
+      "flow_stage": "LIVE/DEFEND",
+      "input_intents": 0,
+      "occupied_market_windows": 1984,
+      "output_intents": 0,
+      "per_window_fill_cap": 1,
+      "rule": "skip_later_live_buy_copyintents_once_a_btc5m_market_has_reached_the_fable_per_window_fill_cap",
+      "sample_filtered_intents": [],
+      "status": "PASS",
+      "taxonomy_counts": {}
+    },
+    "window_participation": {
+      "active_windows": 0,
+      "consecutive_missed_active_windows": 0,
+      "enabled": false,
+      "flow_stage": "LIVE",
+      "incident_triggered": false,
+      "missed_active_windows": 0,
+      "pending_market_lifecycle_windows": 0,
+      "reason": "no_inventory_window_participation_rows",
+      "rows": []
+    }
+  },
+  "candidate_type": "SINGLE_WALLET",
+  "copy_mode": "profitability_filtered_single_wallet_copy",
+  "copy_style": "policy_filtered_not_strict_1_to_1",
+  "drift_buffer": {
+    "blocked_intents": 0,
+    "blocker_counts": {},
+    "eligible_move_slices_loaded": 1,
+    "enabled": true,
+    "flow_stage": "LIVE",
+    "input_intents": 0,
+    "max_buffer_price": 0.05,
+    "output_intents": 0,
+    "profile_cache": {
+      "cache_hit": true,
+      "enabled": true,
+      "flow_stage": "LIVE",
+      "path": "data/research/alpha_decay_report.json",
+      "profiles_loaded": 21,
+      "signature": {
+        "mtime_ns": 1785818383803288080,
+        "size_bytes": 2209674
+      }
+    },
+    "profiles_loaded": 21,
+    "profiles_with_move_slices": 21,
+    "sample_decisions": [],
+    "status": "PASS"
+  },
+  "entry_price_band_gate": {
+    "blocked_bands": [
+      {
+        "max_price_exclusive": 0.7,
+        "min_price_inclusive": 0.5,
+        "n_resolved_windows": 50,
+        "post_fee_pnl_usd": -0.316572,
+        "slice": "[0.5,0.7)"
+      }
+    ],
+    "blocked_intents": 0,
+    "counterfactual_shadow": {
+      "decision_boundary": ">=100 resolved gated-flow windows or 7 days, whichever comes first",
+      "experiment_id": "entry-price-loss-band-gate-0.50-0.70-20260723",
+      "retained": true
+    },
+    "direction_id": "2026-07-23T21:30Z-fable-entry-price-band-gate-activation-0.50-0.70",
+    "enabled": true,
+    "experiment_id": "entry-price-loss-band-gate-0.50-0.70-20260723",
+    "filtered_intents": 0,
+    "filtered_intents_detail": [],
+    "flow_stage": "LIVE/LEARN/DEFEND",
+    "generated_at": "2026-07-23T21:30:00Z",
+    "input_intents": 0,
+    "inverted_shadow": false,
+    "output_intents": 0,
+    "path": "configs/wallet_copy/entry_price_band_gate.json",
+    "reason": null,
+    "rule": "block_only_fable_ruled_live_measured_post_fee_negative_entry_price_bands",
+    "sample_filtered_intents": [],
+    "sample_shadow_intents": [],
+    "shadow_experiment_id": "entry-price-loss-band-gate-readd-shadow-20260723",
+    "shadow_matched_intents": 0,
+    "shadow_mode": "inverted_post_removal",
+    "source_artifact": "data/research/fee_edge_decomposition_latest.json",
+    "status": "PASS",
+    "taxonomy_counts": {}
+  },
+  "execution_filter": {
+    "alpha_decay_report": "data/research/alpha_decay_report.json",
+    "copy_model": "drip",
+    "drip_max_tranche_usd": 2.5,
+    "drip_max_tranches_per_window": 12,
+    "drip_min_tranche_usd": 1.0,
+    "enable_drift_buffer": true,
+    "enable_maker_fallback": true,
+    "entry_price_band_gate_config": "configs/wallet_copy/entry_price_band_gate.json",
+    "inventory_best_ask_timeout_s": 1.0,
+    "inventory_late_window_stop_s": 5.0,
+    "inventory_max_converge_orders_per_window": 6,
+    "live_build_max_observed_age_s": 30.0,
+    "max_drift_buffer_price": 0.05,
+    "max_event_age_s": 30.0,
+    "max_intents": 6,
+    "max_per_wallet_usd": 2.0,
+    "max_price_spread": 0.08,
+    "max_window_usd": 10.0,
+    "min_agreeing_wallets": 2,
+    "min_inventory_plan_usd": 1.0,
+    "min_live_order_usd": 1.0,
+    "per_window_fill_cap": 1,
+    "profit_latency_signal_age_suppress_gte_s": 60.0,
+    "profit_latency_window_time_suppress_gte_s": 60.0,
+    "toxicity_denylist_config": "configs/wallet_copy/toxicity_denylist.json",
+    "wallet_copy_max_buy_price": 0.32,
+    "wallet_copy_min_buy_price": 0.25
+  },
+  "execution_requested": false,
+  "execution_result": {},
+  "generated_at": "2026-08-05T04:49:12.375089+00:00",
+  "history_state": "data/research/wallet_copy_live_guard_hot_history_state.json",
+  "intent_blockers": [],
+  "inventory_best_ask_gate": {
+    "blocked_intents": 0,
+    "blocker_counts": {},
+    "blocker_taxonomy": {
+      "below_ruled_entry_floor": "gate best ask is below the one-tick-protected 0.26 probe floor",
+      "copy_model_outside_best_ask_floor_coverage": "live BUY copy model is outside the best-ask floor coverage set",
+      "inventory_best_ask_below_ruled_entry_floor": "legacy label superseded by below_ruled_entry_floor",
+      "stale_book_at_gate": "gate probe best ask was older than the ruled threshold at gate evaluation"
+    },
+    "book_cache_hits": 0,
+    "book_cache_ttl_s": 2.0,
+    "copy_model": "inventory_like",
+    "direct_clob_fallback_attempts": 0,
+    "direct_clob_fallback_errors": 0,
+    "direct_clob_fallback_passes": 0,
+    "direct_clob_primary_passes": 0,
+    "enabled": true,
+    "enforce_copy_model_coverage": true,
+    "flow_stage": "LIVE",
+    "gate_probe_best_ask_age_at_gate_s": {
+      "count": 0,
+      "max": null,
+      "median": null,
+      "min": null,
+      "p95": null,
+      "scope": "current_guard_cycle_all_gate_evaluations_including_abstains"
+    },
+    "generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+    "input_intents": 0,
+    "inventory_intents": 0,
+    "maker_fallback_candidates": 0,
+    "maker_fallback_enabled": true,
+    "maker_fallback_price_ceiling": 0.5,
+    "max_gate_probe_best_ask_age_at_gate_s": 1.0,
+    "output_intents": 0,
+    "passive_at_source_sealed": true,
+    "relay_503_fast_path": 0,
+    "relay_secondary_attempts": 0,
+    "relay_secondary_errors": 0,
+    "relay_secondary_passes": 0,
+    "relay_timeout_s": 0.3,
+    "runtime_profile": {
+      "book_cache_hits": 0,
+      "clob_book_fetch_concurrency": 1,
+      "direct_clob_primary_passes": 0,
+      "flow_stage": "SELF-DEV",
+      "relay_503_fast_path": 0,
+      "relay_retries": 1,
+      "relay_secondary_attempts": 0,
+      "relay_timeout_s": 0.3,
+      "substage_timers": [
+        {
+          "duration_s": 0.000561,
+          "name": "parallel_clob_book_fetch"
+        },
+        {
+          "duration_s": 2.6e-05,
+          "name": "apply_book_gate_decisions"
+        }
+      ],
+      "total_s": 0.000595
+    },
+    "sample_decisions": [],
+    "status": "PASS",
+    "threshold_independent_of_cache_ttl": true,
+    "timeout_s": 1.0
+  },
+  "kind": "wallet_copy_live_execution_arm_state",
+  "live_connection_plan": {
+    "arm_state_path": "/Users/belavarga/claudecode/polymarket-agent/data/research/wallet_copy_live_execution_probe_deadman_microprobe_c5391c6dfd.json",
+    "live_ledger_event_log_path": "/Users/belavarga/claudecode/polymarket-agent/data/research/wallet_copy_live_execution_probe_deadman_microprobe_c5391c6dfd.events.jsonl",
+    "live_ledger_state_path": "data/research/wallet_copy_live_execution_state.json",
+    "next_gate": "when proof is PASS and operator approval is present, keep live execution only under the pinned guard; copy selected policy-eligible intents, not every source order 1-to-1",
+    "parity_scope": "selected_policy_eligible_copy_intents",
+    "same_copy_intent_path": true,
+    "trade_executor_required": "src.trade_executor.TradeExecutor"
+  },
+  "live_dedupe_summary": {
+    "already_submitted_intents": 0,
+    "input_intents": 0,
+    "live_ledger_state": "data/research/wallet_copy_live_execution_state.json",
+    "new_intents": 0,
+    "skipped_intent_ids": [],
+    "submitted_intent_ids_seen": 4209
+  },
+  "live_hard_entry_cap": {
+    "blocked_intents": 0,
+    "clamped_intents": 0,
+    "enabled": true,
+    "filtered_intents": 0,
+    "flow_stage": "LIVE",
+    "input_intents": 0,
+    "max_buy_price": 0.32,
+    "output_intents": 0,
+    "rule": "drop_live_buy_copyintents_above_active_hard_entry_cap_before_parity_or_submission",
+    "sample_clamped_intents": [],
+    "sample_filtered_intents": [],
+    "status": "PASS",
+    "taxonomy_counts": {}
+  },
+  "live_orders_allowed": false,
+  "maker_fallback_cancel_result": {},
+  "market_buy_precision_preflight": {
+    "blocked_intents": 0,
+    "enabled": true,
+    "filtered_intents": 0,
+    "filtered_intents_detail": [],
+    "flow_stage": "LIVE/LEARN/DEFEND",
+    "input_intents": 0,
+    "output_intents": 0,
+    "passive_at_source_sealed": true,
+    "passive_source_intents": 0,
+    "passive_source_intents_detail": [],
+    "rule": "suppress arithmetic-infeasible market BUYs; only maker-enabled, cap-clamped source-price intents may route as strict post-only GTC",
+    "sample_filtered_intents": [],
+    "sample_passive_source_intents": [],
+    "sample_taker_eligible_emitted": [],
+    "status": "PASS",
+    "taker_eligible_emitted": 0,
+    "taker_eligible_emitted_detail": [],
+    "taxonomy_counts": {}
+  },
+  "operator_gate": {
+    "execution_snapshot_promoted": false,
+    "operator_approval_id": "OP-LIVE-20260703-BELA",
+    "proof_state_preserved_live_orders_allowed": false,
+    "proof_state_preserved_paper_only": true
+  },
+  "operator_gate_blockers": [],
+  "orders_submitted": 0,
+  "paper_only": true,
+  "parity_capsules_profile": {
+    "fallback_full_token_pair_hits": 0,
+    "fallback_partial_token_pair_hits": 0,
+    "flow_stage": "SELF-DEV",
+    "gamma_market_lookups": 0,
+    "intents": 0,
+    "substage_timers": [
+      {
+        "duration_s": 0.0,
+        "name": "token_mapping"
+      },
+      {
+        "duration_s": 1.3e-05,
+        "name": "capsule_build_and_validation"
+      }
+    ],
+    "synthetic_token_pairs": 0,
+    "token_cache_entries": 0,
+    "token_cache_hits": 0,
+    "total_s": 1.2e-05
+  },
+  "parity_summary": {
+    "capsules": 0,
+    "failed_capsules": [],
+    "pass_capsules": 0,
+    "sample_capsules": []
+  },
+  "planned_intent_hash": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+  "planned_intents": [],
+  "planned_token_map": {},
+  "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+  "profit_latency_suppression": {
+    "blocked_intents": 0,
+    "enabled": true,
+    "filtered_intents": 0,
+    "filtered_intents_detail": [],
+    "flow_stage": "LIVE/LEARN",
+    "input_intents": 0,
+    "output_intents": 0,
+    "rule": "suppress_live_buy_copyintents_in_lossy_window_time_or_stale_signal_buckets_before_submission",
+    "sample_filtered_intents": [],
+    "sample_passed_intents": [],
+    "shadow_counterfactual": {
+      "basis": "filtered CopyIntent remains in arm-state diagnostics for suppressed-signal counterfactual pricing",
+      "re_enable_bar": ">=20 shadow-priced suppressed signals with positive aggregate counterfactual PnL",
+      "retained": true
+    },
+    "signal_age_suppress_gte_s": 60.0,
+    "status": "PASS",
+    "taxonomy_counts": {},
+    "window_time_suppress_gte_s": 60.0
+  },
+  "profit_state": "data/research/wallet_copy_profit_engine_state.json",
+  "profitability_filter": {
+    "copy_all_source_orders_required": false,
+    "intent_source": "mission_active_live_set_protection_bounded_refill",
+    "max_event_age_s": 30.0,
+    "max_order_usd": 1.0,
+    "max_price": 0.5,
+    "max_seconds_from_open": 300,
+    "min_live_order_usd": 1.0,
+    "min_price": 0.0,
+    "min_seconds_from_open": 0,
+    "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+    "selected_intents_per_cycle_cap": 10,
+    "wallet_fraction": 0.1
+  },
+  "profitability_first": true,
+  "proof_admission_snapshot": {
+    "blockers": [],
+    "candidate_policy_id": "wf_0.02_cap_5_p_0.01_1_minusd_0_all_window",
+    "candidate_source_wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30",
+    "candidate_type": "SINGLE_WALLET",
+    "decision_status": "PASS",
+    "live_admission_status": "PASS",
+    "live_orders_allowed": false,
+    "live_tracker_truth_status": "PASS",
+    "operator_approval_id": "OP-LIVE-20260703-BELA",
+    "paper_only": true,
+    "runtime_live_paused": false,
+    "sizing_policy_id": ""
+  },
+  "proof_blockers": [],
+  "runtime_profile": {
+    "alpha_decay_profile_cache": {
+      "cache_hit": true,
+      "enabled": true,
+      "flow_stage": "LIVE",
+      "path": "data/research/alpha_decay_report.json",
+      "profiles_loaded": 21,
+      "signature": {
+        "mtime_ns": 1785818383803288080,
+        "size_bytes": 2209674
+      }
+    },
+    "execute_live_profile": {},
+    "flow_stage": "SELF-DEV",
+    "stage_timers": [
+      {
+        "duration_s": 0.027489,
+        "elapsed_s": 0.027489,
+        "name": "load_profit_state"
+      },
+      {
+        "duration_s": 0.012871,
+        "elapsed_s": 0.040359,
+        "name": "select_candidate"
+      },
+      {
+        "duration_s": 3.3e-05,
+        "elapsed_s": 0.040393,
+        "name": "build_admission_snapshots"
+      },
+      {
+        "duration_s": 0.038108,
+        "elapsed_s": 0.078501,
+        "name": "build_candidate_intents"
+      },
+      {
+        "duration_s": 5.5e-05,
+        "elapsed_s": 0.078556,
+        "name": "load_alpha_decay_profiles"
+      },
+      {
+        "duration_s": 2.8e-05,
+        "elapsed_s": 0.078584,
+        "name": "apply_drift_buffer"
+      },
+      {
+        "duration_s": 0.001514,
+        "elapsed_s": 0.080098,
+        "name": "inventory_best_ask_gate"
+      },
+      {
+        "duration_s": 1.6e-05,
+        "elapsed_s": 0.080115,
+        "name": "live_hard_entry_cap"
+      },
+      {
+        "duration_s": 3.9e-05,
+        "elapsed_s": 0.080154,
+        "name": "live_hard_entry_floor"
+      },
+      {
+        "duration_s": 0.000198,
+        "elapsed_s": 0.080352,
+        "name": "entry_price_band_gate"
+      },
+      {
+        "duration_s": 1.5e-05,
+        "elapsed_s": 0.080367,
+        "name": "profit_latency_suppression_gate"
+      },
+      {
+        "duration_s": 0.000236,
+        "elapsed_s": 0.080603,
+        "name": "toxicity_protection_gate"
+      },
+      {
+        "duration_s": 4e-06,
+        "elapsed_s": 0.080607,
+        "name": "live_min_order_floor"
+      },
+      {
+        "duration_s": 8e-06,
+        "elapsed_s": 0.080614,
+        "name": "expected_fee_capture_gate"
+      },
+      {
+        "duration_s": 4.7e-05,
+        "elapsed_s": 0.080661,
+        "name": "market_buy_precision_preflight"
+      },
+      {
+        "duration_s": 0.004413,
+        "elapsed_s": 0.085074,
+        "name": "drop_already_submitted"
+      },
+      {
+        "duration_s": 0.008958,
+        "elapsed_s": 0.094032,
+        "name": "window_fill_cap_gate"
+      },
+      {
+        "duration_s": 2.6e-05,
+        "elapsed_s": 0.094058,
+        "name": "build_parity_capsules"
+      },
+      {
+        "duration_s": 0.000162,
+        "elapsed_s": 0.09422,
+        "name": "evaluate_gates"
+      },
+      {
+        "duration_s": 2e-06,
+        "elapsed_s": 0.094223,
+        "name": "cancel_due_maker_fallbacks"
+      },
+      {
+        "duration_s": 2.2e-05,
+        "elapsed_s": 0.094245,
+        "name": "execute_live_orders"
+      },
+      {
+        "duration_s": 4e-06,
+        "elapsed_s": 0.094249,
+        "name": "window_participation"
+      },
+      {
+        "duration_s": 0.000393,
+        "elapsed_s": 0.094643,
+        "name": "prepare_arm_state"
+      }
+    ],
+    "total_s": 0.094644
+  },
+  "schema_version": 1,
+  "selected_candidate": {
+    "candidate_id": "deadman_microprobe_c5391c6dfd",
+    "candidate_type": "SINGLE_WALLET",
+    "policy": {
+      "drip_max_tranche_usd": 1.0,
+      "live_min_order_cap_floor_clamp": {
+        "active": true,
+        "candidate_id": "deadman_microprobe_c5391c6dfd",
+        "direction_id": "2026-07-15T13:18Z-fable-c50d-cap-floor-1",
+        "flow_stage": "LIVE/DEFEND",
+        "new_max_order_usd": 1.0,
+        "old_drip_max_tranche_usd": 0.5,
+        "old_max_order_usd": 0.5,
+        "old_min_live_order_usd": 1.0,
+        "old_min_order_usd": 1.0,
+        "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+        "process_min_live_order_usd": 1.0,
+        "reason": "live-enabled runtime member cap cannot sit below the process min-live order",
+        "rule": "live-enabled runtime max_order_usd is clamped to process_min_live_order_usd; below-floor live requires explicit PAPER_ONLY demotion",
+        "source": "active_set_live_execution_probe_override",
+        "source_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+        "status": "LIVE_MIN_ORDER_CAP_FLOOR_CLAMPED"
+      },
+      "max_order_usd": 1.0,
+      "max_price": 0.25,
+      "max_seconds_from_open": 300.0,
+      "max_wallet_usdc": 0.0,
+      "min_live_order_usd": 1.0,
+      "min_order_usd": 1.0,
+      "min_price": 0.0,
+      "min_seconds_from_open": 0.0,
+      "min_wallet_usdc": 0.0,
+      "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+      "wallet_fraction": 0.1
+    },
+    "source_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+    "status": "PASS"
+  },
+  "selected_intent_parity_required": true,
+  "source_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+  "status": "LIVE_ARMED_NO_FRESH_INTENTS",
+  "strict_source_order_1_to_1_required": false,
+  "submission_suppressed": false,
+  "token_map_summary": {
+    "conditions": 0,
+    "mapped_conditions": 0,
+    "missing_conditions": []
+  },
+  "token_mapping_blockers": [],
+  "toxicity_protection": {
+    "blocked_intents": 0,
+    "configured_cells": 16,
+    "criteria": {
+      "all_signals_min_count": 100,
+      "all_signals_roi_pct_lte": 0.0,
+      "live_positive_override_20260708_fable": {
+        "authority": "fable RULING M8 2026-07-08 (deny-cell counterfactual)",
+        "effect": "signals-based deny rules do not apply to the cell",
+        "our_fills_min_20_roi_gt": 0.0
+      },
+      "m8_auto_revert_20260708_fable": {
+        "authority": "fable DIRECTION 2026-07-08T01:56Z",
+        "effect": "re-deny 0x251c 25-50c bucket cell when n>=5 fills since 00:25Z and cumulative cell PnL<0"
+      },
+      "reject_reason": "toxicity_protection",
+      "scope": "source_wallet_x_price_bucket",
+      "tightened_20260707_fable": {
+        "authority": "fable DIRECTION 2026-07-07T21:20Z (bucket concentration)",
+        "our_fills_min_5_roi_lte": 0.0,
+        "signals_min_20_roi_lte": -50.0
+      }
+    },
+    "enabled": true,
+    "flow_stage": "LIVE",
+    "generated_at": "2026-07-11T19:51:11.808158Z",
+    "input_intents": 0,
+    "output_intents": 0,
+    "path": "configs/wallet_copy/toxicity_denylist.json",
+    "reject_reason": "toxicity_protection",
+    "rule": "guard_side_reject_source_wallet_x_price_bucket_x_direction_cells_with_negative_our_fill_roi",
+    "sample_filtered_intents": [],
+    "status": "PASS",
+    "taxonomy_counts": {}
+  },
+  "window_fill_cap": {
+    "blocked_intents": 0,
+    "enabled": true,
+    "fable_direction": "2026-07-11T08:21Z-fable-defend-cap1",
+    "filtered_intents": 0,
+    "filtered_intents_detail": [],
+    "flow_stage": "LIVE/DEFEND",
+    "input_intents": 0,
+    "occupied_market_windows": 1984,
+    "output_intents": 0,
+    "per_window_fill_cap": 1,
+    "rule": "skip_later_live_buy_copyintents_once_a_btc5m_market_has_reached_the_fable_per_window_fill_cap",
+    "sample_filtered_intents": [],
+    "status": "PASS",
+    "taxonomy_counts": {}
+  },
+  "window_participation": {
+    "active_windows": 0,
+    "consecutive_missed_active_windows": 0,
+    "enabled": false,
+    "flow_stage": "LIVE",
+    "incident_triggered": false,
+    "missed_active_windows": 0,
+    "pending_market_lifecycle_windows": 0,
+    "reason": "no_inventory_window_participation_rows",
+    "rows": []
+  }
+}

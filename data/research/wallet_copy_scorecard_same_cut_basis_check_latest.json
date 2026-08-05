@@ -1,0 +1,40 @@
+{
+  "command": [
+    "/opt/homebrew/opt/python@3.14/bin/python3.14",
+    "/Users/belavarga/claudecode/polymarket-agent/scripts/daily_scorecard.py",
+    "--day",
+    "2026-07-18",
+    "--output",
+    "<temp>",
+    "--format",
+    "text"
+  ],
+  "count_match": true,
+  "day_utc": "2026-07-18",
+  "flow_stage": "MEASURE/SELF-DEV",
+  "generated_at": "2026-07-18T18:34:07Z",
+  "json_totals": {
+    "fills": 36,
+    "orders": 47,
+    "pnl_usd": -10.290092,
+    "rejects": 11,
+    "resolved_fills": 36
+  },
+  "kind": "wallet_copy_scorecard_same_cut_basis_check",
+  "output": "data/research/wallet_copy_scorecard_same_cut_basis_check_latest.json",
+  "pnl_match": true,
+  "returncode": 0,
+  "rule": "same daily_scorecard process writes JSON and prints text; equal totals close refresh-skew basis divergence",
+  "scorecard_basis": "chain_reconciled_with_local_ledger_fill_data",
+  "scorecard_generated_at": "2026-07-18T18:34:00.483271+00:00",
+  "status": "MATCH",
+  "stderr_tail": "",
+  "stdout_tail": "1.68 sizing_block=96/100 reported_size=$20.00 lane_paper=whale_consensus=31/50 pnl=-17.11 track2_inventory=1/50 pnl=+1.50 e5_maker_first_btc5m=25010/50 pnl=-627.54 e6_whale_net_flow=82/50 pnl=-32.09\nengine_race_gates: ready=none parity_violations=0 E5_maker_first quotes=47322 fills=43813 fill_rate=92.58% resolved=25010/50 W-L=10571-14439 pnl=-627.54 roi=-2.51% | E6_whale_net_flow quotes=0 fills=82 fill_rate=0.00% resolved=82/50 W-L=55-27 pnl=-32.09 roi=-4.89%\nmember_factory_kpi: ready=4/5 depth=2358 status=PASS members=7 delta=-2 basis=24h stale=1 hour_coverage=0/24 replay=1375 promotable=3 series_btc5m=None/288 series_total=None defects=2\nlate_window_cohort: experiment_030_060 fills=0 resolved=0 pnl=+0.000000 tripwire=False\nexpansion_cohort: members_with_resolved_fill=0/0 pnl=+0.000000 raise_ready_now=False []\nready_shadow_lanes: lanes=12 gate_crossed=0 min_gap=0 progress=[bebe6b:0/30, 41b8f1:5/30, 606cd9:0/30, 1d433e:7/30, 6e34b0:75/30]\nautomation_drift: entries=31 content_defects=0\n",
+  "text_totals": {
+    "fills": 36,
+    "orders": 47,
+    "pnl_usd": -10.290092,
+    "rejects": 11,
+    "resolved_fills": 36
+  }
+}

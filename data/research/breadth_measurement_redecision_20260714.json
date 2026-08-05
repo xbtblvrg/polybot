@@ -1,0 +1,34 @@
+{
+  "adjudicated_at": "2026-07-14T08:59:50Z",
+  "commitment_id": "breadth_measurement_redecision_20260713",
+  "direction_id": "2026-07-13T09:28Z-fable-breadth-ruling",
+  "disposition": "MEASUREMENT_INSUFFICIENT_FAIL_CLOSE",
+  "flow_stage": "PROMOTE/LIVE/DEFEND",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "reason": "Both measurement-only breadth lanes remain below the n>=10 resolved simulated copy gate at the missed 2026-07-13T16:00Z decision point.",
+  "successor_commitment": {
+    "due_ts": "2026-07-15T20:00:00Z",
+    "id": "breadth_measurement_redecision_successor_20260715",
+    "next_action": "Re-run c50d/141d measurement redecision only if either lane reaches n>=10 resolved simulated copies; otherwise keep fail-close."
+  },
+  "summary": {
+    "admitted_now": 0,
+    "fail_close": true,
+    "lane_count": 2
+  },
+  "wallets": [
+    {
+      "measurement_status": "ENROLLED_MEASUREMENT_ONLY",
+      "resolved_simulated_copies": 0,
+      "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+      "temporal_label": "UNPROVEN"
+    },
+    {
+      "measurement_status": "ENROLLED_MEASUREMENT_ONLY",
+      "resolved_simulated_copies": 0,
+      "source_wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59",
+      "temporal_label": "MISSING_PROFILE"
+    }
+  ]
+}

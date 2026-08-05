@@ -1,0 +1,421 @@
+{
+  "flow_stage": "LIVE/PROMOTE/ROTATE/SELF-DEV",
+  "fresh_horizon_s": 30.0,
+  "gate_deadline_iso": "2026-07-14T20:00:00Z",
+  "gate_deadline_ts": 1784059200.0,
+  "generated_at": "2026-07-14T20:05:40.078680+00:00",
+  "kind": "admitted_member_gate_report",
+  "members": [
+    {
+      "candidate_id": "market_cohort_alive_96128fea7ee7",
+      "classification": "NO_CYCLES_LANDED",
+      "cycle_outcome_counts": {},
+      "cycle_times_retained": 0,
+      "cycles_landed": 0,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "",
+      "latest_cycle_status": "",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {},
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {},
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 0,
+        "btc5m_buy_windows_since": 0,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 0,
+        "policy_eligible_windows": 0,
+        "policy_window_details": [],
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_with_event_fresh_overlap": 0,
+        "policy_windows_with_received_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 0,
+        "policy_windows_without_event_fresh_overlap": 0,
+        "policy_windows_without_received_fresh_overlap": 0,
+        "source_active_rows": 0,
+        "source_active_windows": 0
+      },
+      "source_wallet": "0x80be724a3511017be131fdcd188296128fea7ee7",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "candidate_id": "market_cohort_alive_aeda7b217d5f",
+      "classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "cycle_outcome_counts": {
+        "LIVE_GUARD_BLOCKED": 268
+      },
+      "cycle_times_retained": 268,
+      "cycles_landed": 268,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "2026-07-14T20:05:06.496671+00:00",
+      "latest_cycle_status": "LIVE_GUARD_BLOCKED",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {
+        "unknown": 268
+      },
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {
+        "none": 268
+      },
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 2,
+        "btc5m_buy_windows_since": 1,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_window_details": [
+          {
+            "cycle_fresh_overlap": false,
+            "event_cycle_fresh_overlap": false,
+            "first_event_iso": "2026-07-14T18:58:51Z",
+            "first_policy_event_iso": "2026-07-14T18:58:51Z",
+            "first_policy_received_iso": "2026-07-14T18:58:51.632451Z",
+            "first_received_iso": "2026-07-14T18:58:51.632451Z",
+            "last_event_iso": "2026-07-14T18:58:52Z",
+            "last_policy_event_iso": "2026-07-14T18:58:52Z",
+            "last_policy_received_iso": "2026-07-14T18:58:52.441995Z",
+            "last_received_iso": "2026-07-14T18:58:52.441995Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784055300",
+            "rows": 2
+          }
+        ],
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_with_event_fresh_overlap": 0,
+        "policy_windows_with_received_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "policy_windows_without_event_fresh_overlap": 1,
+        "policy_windows_without_received_fresh_overlap": 1,
+        "source_active_rows": 2,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "candidate_id": "market_cohort_alive_95e31865a945",
+      "classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "cycle_outcome_counts": {
+        "LIVE_GUARD_BLOCKED": 89,
+        "LIVE_GUARD_RUNNING": 1
+      },
+      "cycle_times_retained": 90,
+      "cycles_landed": 90,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "2026-07-14T20:05:10.883143+00:00",
+      "latest_cycle_status": "LIVE_GUARD_BLOCKED",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {
+        "LIVE_ARMED_NO_FRESH_INTENTS": 1,
+        "unknown": 89
+      },
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {
+        "none": 90
+      },
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 2,
+        "btc5m_buy_windows_since": 1,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_window_details": [
+          {
+            "cycle_fresh_overlap": false,
+            "event_cycle_fresh_overlap": false,
+            "first_event_iso": "2026-07-14T19:22:51Z",
+            "first_policy_event_iso": "2026-07-14T19:22:51Z",
+            "first_policy_received_iso": "2026-07-14T19:22:51.521063Z",
+            "first_received_iso": "2026-07-14T19:22:51.521063Z",
+            "last_event_iso": "2026-07-14T19:22:51Z",
+            "last_policy_event_iso": "2026-07-14T19:22:51Z",
+            "last_policy_received_iso": "2026-07-14T19:22:51.869297Z",
+            "last_received_iso": "2026-07-14T19:22:51.869297Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784056800",
+            "rows": 2
+          }
+        ],
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_with_event_fresh_overlap": 0,
+        "policy_windows_with_received_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "policy_windows_without_event_fresh_overlap": 1,
+        "policy_windows_without_received_fresh_overlap": 1,
+        "source_active_rows": 2,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x2d7c9298b64713de86402bd8a41695e31865a945",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "candidate_id": "market_cohort_alive_82cf08651d9e",
+      "classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "cycle_outcome_counts": {
+        "LIVE_GUARD_BLOCKED": 90
+      },
+      "cycle_times_retained": 90,
+      "cycles_landed": 90,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "2026-07-14T20:05:18.565658+00:00",
+      "latest_cycle_status": "LIVE_GUARD_BLOCKED",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {
+        "unknown": 90
+      },
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {
+        "none": 90
+      },
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 2,
+        "btc5m_buy_windows_since": 1,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_window_details": [
+          {
+            "cycle_fresh_overlap": false,
+            "event_cycle_fresh_overlap": false,
+            "first_event_iso": "2026-07-14T18:58:52Z",
+            "first_policy_event_iso": "2026-07-14T18:58:52Z",
+            "first_policy_received_iso": "2026-07-14T18:58:52.811346Z",
+            "first_received_iso": "2026-07-14T18:58:52.811346Z",
+            "last_event_iso": "2026-07-14T18:58:53Z",
+            "last_policy_event_iso": "2026-07-14T18:58:53Z",
+            "last_policy_received_iso": "2026-07-14T18:58:53.589095Z",
+            "last_received_iso": "2026-07-14T18:58:53.589095Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784055300",
+            "rows": 2
+          }
+        ],
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_with_event_fresh_overlap": 0,
+        "policy_windows_with_received_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "policy_windows_without_event_fresh_overlap": 1,
+        "policy_windows_without_received_fresh_overlap": 1,
+        "source_active_rows": 2,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "candidate_id": "market_cohort_alive_41206ad03db1",
+      "classification": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "cycle_outcome_counts": {
+        "LIVE_GUARD_BLOCKED": 90
+      },
+      "cycle_times_retained": 90,
+      "cycles_landed": 90,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "2026-07-14T20:05:22.837107+00:00",
+      "latest_cycle_status": "LIVE_GUARD_BLOCKED",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {
+        "unknown": 90
+      },
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {
+        "none": 90
+      },
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 2,
+        "btc5m_buy_windows_since": 1,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_window_details": [
+          {
+            "cycle_fresh_overlap": true,
+            "event_cycle_fresh_overlap": true,
+            "first_event_iso": "2026-07-14T19:12:43Z",
+            "first_policy_event_iso": "2026-07-14T19:12:43Z",
+            "first_policy_received_iso": "2026-07-14T19:12:43.377679Z",
+            "first_received_iso": "2026-07-14T19:12:43.377679Z",
+            "last_event_iso": "2026-07-14T19:12:44Z",
+            "last_policy_event_iso": "2026-07-14T19:12:44Z",
+            "last_policy_received_iso": "2026-07-14T19:12:44.295133Z",
+            "last_received_iso": "2026-07-14T19:12:44.295133Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784056200",
+            "rows": 2
+          }
+        ],
+        "policy_windows_with_cycle_fresh_overlap": 1,
+        "policy_windows_with_event_fresh_overlap": 1,
+        "policy_windows_with_received_fresh_overlap": 1,
+        "policy_windows_without_cycle_fresh_overlap": 0,
+        "policy_windows_without_event_fresh_overlap": 0,
+        "policy_windows_without_received_fresh_overlap": 0,
+        "source_active_rows": 2,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "candidate_id": "market_cohort_alive_16c5f15ba419",
+      "classification": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "cycle_outcome_counts": {
+        "LIVE_GUARD_BLOCKED": 88,
+        "LIVE_GUARD_RUNNING": 1
+      },
+      "cycle_times_retained": 89,
+      "cycles_landed": 89,
+      "fresh_intents": 0,
+      "latest_cycle_alerts": [],
+      "latest_cycle_at": "2026-07-14T20:04:07.172352+00:00",
+      "latest_cycle_status": "LIVE_GUARD_BLOCKED",
+      "ledger": {
+        "fills": 0,
+        "latest_order_ts": "",
+        "orders": 0,
+        "rejects": 0,
+        "status_counts": {},
+        "submitted_open": 0
+      },
+      "live_execution_status_counts": {
+        "LIVE_ARMED_NO_FRESH_INTENTS": 1,
+        "unknown": 88
+      },
+      "max_price": "0.5",
+      "new_live_candidate_intents": 0,
+      "orders_submitted_in_cycles": 0,
+      "participation_alert_counts": {
+        "none": 89
+      },
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "source_activity": {
+        "btc5m_buy_rows_since": 4,
+        "btc5m_buy_windows_since": 2,
+        "outside_band_rows": 0,
+        "outside_policy_rows": 0,
+        "policy_eligible_rows": 4,
+        "policy_eligible_windows": 2,
+        "policy_window_details": [
+          {
+            "cycle_fresh_overlap": true,
+            "event_cycle_fresh_overlap": true,
+            "first_event_iso": "2026-07-14T18:58:51Z",
+            "first_policy_event_iso": "2026-07-14T18:58:51Z",
+            "first_policy_received_iso": "2026-07-14T18:58:51.628854Z",
+            "first_received_iso": "2026-07-14T18:58:51.628854Z",
+            "last_event_iso": "2026-07-14T18:58:52Z",
+            "last_policy_event_iso": "2026-07-14T18:58:52Z",
+            "last_policy_received_iso": "2026-07-14T18:58:52.424565Z",
+            "last_received_iso": "2026-07-14T18:58:52.424565Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784055300",
+            "rows": 2
+          },
+          {
+            "cycle_fresh_overlap": false,
+            "event_cycle_fresh_overlap": false,
+            "first_event_iso": "2026-07-14T20:00:27Z",
+            "first_policy_event_iso": "2026-07-14T20:00:27Z",
+            "first_policy_received_iso": "2026-07-14T20:00:27.506544Z",
+            "first_received_iso": "2026-07-14T20:00:27.506544Z",
+            "last_event_iso": "2026-07-14T20:00:28Z",
+            "last_policy_event_iso": "2026-07-14T20:00:28Z",
+            "last_policy_received_iso": "2026-07-14T20:00:28.126982Z",
+            "last_received_iso": "2026-07-14T20:00:28.126982Z",
+            "le_max_price_rows": 2,
+            "market_slug": "btc-updown-5m-1784059200",
+            "rows": 2
+          }
+        ],
+        "policy_windows_with_cycle_fresh_overlap": 1,
+        "policy_windows_with_event_fresh_overlap": 1,
+        "policy_windows_with_received_fresh_overlap": 1,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "policy_windows_without_event_fresh_overlap": 1,
+        "policy_windows_without_received_fresh_overlap": 1,
+        "source_active_rows": 4,
+        "source_active_windows": 2
+      },
+      "source_wallet": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    }
+  ],
+  "schema_version": 1,
+  "since_iso": "2026-07-14T17:04:00Z",
+  "since_ts": 1784048640.0,
+  "summary": {
+    "classification_counts": {
+      "NO_CYCLES_LANDED": 1,
+      "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY": 2,
+      "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP": 3
+    },
+    "gate_status": "FAIL_PIPELINE_EVIDENCE",
+    "members": 6,
+    "members_with_cycles": 5,
+    "members_with_submit": 0,
+    "total_cycles_landed": 627,
+    "total_fresh_intents": 0,
+    "total_ledger_orders": 0,
+    "total_orders_submitted_in_cycles": 0
+  }
+}

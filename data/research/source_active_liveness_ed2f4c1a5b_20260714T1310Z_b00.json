@@ -1,0 +1,29 @@
+{
+  "band": {
+    "max_offset_s": 300.0,
+    "max_price": 0.5,
+    "min_offset_s": 0.0
+  },
+  "file_size_bytes": 202935330656,
+  "flow_stage": "LIVE/PROMOTE",
+  "generated_at": "2026-07-14T13:12:38.129705+00:00",
+  "kind": "source_active_windows_report_v1",
+  "latest_rows": [],
+  "rtds_jsonl": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+  "scan_tail_bytes": 384000000,
+  "since_iso": "2026-07-13T13:12:38.142419Z",
+  "since_ts": 1783948358.142419,
+  "source_wallet": "0xed2f4c1a5b2ea42eb0fbc9c03adc267a04c39897",
+  "summary": {
+    "btc5m_buy_rows_since": 0,
+    "btc5m_buy_windows_since": 0,
+    "policy_eligible_rows": 0,
+    "policy_eligible_tally_status": "PENDING",
+    "policy_eligible_windows": 0,
+    "required_source_active_windows": 1,
+    "source_active_rows": 0,
+    "source_active_tally_status": "PENDING",
+    "source_active_windows": 0
+  },
+  "windows": []
+}

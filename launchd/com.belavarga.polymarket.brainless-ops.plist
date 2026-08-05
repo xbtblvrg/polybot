@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.brainless-ops</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/bin/bash</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/brainless_ops.sh</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+    <key>WALLET_COPY_EGRESS</key>
+    <string>VPN</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>600</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/brainless_ops.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/brainless_ops.launchd.err</string>
+</dict>
+</plist>

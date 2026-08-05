@@ -1,0 +1,107 @@
+{
+  "cells": [
+    {
+      "cell": "60_180_UP",
+      "checks": {
+        "chronological_holdout_positive": true,
+        "no_unresolved_fill_older_than_one_window": false,
+        "post_fee_total_positive": true,
+        "resolved_gte_50": true,
+        "zero_copyintent_parity_violations": true,
+        "zero_fallback_book_rows": true
+      },
+      "copyintent_parity_violations": 0,
+      "fallback_book_rows": 0,
+      "holdout_post_fee_pnl_usd": 9.68066,
+      "holdout_resolved": 22,
+      "pass": false,
+      "post_fee_pnl_usd": 3.375289,
+      "post_fee_roi_pct": 3.309178,
+      "resolved": 72,
+      "train_post_fee_pnl_usd": -6.305371,
+      "train_resolved": 50,
+      "unique_copyintent_hashes": 72,
+      "unresolved_old_fills": 129
+    },
+    {
+      "cell": "60_180_DOWN",
+      "checks": {
+        "chronological_holdout_positive": true,
+        "no_unresolved_fill_older_than_one_window": false,
+        "post_fee_total_positive": true,
+        "resolved_gte_50": true,
+        "zero_copyintent_parity_violations": true,
+        "zero_fallback_book_rows": true
+      },
+      "copyintent_parity_violations": 0,
+      "fallback_book_rows": 0,
+      "holdout_post_fee_pnl_usd": 7.615242,
+      "holdout_resolved": 24,
+      "pass": false,
+      "post_fee_pnl_usd": 9.859916,
+      "post_fee_roi_pct": 8.577569,
+      "resolved": 79,
+      "train_post_fee_pnl_usd": 2.244674,
+      "train_resolved": 55,
+      "unique_copyintent_hashes": 79,
+      "unresolved_old_fills": 104
+    },
+    {
+      "cell": "180_270_UP",
+      "checks": {
+        "chronological_holdout_positive": false,
+        "no_unresolved_fill_older_than_one_window": false,
+        "post_fee_total_positive": true,
+        "resolved_gte_50": false,
+        "zero_copyintent_parity_violations": true,
+        "zero_fallback_book_rows": true
+      },
+      "copyintent_parity_violations": 0,
+      "fallback_book_rows": 0,
+      "holdout_post_fee_pnl_usd": -9.019293,
+      "holdout_resolved": 14,
+      "pass": false,
+      "post_fee_pnl_usd": 19.306272,
+      "post_fee_roi_pct": 39.806746,
+      "resolved": 46,
+      "train_post_fee_pnl_usd": 28.325565,
+      "train_resolved": 32,
+      "unique_copyintent_hashes": 46,
+      "unresolved_old_fills": 76
+    },
+    {
+      "cell": "180_270_DOWN",
+      "checks": {
+        "chronological_holdout_positive": false,
+        "no_unresolved_fill_older_than_one_window": false,
+        "post_fee_total_positive": true,
+        "resolved_gte_50": false,
+        "zero_copyintent_parity_violations": true,
+        "zero_fallback_book_rows": true
+      },
+      "copyintent_parity_violations": 0,
+      "fallback_book_rows": 0,
+      "holdout_post_fee_pnl_usd": -1.948889,
+      "holdout_resolved": 15,
+      "pass": false,
+      "post_fee_pnl_usd": 25.918001,
+      "post_fee_roi_pct": 50.216519,
+      "resolved": 47,
+      "train_post_fee_pnl_usd": 27.86689,
+      "train_resolved": 32,
+      "unique_copyintent_hashes": 47,
+      "unresolved_old_fills": 77
+    }
+  ],
+  "decision": "PARK_DELAYED_OFFSET_METHOD_PAPER_ONLY",
+  "decision_rule": "each offset\u00d7side cell passes independently; aggregate pooling forbidden",
+  "flow_stage": "LIVE/LEARN/PROMOTE",
+  "generated_at": "2026-07-25T03:02:48.967448Z",
+  "immutable_source": "data/research/e5_delayed_offset_paper_state.json",
+  "kind": "e5_delayed_offset_side_selective_promotion_packet",
+  "live_mutation_allowed": false,
+  "passing_cells": [],
+  "schema_version": 1,
+  "selected_cell": null,
+  "single_submitter": "scripts/run_wallet_copy_live_guard.py"
+}

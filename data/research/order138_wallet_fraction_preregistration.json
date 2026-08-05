@@ -1,0 +1,46 @@
+{
+  "activation": {
+    "allowed_at_or_after": "2026-08-02T00:00:00Z",
+    "command": "python3 scripts/brainless_live_guard_restart.py --execute --allow-generation-reload --generation-reload-reason 2026-08-01-fable-order138-wallet-fraction-0.20",
+    "conditions": {
+      "daily_cap_clear": true,
+      "guard_code_identity": "PASS"
+    },
+    "status": "STAGED_NOT_ACTIVE"
+    ,"watcher_activation_record": "automatic from sole PASS guard started_at_utc plus resident --wallet-fraction 0.20 argv"
+  },
+  "change": {
+    "field": "wallet_fraction",
+    "from": 0.1,
+    "to": 0.2
+  },
+  "direction_id": "2026-08-01-fable-order138-wallet-fraction-0.20",
+  "flow_stage": "LIVE/DEFEND/PROMOTE",
+  "immutable_limits": {
+    "drip_max_tranche_usd": 2.5,
+    "drip_min_tranche_usd": 1.0,
+    "max_intents": 6,
+    "max_order_usd": 8.0,
+    "per_window_fill_cap": 1
+  },
+  "kind": "order138_wallet_fraction_preregistration",
+  "mechanical_revert": {
+    "first_n_accepted": 8,
+    "hand_edit_forbidden": true,
+    "net_resolved_pnl_lte_usd": -4.0,
+    "restore_wallet_fraction": 0.1,
+    "state_path": "data/research/order138_wallet_fraction_state.json",
+    "terminal": true,
+    "watcher": "scripts/order138_revert_watch.py"
+  },
+  "source_wallet": "0xbf337426aa856996b8bb79b238345dd1a0276bf7",
+  "success_metrics": {
+    "canonical_cost_usd_2026_08_02_gt": 25.0,
+    "roi_is_success_metric": false,
+    "size_floor_skip_share_direction": "DOWN",
+    "size_floor_skip_taxonomy": [
+      "inventory_residual_gap_below_min_order",
+      "drip_min_tranche_exceeds_window_budget"
+    ]
+  }
+}

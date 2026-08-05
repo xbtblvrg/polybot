@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "kind": "routing_shadow_candidate_seats",
+  "flow_stage": "LIVE/LEARN/SELF-DEV",
+  "generated_at": "2026-07-14T10:30:44Z",
+  "enabled": true,
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "direction_id": "2026-07-14T10:21Z-fable-c539-shadow-seat",
+  "rule": "shadow-only candidate seats feed paper probes and routing-shadow measurement; they do not alter live active-set selection or submit orders",
+  "seats": [
+    {
+      "source_wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1",
+      "candidate_id": "deadman_microprobe_c5391c6dfd",
+      "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+      "enabled": true,
+      "shadow_only": true,
+      "paper_only": true,
+      "live_orders_allowed": false,
+      "max_order_usd": 0.5,
+      "max_price": 0.25,
+      "wallet_fraction": 0.1,
+      "reason": "Fable 2026-07-14T10:21Z ORDER1 seat c539 for routing-shadow and fee-calibration accrual without live promotion",
+      "policy": {
+        "policy_id": "deadman_microprobe_0.10_cap_0.5_le_25",
+        "min_order_usd": 0.5,
+        "max_order_usd": 0.5,
+        "min_price": 0.0,
+        "max_price": 0.25,
+        "wallet_fraction": 0.1
+      }
+    }
+  ]
+}

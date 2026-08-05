@@ -1,0 +1,3192 @@
+{
+  "examples": [
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0x5eba34476962b61912c2ceaca658386aaa8115bccddbe5632583f6bca49cc494'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_76d9c0fb0168b8d61249f8e9",
+      "market_slug": "btc-updown-5m-1784505900",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T00:05:47.397121+00:00"
+    },
+    {
+      "class": "market_state_or_window_end",
+      "error": null,
+      "execution_role": "maker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_76d9c0fb0168b8d61249f8e9",
+      "market_slug": "btc-updown-5m-1784505900",
+      "reason": "maker_window_end_no_fill",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T00:05:50.299025+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xcd7420ec341cd92fc0a25459b2288cefdb624a45fbfc16b51966ab8ee15b38fb'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_7537b4147ce300563d6f76e8",
+      "market_slug": "btc-updown-5m-1784507400",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T00:30:40.379650+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0x2117cd4983e43100fcfadfb2894d0b8289832f2fb7936d508d53aa7a424bf903'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_fb6c62a3b9b1c334738bfe17",
+      "market_slug": "btc-updown-5m-1784508000",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T00:40:11.677490+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0x4491a09d68ef902d8184706f7d52e4bc80749667ae86c2ab5c7b10cb31d3e6b8'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_061fe113e9ea7eb7aa75cf83",
+      "market_slug": "btc-updown-5m-1784509800",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T01:10:23.295559+00:00"
+    },
+    {
+      "class": "other",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'invalid post-only order: order crosses book'}]",
+      "execution_role": "maker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_061fe113e9ea7eb7aa75cf83",
+      "market_slug": "btc-updown-5m-1784509800",
+      "reason": "post_only_rejected",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T01:10:25.438815+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0x93782f49f3cee59a5f15fd1d54e946f5e7a1c659119c3fdffa6c450e9428ad09'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_a7cb9ce24eb989bde0cdb425",
+      "market_slug": "btc-updown-5m-1784509800",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T01:10:39.116218+00:00"
+    },
+    {
+      "class": "market_state_or_window_end",
+      "error": null,
+      "execution_role": "maker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_a7cb9ce24eb989bde0cdb425",
+      "market_slug": "btc-updown-5m-1784509800",
+      "reason": "maker_window_end_no_fill",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T01:10:41.522023+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0x88fc6fc661cf98703cee7c2ef5645ae38d586d1c4fabfd596a470649e24d0b66'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_b62d15ce11def438f4534385",
+      "market_slug": "btc-updown-5m-1784517300",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T03:15:45.643264+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xcfbd191312be2f1ceae8401f533380a63cff3a79bdd6c61cf50a9de9ae08f658'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_826744fe0d9bdcb01db4189d",
+      "market_slug": "btc-updown-5m-1784518500",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T03:35:35.378657+00:00"
+    },
+    {
+      "class": "best_ask_timeout_or_no_match",
+      "error": "PolyApiException[status_code=400, error_message={'error': 'no orders found to match with FAK order. FAK orders are partially filled or killed if no match is found.', 'orderID': '0xf777edf56549025558fc6a62890a4dc19c4b0498b3183ce6d9f436233812f763'}]",
+      "execution_role": "taker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_fc59e8a882842d341fd8778d",
+      "market_slug": "btc-updown-5m-1784526600",
+      "reason": "fak_no_match",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T05:50:25.802357+00:00"
+    },
+    {
+      "class": "market_state_or_window_end",
+      "error": null,
+      "execution_role": "maker",
+      "forgone_usd": 1.0,
+      "intent_id": "ci_fc59e8a882842d341fd8778d",
+      "market_slug": "btc-updown-5m-1784526600",
+      "reason": "maker_window_end_no_fill",
+      "scheduler_subset": false,
+      "submitted_at": "2026-07-20T05:50:27.945663+00:00"
+    }
+  ],
+  "fak_no_match_analysis": {
+    "count": 34,
+    "flow_stage": "LIVE/MEASURE",
+    "rows": [
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.71,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.7,
+          "maker_fallback_candidate": false,
+          "reason": null,
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_76d9c0fb0168b8d61249f8e9",
+        "latency_budget": {
+          "exchange_ack_ts": 1784505946.831757,
+          "submit_sent_to_exchange_ack_s": 1.06152,
+          "submit_sent_ts": 1784505945.770237
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_76d9c0fb0168b8d61249f8e9"
+          ],
+          "linked_order_ids": [
+            "0x4a280ebdc8d1cdaacc0b1668ac2fee31f15707f6a8f8ee403df76676c1601b61"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784505900",
+        "order_id": "0x5eba34476962b61912c2ceaca658386aaa8115bccddbe5632583f6bca49cc494",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 254.229763,
+        "submitted_at": "2026-07-20T00:05:47.397121+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.36,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.34,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_7537b4147ce300563d6f76e8",
+        "latency_budget": {
+          "exchange_ack_ts": 1784507439.868296,
+          "submit_sent_to_exchange_ack_s": 0.983242,
+          "submit_sent_ts": 1784507438.885054
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_7537b4147ce300563d6f76e8"
+          ],
+          "linked_order_ids": [
+            "0x9986994e7b862cb5347c478b0ac4266a54ae59346b9cca1a7c909f3a29049c5f"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784507400",
+        "order_id": "0xcd7420ec341cd92fc0a25459b2288cefdb624a45fbfc16b51966ab8ee15b38fb",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.65
+        },
+        "submit_to_window_close_s": 261.114946,
+        "submitted_at": "2026-07-20T00:30:40.379650+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.5,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.42,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_fb6c62a3b9b1c334738bfe17",
+        "latency_budget": {
+          "exchange_ack_ts": 1784508011.163731,
+          "submit_sent_to_exchange_ack_s": 0.967122,
+          "submit_sent_ts": 1784508010.196609
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_fb6c62a3b9b1c334738bfe17"
+          ],
+          "linked_order_ids": [
+            "0xe4e7023aba3970bf1fd76fb2ff0863a3c14d2fff451377f60092a03b722e7614"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784508000",
+        "order_id": "0x2117cd4983e43100fcfadfb2894d0b8289832f2fb7936d508d53aa7a424bf903",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.05
+        },
+        "submit_to_window_close_s": 289.803391,
+        "submitted_at": "2026-07-20T00:40:11.677490+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.62,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4973,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_061fe113e9ea7eb7aa75cf83",
+        "latency_budget": {
+          "exchange_ack_ts": 1784509822.775112,
+          "submit_sent_to_exchange_ack_s": 1.009382,
+          "submit_sent_ts": 1784509821.76573
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_061fe113e9ea7eb7aa75cf83"
+          ],
+          "linked_order_ids": [
+            "lo_4279269f087c1cf36350ba13"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784509800",
+        "order_id": "0x4491a09d68ef902d8184706f7d52e4bc80749667ae86c2ab5c7b10cb31d3e6b8",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 278.23427,
+        "submitted_at": "2026-07-20T01:10:23.295559+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.57,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4973,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_a7cb9ce24eb989bde0cdb425",
+        "latency_budget": {
+          "exchange_ack_ts": 1784509838.615888,
+          "submit_sent_to_exchange_ack_s": 0.789515,
+          "submit_sent_ts": 1784509837.826373
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_a7cb9ce24eb989bde0cdb425"
+          ],
+          "linked_order_ids": [
+            "0xb489a3051881d16a2ed1af624bbcbb3e838928204f1bf682cbcbe28503904393"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784509800",
+        "order_id": "0x93782f49f3cee59a5f15fd1d54e946f5e7a1c659119c3fdffa6c450e9428ad09",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 262.173627,
+        "submitted_at": "2026-07-20T01:10:39.116218+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.37,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.3778,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_at_or_inside_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_b62d15ce11def438f4534385",
+        "latency_budget": {
+          "exchange_ack_ts": 1784517345.103516,
+          "submit_sent_to_exchange_ack_s": 1.076998,
+          "submit_sent_ts": 1784517344.026518
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_b62d15ce11def438f4534385"
+          ],
+          "linked_order_ids": [
+            "0x7f7d6f10c608bf3a0aa30a7b12c40d98a4e116ee010ed07ca4e2c532c5121181"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784517300",
+        "order_id": "0x88fc6fc661cf98703cee7c2ef5645ae38d586d1c4fabfd596a470649e24d0b66",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.85
+        },
+        "submit_to_window_close_s": 255.973482,
+        "submitted_at": "2026-07-20T03:15:45.643264+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.66,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.49,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_826744fe0d9bdcb01db4189d",
+        "latency_budget": {
+          "exchange_ack_ts": 1784518534.851609,
+          "submit_sent_to_exchange_ack_s": 1.131278,
+          "submit_sent_ts": 1784518533.720331
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_826744fe0d9bdcb01db4189d"
+          ],
+          "linked_order_ids": [
+            "0xa051aeca561be3c655960657ab90c56e25d6b435624b4a3a0bb60f15495ab769"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784518500",
+        "order_id": "0xcfbd191312be2f1ceae8401f533380a63cff3a79bdd6c61cf50a9de9ae08f658",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.4
+        },
+        "submit_to_window_close_s": 266.279669,
+        "submitted_at": "2026-07-20T03:35:35.378657+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.6,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.48,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_fc59e8a882842d341fd8778d",
+        "latency_budget": {
+          "exchange_ack_ts": 1784526625.275687,
+          "submit_sent_to_exchange_ack_s": 0.972501,
+          "submit_sent_ts": 1784526624.303186
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_fc59e8a882842d341fd8778d"
+          ],
+          "linked_order_ids": [
+            "0x2732ec9bbfdcfafc245f29729c67a3df11fdc55ddeac6d1262ac88b61cf72b2c"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784526600",
+        "order_id": "0xf777edf56549025558fc6a62890a4dc19c4b0498b3183ce6d9f436233812f763",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 275.696814,
+        "submitted_at": "2026-07-20T05:50:25.802357+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.48,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.52,
+          "maker_fallback_candidate": false,
+          "reason": null,
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_at_or_inside_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_0c7539001b6d42e9e639709c",
+        "latency_budget": {
+          "exchange_ack_ts": 1784526914.4487,
+          "submit_sent_to_exchange_ack_s": 0.74984,
+          "submit_sent_ts": 1784526913.69886
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_0c7539001b6d42e9e639709c"
+          ],
+          "linked_order_ids": [
+            "0xb6005d577e6e6554fcc3bf4b43165de5ca37048a114b09f60f861387f0329c07"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784526900",
+        "order_id": "0x9f55360a09c7cba0e9bc0d939e7494580ca6ee319b67e9ef1bb97a0553e22fa5",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.55
+        },
+        "submit_to_window_close_s": 286.30114,
+        "submitted_at": "2026-07-20T05:55:14.983618+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.47,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.44,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_c406fce0d8681089eb5d22cb",
+        "latency_budget": {
+          "exchange_ack_ts": 1784527221.181609,
+          "submit_sent_to_exchange_ack_s": 0.826361,
+          "submit_sent_ts": 1784527220.355248
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_c406fce0d8681089eb5d22cb"
+          ],
+          "linked_order_ids": [
+            "0xa018ae108d8aa6f8b4bb59516a55dba363963cc3a074fd5db1ff0b28c34e95eb"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784527200",
+        "order_id": "0xe5152a0d0093a0b79d585011dc73089bccf09ae6929b6d0604d410d366f3884a",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.15
+        },
+        "submit_to_window_close_s": 279.644752,
+        "submitted_at": "2026-07-20T06:00:21.704522+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.4,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.36,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_a9ce198d050b3592a6f19f85",
+        "latency_budget": {
+          "exchange_ack_ts": 1784530540.109275,
+          "submit_sent_to_exchange_ack_s": 0.993468,
+          "submit_sent_ts": 1784530539.115807
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_a9ce198d050b3592a6f19f85"
+          ],
+          "linked_order_ids": [
+            "0xd08af6f5aa3dd55d6dc45eb3db8705855a3b654831c1ff0b02002cce5c540a02"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784530500",
+        "order_id": "0x31f60a42c0c5f2a8a87616eb6890ed3d065281e7a325e21509f6a2ed3213da5b",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.75
+        },
+        "submit_to_window_close_s": 260.884193,
+        "submitted_at": "2026-07-20T06:55:40.637850+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.59,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.5,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_780ad14be09a9922ad1fc3a1",
+        "latency_budget": {
+          "exchange_ack_ts": 1784531721.437167,
+          "submit_sent_to_exchange_ack_s": 1.01205,
+          "submit_sent_ts": 1784531720.425117
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_780ad14be09a9922ad1fc3a1"
+          ],
+          "linked_order_ids": [
+            "0xe068d57fe8d1e1ed08ae42f57715bf02a691d781006223c40c37335c28d2c376"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784531700",
+        "order_id": "0xf8ad4dc0cbfc16868b5c8538003d8f4bda22d04bc51e10e6a347cd549bb6792f",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.45
+        },
+        "submit_to_window_close_s": 279.574883,
+        "submitted_at": "2026-07-20T07:15:21.978849+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.42,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.41,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_cb169e80ce9015538bab714b",
+        "latency_budget": {
+          "exchange_ack_ts": 1784534412.120707,
+          "submit_sent_to_exchange_ack_s": 0.985951,
+          "submit_sent_ts": 1784534411.134756
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_cb169e80ce9015538bab714b"
+          ],
+          "linked_order_ids": [
+            "lo_aac822675dbcfeac258b05c7"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784534400",
+        "order_id": "0x20e56a6a5e7fca6e7462759cf0561abc7aa171ad9baaf3e1af803fe024c99466",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.2
+        },
+        "submit_to_window_close_s": 288.865244,
+        "submitted_at": "2026-07-20T08:00:12.630283+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.5,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4542,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_48988cff97c7acaf0fee37d1",
+        "latency_budget": {
+          "exchange_ack_ts": 1784534431.961741,
+          "submit_sent_to_exchange_ack_s": 0.716993,
+          "submit_sent_ts": 1784534431.244748
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_48988cff97c7acaf0fee37d1"
+          ],
+          "linked_order_ids": [
+            "0xeaaf8c3f96299e436642008cb02dcadbf8a743ce9817568d74300f53185c0476"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784534400",
+        "order_id": "0xa11e04bd75a7dd19c4a3b71c6c84451f72b3072b208c7139ecee00c30212f24a",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.2
+        },
+        "submit_to_window_close_s": 268.755252,
+        "submitted_at": "2026-07-20T08:00:32.466019+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.56,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.48,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_ff9d1fc5f373ff40f8d16a16",
+        "latency_budget": {
+          "exchange_ack_ts": 1784534719.866542,
+          "submit_sent_to_exchange_ack_s": 0.980478,
+          "submit_sent_ts": 1784534718.886064
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_ff9d1fc5f373ff40f8d16a16"
+          ],
+          "linked_order_ids": [
+            "0x55a9af3dd5f19fb35e3160c2c58ca62ea0a1f9fda6bc01406d6f0628e2736aac"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784534700",
+        "order_id": "0x6ea8024d3b3ae6525e73415f9f0cd29a4dfe36fb617d2e7f8530d7edb9025367",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.349467
+        },
+        "submit_to_window_close_s": 281.113936,
+        "submitted_at": "2026-07-20T08:05:20.397928+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.49,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.45,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_fd1e04eea7508cbe63745ba9",
+        "latency_budget": {
+          "exchange_ack_ts": 1784535342.265591,
+          "submit_sent_to_exchange_ack_s": 1.196428,
+          "submit_sent_ts": 1784535341.069163
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_fd1e04eea7508cbe63745ba9"
+          ],
+          "linked_order_ids": [
+            "0x56c5106276d26b5536e0275b0c1c10077d7016c5105fd3facf454afccb7a4690"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784535300",
+        "order_id": "0x960590d5aa32fa94f54b2601ffa1f742e088e7e4069592dc9b6c16b474c33f96",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.2
+        },
+        "submit_to_window_close_s": 258.930837,
+        "submitted_at": "2026-07-20T08:15:42.784464+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.41,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.38,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_1071755b56c81ee25a3aa732",
+        "latency_budget": {
+          "exchange_ack_ts": 1784535661.93339,
+          "submit_sent_to_exchange_ack_s": 1.133671,
+          "submit_sent_ts": 1784535660.799719
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_1071755b56c81ee25a3aa732"
+          ],
+          "linked_order_ids": [
+            "0x098ada169f4b9ec587b34a6819f6b476b7591bfab1fb04cf9d917ebd153e7725"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784535600",
+        "order_id": "0x28e1aa9b1df08a539063868b1d5137ef5ee96c1f4889e2fd94e45de15c67072d",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.85
+        },
+        "submit_to_window_close_s": 239.200281,
+        "submitted_at": "2026-07-20T08:21:02.506430+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.39,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.35,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_4ebd9326f62a92b5dfd60c4b",
+        "latency_budget": {
+          "exchange_ack_ts": 1784535929.553427,
+          "submit_sent_to_exchange_ack_s": 1.073016,
+          "submit_sent_ts": 1784535928.480411
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_4ebd9326f62a92b5dfd60c4b"
+          ],
+          "linked_order_ids": [
+            "0xa9c522e5d6824b8f7be19f4a72345de0461dd7895d8b333895778c063e10a23c"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784535900",
+        "order_id": "0x9b5e8cc7f827613883f0f9db431a5b1baccbef1a79ee0a352dbcf22267edde3f",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.7
+        },
+        "submit_to_window_close_s": 271.519589,
+        "submitted_at": "2026-07-20T08:25:30.054136+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.51,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.49,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_479c3e252f9ae624c0b3036d",
+        "latency_budget": {
+          "exchange_ack_ts": 1784536255.31208,
+          "submit_sent_to_exchange_ack_s": 1.229366,
+          "submit_sent_ts": 1784536254.082714
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "FILLED"
+          ],
+          "linked_intent_ids": [
+            "ci_479c3e252f9ae624c0b3036d"
+          ],
+          "linked_order_ids": [
+            "0xd23eb70b4c91172cc76690c63a5635c123b3ad18bee389b61434515da81282fa"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784536200",
+        "order_id": "0xd83cfe40aea263a029138879fb96411389783873858dd5e3bbc742b4217457d4",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 2.4
+        },
+        "submit_to_window_close_s": 245.917286,
+        "submitted_at": "2026-07-20T08:30:55.816669+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.37,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.31,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_fe99b122e662633bf03a7f22",
+        "latency_budget": {
+          "exchange_ack_ts": 1784537457.357232,
+          "submit_sent_to_exchange_ack_s": 1.087337,
+          "submit_sent_ts": 1784537456.269895
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_fe99b122e662633bf03a7f22"
+          ],
+          "linked_order_ids": [
+            "lo_0a4415f044ac8c5dcc884b1f"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784537400",
+        "order_id": "0xdee93edd9d6da33cddb2c79016aac29972c20fc5e5fbddf20a0159ada1ce51b2",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 243.730105,
+        "submitted_at": "2026-07-20T08:50:57.961756+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.55,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4558,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_42524938dab02cd0a4223b5c",
+        "latency_budget": {
+          "exchange_ack_ts": 1784539845.96425,
+          "submit_sent_to_exchange_ack_s": 1.065907,
+          "submit_sent_ts": 1784539844.898343
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_42524938dab02cd0a4223b5c"
+          ],
+          "linked_order_ids": [
+            "lo_dde21b2f698bed0178f7df2e"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784539800",
+        "order_id": "0xc3acae0a62b8bca919786fda739dbf53cddf5d7648ac5dba895e92567770fd92",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 255.101657,
+        "submitted_at": "2026-07-20T09:30:46.603649+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.55,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.59,
+          "maker_fallback_candidate": false,
+          "reason": null,
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_at_or_inside_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_dca08de0f6278d1682d2e803",
+        "latency_budget": {
+          "exchange_ack_ts": 1784540424.887224,
+          "submit_sent_to_exchange_ack_s": 1.032698,
+          "submit_sent_ts": 1784540423.854526
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_dca08de0f6278d1682d2e803"
+          ],
+          "linked_order_ids": [
+            "lo_f0ed38b8188413b936ffd41f"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784540400",
+        "order_id": "0x92ebd8602de0fe6a3c3c6530fffa91639b74e12d4cbf83777a6e5afdb55aeb90",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 276.145474,
+        "submitted_at": "2026-07-20T09:40:25.399928+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.48,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4415,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_59741e2ab3891829f17357be",
+        "latency_budget": {
+          "exchange_ack_ts": 1784540456.016039,
+          "submit_sent_to_exchange_ack_s": 0.684604,
+          "submit_sent_ts": 1784540455.331435
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_59741e2ab3891829f17357be"
+          ],
+          "linked_order_ids": [
+            "lo_f00154037463a001f4942aef"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784540400",
+        "order_id": "0x2c4da819d67d5d9f5704088dc155d6c10bbab32572437a0e9da211178ef8f57a",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 244.668565,
+        "submitted_at": "2026-07-20T09:40:56.541470+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.51,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.5,
+          "maker_fallback_candidate": false,
+          "reason": null,
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_bba65164acb9a7b506fd021b",
+        "latency_budget": {
+          "exchange_ack_ts": 1784541615.997495,
+          "submit_sent_to_exchange_ack_s": 1.200656,
+          "submit_sent_ts": 1784541614.796839
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_bba65164acb9a7b506fd021b"
+          ],
+          "linked_order_ids": [
+            "lo_a434e622e35246ad3dad8d34"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784541600",
+        "order_id": "0xba572d86af2feee0ebd956d2ae18e602fe9a05304e5f779bd100884b297aac67",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 285.203161,
+        "submitted_at": "2026-07-20T10:00:16.705566+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.65,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.4687,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_773fee8f44b74726a8848742",
+        "latency_budget": {
+          "exchange_ack_ts": 1784541924.008415,
+          "submit_sent_to_exchange_ack_s": 1.14761,
+          "submit_sent_ts": 1784541922.860805
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_773fee8f44b74726a8848742"
+          ],
+          "linked_order_ids": [
+            "lo_3a71cdacddfee6e0664e56a2"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784541900",
+        "order_id": "0x68b82a39c72f398f8c1a614c5a6bfa956c5e0ef48c20b40dea8724525d848320",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 277.139195,
+        "submitted_at": "2026-07-20T10:05:24.546367+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.54,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.51,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_9bff6fdb733a164ffbdb82d4",
+        "latency_budget": {
+          "exchange_ack_ts": 1784544314.319402,
+          "submit_sent_to_exchange_ack_s": 0.94059,
+          "submit_sent_ts": 1784544313.378812
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_9bff6fdb733a164ffbdb82d4"
+          ],
+          "linked_order_ids": [
+            "lo_da87c633fb04462678283233"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784544300",
+        "order_id": "0xc89762b6a7760564da3347c9c790ff38da51e1276ffbde0bd5c6b2c42560e411",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 286.621188,
+        "submitted_at": "2026-07-20T10:45:14.834185+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.64,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.51,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_70cbef12f6a9589677863629",
+        "latency_budget": {
+          "exchange_ack_ts": 1784544332.397908,
+          "submit_sent_to_exchange_ack_s": 0.781031,
+          "submit_sent_ts": 1784544331.616877
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_70cbef12f6a9589677863629"
+          ],
+          "linked_order_ids": [
+            "lo_e90a2d12859e3c126f2ddaf4"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784544300",
+        "order_id": "0x8ae7ab375539859e4fb5a9eb34d4276111d51b7fb394b89ba7791cf2b85a7a3e",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 268.383123,
+        "submitted_at": "2026-07-20T10:45:32.906843+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.54,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.55,
+          "maker_fallback_candidate": false,
+          "reason": null,
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_at_or_inside_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_cbb8147f13db8ea0562093b0",
+        "latency_budget": {
+          "exchange_ack_ts": 1784544652.894272,
+          "submit_sent_to_exchange_ack_s": 0.957517,
+          "submit_sent_ts": 1784544651.936755
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_cbb8147f13db8ea0562093b0"
+          ],
+          "linked_order_ids": [
+            "lo_a99341f2219fc50071149b38"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784544600",
+        "order_id": "0x62ea393e71a5503901f295cd322c9d42ca0c57f716bd82292932767568076497",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 248.063245,
+        "submitted_at": "2026-07-20T10:50:53.422233+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.59,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.49,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_9e4e580282c64b747c6fda33",
+        "latency_budget": {
+          "exchange_ack_ts": 1784545227.93504,
+          "submit_sent_to_exchange_ack_s": 0.946896,
+          "submit_sent_ts": 1784545226.988144
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_9e4e580282c64b747c6fda33"
+          ],
+          "linked_order_ids": [
+            "lo_c61ef13da322434073b093da"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784545200",
+        "order_id": "0xc3b76617b05a2d7ad98194dc29879887321b3113a316af5721e7b079ba592ac4",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.02
+        },
+        "submit_to_window_close_s": 273.011856,
+        "submitted_at": "2026-07-20T11:00:28.405557+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.67,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.47,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_0002e40fcc1cc6ef2bb4def4",
+        "latency_budget": {
+          "exchange_ack_ts": 1784546139.581855,
+          "submit_sent_to_exchange_ack_s": 1.162581,
+          "submit_sent_ts": 1784546138.419274
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_0002e40fcc1cc6ef2bb4def4"
+          ],
+          "linked_order_ids": [
+            "lo_69b86245c83a5bfc294520ee"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784546100",
+        "order_id": "0x69bce99fafa8a766f9f170f4cae896813a216c747e07ea8b5e0b6c92031caf79",
+        "outcome": "Down",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 261.580726,
+        "submitted_at": "2026-07-20T11:15:40.105816+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.9,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.51,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_9d26d5d43fbbb840d23938b2",
+        "latency_budget": {
+          "exchange_ack_ts": 1784547032.269243,
+          "submit_sent_to_exchange_ack_s": 0.9879,
+          "submit_sent_ts": 1784547031.281343
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_9d26d5d43fbbb840d23938b2"
+          ],
+          "linked_order_ids": [
+            "lo_9b722179f71be946453e5d19"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784547000",
+        "order_id": "0x1a00d178c6282eb7ec986a356b24837bfdaa774eaa109dae0d5bf0655723f092",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 268.718657,
+        "submitted_at": "2026-07-20T11:30:32.806571+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.47,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.45,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_618e2863f985fb4442941b62",
+        "latency_budget": {
+          "exchange_ack_ts": 1784547318.982244,
+          "submit_sent_to_exchange_ack_s": 1.020394,
+          "submit_sent_ts": 1784547317.96185
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_618e2863f985fb4442941b62"
+          ],
+          "linked_order_ids": [
+            "lo_43650393e0ddb38517a61762"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784547300",
+        "order_id": "0x6fca31ad10cf35f63192a2999f1317dda209f7bef33986bb812c99d7ce6b22ae",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 282.03815,
+        "submitted_at": "2026-07-20T11:35:19.511591+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.53,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.45,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_01720d9f6134b0463a8b8425",
+        "latency_budget": {
+          "exchange_ack_ts": 1784547335.557715,
+          "submit_sent_to_exchange_ack_s": 0.779846,
+          "submit_sent_ts": 1784547334.777869
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_01720d9f6134b0463a8b8425"
+          ],
+          "linked_order_ids": [
+            "lo_a900c2fa344eb2db59ee20f8"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784547300",
+        "order_id": "0xc48a3c2c58f0a6146bffea39b7e4ac54f9b1d926873fad829335307d2079b9d6",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": false,
+          "same_window_eventual_fill": false,
+          "same_window_fill_count": 0,
+          "same_window_fill_count_after_reject_submit": 0,
+          "same_window_filled_usd": 0
+        },
+        "submit_to_window_close_s": 265.222131,
+        "submitted_at": "2026-07-20T11:35:36.081430+00:00"
+      },
+      {
+        "book_state_at_submit": {
+          "best_ask": 0.39,
+          "displayed_size": null,
+          "displayed_size_available": false,
+          "limit_price": 0.3,
+          "maker_fallback_candidate": true,
+          "reason": "best_ask_above_vwap_allowed_for_maker_fallback",
+          "route": "direct_clob",
+          "source": "parity_capsule.live_intent.metadata.inventory_best_ask_gate",
+          "status": "PASS",
+          "verdict": "ask_above_limit"
+        },
+        "forgone_usd": 1.0,
+        "intent_id": "ci_7655a3429d624f3cb90d16ce",
+        "latency_budget": {
+          "exchange_ack_ts": 1784548834.609999,
+          "submit_sent_to_exchange_ack_s": 1.218095,
+          "submit_sent_ts": 1784548833.391904
+        },
+        "maker_fallback_link": {
+          "engaged": true,
+          "linked_final_statuses": [
+            "REJECTED"
+          ],
+          "linked_intent_ids": [
+            "ci_7655a3429d624f3cb90d16ce"
+          ],
+          "linked_order_ids": [
+            "lo_7d4f90f1c4a34c71fb888ffb"
+          ]
+        },
+        "market_slug": "btc-updown-5m-1784548800",
+        "order_id": "0x29a3f7f65ad0d4fa444fea32ebc54844daa3f2e373077723cf033886d9307acc",
+        "outcome": "Up",
+        "same_window_outcome": {
+          "forgone_estimate_overstated_by_same_window_fill": true,
+          "same_window_eventual_fill": true,
+          "same_window_fill_count": 1,
+          "same_window_fill_count_after_reject_submit": 1,
+          "same_window_filled_usd": 1.02
+        },
+        "submit_to_window_close_s": 266.608096,
+        "submitted_at": "2026-07-20T12:00:35.149484+00:00"
+      }
+    ],
+    "ruling_id": "2026-07-17T13:45Z-fable-ruling24b-fak-no-match-attribution",
+    "summary": {
+      "book_state_verdict_counts": {
+        "ask_above_limit": 30,
+        "ask_at_or_inside_limit": 4
+      },
+      "count": 34,
+      "fak_no_match_rejects": 34,
+      "forgone_usd_estimate": 34.0,
+      "live_path_mutated": false,
+      "maker_fallback_engaged": 34,
+      "net_unrecovered_forgone_usd": 17.0,
+      "race_loss_usd": 2.0,
+      "same_window_eventual_fill": 17,
+      "same_window_eventual_fill_count": 17,
+      "submit_to_window_close_s_avg": 267.836726,
+      "submit_to_window_close_s_p50": 268.718657,
+      "threshold_change": false,
+      "unrecovered_rows": 17
+    }
+  },
+  "flow_stage": "LIVE/MEASURE",
+  "generated_at": "2026-07-20T12:03:54.754422Z",
+  "kind": "live_order_reject_attribution",
+  "live_path_mutated": false,
+  "negative_fill_pnl_analysis": {
+    "flow_stage": "LIVE/MEASURE",
+    "rows": [
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.0,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.24,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_6b2142d230fc89f846a48db6",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784506200",
+        "order_id": "0x1484d1d530bbf120ab3d8d5a1825b1f6bd4fc0b603b6196df9c9dd9315800a32",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -1.0,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T00:10:43.816435+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.65,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.33,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_7537b4147ce300563d6f76e8",
+        "maker_parent_order_id": "0xcd7420ec341cd92fc0a25459b2288cefdb624a45fbfc16b51966ab8ee15b38fb",
+        "market_slug": "btc-updown-5m-1784507400",
+        "order_id": "0x9986994e7b862cb5347c478b0ac4266a54ae59346b9cca1a7c909f3a29049c5f",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -1.65,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T00:30:42.530872+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.05,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.41,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_fb6c62a3b9b1c334738bfe17",
+        "maker_parent_order_id": "0x2117cd4983e43100fcfadfb2894d0b8289832f2fb7936d508d53aa7a424bf903",
+        "market_slug": "btc-updown-5m-1784508000",
+        "order_id": "0xe4e7023aba3970bf1fd76fb2ff0863a3c14d2fff451377f60092a03b722e7614",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.05,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T00:40:13.885038+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.33,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_39d5ff7f69e6f92f2b1da38b",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784508300",
+        "order_id": "0xa88c4e34caadbe63a44506524b3187162a5aae824759509136f6883c91a92483",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T00:45:45.953105+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.34,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_12018b51cf41dd301589730d",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784509500",
+        "order_id": "0xc3fe3ac0b16cd99632bed330b722d5b64bc282235fd182d940b2207165898008",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T01:05:37.595661+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.989999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.47,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_5a25c0284de235c6fd508c3d",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784511000",
+        "order_id": "0xda851c32c7feb4f2f7ac405979282c51525fc1c6e35ca30fae8ff3e919114e3c",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.989999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T01:30:35.907030+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.45,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_6da5aeb9af5d05369187e7d6",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784512500",
+        "order_id": "0x25dc8fc0ae5ea7fee7f37d9cbe55537920829c6146a212eb28550a82aacc8014",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T01:55:31.316349+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.46,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_5d1f7e864e6b28c3716b1419",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784514600",
+        "order_id": "0x39c75b3e1c3366c6f0a2708ee604e8ce95ad85e6b5f8061063b7b1c1ece4aa6a",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T02:30:32.570549+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.31,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_db6e34e8116b2a33066a222f",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784516100",
+        "order_id": "0x7f91794fe6088c39b8f1cb4b374d4b8038df7ee590f4ecc12988057c9048ba57",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T02:55:48.725799+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.989999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.14,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_68296c90fd4d7296c07b38f4",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784516700",
+        "order_id": "0xd3cfeb816e7ad2bf7773ea941091e451fbdff725ce78dc94449a355cc8d41674",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.989999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T03:05:53.519404+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.85,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.3678,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_b62d15ce11def438f4534385",
+        "maker_parent_order_id": "0x88fc6fc661cf98703cee7c2ef5645ae38d586d1c4fabfd596a470649e24d0b66",
+        "market_slug": "btc-updown-5m-1784517300",
+        "order_id": "0x7f7d6f10c608bf3a0aa30a7b12c40d98a4e116ee010ed07ca4e2c532c5121181",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -1.85,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T03:15:47.879224+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.47,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_73babac40b0d583732bdf2db",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784519400",
+        "order_id": "0x4fd41b427a6db2b83765d88591067575966eeaa8616b336773dfb1dce3dbd6a6",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T03:50:17.843638+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.51,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_d4d667743a59a66500f37866",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784520900",
+        "order_id": "0x95d452689d7bb70dde9088dc7d2c93de7727cb232afa9b99894f8318ed59ae73",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T04:15:12.508138+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.989999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.52,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_384137242d52fbaf30353851",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784521200",
+        "order_id": "0x6046e08f54164eb3104667535769cf816bd79dd81200af746bd21cbafaff7b83",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.989999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T04:20:21.499276+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.99,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.4,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_a4f5b8d783429dd9a3d18ce8",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784521500",
+        "order_id": "0x7f7c6180d1c0a40a8aae88ba3e04b1cf76746d46be11809ac2dde68bf15084f8",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.99,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T04:25:38.753038+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.27,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_7d1c87136cc8928df90101db",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784523000",
+        "order_id": "0x24e40c037ef7e39b16819b9639acf377a3d9bf81a986f3fd8a962667a049dacc",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T04:50:52.732056+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.44,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_ffbbfdc30def748e93c08c2c",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784524200",
+        "order_id": "0x21db04b4bdb1e11452d6a02e62fcf7bfeb97a9ae8f3977782173d4d8a51e3cc7",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T05:10:14.491656+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.47,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_e0ea1641c34ee74efe22d861",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784525400",
+        "order_id": "0x7d8b8ec4421bbedf19ab0907e12913720948a6e54266223326a1af52fb8f12b9",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T05:30:19.752460+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.0,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.3,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_eb031dd47946b374d443d55b",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784526000",
+        "order_id": "0xa15373f2275a039cab03e1593fdffc48bf2de286bfffa43d168d4c4eb2374891",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -1.0,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T05:40:43.620564+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.55,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.51,
+        "entry_side": "NO",
+        "execution_role": "maker",
+        "intent_id": "ci_0c7539001b6d42e9e639709c",
+        "maker_parent_order_id": "0x9f55360a09c7cba0e9bc0d939e7494580ca6ee319b67e9ef1bb97a0553e22fa5",
+        "market_slug": "btc-updown-5m-1784526900",
+        "order_id": "0xb6005d577e6e6554fcc3bf4b43165de5ca37048a114b09f60f861387f0329c07",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.55,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|maker_recovery_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T05:55:17.231383+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.15,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.43,
+        "entry_side": "NO",
+        "execution_role": "maker",
+        "intent_id": "ci_c406fce0d8681089eb5d22cb",
+        "maker_parent_order_id": "0xe5152a0d0093a0b79d585011dc73089bccf09ae6929b6d0604d410d366f3884a",
+        "market_slug": "btc-updown-5m-1784527200",
+        "order_id": "0xa018ae108d8aa6f8b4bb59516a55dba363963cc3a074fd5db1ff0b28c34e95eb",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.15,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T06:00:23.965063+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.0,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.6,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_10798812cca5c7fb76c805c8",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784528400",
+        "order_id": "0x055aa23c9d5da0c91075bd605522f5458fb896d7e4e515396bf63d41105f29a7",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -1.0,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T06:20:20.567501+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.51,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_072fa6142ddf3e0ea338b4ec",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784528700",
+        "order_id": "0xfc8e2c2f08b965a74c74113b68a5f363012e20281faec0dc5b5d8d16d3bbc1cb",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T06:25:12.906058+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.46,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_ec1a79337c213b9d99825ac6",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784529000",
+        "order_id": "0xfdb968c24f728f31f4405cdfb876dfc26fdd09089bb1d42d5d9700710df0870e",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T06:30:22.406688+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.75,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.35,
+        "entry_side": "NO",
+        "execution_role": "maker",
+        "intent_id": "ci_a9ce198d050b3592a6f19f85",
+        "maker_parent_order_id": "0x31f60a42c0c5f2a8a87616eb6890ed3d065281e7a325e21509f6a2ed3213da5b",
+        "market_slug": "btc-updown-5m-1784530500",
+        "order_id": "0xd08af6f5aa3dd55d6dc45eb3db8705855a3b654831c1ff0b02002cce5c540a02",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -1.75,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T06:55:42.939146+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.48,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_2dedbd80d67d1c7f7a007839",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784531100",
+        "order_id": "0x7bc5bda6d15be2a0cad55c68481ff6272e5cc1f6f8696756ddfd9473ee58083a",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T07:05:18.188084+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.45,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.49,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_780ad14be09a9922ad1fc3a1",
+        "maker_parent_order_id": "0xf8ad4dc0cbfc16868b5c8538003d8f4bda22d04bc51e10e6a347cd549bb6792f",
+        "market_slug": "btc-updown-5m-1784531700",
+        "order_id": "0xe068d57fe8d1e1ed08ae42f57715bf02a691d781006223c40c37335c28d2c376",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.45,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T07:15:24.172656+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.43,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_71ce753ed9d8209a854f92e3",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784532600",
+        "order_id": "0xeea707d52b08849070a0780a3c60ff8192b608ce870c1d502b4ddf1c8921f068",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T07:30:53.247086+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.349467,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.47,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_ff9d1fc5f373ff40f8d16a16",
+        "maker_parent_order_id": "0x6ea8024d3b3ae6525e73415f9f0cd29a4dfe36fb617d2e7f8530d7edb9025367",
+        "market_slug": "btc-updown-5m-1784534700",
+        "order_id": "0x55a9af3dd5f19fb35e3160c2c58ca62ea0a1f9fda6bc01406d6f0628e2736aac",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.349467,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T08:05:22.803053+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.33,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_a84d40ec3a3d2e4910a564d8",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784535000",
+        "order_id": "0x3a464a65f31bbc0e70376441243e1081d81774b382dca48218a9808407959c84",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T08:10:59.823054+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 2.2,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.44,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_fd1e04eea7508cbe63745ba9",
+        "maker_parent_order_id": "0x960590d5aa32fa94f54b2601ffa1f742e088e7e4069592dc9b6c16b474c33f96",
+        "market_slug": "btc-updown-5m-1784535300",
+        "order_id": "0x56c5106276d26b5536e0275b0c1c10077d7016c5105fd3facf454afccb7a4690",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -2.2,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T08:15:45.060189+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.85,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.37,
+        "entry_side": "YES",
+        "execution_role": "maker",
+        "intent_id": "ci_1071755b56c81ee25a3aa732",
+        "maker_parent_order_id": "0x28e1aa9b1df08a539063868b1d5137ef5ee96c1f4889e2fd94e45de15c67072d",
+        "market_slug": "btc-updown-5m-1784535600",
+        "order_id": "0x098ada169f4b9ec587b34a6819f6b476b7591bfab1fb04cf9d917ebd153e7725",
+        "parent_reject_reason": "fak_no_match",
+        "payout_usd": 0.0,
+        "pnl_usd": -1.85,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|maker_recovery_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T08:21:05.000954+00:00",
+        "tranche_type": "maker_recovery_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.29,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_e757a6c819dcb04bc81dd08f",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784537100",
+        "order_id": "0x6c53ffeeb83de69a91bbe047248ad480d89c035effe5b663f34dec24731a6c74",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T08:45:28.525279+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.45,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_0bc466099ff57bf1420601aa",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784538300",
+        "order_id": "0xc2fd1252dbbe2b2848675f835808ef52c06307ab30d57acc116cae31405b9f5e",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:05:20.947042+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.69,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_7348d688ce13c5b4c3e25a10",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784538900",
+        "order_id": "0xfe93d3519f63ab0d67537ef11f814bbbf13bd8a301d6a37b64ded4f449cefd1b",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "03_70_85",
+        "price_band_tranche_type": "03_70_85|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:15:48.423367+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.989999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.48,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_36c9e9f2c89059e3b5836bbc",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784539200",
+        "order_id": "0x512db7cd2c11251209bbe71cff1118f1207dfa7e312bd5b41912729052253580",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.989999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:20:53.872172+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.27,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_64771916d38fca044cbae5c1",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784539500",
+        "order_id": "0xade6782728a518ebe984595b414c4e97793caf6a90a03ddcada9df4ac5f2d8a6",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:25:38.924280+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.48,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_c7fc1f5385efb93597e92266",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784540100",
+        "order_id": "0xed88420a370c0493cda309f930117d7ef5345776ca634611eb15de30fab7495a",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:35:25.135902+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.44,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_9faa1394ac48a5b3227d5d8b",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784540700",
+        "order_id": "0x0a976a5ab3edea9868390af59aae870e358f5d32fad5c8aa902ed8c92792a064",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:45:33.056195+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.42,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_68115def3563524774dac84c",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784541000",
+        "order_id": "0x6460abf83426f87ea81f73fcc437a0a9b0f4fda689738d2619a8298b79d484e5",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T09:50:17.849483+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.0,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.7,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_74965f538fc18f35504725b0",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784544000",
+        "order_id": "0x68ba67fdfa5cc2f78e345dd0b9289e4c5fb4b7af76febd868aea0376d4b2a00f",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -1.0,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "03_70_85",
+        "price_band_tranche_type": "03_70_85|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T10:40:52.321198+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.38,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_2d3be8da4ff1718060ebf78f",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784545200",
+        "order_id": "0x6ade7371b2c6766847d1bbb0da4077c26a7445c2deede172bbdceff179825d85",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": true,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T11:00:45.346714+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 1.0,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.27,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_17de3b6a16110fb22f7cbc16",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784545500",
+        "order_id": "0x50e2970e98bb5d9bbf7133f2d23c255d78dec618387506ef83acb3d331f24dce",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -1.0,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T11:05:45.353735+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Up",
+        "entry_outcome_side": "YES",
+        "entry_price": 0.29,
+        "entry_side": "YES",
+        "execution_role": "taker",
+        "intent_id": "ci_43546bc940d9edb73cd75622",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784546100",
+        "order_id": "0xece089e88287d7b6d6f282f9743c911bd82e9e8b7b745ae9500559e430533f6d",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "01_25_50",
+        "price_band_tranche_type": "01_25_50|direct_taker_fill",
+        "resolution_winner": "NO",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T11:15:57.145709+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "cost_basis_source": "response_filled_size_usd",
+        "cost_usd": 0.999999,
+        "entry_outcome": "Down",
+        "entry_outcome_side": "NO",
+        "entry_price": 0.23,
+        "entry_side": "NO",
+        "execution_role": "taker",
+        "intent_id": "ci_aba3819d5e9721ea6a2d884d",
+        "maker_parent_order_id": null,
+        "market_slug": "btc-updown-5m-1784546700",
+        "order_id": "0xeccca4c85e69b231a792d8b1d344e9ea24ad618f0bdde65ed2045667e64f9ea4",
+        "parent_reject_reason": null,
+        "payout_usd": 0.0,
+        "pnl_usd": -0.999999,
+        "policy_id": "a6896d11_price_reject_canary_0.10_cap_2_le_70",
+        "price_band": "02_50_70",
+        "price_band_tranche_type": "02_50_70|direct_taker_fill",
+        "resolution_winner": "YES",
+        "roi_pct": -100.0,
+        "same_window_recovery_after_fak_no_match": false,
+        "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+        "submitted_at": "2026-07-20T11:25:46.296656+00:00",
+        "tranche_type": "direct_taker_fill",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      }
+    ],
+    "ruling_id": "2026-07-17T14:19Z-fable-ruling26-price-band-tranche-roi",
+    "summary": {
+      "aggregate_by_price_band_tranche_type": {
+        "01_25_50|direct_taker_fill": {
+          "avg_pnl_usd": -0.006266,
+          "cost_usd": 22.969982,
+          "fills": 23,
+          "fix_candidate_gate": {
+            "max_roi_pct": -20.0,
+            "min_resolved_fills": 15,
+            "passes": false
+          },
+          "negative_fills": 16,
+          "negative_rate_pct": 69.565217,
+          "payout_usd": 22.825858,
+          "pnl_usd": -0.144124,
+          "positive_fills": 7,
+          "resolved_fills": 23,
+          "roi_pct": -0.627445,
+          "zero_fills": 0
+        },
+        "01_25_50|maker_recovery_fill": {
+          "avg_pnl_usd": -0.538421,
+          "cost_usd": 26.999467,
+          "fills": 13,
+          "fix_candidate_gate": {
+            "max_roi_pct": -20.0,
+            "min_resolved_fills": 15,
+            "passes": false
+          },
+          "negative_fills": 9,
+          "negative_rate_pct": 69.230769,
+          "payout_usd": 20.0,
+          "pnl_usd": -6.999467,
+          "positive_fills": 4,
+          "resolved_fills": 13,
+          "roi_pct": -25.924464,
+          "zero_fills": 0
+        },
+        "02_50_70|direct_taker_fill": {
+          "avg_pnl_usd": 0.146649,
+          "cost_usd": 33.949968,
+          "fills": 34,
+          "fix_candidate_gate": {
+            "max_roi_pct": -20.0,
+            "min_resolved_fills": 15,
+            "passes": false
+          },
+          "negative_fills": 17,
+          "negative_rate_pct": 50.0,
+          "payout_usd": 38.936034,
+          "pnl_usd": 4.986066,
+          "positive_fills": 17,
+          "resolved_fills": 34,
+          "roi_pct": 14.686512,
+          "zero_fills": 0
+        },
+        "02_50_70|maker_recovery_fill": {
+          "avg_pnl_usd": -2.55,
+          "cost_usd": 2.55,
+          "fills": 1,
+          "fix_candidate_gate": {
+            "max_roi_pct": -20.0,
+            "min_resolved_fills": 15,
+            "passes": false
+          },
+          "negative_fills": 1,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -2.55,
+          "positive_fills": 0,
+          "resolved_fills": 1,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        },
+        "03_70_85|direct_taker_fill": {
+          "avg_pnl_usd": -0.477612,
+          "cost_usd": 2.999998,
+          "fills": 3,
+          "fix_candidate_gate": {
+            "max_roi_pct": -20.0,
+            "min_resolved_fills": 15,
+            "passes": false
+          },
+          "negative_fills": 2,
+          "negative_rate_pct": 66.666667,
+          "payout_usd": 1.567163,
+          "pnl_usd": -1.432835,
+          "positive_fills": 1,
+          "resolved_fills": 3,
+          "roi_pct": -47.761199,
+          "zero_fills": 0
+        }
+      },
+      "aggregate_by_tranche_type": {
+        "direct_taker_fill": {
+          "avg_pnl_usd": 0.056818,
+          "cost_usd": 59.919948,
+          "fills": 60,
+          "negative_fills": 35,
+          "negative_rate_pct": 58.333333,
+          "payout_usd": 63.329055,
+          "pnl_usd": 3.409107,
+          "positive_fills": 25,
+          "resolved_fills": 60,
+          "roi_pct": 5.689436,
+          "zero_fills": 0
+        },
+        "maker_recovery_fill": {
+          "avg_pnl_usd": -0.682105,
+          "cost_usd": 29.549467,
+          "fills": 14,
+          "negative_fills": 10,
+          "negative_rate_pct": 71.428571,
+          "payout_usd": 20.0,
+          "pnl_usd": -9.549467,
+          "positive_fills": 4,
+          "resolved_fills": 14,
+          "roi_pct": -32.316884,
+          "zero_fills": 0
+        }
+      },
+      "all_resolved_pnl": {
+        "avg_pnl_usd": -0.082978,
+        "cost_usd": 89.469415,
+        "fills": 74,
+        "negative_fills": 45,
+        "negative_rate_pct": 60.810811,
+        "payout_usd": 83.329055,
+        "pnl_usd": -6.14036,
+        "positive_fills": 29,
+        "resolved_fills": 74,
+        "roi_pct": -6.863083,
+        "zero_fills": 0
+      },
+      "counts_basis": "resolved_only_canonical_pnl_truth_events_joined_by_order_id",
+      "live_path_mutated": false,
+      "maker_recovery_vs_direct_taker": {
+        "direct_taker_avg_pnl_usd": 0.056818,
+        "direct_taker_fills": 60,
+        "direct_taker_negative_rate_pct": 58.333333,
+        "direct_taker_roi_pct": 5.689436,
+        "maker_minus_direct_avg_pnl_usd": -0.738923,
+        "maker_recovery_avg_pnl_usd": -0.682105,
+        "maker_recovery_fills": 14,
+        "maker_recovery_negative_rate_pct": 71.428571,
+        "maker_recovery_roi_pct": -32.316884,
+        "measurement_only_no_fix": true
+      },
+      "negative_by_policy": {
+        "a6896d11_price_reject_canary_0.10_cap_2_le_70": {
+          "avg_pnl_usd": -1.239988,
+          "cost_usd": 55.799438,
+          "fills": 45,
+          "negative_fills": 45,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -55.799438,
+          "positive_fills": 0,
+          "resolved_fills": 45,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        }
+      },
+      "negative_by_price_band": {
+        "01_25_50": {
+          "avg_pnl_usd": -1.371178,
+          "cost_usd": 34.279455,
+          "fills": 25,
+          "negative_fills": 25,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -34.279455,
+          "positive_fills": 0,
+          "resolved_fills": 25,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        },
+        "02_50_70": {
+          "avg_pnl_usd": -1.084444,
+          "cost_usd": 19.519984,
+          "fills": 18,
+          "negative_fills": 18,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -19.519984,
+          "positive_fills": 0,
+          "resolved_fills": 18,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        },
+        "03_70_85": {
+          "avg_pnl_usd": -0.999999,
+          "cost_usd": 1.999999,
+          "fills": 2,
+          "negative_fills": 2,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -1.999999,
+          "positive_fills": 0,
+          "resolved_fills": 2,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        }
+      },
+      "negative_by_tranche_type": {
+        "direct_taker_fill": {
+          "avg_pnl_usd": -0.998571,
+          "cost_usd": 34.949971,
+          "fills": 35,
+          "negative_fills": 35,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -34.949971,
+          "positive_fills": 0,
+          "resolved_fills": 35,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        },
+        "maker_recovery_fill": {
+          "avg_pnl_usd": -2.084947,
+          "cost_usd": 20.849467,
+          "fills": 10,
+          "negative_fills": 10,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -20.849467,
+          "positive_fills": 0,
+          "resolved_fills": 10,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        }
+      },
+      "negative_by_wallet": {
+        "0xa6896d11f76dfa2820662c1f441496f51553559b": {
+          "avg_pnl_usd": -1.239988,
+          "cost_usd": 55.799438,
+          "fills": 45,
+          "negative_fills": 45,
+          "negative_rate_pct": 100.0,
+          "payout_usd": 0.0,
+          "pnl_usd": -55.799438,
+          "positive_fills": 0,
+          "resolved_fills": 45,
+          "roi_pct": -100.0,
+          "zero_fills": 0
+        }
+      },
+      "negative_fills": 45,
+      "negative_pnl_usd": -55.799438,
+      "previous_ruling_id": "2026-07-17T13:52Z-fable-ruling25-negative-fill-maker-recovery-pnl",
+      "resolved_fills": 74,
+      "resolved_fills_joined": 74,
+      "threshold_change": false,
+      "unresolved_fills": 1
+    }
+  },
+  "ruling_id": "2026-07-17T13:52Z-fable-ruling25-negative-fill-maker-recovery-pnl",
+  "schema_version": 1,
+  "source": {
+    "guard_generated_at": "2026-07-20T12:03:36.837466+00:00",
+    "guard_pid": 9852,
+    "guard_state_path": "data/research/wallet_copy_live_guard_state.json",
+    "live_state_path": "data/research/wallet_copy_live_execution_state.json",
+    "resolutions_path": "data/research/btc_resolutions_from_btcusdt_ticks.jsonl",
+    "scorecard_path": "data/research/wallet_copy_daily_scorecard_2026-07-17.json"
+  },
+  "summary": {
+    "classes": {
+      "best_ask_timeout_or_no_match": {
+        "count": 34,
+        "forgone_usd_estimate": 34.0
+      },
+      "market_state_or_window_end": {
+        "count": 3,
+        "forgone_usd_estimate": 3.0
+      },
+      "other": {
+        "count": 2,
+        "forgone_usd_estimate": 2.0
+      },
+      "price_band_or_policy_cap": {
+        "count": 21,
+        "forgone_usd_estimate": 21.0
+      }
+    },
+    "day": "2026-07-20",
+    "dominant_class": "best_ask_timeout_or_no_match",
+    "fills": 75,
+    "flow_stage": "LIVE/MEASURE",
+    "forgone_usd_estimate": 60.0,
+    "live_path_mutated": false,
+    "orders": 135,
+    "reason_counts": {
+      "fak_no_match": 34,
+      "maker_min_share_bump_exceeds_policy_cap": 15,
+      "maker_window_end_no_fill": 3,
+      "market_buy_precision_cap_exceeded": 6,
+      "post_only_rejected": 2
+    },
+    "reject_rate_pct": 44.444444,
+    "rejects": 60,
+    "scheduler_triggered_subset": {
+      "classes": {
+        "best_ask_timeout_or_no_match": {
+          "count": 1,
+          "forgone_usd_estimate": 1.0
+        },
+        "price_band_or_policy_cap": {
+          "count": 1,
+          "forgone_usd_estimate": 1.0
+        }
+      },
+      "forgone_usd_estimate": 2.0,
+      "market_slugs": [
+        "btc-updown-5m-1784548800"
+      ],
+      "rejects": 2
+    },
+    "threshold_change": false
+  },
+  "threshold_change": false
+}

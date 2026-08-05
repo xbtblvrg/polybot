@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.wallet-copy-e5-delayed-offset-paper</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/nice</string><string>-n</string><string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_maker_first_btc5m_paper_lane.py</string>
+    <string>--lane-id</string><string>e5_delayed_offset_side_selective_v1</string>
+    <string>--intent-source-wallet</string><string>E5_DELAYED_OFFSET_PAPER</string>
+    <string>--window-offset-min-s</string><string>60</string>
+    <string>--window-offset-max-s</string><string>270</string>
+    <string>--outcomes</string><string>Up,Down</string>
+    <string>--fixed-shares</string><string>5</string>
+    <string>--max-price</string><string>0.50</string>
+    <string>--cancel-before-close-s</string><string>30</string>
+    <string>--max-feed-events</string><string>8000</string>
+    <string>--max-event-age-s</string><string>1800</string>
+    <string>--max-quotes</string><string>24</string>
+    <string>--state</string><string>data/research/e5_delayed_offset_paper_state.json</string>
+    <string>--event-log</string><string>data/research/e5_delayed_offset_paper_events.jsonl</string>
+    <string>--resolution-state</string><string>data/research/e5_delayed_offset_resolution_state.json</string>
+    <string>--book-aware-state</string><string>data/research/e5_delayed_offset_book_aware_state.json</string>
+    <string>--live-intents-state</string><string>data/research/e5_delayed_offset_paper_intents.json</string>
+    <string>--gamma-refresh-summary</string><string>data/research/e5_delayed_offset_gamma_refresh_summary.json</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PYTHONUNBUFFERED</key><string>1</string>
+    <key>WALLET_COPY_EGRESS</key><string>VPN</string>
+  </dict>
+  <key>RunAtLoad</key><true/>
+  <key>StartInterval</key><integer>60</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/e5_delayed_offset_paper.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/e5_delayed_offset_paper.launchd.err</string>
+</dict>
+</plist>

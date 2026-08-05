@@ -1,0 +1,127 @@
+{
+  "band": {
+    "max_offset_s": 300.0,
+    "max_price": 0.5,
+    "min_offset_s": 0.0
+  },
+  "file_size_bytes": 202936870707,
+  "flow_stage": "LIVE/PROMOTE",
+  "generated_at": "2026-07-14T13:12:46.788987+00:00",
+  "kind": "source_active_windows_report_v1",
+  "latest_rows": [
+    {
+      "event_iso": "2026-07-14T12:54:07Z",
+      "event_ts": 1784033647.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 247.0,
+      "outcome": "Up",
+      "price": 0.9299999984939264,
+      "received_iso": "2026-07-14T12:54:07.944610Z",
+      "received_ts": 1784033647.94461,
+      "size": 26.559128,
+      "transaction_hash": "0x194146683da2da99c46db855f50a76b8cfc34e551d5b861e0f8108acf6fe6dd9",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:54:08Z",
+      "event_ts": 1784033648.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 248.0,
+      "outcome": "Up",
+      "price": 0.9299999984939264,
+      "received_iso": "2026-07-14T12:54:08.517328Z",
+      "received_ts": 1784033648.517328,
+      "size": 26.559128,
+      "transaction_hash": "0x194146683da2da99c46db855f50a76b8cfc34e551d5b861e0f8108acf6fe6dd9",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T13:09:33Z",
+      "event_ts": 1784034573.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 273.0,
+      "outcome": "Down",
+      "price": 0.95,
+      "received_iso": "2026-07-14T13:09:33.963251Z",
+      "received_ts": 1784034573.963251,
+      "size": 26.0,
+      "transaction_hash": "0x2247d6d3cb399ae771de113d6a2c31f648f63afe0a4907f1e5121f62fe84badb",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:09:34Z",
+      "event_ts": 1784034574.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 274.0,
+      "outcome": "Down",
+      "price": 0.95,
+      "received_iso": "2026-07-14T13:09:34.374991Z",
+      "received_ts": 1784034574.374991,
+      "size": 26.0,
+      "transaction_hash": "0x2247d6d3cb399ae771de113d6a2c31f648f63afe0a4907f1e5121f62fe84badb",
+      "window_start_s": 1784034300.0
+    }
+  ],
+  "rtds_jsonl": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+  "scan_tail_bytes": 384000000,
+  "since_iso": "2026-07-13T13:12:46.801729Z",
+  "since_ts": 1783948366.801729,
+  "source_wallet": "0x6aca4b92179e905378c11c1e7c06ed10b06eaff3",
+  "summary": {
+    "btc5m_buy_rows_since": 4,
+    "btc5m_buy_windows_since": 2,
+    "policy_eligible_rows": 0,
+    "policy_eligible_tally_status": "PENDING",
+    "policy_eligible_windows": 0,
+    "required_source_active_windows": 1,
+    "source_active_rows": 4,
+    "source_active_tally_status": "PASS",
+    "source_active_windows": 2
+  },
+  "windows": [
+    {
+      "first_event_iso": "2026-07-14T12:54:07Z",
+      "first_policy_event_iso": "",
+      "first_policy_received_iso": "",
+      "first_received_iso": "2026-07-14T12:54:07.944610Z",
+      "last_event_iso": "2026-07-14T12:54:08Z",
+      "last_policy_event_iso": "",
+      "last_policy_received_iso": "",
+      "last_received_iso": "2026-07-14T12:54:08.517328Z",
+      "le_max_price_rows": 0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "max_offset_s": 248.0,
+      "min_offset_s": 247.0,
+      "outcomes": [
+        "Up"
+      ],
+      "prices": [
+        0.9299999984939264
+      ],
+      "rows": 2,
+      "window_start_s": 1784033400.0
+    },
+    {
+      "first_event_iso": "2026-07-14T13:09:33Z",
+      "first_policy_event_iso": "",
+      "first_policy_received_iso": "",
+      "first_received_iso": "2026-07-14T13:09:33.963251Z",
+      "last_event_iso": "2026-07-14T13:09:34Z",
+      "last_policy_event_iso": "",
+      "last_policy_received_iso": "",
+      "last_received_iso": "2026-07-14T13:09:34.374991Z",
+      "le_max_price_rows": 0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "max_offset_s": 274.0,
+      "min_offset_s": 273.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.95
+      ],
+      "rows": 2,
+      "window_start_s": 1784034300.0
+    }
+  ]
+}

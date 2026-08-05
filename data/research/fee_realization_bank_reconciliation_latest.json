@@ -1,0 +1,141 @@
+{
+  "bank_identity": {
+    "absolute_residual_usd": 17.412564,
+    "account_value_usd": 301.16255,
+    "banked_cost_usd": 3472.30106,
+    "baseline_iso": "2026-07-05T12:55:00Z",
+    "baseline_usd": 335.0,
+    "current_scorecard_generated_at": "2026-08-05T04:25:31.851188+00:00",
+    "cut_status": "PASS_SAME_CUT",
+    "excluded_stale_gap_snapshot_usd": 10.328578,
+    "fee_cash_term_interval_usd": [
+      101.042332,
+      135.493627
+    ],
+    "fee_interval_rule": "lower bound is receipt-observed cash only; upper bound adds the row-level model on named coverage gaps without interpolating a point estimate",
+    "identity": "account_value = baseline - SUM(banked_cost) - SUM(observed_fee) + SUM(observed_payout) + named_movements",
+    "identity_expected_account_value_usd": 318.575114,
+    "maximum_absolute_residual_usd": 1.0,
+    "named_cash_movement_rule": "append-only tx_hash+block_ts+signed_usd+class rows only; none observed",
+    "named_cash_movements_usd": 0.0,
+    "named_payout_gap_rows": 1,
+    "named_row_set_status": "PASS_ALL_REMAINDER_TERMS_NAMED",
+    "named_unmatched_payout_credit_rows": 7,
+    "named_unmeasured_fee_rows": 398,
+    "observed_fee_usd": 101.042332,
+    "observed_payout_usd": 3556.918506,
+    "open_exposure_basis": "zero_only_because_unresolved_open_cost_is_zero",
+    "open_exposure_delta_usd": 0.0,
+    "open_exposure_double_count_guard": "PASS",
+    "realized_since_topup_usd": 43.140133,
+    "residual_interval_after_named_fee_gaps_usd": [
+      -17.412564,
+      17.038731
+    ],
+    "residual_usd": -17.412564,
+    "since_topup_actual_usd": -33.83745,
+    "status": "PASS_NAMED_ROW_SET"
+  },
+  "cost_basis_migration": {
+    "basis_immutability_status": "PASS_NO_MIGRATION",
+    "by_current_basis": {
+      "actual_trade_record": {
+        "cost_basis_migration_usd": 0.0,
+        "current_cost_usd": 296.302119,
+        "response_cost_usd": 296.302119,
+        "rows": 190
+      },
+      "response_filled_size_usd": {
+        "cost_basis_migration_usd": 0.0,
+        "current_cost_usd": 3175.998941,
+        "response_cost_usd": 3175.998941,
+        "rows": 1847
+      }
+    },
+    "changed_rows": 0,
+    "cost_basis_migration_usd": 0,
+    "matched_since_topup_rows": 2037,
+    "pnl_effect_usd": 0,
+    "rows": [],
+    "sign_convention": "current_cost_minus_original_response_cost; negative means retroactive downward re-costing"
+  },
+  "fee_authority": {
+    "accounting_authority": false,
+    "active_fee_rate": 0.0,
+    "active_fee_source": "live_ledger.expected_vs_realized_fee.realized_fee_usd_nonnull_count_zero",
+    "decision": "ZERO_ACCOUNTING_RATE_OBSERVED_RECEIPT_FEES_SEPARATE_BANKED_COST_IMMUTABLE",
+    "measured_receipt_premium_included_in_banked_cost_basis_usd": 0.0,
+    "measured_receipt_premium_rate": 0.069997697,
+    "measured_receipt_premium_source": "polygon_receipt_pusd_debit_fit_1629_rows_2026-08-02",
+    "measured_receipt_premium_usd_separate_observation": 101.042332,
+    "modeled_unvalidated": true,
+    "orders_with_fee_comparison": 3676,
+    "orders_with_observed_distinct_realized_fee": 1629,
+    "realized_money_basis": "payout_usd - immutable banked fill response cost",
+    "receipt_backfill": {
+      "absolute_model_residual_usd": 5.981172,
+      "coverage_gap_rows": 398,
+      "coverage_verdict": "PARTIAL_DO_NOT_INTERPOLATE",
+      "expected_fee_usd_measured": 106.94991,
+      "measured_first_submitted_at": "2026-07-05T13:08:44.853732+00:00",
+      "measured_last_submitted_at": "2026-08-02T22:10:33.210842+00:00",
+      "model_classification": {
+        "fits_rate_within_0_01_usd": 1588,
+        "other_receipt_response_mismatch": 19,
+        "rule": "receipt debit is authoritative per row; never interpolate into coverage gaps",
+        "zero_fee_receipts": 22
+      },
+      "realized_fee_usd_measured": 101.042332,
+      "receipt_measured_fee_rate": {
+        "maximum": 0.090456807,
+        "mean": 0.066714589,
+        "median": 0.069993246,
+        "minimum": -1.629508197,
+        "target": 0.069997697
+      },
+      "receipt_measured_rows": 1629,
+      "since_topup_filled_rows": 2027,
+      "status_counts": {
+        "COVERAGE_GAP_TX_HASH_COUNT": 398,
+        "PASS_RECEIPT_MEASURED": 1629
+      }
+    }
+  },
+  "flow_stage": "DEFEND/MEASURE/SELF-DEV",
+  "generated_at": "2026-08-05T04:29:09.611499+00:00",
+  "kind": "fee_realization_bank_reconciliation",
+  "live_mutation": false,
+  "measurement_only": true,
+  "population_fork": {
+    "appended_cost_usd_current_basis": 0,
+    "appended_first_submitted_at": null,
+    "appended_last_submitted_at": null,
+    "appended_pnl_usd_realized": 0,
+    "appended_resolved_rows": 0,
+    "appended_row_keys": [],
+    "baseline_cost_usd": 4252.466976,
+    "baseline_resolved_fills": 2513,
+    "cost_delta_decomposition_error_usd": 0.0,
+    "cost_delta_decomposition_sum_usd": 0.0,
+    "cost_delta_usd": 0.0,
+    "current_cost_usd": 4252.466976,
+    "current_resolved_fills": 2513,
+    "cutoff_submitted_at": "2026-08-04T20:45:56.378554+00:00",
+    "historical_cost_basis_revaluation_usd": 0.0,
+    "prior_status_restatement": "STALE_BASELINE_ARTEFACT_NOT_A_FORK",
+    "resolved_fill_delta": 0,
+    "status": "STALE_BASELINE_ARTEFACT_NOT_A_FORK"
+  },
+  "response_basis_counterfactual": {
+    "bank_residual_usd": -76.977583,
+    "basis": "original_response_filled_size_usd_for_every_since_topup_row",
+    "collapses_residual_by_more_than_1_usd": false,
+    "expected_account_value_usd": 378.140133,
+    "realized_since_topup_usd": 43.140133,
+    "residual_change_vs_current_basis_usd": -59.565019,
+    "resolved_fills": 2037,
+    "verdict": "RESPONSE_REBASIS_DOES_NOT_COLLAPSE_RESIDUAL_EXTERNAL_CASH_OUTFLOW_AUDIT_REQUIRED"
+  },
+  "schema_version": 1,
+  "status": "PASS_BANK_IDENTITY_FEE_MODEL_DEMOTED_STALE_BASELINE_RESTATED"
+}

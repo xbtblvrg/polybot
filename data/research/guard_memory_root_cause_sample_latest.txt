@@ -1,0 +1,1338 @@
+Analysis of sampling Python (pid 41723) every 1 millisecond
+Process:         Python [41723]
+Path:            /opt/homebrew/*/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python
+Load Address:    0x1020a0000
+Identifier:      org.python.python
+Version:         3.14.2 (3.14.2)
+Code Type:       ARM64
+Platform:        macOS
+Parent Process:  launchd [1]
+Target Type:     live task
+
+Date/Time:       2026-07-18 17:03:53.744 +0200
+Launch Time:     2026-07-18 16:34:20.793 +0200
+OS Version:      macOS 26.5.1 (25F80)
+Report Version:  7
+Analysis Tool:   /usr/bin/sample
+
+Physical footprint:         4.0G
+Physical footprint (peak):  21.5G
+Idle exit:                  untracked
+----
+
+Call graph:
+    2148 Thread_4999945   DispatchQueue_1: com.apple.main-thread  (serial)
+      2148 start  (in dyld) + 6992  [0x187287e00]
+        2148 Py_BytesMain  (in Python) + 40  [0x102c5b698]
+          2148 pymain_main  (in Python) + 232  [0x102c5b5fc]
+            2148 Py_RunMain  (in Python) + 852  [0x102c5b164]
+              2148 pymain_run_file  (in Python) + 72  [0x102c5bbac]
+                2148 pymain_run_file_obj  (in Python) + 164  [0x102c5be64]
+                  2148 _PyRun_AnyFileObject  (in Python) + 80  [0x102c2ce24]
+                    2148 _PyRun_SimpleFileObject  (in Python) + 256  [0x102c2d1c0]
+                      2148 pyrun_file  (in Python) + 164  [0x102c2dc3c]
+                        2148 run_mod  (in Python) + 172  [0x102c2f3c8]
+                          2148 PyEval_EvalCode  (in Python) + 248  [0x102bb69a0]
+                            1950 _PyEval_EvalFrameDefault  (in Python) + 13112  [0x102bba1d4]
+                            + 1950 _PyObject_MakeTpCall  (in Python) + 120  [0x102a85434]
+                            +   1950 scanner_call  (in _json.cpython-314-darwin.so) + 128  [0x102465b8c]
+                            +     1950 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       1949 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+                            +       ! 1903 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : 1700 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | 1567 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + 1209 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! 1190 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184,164,...  [0x102465470,0x10246545c,...]
+                            +       ! : | + ! 14 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : 5 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : | 5 _platform_memmove  (in libsystem_platform.dylib) + 428,444,...  [0x18764f50c,0x18764f51c,...]
+                            +       ! : | + ! : 4 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | 3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + 3 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | 1 _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+                            +       ! : | + ! : |   1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! : 3 _PyUnicode_FromASCII  (in Python) + 68,80,...  [0x102b3a9fc,0x102b3aa08,...]
+                            +       ! : | + ! : 1 DYLD-STUB$$PyUnicode_Substring  (in _json.cpython-314-darwin.so) + 4  [0x102468ea0]
+                            +       ! : | + ! : 1 PyUnicode_Substring  (in Python) + 20  [0x102b4d14c]
+                            +       ! : | + ! 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! : 2 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : | + ! :   2 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + ! 1 PyUnicode_Substring  (in Python) + 124  [0x102b4d1b4]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + !   1 PyUnicodeWriter_Create  (in Python) + 112  [0x102b51ee4]
+                            +       ! : | + 246 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! 106 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : 44 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | 21 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+                            +       ! : | + ! : | + 8 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : | + ! 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | + ! : 1 _PyObject_Malloc  (in Python) + 60  [0x102b00ba0]
+                            +       ! : | + ! : | + ! : 1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | + ! : | 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! : |   1 pymalloc_alloc  (in Python) + 44  [0x102b00c0c]
+                            +       ! : | + ! : | + ! : 1 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : | + ! :   1 _platform_memmove  (in libsystem_platform.dylib) + 452  [0x18764f524]
+                            +       ! : | + ! : | + ! 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 136,164,...  [0x102465440,0x10246545c,...]
+                            +       ! : | + ! : | + ! 1 _PyUnicode_FromASCII  (in Python) + 212  [0x102b3aa8c]
+                            +       ! : | + ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! : | + !   1 DYLD-STUB$$PyUnicodeWriter_Create  (in _json.cpython-314-darwin.so) + 4  [0x102468dec]
+                            +       ! : | + ! : | + 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+                            +       ! : | + ! : | + ! : 1 PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+                            +       ! : | + ! : | + ! :   1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : | + ! : 1 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : | + ! :   1 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : | + ! :     1 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + ! :       1 _Py_dg_strtod  (in Python) + 4556  [0x102c51424]
+                            +       ! : | + ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | + ! : 1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | + ! :   1 _PyObject_Malloc  (in Python) + 24  [0x102b00b7c]
+                            +       ! : | + ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184  [0x102465470]
+                            +       ! : | + ! : | + 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1796,1812  [0x1024665c4,0x1024665d4]
+                            +       ! : | + ! : | + 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : | + ! 1 insert_to_emptydict  (in Python) + 92  [0x102ad71f4]
+                            +       ! : | + ! : | + ! : 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! :   1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | + ! 1 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + ! : | + !   1 _Py_dict_lookup  (in Python) + 52  [0x102ad5668]
+                            +       ! : | + ! : | + 1 insertdict  (in Python) + 128  [0x102ad741c]
+                            +       ! : | + ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! : | + ! 1 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! : | + !   1 _Py_dict_lookup  (in Python) + 16  [0x102ad5644]
+                            +       ! : | + ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | + ! : | +   1 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! : | +     1 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! : | +       1 _PyObject_Free  (in Python) + 80  [0x102b010d8]
+                            +       ! : | + ! : | 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,176,...  [0x10246545c,0x102465468,...]
+                            +       ! : | + ! : | 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | + 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+                            +       ! : | + ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | + ! : | + ! : 1 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! : | + ! :   1 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! : | + ! :     1 PyObject_Free  (in Python) + 16  [0x102b00744]
+                            +       ! : | + ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | + !   1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | + ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+                            +       ! : | + ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : | + !   1 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + ! : | + !     1 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! : | + !       1 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : | + !         1 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : | + !           1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + !             1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | +   1 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : | +     1 _platform_memmove  (in libsystem_platform.dylib) + 460  [0x18764f52c]
+                            +       ! : | + ! : | 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 880,52,...  [0x102466230,0x102465ef4,...]
+                            +       ! : | + ! : | 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! : | + 1 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : | + ! : | + ! 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! : | + 1 PyUnicodeWriter_Discard  (in Python) + 32  [0x102b51fa4]
+                            +       ! : | + ! : | + 1 _PyUnicodeWriter_Dealloc  (in Python) + 36  [0x102b3cdc0]
+                            +       ! : | + ! : | 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : | + 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 64,196  [0x1024653f8,0x10246547c]
+                            +       ! : | + ! : | 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : | + 2 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : | +   1 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : | +   ! 1 PyOS_string_to_double  (in Python) + 116  [0x102c4f4b0]
+                            +       ! : | + ! : | +   !   1 DYLD-STUB$$__error  (in Python) + 4  [0x102ce0240]
+                            +       ! : | + ! : | +   1 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : | +     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 820  [0x1024661f4]
+                            +       ! : | + ! : | + 1 PyList_New  (in Python) + 352  [0x102ab9934]
+                            +       ! : | + ! : | +   1 _PyObject_GC_New  (in Python) + 64  [0x102bf9210]
+                            +       ! : | + ! : | +     1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+                            +       ! : | + ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | +   1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 176  [0x102465468]
+                            +       ! : | + ! : | 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : |   1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : |     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : |       1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : 11 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : | 9 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : | + 6 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : | + ! 5 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + ! : 4 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + ! : | 4 _Py_dg_strtod  (in Python) + 496,312,...  [0x102c50448,0x102c50390,...]
+                            +       ! : | + ! : | + ! : 1 _Py_dg_strtod  (in Python) + 4576  [0x102c51438]
+                            +       ! : | + ! : | + ! 1 PyOS_string_to_double  (in Python) + 84  [0x102c4f490]
+                            +       ! : | + ! : | + !   1 DYLD-STUB$$__error  (in Python) + 4  [0x102ce0240]
+                            +       ! : | + ! : | + 1 _Py_string_to_number_with_underscores  (in Python) + 60  [0x102c4f5bc]
+                            +       ! : | + ! : | + ! 1 _platform_strchr  (in libsystem_platform.dylib) + 60  [0x18764f69c]
+                            +       ! : | + ! : | + 1 float_from_string_inner  (in Python) + 160  [0x102aab240]
+                            +       ! : | + ! : | + ! 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! : | + 1 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : | +   1 _PyObject_Malloc  (in Python) + 24  [0x102b00b7c]
+                            +       ! : | + ! : | 1 DYLD-STUB$$PyFloat_FromString  (in _json.cpython-314-darwin.so) + 0  [0x102468ce0]
+                            +       ! : | + ! : | 1 PyFloat_FromString  (in Python) + 48  [0x102aaaee8]
+                            +       ! : | + ! : 11 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1796,2320,...  [0x1024665c4,0x1024667d0,...]
+                            +       ! : | + ! : 10 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : | 4 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | + 2 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | + ! 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! : 1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | + ! 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + 1 DYLD-STUB$$PyUnicode_Substring  (in _json.cpython-314-darwin.so) + 0  [0x102468e9c]
+                            +       ! : | + ! : | + 1 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : | +   1 _platform_memmove  (in libsystem_platform.dylib) + 452  [0x18764f524]
+                            +       ! : | + ! : | 4 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184,172,...  [0x102465470,0x102465464,...]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + ! : | 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! : |   1 DYLD-STUB$$PyUnicodeWriter_Discard  (in _json.cpython-314-darwin.so) + 4  [0x102468df8]
+                            +       ! : | + ! : 6 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! : | 4 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! : | + 4 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + ! : | +   4 siphash13  (in Python) + 500,64,...  [0x102c2508c,0x102c24ed8,...]
+                            +       ! : | + ! : | 2 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! : |   1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : |   ! 1 unicodekeys_lookup_unicode  (in Python) + 188  [0x102ad53f4]
+                            +       ! : | + ! : |   !   1 compare_unicode_unicode  (in Python) + 140  [0x102adf844]
+                            +       ! : | + ! : |   !     1 compare_unicode_unicode  (in Python) + 140  [0x102adf844]
+                            +       ! : | + ! : |   1 _Py_dict_lookup  (in Python) + 1484  [0x102ad5c00]
+                            +       ! : | + ! : 6 scanstring_unicode  (in _json.cpython-314-darwin.so) + 520,176,...  [0x1024655c0,0x102465468,...]
+                            +       ! : | + ! : 5 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : | 5 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + ! : |   4 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! : |   + 2 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : |   + ! 1 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : |   + ! : 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : |   + ! :   1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : |   + ! 1 new_keys_object  (in Python) + 244  [0x102addd7c]
+                            +       ! : | + ! : |   + 2 dictresize  (in Python) + 196,280  [0x102adfe20,0x102adfe74]
+                            +       ! : | + ! : |   1 insert_combined_dict  (in Python) + 216  [0x102adfbdc]
+                            +       ! : | + ! : 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | 3 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | + 3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | +   3 pymalloc_alloc  (in Python) + 592,88  [0x102b00e30,0x102b00c38]
+                            +       ! : | + ! : | 2 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : |   2 _platform_memmove  (in libsystem_platform.dylib) + 180,460  [0x18764f414,0x18764f52c]
+                            +       ! : | + ! : 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | + ! : | 3 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! : | + 3 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! : | +   2 PyObject_Free  (in Python) + 16  [0x102b00744]
+                            +       ! : | + ! : | +   1 _PyObject_Free  (in Python) + 112  [0x102b010f8]
+                            +       ! : | + ! : | 1 unicode_dealloc  (in Python) + 76  [0x102b55714]
+                            +       ! : | + ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : |   1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184  [0x102465470]
+                            +       ! : | + ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : |   1 _Py_dict_lookup  (in Python) + 328  [0x102ad577c]
+                            +       ! : | + ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3908  [0x102466e04]
+                            +       ! : | + ! : | 1 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! : |   1 _PyObject_Free  (in Python) + 112  [0x102b010f8]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! :   1 PyUnicodeWriter_Create  (in Python) + 76  [0x102b51ec0]
+                            +       ! : | + ! 25 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1796,1804,...  [0x1024665c4,0x1024665cc,...]
+                            +       ! : | + ! 21 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+                            +       ! : | + ! : 5 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1796,232,...  [0x1024665c4,0x102465fa8,...]
+                            +       ! : | + ! : 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : | 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | + 1 PyUnicode_Substring  (in Python) + 20  [0x102b4d14c]
+                            +       ! : | + ! : | + 1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | +   1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | +     1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + ! : | 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | + ! : 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3876  [0x102466de4]
+                            +       ! : | + ! : | + 1 DYLD-STUB$$PyLong_FromString  (in _json.cpython-314-darwin.so) + 0  [0x102468d28]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : | + 1 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : | +   1 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : | +     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | +       1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3024  [0x102466a90]
+                            +       ! : | + ! : | 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | + ! : 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! : | 2 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! : | + 1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : | + ! 1 unicodekeys_lookup_unicode  (in Python) + 188  [0x102ad53f4]
+                            +       ! : | + ! : | + !   1 compare_unicode_unicode  (in Python) + 140  [0x102adf844]
+                            +       ! : | + ! : | + !     1 _platform_memcmp  (in libsystem_platform.dylib) + 88  [0x18764cf68]
+                            +       ! : | + ! : | + 1 _Py_dict_lookup  (in Python) + 72  [0x102ad567c]
+                            +       ! : | + ! : | 1 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! : |   1 unicode_hash  (in Python) + 16  [0x102b56254]
+                            +       ! : | + ! : 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : | 1 insert_to_emptydict  (in Python) + 168  [0x102ad7240]
+                            +       ! : | + ! : | + 1 DYLD-STUB$$bzero  (in Python) + 4  [0x102ce0330]
+                            +       ! : | + ! : | 1 insert_to_emptydict  (in Python) + 80  [0x102ad71e8]
+                            +       ! : | + ! : | 1 setitem_take2_lock_held  (in Python) + 32  [0x102ad6ef4]
+                            +       ! : | + ! : 1 dict_setdefault_ref_lock_held  (in Python) + 244  [0x102ada0ec]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 520  [0x1024655c0]
+                            +       ! : | + ! 16 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : 13 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : | 8 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : | + 7 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + ! 6 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + ! : 6 _Py_dg_strtod  (in Python) + 52,160,...  [0x102c5028c,0x102c502f8,...]
+                            +       ! : | + ! : | + ! 1 lshift  (in Python) + 336  [0x102c524ec]
+                            +       ! : | + ! : | + 1 PyOS_string_to_double  (in Python) + 48  [0x102c4f46c]
+                            +       ! : | + ! : | +   1 __error  (in libsystem_kernel.dylib) + 4  [0x18760261c]
+                            +       ! : | + ! : | 3 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : | + 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! 2 pymalloc_alloc  (in Python) + 48,592  [0x102b00c10,0x102b00e30]
+                            +       ! : | + ! : | + 1 pymalloc_alloc  (in Python) + 96  [0x102b00c40]
+                            +       ! : | + ! : | 1 _Py_string_to_number_with_underscores  (in Python) + 60  [0x102c4f5bc]
+                            +       ! : | + ! : | + 1 _platform_strchr  (in libsystem_platform.dylib) + 60  [0x18764f69c]
+                            +       ! : | + ! : | 1 _Py_string_to_number_with_underscores  (in Python) + 40  [0x102c4f5a8]
+                            +       ! : | + ! : 2 _Py_string_to_number_with_underscores  (in Python) + 84,104  [0x102c4f5d4,0x102c4f5e8]
+                            +       ! : | + ! : 1 DYLD-STUB$$PyFloat_FromString  (in _json.cpython-314-darwin.so) + 4  [0x102468ce4]
+                            +       ! : | + ! 15 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! : 6 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! : | 6 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + ! : |   6 siphash13  (in Python) + 64,80,...  [0x102c24ed8,0x102c24ee8,...]
+                            +       ! : | + ! : 5 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! : | 4 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : | + 4 unicodekeys_lookup_unicode  (in Python) + 300,224,...  [0x102ad5464,0x102ad5418,...]
+                            +       ! : | + ! : | 1 _Py_dict_lookup  (in Python) + 1484  [0x102ad5c00]
+                            +       ! : | + ! : 3 dict_setdefault_ref_lock_held  (in Python) + 36,60,...  [0x102ada01c,0x102ada034,...]
+                            +       ! : | + ! : 1 _Py_dict_lookup  (in Python) + 328  [0x102ad577c]
+                            +       ! : | + ! 15 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184,212,...  [0x102465470,0x10246548c,...]
+                            +       ! : | + ! 14 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : | 4 _PyUnicode_FromASCII  (in Python) + 160,128,...  [0x102b3aa58,0x102b3aa38,...]
+                            +       ! : | + ! : | 1 PyUnicode_Substring  (in Python) + 20  [0x102b4d14c]
+                            +       ! : | + ! : 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,212,...  [0x10246545c,0x10246548c,...]
+                            +       ! : | + ! : 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + ! : 1 PyUnicode_Substring  (in Python) + 120  [0x102b4d1b0]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Create  (in Python) + 48  [0x102b51ea4]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! :   1 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : | + ! :     1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! 12 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : 5 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + ! : | 4 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! : | + 3 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : | + ! 1 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : | + ! : 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + ! :   1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | + ! 1 new_keys_object  (in Python) + 264  [0x102addd90]
+                            +       ! : | + ! : | + ! : 1 _platform_memset  (in libsystem_platform.dylib) + 180  [0x18764f144]
+                            +       ! : | + ! : | + ! 1 new_keys_object  (in Python) + 68  [0x102addccc]
+                            +       ! : | + ! : | + 1 dictresize  (in Python) + 148  [0x102adfdf0]
+                            +       ! : | + ! : | 1 insert_combined_dict  (in Python) + 44  [0x102adfb30]
+                            +       ! : | + ! : 4 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + ! : | 2 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : | + 2 unicodekeys_lookup_unicode  (in Python) + 168,232  [0x102ad53e0,0x102ad5420]
+                            +       ! : | + ! : | 1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : | 1 unicodekeys_lookup_unicode  (in Python) + 276  [0x102ad544c]
+                            +       ! : | + ! : 2 insertdict  (in Python) + 40  [0x102ad73c4]
+                            +       ! : | + ! : 1 setitem_take2_lock_held  (in Python) + 32  [0x102ad6ef4]
+                            +       ! : | + ! 7 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! : 4 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : | 4 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : |   4 pymalloc_alloc  (in Python) + 592,44,...  [0x102b00e30,0x102b00c0c,...]
+                            +       ! : | + ! : 2 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : | 2 _platform_memmove  (in libsystem_platform.dylib) + 0,428  [0x18764f360,0x18764f50c]
+                            +       ! : | + ! : 1 _PyUnicode_FromASCII  (in Python) + 160  [0x102b3aa58]
+                            +       ! : | + ! 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+                            +       ! : | + ! : 2 PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+                            +       ! : | + ! : | 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : |   2 pymalloc_alloc  (in Python) + 88,592  [0x102b00c38,0x102b00e30]
+                            +       ! : | + ! : 1 DYLD-STUB$$PyBytes_FromStringAndSize  (in _json.cpython-314-darwin.so) + 4  [0x102468c60]
+                            +       ! : | + ! 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3908  [0x102466e04]
+                            +       ! : | + ! : 2 _Py_Dealloc  (in Python) + 44  [0x102af8934]
+                            +       ! : | + ! : 1 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! :   1 _PyObject_Free  (in Python) + 32  [0x102b010a8]
+                            +       ! : | + ! :     1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! 2 PyBytes_FromStringAndSize  (in Python) + 80  [0x102a78948]
+                            +       ! : | + ! 2 insertdict  (in Python) + 128  [0x102ad741c]
+                            +       ! : | + ! 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! : 2 PyUnicodeWriter_Discard  (in Python) + 0,32  [0x102b51f84,0x102b51fa4]
+                            +       ! : | + ! 1 PyFloat_FromString  (in Python) + 200  [0x102aaaf80]
+                            +       ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3876  [0x102466de4]
+                            +       ! : | + ! : 1 PyLong_FromString  (in Python) + 2060  [0x102ac750c]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + !   1 PyUnicodeWriter_Create  (in Python) + 40  [0x102b51e9c]
+                            +       ! : | + !     1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + 30 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1804,1796,...  [0x1024665cc,0x1024665c4,...]
+                            +       ! : | + 23 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! 15 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + ! : 12 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! : | 6 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : | + 5 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : | + ! 5 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + !   5 pymalloc_alloc  (in Python) + 592,88  [0x102b00e30,0x102b00c38]
+                            +       ! : | + ! : | + 1 new_keys_object  (in Python) + 264  [0x102addd90]
+                            +       ! : | + ! : | +   1 _platform_memset  (in libsystem_platform.dylib) + 180  [0x18764f144]
+                            +       ! : | + ! : | 6 dictresize  (in Python) + 220,196,...  [0x102adfe38,0x102adfe20,...]
+                            +       ! : | + ! : 2 insert_combined_dict  (in Python) + 120  [0x102adfb7c]
+                            +       ! : | + ! : 1 dictresize  (in Python) + 516  [0x102adff60]
+                            +       ! : | + ! 6 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + ! : 6 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! :   6 unicodekeys_lookup_unicode  (in Python) + 232,32,...  [0x102ad5420,0x102ad5358,...]
+                            +       ! : | + ! 2 insertdict  (in Python) + 40,96  [0x102ad73c4,0x102ad73fc]
+                            +       ! : | + 15 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! 8 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! : 6 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + ! : | 6 siphash13  (in Python) + 64,144,...  [0x102c24ed8,0x102c24f28,...]
+                            +       ! : | + ! : 2 unicode_hash  (in Python) + 16  [0x102b56254]
+                            +       ! : | + ! 5 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! : 3 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : | 3 unicodekeys_lookup_unicode  (in Python) + 380  [0x102ad54b4]
+                            +       ! : | + ! : |   3 _platform_memcmp  (in libsystem_platform.dylib) + 280,272  [0x18764d028,0x18764d020]
+                            +       ! : | + ! : 2 _Py_dict_lookup  (in Python) + 72,1484  [0x102ad567c,0x102ad5c00]
+                            +       ! : | + ! 2 dict_setdefault_ref_lock_held  (in Python) + 60,120  [0x102ada034,0x102ada070]
+                            +       ! : | + 10 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,184,...  [0x10246545c,0x102465470,...]
+                            +       ! : | + 8 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | + ! 5 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! : 5 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! :   5 _PyObject_Free  (in Python) + 24,112,...  [0x102b010a0,0x102b010f8,...]
+                            +       ! : | + ! 2 _Py_Dealloc  (in Python) + 28,92  [0x102af8924,0x102af8964]
+                            +       ! : | + ! 1 DYLD-STUB$$_Py_Dealloc  (in _json.cpython-314-darwin.so) + 4  [0x102468ed0]
+                            +       ! : | + 7 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! 7 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + !   5 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + !   : 2 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + !   : | 2 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + !   : |   2 _Py_dg_strtod  (in Python) + 192,496  [0x102c50318,0x102c50448]
+                            +       ! : | + !   : 2 PyOS_string_to_double  (in Python) + 16  [0x102c4f44c]
+                            +       ! : | + !   : 1 PyOS_string_to_double  (in Python) + 84  [0x102c4f490]
+                            +       ! : | + !   :   1 DYLD-STUB$$__error  (in Python) + 4  [0x102ce0240]
+                            +       ! : | + !   1 _Py_string_to_number_with_underscores  (in Python) + 40  [0x102c4f5a8]
+                            +       ! : | + !   1 float_from_string_inner  (in Python) + 160  [0x102aab240]
+                            +       ! : | + !     1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! 4 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : 3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | 3 pymalloc_alloc  (in Python) + 592,88  [0x102b00e30,0x102b00c38]
+                            +       ! : | + ! : 1 _PyObject_Malloc  (in Python) + 24  [0x102b00b7c]
+                            +       ! : | + ! 1 _PyObject_Malloc  (in Python) + 60  [0x102b00ba0]
+                            +       ! : | + 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+                            +       ! : | + ! 4 PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+                            +       ! : | + !   3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + !   : 3 pymalloc_alloc  (in Python) + 80,0  [0x102b00c30,0x102b00be0]
+                            +       ! : | + !   1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 200  [0x102465f88]
+                            +       ! : | + ! 2 PyDict_New  (in Python) + 248  [0x102ad50cc]
+                            +       ! : | + ! : 1 _PyObject_GC_New  (in Python) + 108  [0x102bf923c]
+                            +       ! : | + ! : | 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : 1 _PyObject_GC_New  (in Python) + 64  [0x102bf9210]
+                            +       ! : | + ! 1 DYLD-STUB$$PyDict_New  (in _json.cpython-314-darwin.so) + 4  [0x102468c90]
+                            +       ! : | + 2 dict_setdefault_ref_lock_held  (in Python) + 240,244  [0x102ada0e8,0x102ada0ec]
+                            +       ! : | + 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 132  [0x102465f44]
+                            +       ! : | + ! 1 _PyThreadState_GetCurrent  (in Python) + 24  [0x102c29804]
+                            +       ! : | + ! : 1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + ! 1 _PyThreadState_GetCurrent  (in Python) + 28  [0x102c29808]
+                            +       ! : | + 1 PyUnicode_Substring  (in Python) + 124  [0x102b4d1b4]
+                            +       ! : | + 1 _Py_Dealloc  (in Python) + 124  [0x102af8984]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | +   1 DYLD-STUB$$PyUnicodeWriter_Create  (in _json.cpython-314-darwin.so) + 4  [0x102468dec]
+                            +       ! : | 25 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + 22 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! 18 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : 17 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | 12 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : | + 12 _Py_dg_strtod  (in Python) + 496,192,...  [0x102c50448,0x102c50318,...]
+                            +       ! : | + ! : | 2 _Py_dg_strtod  (in Python) + 1692  [0x102c508f4]
+                            +       ! : | + ! : | + 2 lshift  (in Python) + 44,200  [0x102c523c8,0x102c52464]
+                            +       ! : | + ! : | 2 _Py_dg_strtod  (in Python) + 1724  [0x102c50914]
+                            +       ! : | + ! : | + 2 _Py_dg_strtod  (in Python) + 1740,1808  [0x102c50924,0x102c50968]
+                            +       ! : | + ! : | 1 _Py_dg_strtod  (in Python) + 1636  [0x102c508bc]
+                            +       ! : | + ! : |   1 lshift  (in Python) + 228  [0x102c52480]
+                            +       ! : | + ! : 1 PyOS_string_to_double  (in Python) + 48  [0x102c4f46c]
+                            +       ! : | + ! :   1 DYLD-STUB$$__error  (in Python) + 4  [0x102ce0240]
+                            +       ! : | + ! 3 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | 2 pymalloc_alloc  (in Python) + 88,592  [0x102b00c38,0x102b00e30]
+                            +       ! : | + ! : 1 _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+                            +       ! : | + ! :   1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + ! 1 float_from_string_inner  (in Python) + 180  [0x102aab254]
+                            +       ! : | + 1 DYLD-STUB$$PyFloat_FromString  (in _json.cpython-314-darwin.so) + 0  [0x102468ce0]
+                            +       ! : | + 1 _Py_string_to_number_with_underscores  (in Python) + 96  [0x102c4f5e0]
+                            +       ! : | + 1 float_from_string_inner  (in Python) + 248  [0x102aab298]
+                            +       ! : | 19 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + 7 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! 4 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! : 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | 2 pymalloc_alloc  (in Python) + 280,592  [0x102b00cf8,0x102b00e30]
+                            +       ! : | + ! : 1 _PyObject_Malloc  (in Python) + 24  [0x102b00b7c]
+                            +       ! : | + ! : 1 pymalloc_alloc  (in Python) + 96  [0x102b00c40]
+                            +       ! : | + ! 2 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! : 2 _platform_memmove  (in libsystem_platform.dylib) + 452,460  [0x18764f524,0x18764f52c]
+                            +       ! : | + ! 1 _PyUnicode_FromASCII  (in Python) + 36  [0x102b3a9dc]
+                            +       ! : | + 7 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184,64,...  [0x102465470,0x1024653f8,...]
+                            +       ! : | + 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + 1 PyUnicode_Substring  (in Python) + 124  [0x102b4d1b4]
+                            +       ! : | + 1 _PyUnicode_FromASCII  (in Python) + 212  [0x102b3aa8c]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! 1 PyUnicodeWriter_Create  (in Python) + 8  [0x102b51e7c]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | +   1 PyUnicodeWriter_Discard  (in Python) + 4  [0x102b51f88]
+                            +       ! : | 18 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1804,1832,...  [0x1024665cc,0x1024665e8,...]
+                            +       ! : | 16 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,176,...  [0x10246545c,0x102465468,...]
+                            +       ! : | 12 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + 6 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! 4 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + ! : 4 siphash13  (in Python) + 56,64,...  [0x102c24ed0,0x102c24ed8,...]
+                            +       ! : | + ! 2 unicode_hash  (in Python) + 56  [0x102b5627c]
+                            +       ! : | + 5 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! 4 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : 2 unicodekeys_lookup_unicode  (in Python) + 380  [0x102ad54b4]
+                            +       ! : | + ! : | 2 _platform_memcmp  (in libsystem_platform.dylib) + 164,256  [0x18764cfb4,0x18764d010]
+                            +       ! : | + ! : 2 unicodekeys_lookup_unicode  (in Python) + 136,380  [0x102ad53c0,0x102ad54b4]
+                            +       ! : | + ! 1 _Py_dict_lookup  (in Python) + 1484  [0x102ad5c00]
+                            +       ! : | + 1 dict_setdefault_ref_lock_held  (in Python) + 136  [0x102ada080]
+                            +       ! : | 11 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + 4 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! 3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : 3 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! 1 pymalloc_alloc  (in Python) + 96  [0x102b00c40]
+                            +       ! : | + 4 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! 4 _platform_memmove  (in libsystem_platform.dylib) + 452,420,...  [0x18764f524,0x18764f504,...]
+                            +       ! : | + 2 _PyUnicode_FromASCII  (in Python) + 160,196  [0x102b3aa58,0x102b3aa7c]
+                            +       ! : | + 1 DYLD-STUB$$PyUnicode_Substring  (in _json.cpython-314-darwin.so) + 4  [0x102468ea0]
+                            +       ! : | 10 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + 5 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + ! 3 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! : 3 unicodekeys_lookup_unicode  (in Python) + 84,160,...  [0x102ad538c,0x102ad53d8,...]
+                            +       ! : | + ! 2 _Py_dict_lookup  (in Python) + 72  [0x102ad567c]
+                            +       ! : | + 3 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + ! 2 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! : 1 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : | 1 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : |   1 _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+                            +       ! : | + ! : |     1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! : 1 dictresize  (in Python) + 196  [0x102adfe20]
+                            +       ! : | + ! 1 insert_combined_dict  (in Python) + 36  [0x102adfb28]
+                            +       ! : | + 1 DYLD-STUB$$PyDict_SetItem  (in _json.cpython-314-darwin.so) + 4  [0x102468cb4]
+                            +       ! : | + 1 setitem_take2_lock_held  (in Python) + 144  [0x102ad6f64]
+                            +       ! : | 5 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | + 4 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! 3 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! : 2 _PyObject_Free  (in Python) + 80,96  [0x102b010d8,0x102b010e8]
+                            +       ! : | + ! : 1 _PyObject_Free  (in Python) + 32  [0x102b010a8]
+                            +       ! : | + ! :   1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! 1 _PyObject_Free  (in Python) + 152  [0x102b01120]
+                            +       ! : | + 1 _Py_Dealloc  (in Python) + 28  [0x102af8924]
+                            +       ! : | 5 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3908  [0x102466e04]
+                            +       ! : | + 4 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + ! 2 _PyObject_Free  (in Python) + 32  [0x102b010a8]
+                            +       ! : | + ! : 2 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! 1 _PyObject_Free  (in Python) + 136  [0x102b01110]
+                            +       ! : | + ! 1 object_dealloc  (in Python) + 4  [0x102b21f30]
+                            +       ! : | + 1 _Py_Dealloc  (in Python) + 84  [0x102af895c]
+                            +       ! : | 4 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + 2 _PyUnicodeWriter_Dealloc  (in Python) + 36  [0x102b3cdc0]
+                            +       ! : | + 1 PyUnicodeWriter_Discard  (in Python) + 24  [0x102b51f9c]
+                            +       ! : | + ! 1 _PyUnicodeWriter_Dealloc  (in Python) + 20  [0x102b3cdb0]
+                            +       ! : | + 1 PyUnicodeWriter_Discard  (in Python) + 4  [0x102b51f88]
+                            +       ! : | 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+                            +       ! : | + 2 PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+                            +       ! : | + ! 1 _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+                            +       ! : | + ! : 1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | + ! 1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + !   1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + 1 PyBytes_FromStringAndSize  (in Python) + 8  [0x102a78900]
+                            +       ! : | 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 200  [0x102465f88]
+                            +       ! : | + 2 PyDict_New  (in Python) + 248  [0x102ad50cc]
+                            +       ! : | +   2 _PyObject_GC_New  (in Python) + 64  [0x102bf9210]
+                            +       ! : | +     2 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | 1 dict_setdefault_ref_lock_held  (in Python) + 236  [0x102ada0e4]
+                            +       ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3876  [0x102466de4]
+                            +       ! : | + 1 PyLong_FromString  (in Python) + 2044  [0x102ac74fc]
+                            +       ! : | +   1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : | 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : |   1 PyUnicodeWriter_Create  (in Python) + 40  [0x102b51e9c]
+                            +       ! : |     1 _tlv_get_addr  (in libdyld.dylib) + 12  [0x187250394]
+                            +       ! : 36 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | 17 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,184,...  [0x10246545c,0x102465470,...]
+                            +       ! : | 13 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + 5 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + ! 5 _platform_memmove  (in libsystem_platform.dylib) + 460,0,...  [0x18764f52c,0x18764f360,...]
+                            +       ! : | + 4 _PyUnicode_FromASCII  (in Python) + 68,48,...  [0x102b3a9fc,0x102b3a9e8,...]
+                            +       ! : | + 3 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : 2 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! 1 pymalloc_alloc  (in Python) + 92  [0x102b00c3c]
+                            +       ! : | + 1 PyUnicode_Substring  (in Python) + 20  [0x102b4d14c]
+                            +       ! : | 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + 2 PyUnicodeWriter_Create  (in Python) + 8  [0x102b51e7c]
+                            +       ! : | + 1 DYLD-STUB$$PyUnicodeWriter_Create  (in _json.cpython-314-darwin.so) + 4  [0x102468dec]
+                            +       ! : | 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : |   1 PyUnicodeWriter_Discard  (in Python) + 24  [0x102b51f9c]
+                            +       ! : |   ! 1 _PyUnicodeWriter_Dealloc  (in Python) + 20  [0x102b3cdb0]
+                            +       ! : |   1 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : |   ! 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : |   1 PyUnicodeWriter_Discard  (in Python) + 4  [0x102b51f88]
+                            +       ! : 33 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | 15 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + 13 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! 7 unicodekeys_lookup_unicode  (in Python) + 188,224,...  [0x102ad53f4,0x102ad5418,...]
+                            +       ! : | + ! 5 unicodekeys_lookup_unicode  (in Python) + 380  [0x102ad54b4]
+                            +       ! : | + ! : 4 _platform_memcmp  (in libsystem_platform.dylib) + 260,164,...  [0x18764d014,0x18764cfb4,...]
+                            +       ! : | + ! : 1 DYLD-STUB$$memcmp  (in Python) + 4  [0x102ce08ac]
+                            +       ! : | + ! 1 unicodekeys_lookup_unicode  (in Python) + 188  [0x102ad53f4]
+                            +       ! : | + !   1 compare_unicode_unicode  (in Python) + 140  [0x102adf844]
+                            +       ! : | + !     1 _platform_memcmp  (in libsystem_platform.dylib) + 280  [0x18764d028]
+                            +       ! : | + 1 _Py_dict_lookup  (in Python) + 1484  [0x102ad5c00]
+                            +       ! : | + 1 unicodekeys_lookup_unicode  (in Python) + 276  [0x102ad544c]
+                            +       ! : | 13 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + 13 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | +   13 siphash13  (in Python) + 64,80,...  [0x102c24ed8,0x102c24ee8,...]
+                            +       ! : | 3 dict_setdefault_ref_lock_held  (in Python) + 36,108,...  [0x102ada01c,0x102ada064,...]
+                            +       ! : | 1 _Py_dict_lookup  (in Python) + 328  [0x102ad577c]
+                            +       ! : | 1 unicode_hash  (in Python) + 104  [0x102b562ac]
+                            +       ! : 33 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+                            +       ! : | 28 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + 24 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! 7 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! : 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : | + ! : | + 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Discard  (in Python) + 32  [0x102b51fa4]
+                            +       ! : | + ! : 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | + ! : 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! : | 1 PyUnicodeWriter_Create  (in Python) + 40  [0x102b51e9c]
+                            +       ! : | + ! : 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! :   1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + ! :     1 _PyObject_Malloc  (in Python) + 24  [0x102b00b7c]
+                            +       ! : | + ! 6 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! : | + ! : | 2 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! : | + ! : |   1 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! : | + ! : |   + 1 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! : | + ! : |   +   1 _Py_dg_strtod  (in Python) + 1560  [0x102c50870]
+                            +       ! : | + ! : |   +     1 mult  (in Python) + 100  [0x102c520dc]
+                            +       ! : | + ! : |   1 float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+                            +       ! : | + ! : |     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : |       1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1080,4192  [0x1024662f8,0x102466f20]
+                            +       ! : | + ! : 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,212  [0x10246545c,0x10246548c]
+                            +       ! : | + ! 5 scan_once_unicode  (in _json.cpython-314-darwin.so) + 480,612,...  [0x1024660a0,0x102466124,...]
+                            +       ! : | + ! 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! : 1 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! : | 1 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + ! : |   1 siphash13  (in Python) + 80  [0x102c24ee8]
+                            +       ! : | + ! : 1 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + ! :   1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! :     1 unicodekeys_lookup_unicode  (in Python) + 136  [0x102ad53c0]
+                            +       ! : | + ! 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | + ! : 1 PyDict_SetItem  (in Python) + 36  [0x102ad709c]
+                            +       ! : | + ! : 1 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + ! :   1 _Py_dict_lookup  (in Python) + 52  [0x102ad5668]
+                            +       ! : | + ! 1 _Py_Dealloc  (in Python) + 124  [0x102af8984]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + ! 1 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | + !   1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + !     1 unicodekeys_lookup_unicode  (in Python) + 188  [0x102ad53f4]
+                            +       ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1956  [0x102466664]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! 1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + !   1 pymalloc_alloc  (in Python) + 96  [0x102b00c40]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 184  [0x102465470]
+                            +       ! : | 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! 1 PyUnicodeWriter_Create  (in Python) + 32  [0x102b51e94]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : | 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + 1 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! 1 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + !   1 siphash13  (in Python) + 176  [0x102c24f48]
+                            +       ! : | + 1 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | +   1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | +     1 unicodekeys_lookup_unicode  (in Python) + 28  [0x102ad5354]
+                            +       ! : | 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1824  [0x1024665e0]
+                            +       ! : 32 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : | 16 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | + 10 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + ! 5 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | + ! : 3 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | + ! : | 2 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + ! : | + 2 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + ! : | 1 _PyObject_Malloc  (in Python) + 96  [0x102b00bc4]
+                            +       ! : | + ! : |   1 _xzm_xzone_malloc_freelist_outlined  (in libsystem_malloc.dylib) + 756  [0x18746992c]
+                            +       ! : | + ! : 2 new_keys_object  (in Python) + 264  [0x102addd90]
+                            +       ! : | + ! :   2 _platform_memset  (in libsystem_platform.dylib) + 160,176  [0x18764f130,0x18764f140]
+                            +       ! : | + ! 5 dictresize  (in Python) + 200,220,...  [0x102adfe24,0x102adfe38,...]
+                            +       ! : | + 6 insert_combined_dict  (in Python) + 92,36,...  [0x102adfb60,0x102adfb28,...]
+                            +       ! : | 8 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | + 5 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + ! 5 unicodekeys_lookup_unicode  (in Python) + 108,232,...  [0x102ad53a4,0x102ad5420,...]
+                            +       ! : | + 2 unicodekeys_lookup_unicode  (in Python) + 276  [0x102ad544c]
+                            +       ! : | + 1 _Py_dict_lookup  (in Python) + 80  [0x102ad5684]
+                            +       ! : | 2 _Py_dict_lookup  (in Python) + 328  [0x102ad577c]
+                            +       ! : | 2 insert_combined_dict  (in Python) + 304,308  [0x102adfc34,0x102adfc38]
+                            +       ! : | 2 insertdict  (in Python) + 40,72  [0x102ad73c4,0x102ad73e4]
+                            +       ! : | 1 insert_to_emptydict  (in Python) + 168  [0x102ad7240]
+                            +       ! : | 1 setitem_take2_lock_held  (in Python) + 52  [0x102ad6f08]
+                            +       ! : 24 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1832,480,...  [0x1024665e8,0x1024660a0,...]
+                            +       ! : 17 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+                            +       ! : | 10 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+                            +       ! : | + ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1080  [0x1024662f8]
+                            +       ! : | + ! 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 2576  [0x1024668d0]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + !   1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + !     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + !       1 pymalloc_alloc  (in Python) + 44  [0x102b00c0c]
+                            +       ! : | + 3 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + ! 3 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + !   3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + !     3 pymalloc_alloc  (in Python) + 592,280  [0x102b00e30,0x102b00cf8]
+                            +       ! : | + 2 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | + ! : 1 PyUnicodeWriter_Create  (in Python) + 84  [0x102b51ec8]
+                            +       ! : | + ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | + !   1 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + !     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | + !       1 pymalloc_alloc  (in Python) + 592  [0x102b00e30]
+                            +       ! : | + 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1744  [0x102466590]
+                            +       ! : | + 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+                            +       ! : | +   1 PyUnicodeWriter_Create  (in Python) + 8  [0x102b51e7c]
+                            +       ! : | 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : | + 2 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | + ! 2 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + !   2 siphash13  (in Python) + 228,456  [0x102c24f7c,0x102c25060]
+                            +       ! : | + 2 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | +   1 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | +   : 1 unicodekeys_lookup_unicode  (in Python) + 84  [0x102ad538c]
+                            +       ! : | +   1 _Py_dict_lookup  (in Python) + 1484  [0x102ad5c00]
+                            +       ! : | 3 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : |   2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : |   ! 2 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : |   !   2 _platform_memmove  (in libsystem_platform.dylib) + 12  [0x18764f36c]
+                            +       ! : |   1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164  [0x10246545c]
+                            +       ! : 10 scanstring_unicode  (in _json.cpython-314-darwin.so) + 164,176,...  [0x10246545c,0x102465468,...]
+                            +       ! : 6 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : | 5 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | + 4 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + ! 4 _PyObject_Free  (in Python) + 136,96,...  [0x102b01110,0x102b010e8,...]
+                            +       ! : | + 1 unicode_dealloc  (in Python) + 20  [0x102b556dc]
+                            +       ! : | 1 _Py_Dealloc  (in Python) + 52  [0x102af893c]
+                            +       ! : |   1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : 5 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | 3 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + 3 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | +   3 pymalloc_alloc  (in Python) + 592,88  [0x102b00e30,0x102b00c38]
+                            +       ! : | 1 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + 1 _platform_memmove  (in libsystem_platform.dylib) + 12  [0x18764f36c]
+                            +       ! : | 1 _PyUnicode_FromASCII  (in Python) + 160  [0x102b3aa58]
+                            +       ! : 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | 1 PyUnicodeWriter_Discard  (in Python) + 24  [0x102b51f9c]
+                            +       ! : | + 1 _PyUnicodeWriter_Dealloc  (in Python) + 20  [0x102b3cdb0]
+                            +       ! : | 1 _PyUnicodeWriter_Dealloc  (in Python) + 36  [0x102b3cdc0]
+                            +       ! : 1 dict_setdefault_ref_lock_held  (in Python) + 244  [0x102ada0ec]
+                            +       ! : 1 insertdict  (in Python) + 128  [0x102ad741c]
+                            +       ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 132  [0x102465f44]
+                            +       ! : | 1 DYLD-STUB$$_PyThreadState_GetCurrent  (in _json.cpython-314-darwin.so) + 4  [0x102468eb8]
+                            +       ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+                            +       ! : | 1 PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+                            +       ! : |   1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : |     1 pymalloc_alloc  (in Python) + 88  [0x102b00c38]
+                            +       ! : 1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+                            +       ! :   1 PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+                            +       ! :     1 float_from_string_inner  (in Python) + 124  [0x102aab21c]
+                            +       ! :       1 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! :         1 PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+                            +       ! :           1 _Py_dg_strtod  (in Python) + 424  [0x102c50400]
+                            +       ! 16 scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+                            +       ! : 8 scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+                            +       ! : | 4 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : | + 4 _platform_memmove  (in libsystem_platform.dylib) + 460,12,...  [0x18764f52c,0x18764f36c,...]
+                            +       ! : | 2 _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+                            +       ! : | + 1 _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+                            +       ! : | + ! 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | + 1 pymalloc_alloc  (in Python) + 96  [0x102b00c40]
+                            +       ! : | 1 PyUnicode_Substring  (in Python) + 20  [0x102b4d14c]
+                            +       ! : | 1 _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+                            +       ! : 4 scanstring_unicode  (in _json.cpython-314-darwin.so) + 176,184,...  [0x102465468,0x102465470,...]
+                            +       ! : 2 scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+                            +       ! : | 1 PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+                            +       ! : | + 1 _tlv_get_addr  (in libdyld.dylib) + 20  [0x18725039c]
+                            +       ! : | 1 _PyUnicodeWriter_Dealloc  (in Python) + 36  [0x102b3cdc0]
+                            +       ! : 1 PyUnicodeWriter_Discard  (in Python) + 80  [0x102b51fd4]
+                            +       ! : 1 _PyUnicode_FromASCII  (in Python) + 212  [0x102b3aa8c]
+                            +       ! 11 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+                            +       ! : 6 insertdict  (in Python) + 96  [0x102ad73fc]
+                            +       ! : | 3 insert_combined_dict  (in Python) + 412  [0x102adfca0]
+                            +       ! : | + 2 dictresize  (in Python) + 112,280  [0x102adfdcc,0x102adfe74]
+                            +       ! : | + 1 dictresize  (in Python) + 68  [0x102adfda0]
+                            +       ! : | +   1 new_keys_object  (in Python) + 204  [0x102addd54]
+                            +       ! : | +     1 _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+                            +       ! : | +       1 pymalloc_alloc  (in Python) + 48  [0x102b00c10]
+                            +       ! : | 3 insert_combined_dict  (in Python) + 36,76,...  [0x102adfb28,0x102adfb50,...]
+                            +       ! : 2 insertdict  (in Python) + 68  [0x102ad73e0]
+                            +       ! : | 2 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : |   2 unicodekeys_lookup_unicode  (in Python) + 108,232  [0x102ad53a4,0x102ad5420]
+                            +       ! : 2 setitem_take2_lock_held  (in Python) + 32,116  [0x102ad6ef4,0x102ad6f48]
+                            +       ! : 1 _Py_dict_lookup  (in Python) + 328  [0x102ad577c]
+                            +       ! 10 scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+                            +       ! : 6 dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+                            +       ! : | 5 unicode_hash  (in Python) + 84  [0x102b56298]
+                            +       ! : | + 5 siphash13  (in Python) + 280,368,...  [0x102c24fb0,0x102c25008,...]
+                            +       ! : | 1 unicode_hash  (in Python) + 16  [0x102b56254]
+                            +       ! : 3 dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+                            +       ! : | 2 _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+                            +       ! : | + 2 unicodekeys_lookup_unicode  (in Python) + 84,136  [0x102ad538c,0x102ad53c0]
+                            +       ! : | 1 unicodekeys_lookup_unicode  (in Python) + 276  [0x102ad544c]
+                            +       ! : 1 unicode_hash  (in Python) + 104  [0x102b562ac]
+                            +       ! 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+                            +       ! : 3 _Py_Dealloc  (in Python) + 100  [0x102af896c]
+                            +       ! : | 1 _PyObject_Free  (in Python) + 152  [0x102b01120]
+                            +       ! : | 1 unicode_dealloc  (in Python) + 72  [0x102b55710]
+                            +       ! : | + 1 PyObject_Free  (in Python) + 16  [0x102b00744]
+                            +       ! : | 1 unicode_dealloc  (in Python) + 36  [0x102b556ec]
+                            +       ! : 1 unicode_dealloc  (in Python) + 76  [0x102b55714]
+                            +       ! 4 scan_once_unicode  (in _json.cpython-314-darwin.so) + 564,580,...  [0x1024660f4,0x102466104,...]
+                            +       ! 1 scanstring_unicode  (in _json.cpython-314-darwin.so) + 520  [0x1024655c0]
+                            +       1 scan_once_unicode  (in _json.cpython-314-darwin.so) + 1204  [0x102466374]
+                            +         1 PyList_Append  (in Python) + 224  [0x102aba160]
+                            +           1 _realloc  (in libsystem_malloc.dylib) + 452  [0x187472e90]
+                            +             1 _malloc_zone_realloc  (in libsystem_malloc.dylib) + 148  [0x187472674]
+                            +               1 xzm_realloc  (in libsystem_malloc.dylib) + 852  [0x187462e48]
+                            +                 1 _platform_memmove  (in libsystem_platform.dylib) + 88  [0x18764f3b8]
+                            164 _PyEval_EvalFrameDefault  (in Python) + 45760  [0x102bc215c]
+                            + 164 _Py_HandlePending  (in Python) + 76  [0x102c00a84]
+                            +   149 _PyGC_Collect  (in Python) + 1140  [0x102bf84b8]
+                            +   ! 149 mark_stacks  (in Python) + 416  [0x102bfa87c]
+                            +   !   137 mark_all_reachable  (in Python) + 172  [0x102bfab20]
+                            +   !   : 83 dict_traverse  (in Python) + 100  [0x102adb378]
+                            +   !   : | 83 visit_add_to_container  (in Python) + 0,8,...  [0x102bfab4c,0x102bfab54,...]
+                            +   !   : 44 dict_traverse  (in Python) + 104,92,...  [0x102adb37c,0x102adb370,...]
+                            +   !   : 6 list_traverse  (in Python) + 64  [0x102abd3b0]
+                            +   !   : | 6 visit_add_to_container  (in Python) + 8,40,...  [0x102bfab54,0x102bfab74,...]
+                            +   !   : 3 visit_add_to_container  (in Python) + 56,60  [0x102bfab84,0x102bfab88]
+                            +   !   : 1 list_traverse  (in Python) + 16  [0x102abd380]
+                            +   !   10 mark_all_reachable  (in Python) + 172,116,...  [0x102bfab20,0x102bfaae8,...]
+                            +   !   1 dict_traverse  (in Python) + 132  [0x102adb398]
+                            +   !   1 list_traverse  (in Python) + 92  [0x102abd3cc]
+                            +   15 _PyGC_Collect  (in Python) + 768  [0x102bf8344]
+                            +     15 untrack_tuples  (in Python) + 92,76,...  [0x102bf9950,0x102bf9940,...]
+                            34 _PyEval_EvalFrameDefault  (in Python) + 11008  [0x102bb999c]
+                              33 _io_TextIOWrapper_read  (in Python) + 248  [0x102ca7094]
+                              ! 24 _PyIncrementalNewlineDecoder_decode  (in Python) + 124  [0x102ca1cf8]
+                              ! : 24 PyObject_CallMethodObjArgs  (in Python) + 112  [0x102a874a8]
+                              ! :   24 object_vacall  (in Python) + 228  [0x102a87658]
+                              ! :     24 _PyEval_Vector  (in Python) + 268  [0x102bb6b98]
+                              ! :       24 _PyEval_EvalFrameDefault  (in Python) + 10684  [0x102bb9858]
+                              ! :         24 _codecs_utf_8_decode  (in Python) + 216  [0x102c87aa4]
+                              ! :           16 unicode_decode_utf8  (in Python) + 384  [0x102b40ecc]
+                              ! :           | 16 find_first_nonascii  (in Python) + 56,68  [0x102b593d8,0x102b593e4]
+                              ! :           8 unicode_decode_utf8  (in Python) + 260  [0x102b40e50]
+                              ! :             8 _platform_memmove  (in libsystem_platform.dylib) + 88,104  [0x18764f3b8,0x18764f3c8]
+                              ! 9 _PyIncrementalNewlineDecoder_decode  (in Python) + 300  [0x102ca1da8]
+                              !   9 _platform_memchr  (in libsystem_platform.dylib) + 76,84  [0x18764ce4c,0x18764ce54]
+                              1 _io_TextIOWrapper_read  (in Python) + 188  [0x102ca7058]
+                                1 PyObject_VectorcallMethod  (in Python) + 152  [0x102a872c8]
+                                  1 _io__Buffered_read  (in Python) + 320  [0x102c9d84c]
+                                    1 _io_FileIO_readall_impl  (in Python) + 212  [0x102c97d90]
+                                      1 _Py_read  (in Python) + 108  [0x102c58644]
+                                        1 read  (in libsystem_kernel.dylib) + 8  [0x18760291c]
+
+Total number in stack (recursive counted multiple, when >=5):
+        36       pymalloc_alloc  (in Python) + 0  [0x102b00be0]
+        30       _PyObject_Malloc  (in Python) + 52  [0x102b00b98]
+        28       scanstring_unicode  (in _json.cpython-314-darwin.so) + 0  [0x1024653b8]
+        23       _tlv_get_addr  (in libdyld.dylib) + 0  [0x187250388]
+        22       scanstring_unicode  (in _json.cpython-314-darwin.so) + 472  [0x102465590]
+        19       _PyUnicode_FromASCII  (in Python) + 80  [0x102b3aa08]
+        18       _Py_dict_lookup  (in Python) + 0  [0x102ad5634]
+        18       scan_once_unicode  (in _json.cpython-314-darwin.so) + 672  [0x102466160]
+        17       scan_once_unicode  (in _json.cpython-314-darwin.so) + 0  [0x102465ec0]
+        17       unicodekeys_lookup_unicode  (in Python) + 0  [0x102ad5338]
+        16       _Py_dict_lookup  (in Python) + 284  [0x102ad5750]
+        14       _platform_memmove  (in libsystem_platform.dylib) + 0  [0x18764f360]
+        14       scan_once_unicode  (in _json.cpython-314-darwin.so) + 384  [0x102466040]
+        13       PyUnicodeWriter_Discard  (in Python) + 0  [0x102b51f84]
+        13       scanstring_unicode  (in _json.cpython-314-darwin.so) + 56  [0x1024653f0]
+        12       PyOS_string_to_double  (in Python) + 64  [0x102c4f47c]
+        12       _PyObject_Malloc  (in Python) + 0  [0x102b00b64]
+        12       _PyUnicode_FromASCII  (in Python) + 200  [0x102b3aa80]
+        12       dict_setdefault_ref_lock_held  (in Python) + 168  [0x102ada0a0]
+        12       scan_once_unicode  (in _json.cpython-314-darwin.so) + 412  [0x10246605c]
+        11       _PyUnicode_FromASCII  (in Python) + 0  [0x102b3a9b8]
+        11       scan_once_unicode  (in _json.cpython-314-darwin.so) + 1584  [0x1024664f0]
+        11       scanstring_unicode  (in _json.cpython-314-darwin.so) + 488  [0x1024655a0]
+        10       _Py_Dealloc  (in Python) + 100  [0x102af896c]
+        10       dict_setdefault_ref_lock_held  (in Python) + 108  [0x102ada064]
+        9       PyFloat_FromString  (in Python) + 116  [0x102aaaf2c]
+        9       PyUnicodeWriter_Create  (in Python) + 0  [0x102b51e74]
+        9       PyUnicode_Substring  (in Python) + 0  [0x102b4d138]
+        9       _PyObject_Free  (in Python) + 0  [0x102b01088]
+        9       scan_once_unicode  (in _json.cpython-314-darwin.so) + 4112  [0x102466ed0]
+        9       siphash13  (in Python) + 0  [0x102c24e98]
+        9       unicode_hash  (in Python) + 84  [0x102b56298]
+        8       _Py_dg_strtod  (in Python) + 0  [0x102c50258]
+        8       dict_setdefault_ref_lock_held  (in Python) + 0  [0x102ad9ff8]
+        8       float_from_string_inner  (in Python) + 124  [0x102aab21c]
+        7       _PyUnicodeWriter_Dealloc  (in Python) + 0  [0x102b3cd9c]
+        7       dictresize  (in Python) + 0  [0x102adfd5c]
+        7       dictresize  (in Python) + 68  [0x102adfda0]
+        7       insert_combined_dict  (in Python) + 0  [0x102adfb04]
+        7       insert_combined_dict  (in Python) + 412  [0x102adfca0]
+        7       insertdict  (in Python) + 68  [0x102ad73e0]
+        7       insertdict  (in Python) + 96  [0x102ad73fc]
+        7       new_keys_object  (in Python) + 204  [0x102addd54]
+        7       scan_once_unicode  (in _json.cpython-314-darwin.so) + 448  [0x102466080]
+        7       unicode_dealloc  (in Python) + 72  [0x102b55710]
+        6       PyUnicodeWriter_Discard  (in Python) + 40  [0x102b51fac]
+        6       _Py_Dealloc  (in Python) + 0  [0x102af8908]
+        6       float_from_string_inner  (in Python) + 276  [0x102aab2b4]
+        6       insertdict  (in Python) + 0  [0x102ad739c]
+        6       unicode_hash  (in Python) + 0  [0x102b56244]
+        5       PyBytes_FromStringAndSize  (in Python) + 132  [0x102a7897c]
+        5       _PyObject_Malloc  (in Python) + 32  [0x102b00b84]
+        5       _platform_memcmp  (in libsystem_platform.dylib) + 0  [0x18764cf10]
+        5       scan_once_unicode  (in _json.cpython-314-darwin.so) + 1000  [0x1024662a8]
+        5       scan_once_unicode  (in _json.cpython-314-darwin.so) + 1524  [0x1024664b4]
+        5       scan_once_unicode  (in _json.cpython-314-darwin.so) + 3808  [0x102466da0]
+        5       setitem_take2_lock_held  (in Python) + 0  [0x102ad6ed4]
+
+Sort by top of stack, same collapsed (when >= 5):
+        scanstring_unicode  (in _json.cpython-314-darwin.so)        1310
+        scan_once_unicode  (in _json.cpython-314-darwin.so)        138
+        visit_add_to_container  (in Python)        92
+        pymalloc_alloc  (in Python)        63
+        dict_traverse  (in Python)        45
+        siphash13  (in Python)        42
+        unicodekeys_lookup_unicode  (in Python)        42
+        _platform_memmove  (in libsystem_platform.dylib)        39
+        _Py_dg_strtod  (in Python)        29
+        _tlv_get_addr  (in libdyld.dylib)        26
+        _Py_dict_lookup  (in Python)        21
+        _PyUnicode_FromASCII  (in Python)        20
+        dictresize  (in Python)        18
+        _PyObject_Free  (in Python)        17
+        find_first_nonascii  (in Python)        16
+        insert_combined_dict  (in Python)        16
+        untrack_tuples  (in Python)        15
+        PyUnicodeWriter_Discard  (in Python)        14
+        dict_setdefault_ref_lock_held  (in Python)        14
+        _PyObject_Malloc  (in Python)        12
+        _platform_memcmp  (in libsystem_platform.dylib)        11
+        PyUnicodeWriter_Create  (in Python)        10
+        insertdict  (in Python)        10
+        mark_all_reachable  (in Python)        10
+        PyUnicode_Substring  (in Python)        9
+        _platform_memchr  (in libsystem_platform.dylib)        9
+        _PyUnicodeWriter_Dealloc  (in Python)        8
+        _Py_Dealloc  (in Python)        8
+        unicode_hash  (in Python)        8
+        setitem_take2_lock_held  (in Python)        6
+        _Py_string_to_number_with_underscores  (in Python)        5
+
+Binary Images:
+       0x1020a0000 -        0x1020a115f +org.python.python (3.14.2 - 3.14.2) <D0FD8187-6F3F-3C69-9D22-0B137D438B0E> /opt/homebrew/*/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python
+       0x1023e0000 -        0x1023e45af +_interpreters.cpython-314-darwin.so (0) <A97C2863-896D-3C87-9616-7A5C63A2A204> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_interpreters.cpython-314-darwin.so
+       0x1023f8000 -        0x1023fba53 +_heapq.cpython-314-darwin.so (0) <58592519-75BB-31A0-9146-779E10086BC9> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_heapq.cpython-314-darwin.so
+       0x10240c000 -        0x10240df67 +_queue.cpython-314-darwin.so (0) <A37FB31B-7830-350E-A411-C0158CF9934D> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_queue.cpython-314-darwin.so
+       0x102420000 -        0x102422f5b +fcntl.cpython-314-darwin.so (0) <71B32C8A-7CB9-3008-B197-F221B31A1C5F> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/fcntl.cpython-314-darwin.so
+       0x102434000 -        0x10243b6ff +_hashlib.cpython-314-darwin.so (0) <20167A68-81D3-3E8A-82C4-A37A86CFE67E> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_hashlib.cpython-314-darwin.so
+       0x10244c000 -        0x102452c37 +_blake2.cpython-314-darwin.so (0) <06F05BFB-0047-31DA-8545-480C7B142FF2> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_blake2.cpython-314-darwin.so
+       0x102464000 -        0x102469bd7 +_json.cpython-314-darwin.so (0) <8724F8D0-89C6-32FA-9822-740556813BDA> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_json.cpython-314-darwin.so
+       0x1025dc000 -        0x1025dea73 +_posixsubprocess.cpython-314-darwin.so (0) <467CCF31-4527-32E8-BA7E-15D6851B714C> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_posixsubprocess.cpython-314-darwin.so
+       0x1025f0000 -        0x1025f4bd3 +select.cpython-314-darwin.so (0) <5FA898C7-B1F6-3C6D-9BF0-D802CEFFA255> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/select.cpython-314-darwin.so
+       0x102608000 -        0x10260bfff +_cpuid_c.abi3.so (0) <FEAA427A-6402-30A3-BDC8-885BC4B67C28> /Users/*/_cpuid_c.abi3.so
+       0x1029f0000 -        0x1029fa467 +math.cpython-314-darwin.so (0) <EDA3D152-F433-3185-8B3F-66627A7A7E9B> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/math.cpython-314-darwin.so
+       0x102a0c000 -        0x102a0ffff +cd.cpython-314-darwin.so (0) <4ED37A64-61F0-3EEA-8404-3EB82C9E5812> /Users/*/cd.cpython-314-darwin.so
+       0x102a1c000 -        0x102de413b +org.python.python (3.14.2, [c] 2001-2024 Python Software Foundation. - 3.14.2) <D1EEA04D-1FAD-31B0-A34C-48E935FF166E> /opt/homebrew/*/Python.framework/Versions/3.14/Python
+       0x1078cc000 -        0x1078cdaf3 +grp.cpython-314-darwin.so (0) <DD693665-3C02-37FB-9205-A6A005AA6EBD> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/grp.cpython-314-darwin.so
+       0x1078e0000 -        0x1078e3ddb +binascii.cpython-314-darwin.so (0) <6DC2DBFE-AA62-3261-9979-3C7186D8E624> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/binascii.cpython-314-darwin.so
+       0x1078f4000 -        0x1078fbfff  libffi-trampolines.dylib (40) <E2B9BC52-75FB-382A-96EE-7BB18180BFD2> /usr/lib/libffi-trampolines.dylib
+       0x107904000 -        0x107911f9b +_socket.cpython-314-darwin.so (0) <5076C830-BA35-30CD-9013-1801A7781957> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_socket.cpython-314-darwin.so
+       0x107928000 -        0x10792e35b +_struct.cpython-314-darwin.so (0) <B1DF6758-F965-391A-846D-88B4BD76356B> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_struct.cpython-314-darwin.so
+       0x107940000 -        0x1079424c3 +_bisect.cpython-314-darwin.so (0) <9B3304BA-7EF8-36B1-B421-D4C0E34CAC72> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_bisect.cpython-314-darwin.so
+       0x107954000 -        0x107957fff +_strxor.abi3.so (0) <97C362CE-0608-331A-B9E6-A5CD8C91FE00> /Users/*/_strxor.abi3.so
+       0x10795c000 -        0x10796486b +_zstd.cpython-314-darwin.so (0) <1D959209-0949-35E0-9DBA-A35A9479B557> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_zstd.cpython-314-darwin.so
+       0x107978000 -        0x107991e0b +_ssl.cpython-314-darwin.so (0) <550D6333-4613-3BD7-8EF9-6CFD50CEB62A> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_ssl.cpython-314-darwin.so
+       0x1079b0000 -        0x1079b1e2f +_random.cpython-314-darwin.so (0) <2BE79600-E56C-3F18-B81F-4412AABA9D86> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_random.cpython-314-darwin.so
+       0x1079c4000 -        0x1079caf93 +zlib.cpython-314-darwin.so (0) <357A98D5-631D-3AD5-BD62-7CA9009E2FD1> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/zlib.cpython-314-darwin.so
+       0x1079e8000 -        0x1079fbc27 +_hmac.cpython-314-darwin.so (0) <B0722A91-B323-3366-B529-27F30EF467BE> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_hmac.cpython-314-darwin.so
+       0x107a0c000 -        0x107a0ee47 +_bz2.cpython-314-darwin.so (0) <7D6F7E98-CC1F-37EB-8688-A1ECDC2018B3> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_bz2.cpython-314-darwin.so
+       0x107a20000 -        0x107a25433 +_lzma.cpython-314-darwin.so (0) <8821F10E-086D-30FC-A172-A72583A9EE7C> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_lzma.cpython-314-darwin.so
+       0x107a38000 -        0x107a3d3eb +_multibytecodec.cpython-314-darwin.so (0) <0EBF2508-81BA-3A7D-9662-A53EA92CB021> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_multibytecodec.cpython-314-darwin.so
+       0x107a50000 -        0x107a5331b +_codecs_iso2022.cpython-314-darwin.so (0) <606F8C00-93FC-384C-BA43-E242487DCD53> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_iso2022.cpython-314-darwin.so
+       0x107a64000 -        0x107a65ae7 +_scproxy.cpython-314-darwin.so (0) <645CFF6E-C772-3856-B268-CE3D03DB3541> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_scproxy.cpython-314-darwin.so
+       0x107a78000 -        0x107a7bff7 +_SHA1.abi3.so (0) <92F69CC8-377D-3802-A43E-A494ABBD3205> /Users/*/_SHA1.abi3.so
+       0x107a88000 -        0x107b17ba7 +libssl.3.dylib (0) <704BF8E6-0DEC-398E-986F-2EB58F3C6B3C> /opt/homebrew/*/libssl.3.dylib
+       0x107b60000 -        0x107b7dd67 +liblzma.5.dylib (0) <43C01AFF-C040-33FF-BB38-5E1EC42D9E75> /opt/homebrew/*/liblzma.5.dylib
+       0x107b90000 -        0x107ba49eb +_codecs_tw.cpython-314-darwin.so (0) <8ED748C6-FF68-3F49-B193-BDAEE7D82BAB> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_tw.cpython-314-darwin.so
+       0x107bbc000 -        0x107bbfffb +_SHA256.abi3.so (0) <6169E4CC-BC07-31AD-BE1D-0268FDD9E6B0> /Users/*/_SHA256.abi3.so
+       0x107dcc000 -        0x107e5344f +libzstd.1.5.7.dylib (0) <1CE1197A-4A2B-3036-984E-95599210332B> /opt/homebrew/*/libzstd.1.5.7.dylib
+       0x107f70000 -        0x107f901cf +_codecs_hk.cpython-314-darwin.so (0) <37CB6AD1-3485-38F2-A7BC-0AC029AE74DF> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_hk.cpython-314-darwin.so
+       0x107fa4000 -        0x107fbef37 +_codecs_kr.cpython-314-darwin.so (0) <5ADE778D-81E8-3D16-B220-44BCB6EF4729> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_kr.cpython-314-darwin.so
+       0x107fd0000 -        0x107febc47 +_codecs_cn.cpython-314-darwin.so (0) <93344789-0882-364F-9087-C917D7CA846C> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_cn.cpython-314-darwin.so
+       0x108000000 -        0x108001057 +_statistics.cpython-314-darwin.so (0) <A1035552-241B-340B-BAF0-7C4260EF8021> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_statistics.cpython-314-darwin.so
+       0x108014000 -        0x108017fff +_BLAKE2s.abi3.so (0) <A34A9912-AC8A-3871-83EE-C34CA6ABD43D> /Users/*/_BLAKE2s.abi3.so
+       0x108024000 -        0x10805fff7 +81d243bd2c585b0f4821__mypyc.cpython-314-darwin.so (0) <C8C56CF5-55E8-3C9D-A21E-1DE0CF4F1E3F> /Users/*/81d243bd2c585b0f4821__mypyc.cpython-314-darwin.so
+       0x108080000 -        0x1080aed33 +_codecs_jp.cpython-314-darwin.so (0) <9E5F1684-D831-39E1-B34B-B10986E5F0B1> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_codecs_jp.cpython-314-darwin.so
+       0x1080cc000 -        0x1080d63d3 +_asyncio.cpython-314-darwin.so (0) <2766A86D-3EF3-3581-B7EA-850312E9ABA1> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_asyncio.cpython-314-darwin.so
+       0x1080ec000 -        0x1080f3fff +_raw_aes.abi3.so (0) <A1493C9D-1945-31AC-8608-D10567BA8A54> /Users/*/_raw_aes.abi3.so
+       0x108104000 -        0x10810b2bb +utils.cpython-314-darwin.so (0) <57AEC17F-EDBC-3D8F-A983-B80F177CFEDA> /Users/*/utils.cpython-314-darwin.so
+       0x108120000 -        0x10813c23b +_decimal.cpython-314-darwin.so (0) <53A2C25E-8520-3CBB-963B-F4088C644EFB> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_decimal.cpython-314-darwin.so
+       0x108154000 -        0x108154b6b +_uuid.cpython-314-darwin.so (0) <25C19ED7-884F-3752-AAA7-9C0CC76EF200> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_uuid.cpython-314-darwin.so
+       0x10816c000 -        0x1084ab10f +libcrypto.3.dylib (0) <6D7E86A1-BA7D-3B61-BFC7-248B1221632E> /opt/homebrew/*/libcrypto.3.dylib
+       0x10870c000 -        0x1087bd0e3 +unicodedata.cpython-314-darwin.so (0) <54EEAFAC-D2AC-39E0-B8CD-3BE921026A63> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/unicodedata.cpython-314-darwin.so
+       0x108cd0000 -        0x108ceb4e7 +libmpdec.4.0.1.dylib (0) <52D16117-FCF0-3704-984F-CE4454923A78> /opt/homebrew/*/libmpdec.4.0.1.dylib
+       0x10b100000 -        0x10b1142e7 +_pickle.cpython-314-darwin.so (0) <7A9EBC97-2B31-341E-B293-9D5F590372FA> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_pickle.cpython-314-darwin.so
+       0x10b12c000 -        0x10b130d37 +_zoneinfo.cpython-314-darwin.so (0) <96FB7193-2C46-3753-8D95-19EEFFBF8F61> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_zoneinfo.cpython-314-darwin.so
+       0x10b144000 -        0x10b147fff +_Salsa20.abi3.so (0) <FDC917E1-3B87-33BB-92E2-71BE2D481BF9> /Users/*/_Salsa20.abi3.so
+       0x10b15c000 -        0x10b174753 +dicttoolz.cpython-314-darwin.so (0) <E7D96190-8B76-30CF-9108-245E9287D43C> /Users/*/dicttoolz.cpython-314-darwin.so
+       0x10b18c000 -        0x10b194eeb +recipes.cpython-314-darwin.so (0) <7E5B4E2D-1F5C-3B0D-B3A8-5FDA766427AA> /Users/*/recipes.cpython-314-darwin.so
+       0x10b1b0000 -        0x10b1fd817 +itertoolz.cpython-314-darwin.so (0) <A9CA3A00-AE2C-3483-84FF-3A1F74B4FA0C> /Users/*/itertoolz.cpython-314-darwin.so
+       0x10b234000 -        0x10b25b94f +functoolz.cpython-314-darwin.so (0) <D6C46D34-02A2-373C-8ED8-EFD06ECF50FA> /Users/*/functoolz.cpython-314-darwin.so
+       0x10b27c000 -        0x10b27ffff +_keccak.abi3.so (0) <B6A2EC25-34ED-3D17-A0C7-ADD1680E3051> /Users/*/_keccak.abi3.so
+       0x10b290000 -        0x10b297ff7 +_util.cpython-314-darwin.so (0) <9BE41373-FE4D-3B8B-A446-B92BD79F147D> /Users/*/_util.cpython-314-darwin.so
+       0x10b2a8000 -        0x10b2bca3f +_ctypes.cpython-314-darwin.so (0) <421CD4AA-D8D1-3A8D-BB15-54DFACC7B138> /opt/homebrew/*/Python.framework/Versions/3.14/lib/python3.14/lib-dynload/_ctypes.cpython-314-darwin.so
+       0x10b2d4000 -        0x10b2d7fff +_scrypt.abi3.so (0) <8C9798D6-4910-39ED-A39C-541AF020B15C> /Users/*/_scrypt.abi3.so
+       0x10b2e4000 -        0x10b2f3ffb +_bitarray.cpython-314-darwin.so (0) <941B5ED6-7514-3B32-BD6A-1FA4A678D418> /Users/*/_bitarray.cpython-314-darwin.so
+       0x10b324000 -        0x10b34fc07 +ckzg.cpython-314-darwin.so (0) <3F6DD71B-4563-30C2-BC88-32AF59D1D36B> /Users/*/ckzg.cpython-314-darwin.so
+       0x10b428000 -        0x10b4c8da7 +_regex.cpython-314-darwin.so (0) <0FB52076-1FE4-3938-B5AE-ACF03CE6C73F> /Users/*/_regex.cpython-314-darwin.so
+       0x10f1fc000 -        0x10f5aca37 +_pydantic_core.cpython-314-darwin.so (0) <CD899DE6-EA55-3224-A82A-C93F78C16BB9> /Users/*/_pydantic_core.cpython-314-darwin.so
+       0x1871e0000 -        0x187232b4b  libobjc.A.dylib (951.7) <FF1D8AE4-ABEF-35F1-A30A-1183B9CB414F> /usr/lib/libobjc.A.dylib
+       0x187233000 -        0x187267d07  libdyld.dylib (1378) <B147D877-D0C2-388F-B38D-D3132E39905F> /usr/lib/system/libdyld.dylib
+       0x187268000 -        0x18730e217  dyld (1.0.0 - 1378) <A237EF81-B68B-37BA-A165-92C965529534> /usr/lib/dyld
+       0x18730f000 -        0x187312228  libsystem_blocks.dylib (96) <CC947089-488D-316B-A9C7-46DEC0F73145> /usr/lib/system/libsystem_blocks.dylib
+       0x187313000 -        0x18736755f  libxpc.dylib (3102.120.13) <C40FCAE8-7A17-3D82-87CB-3DA4802ADEF1> /usr/lib/system/libxpc.dylib
+       0x187368000 -        0x1873889ff  libsystem_trace.dylib (1861.120.4) <D0FABAB3-5AE7-3F10-8C62-60CBF5D70850> /usr/lib/system/libsystem_trace.dylib
+       0x187389000 -        0x1874375f7  libcorecrypto.dylib (1922.121.1) <A01A158D-6FE7-3B1C-A2C4-6BCB90D7314A> /usr/lib/system/libcorecrypto.dylib
+       0x187438000 -        0x1874881d7  libsystem_malloc.dylib (812.100.31) <5FAE4807-4D2B-3A95-A63A-DD96D3DA11B4> /usr/lib/system/libsystem_malloc.dylib
+       0x187489000 -        0x1874d023f  libdispatch.dylib (1542.100.32) <F071EFE4-299F-3089-ACC4-0025B8FFB52A> /usr/lib/system/libdispatch.dylib
+       0x1874d1000 -        0x1874d3ffb  libsystem_featureflags.dylib (103) <71FCFFBD-85F8-3365-AFE0-BECEA4369122> /usr/lib/system/libsystem_featureflags.dylib
+       0x1874d4000 -        0x187554d9f  libsystem_c.dylib (1752.120.2) <694B7881-1BF3-3D0F-8F19-B50AE4E8EF8A> /usr/lib/system/libsystem_c.dylib
+       0x187555000 -        0x1875e5ae7  libc++.1.dylib (2100.43) <5013C0F8-84A9-3B56-9FEB-C353816A750F> /usr/lib/libc++.1.dylib
+       0x1875e6000 -        0x18760075f  libc++abi.dylib (2100.43) <E482D257-E5A0-3816-BD97-7B39342958DA> /usr/lib/libc++abi.dylib
+       0x187601000 -        0x18763e2af  libsystem_kernel.dylib (12377.121.6) <CC1CF985-BC65-3725-809F-4C1E36B8F4BA> /usr/lib/system/libsystem_kernel.dylib
+       0x18763f000 -        0x18764bb3b  libsystem_pthread.dylib (539.100.4) <4F33683C-18C8-39A1-800B-2E3BD43BCC13> /usr/lib/system/libsystem_pthread.dylib
+       0x18764c000 -        0x187654963  libsystem_platform.dylib (375.120.2) <160FD864-8D15-36FC-9E97-9725388CFAFE> /usr/lib/system/libsystem_platform.dylib
+       0x187655000 -        0x1876846eb  libsystem_info.dylib (600) <3D62F2D9-F516-31BF-83C7-E203D872300B> /usr/lib/system/libsystem_info.dylib
+       0x187685000 -        0x187be331f  com.apple.CoreFoundation (6.9 - 5026.5.4) <04E3598B-F226-3250-B3B2-CE938DD4DB7E> /System/Library/Frameworks/CoreFoundation.framework/Versions/A/CoreFoundation
+       0x187be4000 -        0x187efebff  com.apple.LaunchServices (1141.1 - 1141.1) <F32798D4-CA63-3935-B694-F45DAFFE5655> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/LaunchServices.framework/Versions/A/LaunchServices
+       0x187eff000 -        0x1880e79bf  com.apple.gpusw.MetalTools (1.0 - 1) <2C2180C9-E027-3712-BED5-73645D651BFD> /System/Library/PrivateFrameworks/MetalTools.framework/Versions/A/MetalTools
+       0x1880e8000 -        0x1888e24bf  libBLAS.dylib (1551.100.26) <F078C775-D8DC-3C4D-879F-A9BB228DBE06> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBLAS.dylib
+       0x1888e3000 -        0x1889f235f  com.apple.Lexicon-framework (1.0 - 195.12) <16E3C45A-3C24-33D7-AD1C-1F6A215E57E7> /System/Library/PrivateFrameworks/Lexicon.framework/Versions/A/Lexicon
+       0x1889f3000 -        0x188b60417  libSparse.dylib (184.80.2) <C479DB8D-CF22-336C-B455-0CF900D96647> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparse.dylib
+       0x188b61000 -        0x188bf40ff  com.apple.SystemConfiguration (1.21 - 1.21) <3E3C91CD-C9CE-3186-B49F-FBF3E6F1696B> /System/Library/Frameworks/SystemConfiguration.framework/Versions/A/SystemConfiguration
+       0x188bf5000 -        0x188c2957b  libCRFSuite.dylib (55) <5220F98F-4B63-31DF-B1BA-F507F9441C35> /usr/lib/libCRFSuite.dylib
+       0x188ef2000 -        0x189ed441f  com.apple.Foundation (6.9 - 5026.5.4) <49DD529F-1708-3767-997B-1A4639A07536> /System/Library/Frameworks/Foundation.framework/Versions/C/Foundation
+       0x18a084000 -        0x18a1a4cbf  com.apple.CoreDisplay (291.4 - 291.4) <C5ACFCC5-A8E3-3DA5-BEB8-F3F3B932BD63> /System/Library/Frameworks/CoreDisplay.framework/Versions/A/CoreDisplay
+       0x18a1a5000 -        0x18a567c1f  com.apple.audio.AudioToolboxCore (1.0 - 1556.604) <868DF717-7563-39D0-95EB-19AB37629A5A> /System/Library/PrivateFrameworks/AudioToolboxCore.framework/Versions/A/AudioToolboxCore
+       0x18a568000 -        0x18a790f1f  com.apple.CoreText (877.4.0.7 - 877.4.0.7) <F7410CD3-EF38-3134-868D-C8633BD5D7F7> /System/Library/Frameworks/CoreText.framework/Versions/A/CoreText
+       0x18a791000 -        0x18af26e7f  com.apple.audio.CoreAudio (5.0 - 5.0) <242B3E7E-7A94-33DA-9D5B-C6739557CEB9> /System/Library/Frameworks/CoreAudio.framework/Versions/A/CoreAudio
+       0x18af27000 -        0x18b345aff  com.apple.security (7.0 - 61901.120.67) <8FDCF5BF-61B9-3D69-BF9E-D134D220B8D9> /System/Library/Frameworks/Security.framework/Versions/A/Security
+       0x18b346000 -        0x18b61bd53  libicucore.A.dylib (76142.5.1.200) <EB0C6EA9-E934-3776-9FD1-AF5E473552AA> /usr/lib/libicucore.A.dylib
+       0x18b61c000 -        0x18b625e5f  libsystem_darwin.dylib (1752.120.2) <8858F025-745A-388E-9544-080781CC9A69> /usr/lib/system/libsystem_darwin.dylib
+       0x18b626000 -        0x18b91dcbf  com.apple.CoreServices.CarbonCore (1333 - 1333) <D5517285-3BB1-37C7-9ECA-B9E6D99DF7CF> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/CarbonCore.framework/Versions/A/CarbonCore
+       0x18b91e000 -        0x18b95dc1b  com.apple.CoreServicesInternal (505 - 505) <0FBC8F4C-B825-381C-8728-762844E11392> /System/Library/PrivateFrameworks/CoreServicesInternal.framework/Versions/A/CoreServicesInternal
+       0x18b95e000 -        0x18b99d1bf  com.apple.CSStore (1141.1 - 1141.1) <1E543EF0-6C96-389F-9B2A-9614B625D198> /System/Library/PrivateFrameworks/CoreServicesStore.framework/Versions/A/CoreServicesStore
+       0x18b99e000 -        0x18ba8625f  com.apple.framework.IOKit (2.0.2 - 100231.120.3) <13C5D661-B23A-3AD8-88BB-2DE56023B840> /System/Library/Frameworks/IOKit.framework/Versions/A/IOKit
+       0x18ba87000 -        0x18ba991b6  libsystem_notify.dylib (348.120.4) <64D76451-1E0C-369B-A631-54DA3140E083> /usr/lib/system/libsystem_notify.dylib
+       0x18d3d3000 -        0x18d3e93ff  com.apple.UniformTypeIdentifiers (709 - 709) <D24AEC54-C332-3707-A7CC-BB0710F6D193> /System/Library/Frameworks/UniformTypeIdentifiers.framework/Versions/A/UniformTypeIdentifiers
+       0x18d8c5000 -        0x18d99d95f  libboringssl.dylib (532.120.8) <611779E1-4B3F-310E-B070-1062D4707AA4> /usr/lib/libboringssl.dylib
+       0x18d99e000 -        0x18dd531df  com.apple.CFNetwork (1.0 - 3860.600.21) <96293549-E281-3713-8ABF-886F0F966951> /System/Library/Frameworks/CFNetwork.framework/Versions/A/CFNetwork
+       0x18dd54000 -        0x18dd6ef7b  libsystem_networkextension.dylib (2226.121.1) <0331EE20-A1FB-3C0D-990A-F65939CFF505> /usr/lib/system/libsystem_networkextension.dylib
+       0x18dd6f000 -        0x18dd70067  libenergytrace.dylib (23) <E59503ED-FB38-3FBC-8999-83124D31645B> /usr/lib/libenergytrace.dylib
+       0x18dd71000 -        0x18ddf0f3f  libMobileGestalt.dylib (1484.120.3) <FA923504-DDCB-3138-ACC5-FB1D38183C78> /usr/lib/libMobileGestalt.dylib
+       0x18ddf1000 -        0x18de08fdf  libsystem_asl.dylib (406) <F40838DF-2F15-3F62-970F-DEE25706BF1B> /usr/lib/system/libsystem_asl.dylib
+       0x18de09000 -        0x18de2c797  com.apple.TCC (1.0 - 1) <46AC4453-DB23-3C07-A0EB-A68277A24098> /System/Library/PrivateFrameworks/TCC.framework/Versions/A/TCC
+       0x18de2d000 -        0x18e3e3bbf  com.apple.SkyLight (1.600.0 - 922.7) <6F1978A2-1B8A-3A44-903D-532EED7106EB> /System/Library/PrivateFrameworks/SkyLight.framework/Versions/A/SkyLight
+       0x18e3e4000 -        0x18eb3903f  com.apple.CoreGraphics (2.0 - 1965.5.1) <3B96EADF-571C-3690-B5CE-7672B45CE859> /System/Library/Frameworks/CoreGraphics.framework/Versions/A/CoreGraphics
+       0x18eb3a000 -        0x18ece1b8b  com.apple.ColorSync (4.13.0 - 3813.5.1) <24C07C0F-03C6-302B-9E54-5ED3A01B730E> /System/Library/Frameworks/ColorSync.framework/Versions/A/ColorSync
+       0x18f136000 -        0x18f523f5f  com.apple.CoreData (120 - 1526) <0A6EBD87-B6D8-3CFB-88A9-A091CE155610> /System/Library/Frameworks/CoreData.framework/Versions/A/CoreData
+       0x18f524000 -        0x18f53fd5f  com.apple.ProtocolBuffer (1 - 310.25.2.9.2) <52A2B4A4-4DB3-3FC3-B3F1-21E64D2F2003> /System/Library/PrivateFrameworks/ProtocolBuffer.framework/Versions/A/ProtocolBuffer
+       0x18f540000 -        0x18f728a2f  libsqlite3.dylib (382) <2197AD4A-E0F8-38FF-924C-D9A97343680F> /usr/lib/libsqlite3.dylib
+       0x18f7cb000 -        0x18f8bc49f  com.apple.BaseBoard (732.1.1 - 732.1.1) <03F3FD64-6BF3-326A-8004-C4EE9563571A> /System/Library/PrivateFrameworks/BaseBoard.framework/Versions/A/BaseBoard
+       0x18f8bd000 -        0x18f92893f  com.apple.RunningBoardServices (1.0 - 1015.100.16) <0E844E62-6BFB-3446-85DC-61C0A6488511> /System/Library/PrivateFrameworks/RunningBoardServices.framework/Versions/A/RunningBoardServices
+       0x18f929000 -        0x18f99cc37  com.apple.AE (944 - 944) <0B347618-0BCF-3104-84B4-C0C0909E9C80> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/AE.framework/Versions/A/AE
+       0x18f99d000 -        0x18f9aed87  libdns_services.dylib (2881.120.11) <E8717AA2-B706-36BB-A8FF-7EB3E64E58D5> /usr/lib/libdns_services.dylib
+       0x18f9af000 -        0x18f9b7387  libsystem_symptoms.dylib (2169.120.7) <F5029F5C-1BF3-31C7-892E-BC8606AC829E> /usr/lib/system/libsystem_symptoms.dylib
+       0x18f9b8000 -        0x1911d575f  com.apple.Network (1.0 - 5812.121.1) <C901F589-30E9-3847-B8FD-0DA14F3E8A09> /System/Library/Frameworks/Network.framework/Versions/A/Network
+       0x1911d6000 -        0x191205ddf  com.apple.analyticsd (1.0 - 1) <5F3582B5-C44E-3B5A-8C3D-E4DA63B8C6D8> /System/Library/PrivateFrameworks/CoreAnalytics.framework/Versions/A/CoreAnalytics
+       0x191206000 -        0x1912078bb  libDiagnosticMessagesClient.dylib (113) <0770F750-6155-3991-9FDE-968CB42647DF> /usr/lib/libDiagnosticMessagesClient.dylib
+       0x191208000 -        0x19127433f  com.apple.spotlight.metadata.utilities (1.0 - 2418.5.9.101) <B4AB943C-5D50-3ADF-8175-4B56301C6DC3> /System/Library/PrivateFrameworks/MetadataUtilities.framework/Versions/A/MetadataUtilities
+       0x191275000 -        0x191300b5f  com.apple.Metadata (26.5 - 2418.5.9.101) <E968E783-21CF-32A8-9C69-6C6870C36CDC> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/Metadata.framework/Versions/A/Metadata
+       0x191301000 -        0x19130a1eb  com.apple.DiskArbitration (2.7 - 2.7) <18127B89-B783-3D13-882D-4F601449EA8A> /System/Library/Frameworks/DiskArbitration.framework/Versions/A/DiskArbitration
+       0x19130b000 -        0x19172f063  com.apple.vImage (8.1 - 632.120.2) <F2338A5A-848F-3745-9C95-92835FED69BC> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vImage.framework/Versions/A/vImage
+       0x191730000 -        0x191b45cdf  com.apple.QuartzCore (1195.14.4 - 1195.14.4) <C57B87A6-283C-3588-87EF-145BBEE8E257> /System/Library/Frameworks/QuartzCore.framework/Versions/A/QuartzCore
+       0x191b46000 -        0x191b974ff  libFontRegistry.dylib (408.4.0.1) <3480BBE1-4AE8-3066-BCB7-EAA15F37C64E> /System/Library/Frameworks/ApplicationServices.framework/Versions/A/Frameworks/ATS.framework/Versions/A/Resources/libFontRegistry.dylib
+       0x191e5e000 -        0x191e6baff  com.apple.OpenDirectory (26.5 - 666.100.1) <96F04359-D02E-3990-B798-4FE4448067BE> /System/Library/Frameworks/OpenDirectory.framework/Versions/A/OpenDirectory
+       0x191e6c000 -        0x191e9527f  com.apple.CFOpenDirectory (26.5 - 666.100.1) <270997B5-219E-3253-AFDD-619027EFDC6B> /System/Library/Frameworks/OpenDirectory.framework/Versions/A/Frameworks/CFOpenDirectory.framework/Versions/A/CFOpenDirectory
+       0x191e96000 -        0x191ea291b  com.apple.CoreServices.FSEvents (1413.100.6 - 1413.100.6) <7AA0D80A-3240-37B5-94D2-0C9B14103993> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/FSEvents.framework/Versions/A/FSEvents
+       0x191ea3000 -        0x191ecc0df  com.apple.coreservices.SharedFileList (225 - 225) <997A2621-7998-38C3-B92C-7BD5A2A2B066> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SharedFileList.framework/Versions/A/SharedFileList
+       0x191ecd000 -        0x191ed008f  libapp_launch_measurement.dylib (17) <7760B2FE-B4E6-3244-B941-0A5277879853> /usr/lib/libapp_launch_measurement.dylib
+       0x191ed1000 -        0x191f199bf  com.apple.CoreAutoLayout (1.0 - 34) <A53A5066-0626-325A-BADA-9F438AE63BB2> /System/Library/PrivateFrameworks/CoreAutoLayout.framework/Versions/A/CoreAutoLayout
+       0x191f1a000 -        0x19200013b  libxml2.2.dylib (39.10) <F9320B7C-5B95-3777-B991-646318D41D0C> /usr/lib/libxml2.2.dylib
+       0x192001000 -        0x19208185f  com.apple.CoreVideo (1.8 - 734.4) <8A36CB95-D65E-3838-8837-22FD9A7E3D9C> /System/Library/Frameworks/CoreVideo.framework/Versions/A/CoreVideo
+       0x192082000 -        0x192084f5f  com.apple.loginsupport (3.0 - 264.4.1) <867D855C-0CD1-32D3-9345-83E99EC84CB6> /System/Library/PrivateFrameworks/login.framework/Versions/A/Frameworks/loginsupport.framework/Versions/A/loginsupport
+       0x1920c3000 -        0x1920ef65f  com.apple.UserManagement (1.0 - 1) <20A5542F-F968-33E9-ABEE-DF2829C727ED> /System/Library/PrivateFrameworks/UserManagement.framework/Versions/A/UserManagement
+       0x193c53000 -        0x193c8b257  libsystem_containermanager.dylib (725.120.2) <518BE44D-AA31-31E6-B44B-A37AD5E47040> /usr/lib/system/libsystem_containermanager.dylib
+       0x193c8c000 -        0x193ca825f  com.apple.IOSurface (393.5.7 - 393.5.7) <B572C01C-59C9-3A03-9EA2-899DE87F3702> /System/Library/Frameworks/IOSurface.framework/Versions/A/IOSurface
+       0x193ca9000 -        0x193cb305f  com.apple.IOAccelerator (487.4.3 - 487.4.3) <1A671DA5-99DE-3CFC-83BF-2563BFA4E32F> /System/Library/PrivateFrameworks/IOAccelerator.framework/Versions/A/IOAccelerator
+       0x193cb4000 -        0x193f8dd5f  com.apple.Metal (373.2 - 373.2) <A5124C88-37B2-3F0D-94AC-B9A984420F0C> /System/Library/Frameworks/Metal.framework/Versions/A/Metal
+       0x193f8e000 -        0x193fb705f  com.apple.audio.caulk (1.0 - 214.600.10) <47E71130-9608-3D99-ACEB-DF5638BC08DF> /System/Library/PrivateFrameworks/caulk.framework/Versions/A/caulk
+       0x193fb8000 -        0x19415929f  com.apple.CoreMedia (1.0 - 3320.8.5.1) <A762A5D3-6049-3849-891B-5805936DAC48> /System/Library/Frameworks/CoreMedia.framework/Versions/A/CoreMedia
+       0x19415a000 -        0x19442925f  libFontParser.dylib (435.4.0.2) <56AE3539-AFDA-3C4B-A32F-D6470E9C877B> /System/Library/PrivateFrameworks/FontServices.framework/libFontParser.dylib
+       0x19477f000 -        0x194abe8df  com.apple.ImageIO (3.3.0 - 2784.5.4) <6018F9E4-A50C-31EC-A4D4-3591A6BA11EE> /System/Library/Frameworks/ImageIO.framework/Versions/A/ImageIO
+       0x194abf000 -        0x194fa9f9f  com.apple.CoreImage (19.0.0 - 1592.120.2) <49179CFD-DE4F-3C89-9139-1FFCCABD1AC2> /System/Library/Frameworks/CoreImage.framework/Versions/A/CoreImage
+       0x194faa000 -        0x195063ddf  com.apple.MetalPerformanceShaders.MPSCore (1.0 - 1) <5ECFEA4E-D0ED-3809-AE36-F6A226913EC1> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSCore.framework/Versions/A/MPSCore
+       0x195064000 -        0x1950685d7  libsystem_configuration.dylib (1405.120.5) <0F7BBC1C-3D50-3E59-A31F-E4672A80BCEB> /usr/lib/system/libsystem_configuration.dylib
+       0x195069000 -        0x19506f8cf  libsystem_sandbox.dylib (2680.120.12) <EC3A75EA-44C0-3A0B-9BF7-71C117B0A9C6> /usr/lib/system/libsystem_sandbox.dylib
+       0x195070000 -        0x19507117f  com.apple.AggregateDictionary (1.0 - 1) <9526ACB3-9F77-3C63-94E3-1F7FF9FFD848> /System/Library/PrivateFrameworks/AggregateDictionary.framework/Versions/A/AggregateDictionary
+       0x195072000 -        0x1950764d3  com.apple.AppleSystemInfo (3.1.5 - 3.1.5) <1AF0471A-7CA4-363A-A88C-878F918559C3> /System/Library/PrivateFrameworks/AppleSystemInfo.framework/Versions/A/AppleSystemInfo
+       0x195077000 -        0x19507846b  liblangid.dylib (140) <150F6708-1CA6-341A-A2A0-46CB1BA1A23C> /usr/lib/liblangid.dylib
+       0x195079000 -        0x19519845f  com.apple.CoreNLP (1.0 - 313) <50C546E9-E6E0-3E9F-9E7A-9473578D7433> /System/Library/PrivateFrameworks/CoreNLP.framework/Versions/A/CoreNLP
+       0x195199000 -        0x19519f91f  com.apple.LinguisticData (1.0 - 483.10) <88A7B02D-D5D3-3120-9D38-BCD3B8A1BC08> /System/Library/PrivateFrameworks/LinguisticData.framework/Versions/A/LinguisticData
+       0x1951a0000 -        0x196227bcf  libBNNS.dylib (1961.120.8) <27D26BDE-14F4-3EBC-9A1F-195C0F69EFB7> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libBNNS.dylib
+       0x196228000 -        0x19636546f  libvDSP.dylib (1126.100.7) <81359684-F2CB-3A26-A032-265A85B354EB> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvDSP.dylib
+       0x19639a000 -        0x1963d3267  com.apple.IOMobileFramebuffer (343.0.0 - 343.0.0) <AD6AF1CD-4106-32CB-9512-A51BD8DAC459> /System/Library/PrivateFrameworks/IOMobileFramebuffer.framework/Versions/A/IOMobileFramebuffer
+       0x1965cc000 -        0x1965e36df  com.apple.MobileKeyBag (2.0 - 1.0) <DD679B3D-7C31-3A73-AA3F-E38AE71F6082> /System/Library/PrivateFrameworks/MobileKeyBag.framework/Versions/A/MobileKeyBag
+       0x1965e4000 -        0x1965f20ff  com.apple.AssertionServices (1.0 - 1015.100.16) <2AFED4E5-1BEF-3620-A118-13C2487C5E8A> /System/Library/PrivateFrameworks/AssertionServices.framework/Versions/A/AssertionServices
+       0x1965f3000 -        0x196685a9f  com.apple.securityfoundation (6.0 - 55293) <B186B3B6-62A5-3680-8FB4-1CC6DFB3D551> /System/Library/Frameworks/SecurityFoundation.framework/Versions/A/SecurityFoundation
+       0x196686000 -        0x1966b72ff  com.apple.coreservices.BackgroundTaskManagement (1.0 - 104) <C8C301D5-8180-31EF-ACC6-F754D14E23AC> /System/Library/PrivateFrameworks/BackgroundTaskManagement.framework/Versions/A/BackgroundTaskManagement
+       0x1966c3000 -        0x1966c61fb  libquarantine.dylib (196.120.2) <5849009B-ACA3-3796-94C4-BBDF8D300EBA> /usr/lib/system/libquarantine.dylib
+       0x1966c7000 -        0x1966d22bf  libCheckFix.dylib (33) <60BF3A9B-F3E5-3AF0-ADE5-F86DEBD5CC5C> /usr/lib/libCheckFix.dylib
+       0x1966d3000 -        0x1966ea7ab  libcoretls.dylib (187.100.3) <888DACFD-0135-3166-83EE-4E14D9A4A98B> /usr/lib/libcoretls.dylib
+       0x1966eb000 -        0x1966fc273  libbsm.0.dylib (90) <D82537E0-FE06-3158-BC46-D1073D1D4384> /usr/lib/libbsm.0.dylib
+       0x1966fd000 -        0x19675bc6b  libmecab.dylib (1121.5.1) <B8A7C8DB-0176-3E90-929C-238A56EF45B8> /usr/lib/libmecab.dylib
+       0x19675c000 -        0x19675e41b  libgermantok.dylib (31) <55193FF8-D101-3B4B-B6FB-01EA87FC3D37> /usr/lib/libgermantok.dylib
+       0x19675f000 -        0x196772e3f  libLinearAlgebra.dylib (1551.100.26) <3849C130-9327-3672-88E1-B0E548F4EB82> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLinearAlgebra.dylib
+       0x196773000 -        0x1969c917f  com.apple.MetalPerformanceShaders.MPSNeuralNetwork (1.0 - 1) <A8E8C36C-8F11-3ED5-B9B3-2810EDDD4D77> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNeuralNetwork.framework/Versions/A/MPSNeuralNetwork
+       0x1969ca000 -        0x196a1e19f  com.apple.MetalPerformanceShaders.MPSRayIntersector (1.0 - 1) <FCB4E780-9954-345D-B82F-9D319958448E> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSRayIntersector.framework/Versions/A/MPSRayIntersector
+       0x196bb2000 -        0x196be357f  com.apple.MetalPerformanceShaders.MPSMatrix (1.0 - 1) <21591139-CD3C-36AB-8191-28193ACD17A7> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSMatrix.framework/Versions/A/MPSMatrix
+       0x196be4000 -        0x196db3cdf  com.apple.MetalPerformanceShaders.MPSNDArray (1.0 - 1) <1CBC037E-8038-32F6-880A-6F3825544713> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSNDArray.framework/Versions/A/MPSNDArray
+       0x196db4000 -        0x196e481df  com.apple.MetalPerformanceShaders.MPSImage (1.0 - 1) <35130CF5-F99D-3CED-9993-48AEE13ECA36> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSImage.framework/Versions/A/MPSImage
+       0x196e49000 -        0x196e544b3  com.apple.AppleFSCompression (174.100.2 - 1.0) <1B79BCD7-4B46-302B-8008-86CBD62FEB0A> /System/Library/PrivateFrameworks/AppleFSCompression.framework/Versions/A/AppleFSCompression
+       0x196e55000 -        0x196e610a3  libbz2.1.0.dylib (49) <928515D6-6108-3757-97F4-256F9F9CFBC8> /usr/lib/libbz2.1.0.dylib
+       0x196e62000 -        0x196e68d03  libsystem_coreservices.dylib (191.4.5) <9576143B-C303-35A3-BA63-1FD06EDA2BB1> /usr/lib/system/libsystem_coreservices.dylib
+       0x196e69000 -        0x196e9aadf  com.apple.CoreServices.OSServices (1141.1 - 1141.1) <F42F7727-9C73-3148-B41C-186607715B54> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/OSServices.framework/Versions/A/OSServices
+       0x1973de000 -        0x1973ecd97  libz.1.dylib (100.120.1) <863BB312-F115-32B0-889F-D3B42857A7A6> /usr/lib/libz.1.dylib
+       0x1973ed000 -        0x19742aa77  libsystem_m.dylib (3312.100.1) <A7E0863C-101A-31A0-922B-ED9B02626151> /usr/lib/system/libsystem_m.dylib
+       0x19742b000 -        0x19742bc9b  libcharset.1.dylib (115.120.2) <338A5252-594A-3AC5-B274-5AB3CE5820C6> /usr/lib/libcharset.1.dylib
+       0x19742c000 -        0x19742f527  libmacho.dylib (1378) <755441B4-C034-3E3A-8E3C-F424FBB28261> /usr/lib/system/libmacho.dylib
+       0x197430000 -        0x197448dc3  libkxld.dylib (12377.121.6) <AC5F4062-6A0E-36D2-B06E-D6192FC77B7D> /usr/lib/system/libkxld.dylib
+       0x197449000 -        0x1974563a7  libcommonCrypto.dylib (600035) <CE357BB1-2D49-37CC-9FFE-D093936B1475> /usr/lib/system/libcommonCrypto.dylib
+       0x197457000 -        0x197460ca3  libunwind.dylib (2100.2) <FC8F0C4E-6FB0-3E27-ABEF-B0FA720CD5E4> /usr/lib/system/libunwind.dylib
+       0x197461000 -        0x197468349  liboah.dylib (367.9) <8651ED4F-6506-3788-B56B-32EE414A85CA> /usr/lib/liboah.dylib
+       0x197469000 -        0x1974737ff  libcopyfile.dylib (240) <8ACFAC7A-88E9-3EF4-853F-A9140FF110E5> /usr/lib/system/libcopyfile.dylib
+       0x197474000 -        0x197477987  libcompiler_rt.dylib (103.3) <AA79151F-C19D-3C7C-92F8-B10F04D82C1C> /usr/lib/system/libcompiler_rt.dylib
+       0x197478000 -        0x19747c78b  libsystem_collections.dylib (1752.120.2) <72DB5BE7-EF78-37D0-8AAD-53E37CFE4287> /usr/lib/system/libsystem_collections.dylib
+       0x19747d000 -        0x1974804cf  libsystem_secinit.dylib (168.100.7) <E525C566-CDA4-3D99-B12B-1615FD54A1F3> /usr/lib/system/libsystem_secinit.dylib
+       0x197481000 -        0x197483bf7  libremovefile.dylib (85.100.6) <635E661D-80A7-340D-A165-3F7D318FDFC9> /usr/lib/system/libremovefile.dylib
+       0x197484000 -        0x197484f27  libkeymgr.dylib (31) <8C08891A-DF1C-3DCC-AB64-4742FD6BE9BA> /usr/lib/system/libkeymgr.dylib
+       0x197485000 -        0x19748de37  libsystem_dnssd.dylib (2881.120.11) <6F45DF3F-233B-3BC3-BA8C-B43E7DA884BF> /usr/lib/system/libsystem_dnssd.dylib
+       0x19748e000 -        0x19749309b  libcache.dylib (95) <189B576E-6176-3F82-8FA4-5914B0BEAEE7> /usr/lib/system/libcache.dylib
+       0x197494000 -        0x197495ce3  libSystem.B.dylib (1356) <D65E4112-C151-3FF8-BEB7-4841436012D6> /usr/lib/libSystem.B.dylib
+       0x197496000 -        0x197497fcf  libfakelink.dylib (5) <C7FBDAB2-BA25-3B1B-924B-6CD5EB501D3D> /usr/lib/libfakelink.dylib
+       0x197498000 -        0x197498a33  com.apple.SoftLinking (1.0 - 71) <B47F8999-CDB3-308F-9129-E690590605D8> /System/Library/PrivateFrameworks/SoftLinking.framework/Versions/A/SoftLinking
+       0x1974ce000 -        0x1974d52bb  libiconv.2.dylib (115.120.2) <7C02D8F4-1921-323C-9D3D-A5D9B0ACDD78> /usr/lib/libiconv.2.dylib
+       0x1974e9000 -        0x1975e0edf  libarchive.2.dylib (167.120.3) <98ED60D0-2C5C-31A2-81BA-17C9C2312B7E> /usr/lib/libarchive.2.dylib
+       0x1975e1000 -        0x19764685b  com.apple.SearchKit (1.4.2 - 1.4.2) <B73B7F8E-666B-33EA-AC89-9DE4F7C25835> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/SearchKit.framework/Versions/A/SearchKit
+       0x197647000 -        0x19764f18f  libThaiTokenizer.dylib (28) <43BAB012-1CCE-3DDC-9832-3A93EF0BAD9C> /usr/lib/libThaiTokenizer.dylib
+       0x197650000 -        0x197673f37  com.apple.applesauce (1.0 - 17.7) <9F8F8959-64E3-3B88-BC05-20ACA5436052> /System/Library/PrivateFrameworks/AppleSauce.framework/Versions/A/AppleSauce
+       0x197674000 -        0x19768c4ab  libapple_nghttp2.dylib (37.120.3) <7C8B8B14-EC40-3F5B-8265-8975D4D4E83B> /usr/lib/libapple_nghttp2.dylib
+       0x19768d000 -        0x1976b3ac3  libSparseBLAS.dylib (1551.100.26) <EF675037-43BA-3616-8BEF-662BA272F3D7> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libSparseBLAS.dylib
+       0x1976b4000 -        0x1976b563f  com.apple.MetalPerformanceShaders.MetalPerformanceShaders (1.0 - 1) <1FC17E05-127E-3222-B3A2-72912C49821C> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/MetalPerformanceShaders
+       0x1976b6000 -        0x1976bbff7  libpam.2.dylib (35) <24C42EB6-FC23-3D66-A260-CAD78EF8637B> /usr/lib/libpam.2.dylib
+       0x1976bc000 -        0x197790d97  libcompression.dylib (193.120.2) <F9FEA7C5-8DE1-3EE6-BFD3-E8B5698D73A6> /usr/lib/libcompression.dylib
+       0x197791000 -        0x197795267  libQuadrature.dylib (8) <A285FC62-DE15-317B-8451-619953D3660A> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libQuadrature.dylib
+       0x197796000 -        0x19896694f  libLAPACK.dylib (1551.100.26) <7275296D-74F2-3020-B2C5-E2EA0E7A6F7A> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libLAPACK.dylib
+       0x198967000 -        0x1989bd43f  com.apple.DictionaryServices (1.2 - 382) <1C33980B-2B1B-3374-8DFF-C0589BDA8D37> /System/Library/Frameworks/CoreServices.framework/Versions/A/Frameworks/DictionaryServices.framework/Versions/A/DictionaryServices
+       0x1989be000 -        0x1989dc4f7  liblzma.5.dylib (21) <9F5AA0F6-7C29-3699-8AA3-C7B56284D3F4> /usr/lib/liblzma.5.dylib
+       0x1989dd000 -        0x1989de85f  libcoretls_cfhelpers.dylib (187.100.3) <236BD946-7627-367C-8150-FCC9297471E1> /usr/lib/libcoretls_cfhelpers.dylib
+       0x1989df000 -        0x198a525c3  com.apple.APFS (2811.120.14 - 2811.120.14) <37C876CB-358E-3900-A8EF-93D70E577B7C> /System/Library/PrivateFrameworks/APFS.framework/Versions/A/APFS
+       0x198a53000 -        0x198a61693  libxar.1.dylib (503) <689E5ED9-2D46-3B4C-8942-B5A6D7495445> /usr/lib/libxar.1.dylib
+       0x198a62000 -        0x198a6579b  libutil.dylib (73) <93D2F3FE-6001-3A87-BF89-3ECABFF334CE> /usr/lib/libutil.dylib
+       0x198a66000 -        0x198a90cdf  libxslt.1.dylib (21.13) <EABDBD76-C455-3D16-A1EE-4370F95E8D3E> /usr/lib/libxslt.1.dylib
+       0x198a99000 -        0x198b12587  libvMisc.dylib (1126.100.7) <73154851-2341-34B7-8214-625C9219A676> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/libvMisc.dylib
+       0x198b13000 -        0x198ba245f  libate.dylib (3.0.9) <30643AB8-BA08-3222-9AD2-64248E503B89> /usr/lib/libate.dylib
+       0x198bac000 -        0x198bbf1bf  com.apple.CrashReporterSupport (10.13 - 15140) <482F92F1-D855-36EC-8E3D-C084CFA61B27> /System/Library/PrivateFrameworks/CrashReporterSupport.framework/Versions/A/CrashReporterSupport
+       0x198d03000 -        0x198d43f9f  com.apple.pluginkit.framework (1.0 - 1) <6A017CC8-84D1-36E5-ADE4-2A2EDC08D67F> /System/Library/PrivateFrameworks/PlugInKit.framework/Versions/A/PlugInKit
+       0x198dba000 -        0x198e029ff  com.apple.AppleVAFramework (6.2.10 - 6.2.10) <6CFBB631-D1EF-3D92-AE69-6758E7BDE4C5> /System/Library/PrivateFrameworks/AppleVA.framework/Versions/A/AppleVA
+       0x198e03000 -        0x198e1dccf  libexpat.1.dylib (47) <B7EE1C84-0D24-3B3F-8A1F-94ADDCFE777C> /usr/lib/libexpat.1.dylib
+       0x198e1e000 -        0x198e27bd3  libheimdal-asn1.dylib (710.100.4) <AF872616-7404-3D91-BA6B-A723D4269665> /usr/lib/libheimdal-asn1.dylib
+       0x198f47000 -        0x199008edf  com.apple.MediaExperience (1.0 - 1) <507B3FE7-C5C1-30DB-935C-C478FF7B4096> /System/Library/PrivateFrameworks/MediaExperience.framework/Versions/A/MediaExperience
+       0x199036000 -        0x1990457ff  com.apple.GraphVisualizer (1.0 - 307) <6F1E4885-F5B7-3B50-9C33-044B6925A07F> /System/Library/PrivateFrameworks/GraphVisualizer.framework/Versions/A/GraphVisualizer
+       0x199046000 -        0x19908551f  com.apple.OTSVG (1.0 - 877.4.0.7) <666515E5-7CF8-349D-952E-EDD2210CF63D> /System/Library/PrivateFrameworks/OTSVG.framework/Versions/A/OTSVG
+       0x199086000 -        0x199092c7f  com.apple.xpc.AppServerSupport (1.0 - 3102.120.13) <AB36D838-16DB-3974-ABEC-220B5026013E> /System/Library/PrivateFrameworks/AppServerSupport.framework/Versions/A/AppServerSupport
+       0x199093000 -        0x199099abf  libspindump.dylib (419.10) <5EAE94A8-4A96-3DBD-8FC6-DA684427813F> /usr/lib/libspindump.dylib
+       0x19909a000 -        0x19915adff  com.apple.Heimdal (4.0 - 2.0) <29B023E7-2213-362C-80BD-8A463A229936> /System/Library/PrivateFrameworks/Heimdal.framework/Versions/A/Heimdal
+       0x199429000 -        0x19946d6ef  com.apple.AppleJPEG (1.0 - 1) <63F815E9-899E-3F5E-8837-43C168F606C6> /System/Library/PrivateFrameworks/AppleJPEG.framework/Versions/A/AppleJPEG
+       0x19946e000 -        0x19962e92f  libJP2.dylib (2784.5.4) <A3392AA7-53EF-3B19-9A87-505CBACE40C2> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJP2.dylib
+       0x19962f000 -        0x199630e1f  com.apple.WatchdogClient.framework (1.0 - 333) <05DDF467-0A3F-3F3F-821F-3063D15BDDF6> /System/Library/PrivateFrameworks/WatchdogClient.framework/Versions/A/WatchdogClient
+       0x199631000 -        0x199676c1f  com.apple.MultitouchSupport.framework (9450.2 - 9450.2) <20C49E65-4FDC-3FA2-ADD2-8BD540F8849B> /System/Library/PrivateFrameworks/MultitouchSupport.framework/Versions/A/MultitouchSupport
+       0x199677000 -        0x199bcd29f  com.apple.VideoToolbox (1.0 - 3320.8.5.1) <0B641B4E-092B-3EC7-A20E-B99157F4DDB7> /System/Library/Frameworks/VideoToolbox.framework/Versions/A/VideoToolbox
+       0x199bce000 -        0x199bf320f  libAudioToolboxUtility.dylib (1556.604) <8679E444-23B4-3B9F-8D0A-18ACEED541C5> /usr/lib/libAudioToolboxUtility.dylib
+       0x199bf4000 -        0x199c1e01f  libPng.dylib (2784.5.4) <42EE7A25-5004-3435-A453-0158C53A6C93> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libPng.dylib
+       0x199c1f000 -        0x199c7fa77  libTIFF.dylib (2784.5.4) <FC3ACF96-0841-360F-B36A-50A3B08AF198> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libTIFF.dylib
+       0x199c80000 -        0x199c9f257  com.apple.IOPresentment (67 - 67) <C9C0A630-F275-3ABE-BFE2-86ECE91F83CA> /System/Library/PrivateFrameworks/IOPresentment.framework/Versions/A/IOPresentment
+       0x199ca0000 -        0x199ca47d3  com.apple.GPUWrangler (8.1.12 - 8.1.12) <1644240B-3D71-35E7-AC5B-2A69E6B29535> /System/Library/PrivateFrameworks/GPUWrangler.framework/Versions/A/GPUWrangler
+       0x199ca5000 -        0x199ca7913  libRadiance.dylib (2784.5.4) <86335ED6-B791-37F5-B57E-B6F9C50652D8> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libRadiance.dylib
+       0x199ca8000 -        0x199cad2f3  com.apple.DSExternalDisplay (3.1 - 380) <DDF7A5A5-72F8-3580-9FF6-2A02E4ADE864> /System/Library/PrivateFrameworks/DSExternalDisplay.framework/Versions/A/DSExternalDisplay
+       0x199cae000 -        0x199cd8baf  libJPEG.dylib (2784.5.4) <5B4F384D-EC75-3A03-BA74-A644FDF3F722> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libJPEG.dylib
+       0x199d07000 -        0x199d0c9fb  libGIF.dylib (2784.5.4) <D054410B-09D0-3856-B7CB-EEF320362B0B> /System/Library/Frameworks/ImageIO.framework/Versions/A/Resources/libGIF.dylib
+       0x199d0d000 -        0x199d1d19f  com.apple.CMCaptureCore (1.0 - 665.120.8) <95190CD1-3456-355B-9369-5604AA49C1F3> /System/Library/PrivateFrameworks/CMCaptureCore.framework/Versions/A/CMCaptureCore
+       0x19ac95000 -        0x19ad0386f  libusrtcp.dylib (5812.121.1) <54F1B848-D6B1-3DB0-B640-FA6A86262C1D> /usr/lib/libusrtcp.dylib
+       0x19ad04000 -        0x19b2a57bf  libswiftCore.dylib (6.3.2 - 6.3.2.1.3) <7669D858-D332-36C7-9C6C-4564FFBEA8D2> /usr/lib/swift/libswiftCore.dylib
+       0x19b359000 -        0x19b3ae17f  libSessionUtility.dylib (398.601) <3D82E6A1-1D29-3274-84DD-BDF36B6F7962> /System/Library/PrivateFrameworks/AudioSession.framework/libSessionUtility.dylib
+       0x19b3af000 -        0x19b583c3f  com.apple.audio.toolbox.AudioToolbox (1.14 - 1.14) <B0ED86EE-4A99-3D39-AFC1-BC3361F630D8> /System/Library/Frameworks/AudioToolbox.framework/Versions/A/AudioToolbox
+       0x19b584000 -        0x19b604b7f  com.apple.audio.AudioSession (1.0 - 398.601) <23137B46-437B-382A-BF06-17C82F58149B> /System/Library/PrivateFrameworks/AudioSession.framework/Versions/A/AudioSession
+       0x19b605000 -        0x19b61e39f  libAudioStatistics.dylib (262.601) <9AD96BE7-444B-3641-9B75-8F4EE1A686BF> /usr/lib/libAudioStatistics.dylib
+       0x19b695000 -        0x19b6b119b  libresolv.9.dylib (96) <90D545B0-52B4-335D-A075-4A7B83C01FC8> /usr/lib/libresolv.9.dylib
+       0x19b6b2000 -        0x19b6c47e7  libsasl2.2.dylib (215) <28BFB13B-08D2-3705-A634-B4E888613489> /usr/lib/libsasl2.2.dylib
+       0x19b8ad000 -        0x19b98d337  libSMC.dylib (38) <CD66132B-7D67-36D2-82BC-FFFACBAAF05A> /usr/lib/libSMC.dylib
+       0x19b9ed000 -        0x19b9f9c17  com.apple.NetAuth (6.2 - 6.2) <F039515C-B344-37B5-B705-E58B48AD3C5D> /System/Library/PrivateFrameworks/NetAuth.framework/Versions/A/NetAuth
+       0x19ba08000 -        0x19ba15b1f  com.apple.perfdata (1.0 - 130) <63F6F6B4-A2A8-3647-BDEB-50508AE91B8F> /System/Library/PrivateFrameworks/perfdata.framework/Versions/A/perfdata
+       0x19ba16000 -        0x19ba23c9f  libperfcheck.dylib (46) <F900A796-0FF7-3195-85CF-80D62DF5C477> /usr/lib/libperfcheck.dylib
+       0x19ba24000 -        0x19ba35187  com.apple.Kerberos (3.0 - 1) <D81F4821-8D01-394B-812B-657C3114A356> /System/Library/Frameworks/Kerberos.framework/Versions/A/Kerberos
+       0x19ba36000 -        0x19ba87aaf  com.apple.GSS (4.0 - 2.0) <9149B4E1-8502-3A93-9944-61323F4725E1> /System/Library/Frameworks/GSS.framework/Versions/A/GSS
+       0x19ba88000 -        0x19ba98d6f  com.apple.CommonAuth (4.0 - 2.0) <B703DB83-34E2-3728-89DF-41421EC67747> /System/Library/PrivateFrameworks/CommonAuth.framework/Versions/A/CommonAuth
+       0x19ba99000 -        0x19bb7d01f  com.apple.MobileAssets (1.0 - 1837.121.1) <95D9C5B8-40A8-3F25-B1FC-C4468D133923> /System/Library/PrivateFrameworks/MobileAsset.framework/Versions/A/MobileAsset
+       0x19bc10000 -        0x19bc1f160  com.apple.CorePhoneNumbers (1.0 - 1) <CF1CBC2C-A525-3C79-B709-D5C23B2CB33A> /System/Library/PrivateFrameworks/CorePhoneNumbers.framework/Versions/A/CorePhoneNumbers
+       0x19bd6c000 -        0x19bd7e227  libffi.dylib (40) <ED35DE10-AC5D-3468-9986-10C0C12B0562> /usr/lib/libffi.dylib
+       0x19d7fb000 -        0x19d8eea36  com.apple.combine (1.0 - 3023) <D757C287-429D-3F70-B903-C942A00F2DAA> /System/Library/Frameworks/Combine.framework/Versions/A/Combine
+       0x19fb3c000 -        0x19fb3c86f  com.apple.Accelerate.vecLib (3.11 - vecLib 3.11) <46556F2E-DD6B-3A4A-B2A3-4F844ED123EC> /System/Library/Frameworks/Accelerate.framework/Versions/A/Frameworks/vecLib.framework/Versions/A/vecLib
+       0x19fb61000 -        0x19fb6198f  com.apple.CoreServices (1226 - 1226) <FF182FDE-8926-3DFB-8D12-C1258443F67F> /System/Library/Frameworks/CoreServices.framework/Versions/A/CoreServices
+       0x19fde0000 -        0x19fde0417  com.apple.Accelerate (1.11 - Accelerate 1.11) <1DF31AEA-3D8E-382D-9493-D74635AA1CD4> /System/Library/Frameworks/Accelerate.framework/Versions/A/Accelerate
+       0x1a0cdc000 -        0x1a0ceb5df  com.apple.SymptomDiagnosticReporter (1.0 - 411.120.4) <FF9F1A47-EE31-3182-9AA1-4D325D6DA8A0> /System/Library/PrivateFrameworks/SymptomDiagnosticReporter.framework/Versions/A/SymptomDiagnosticReporter
+       0x1a0cec000 -        0x1a0d1a25f  com.apple.PowerLog (1.0 - 1) <BE05FF5C-4DE3-3B2C-B20F-BC5D46938816> /System/Library/PrivateFrameworks/PowerLog.framework/Versions/A/PowerLog
+       0x1a0d28000 -        0x1a0dd96df  com.apple.DiscRecording (9.0.3 - 9030.4.5) <BCE71519-708B-3376-B013-2B691BD174AC> /System/Library/Frameworks/DiscRecording.framework/Versions/A/DiscRecording
+       0x1a0dda000 -        0x1a0e0b137  com.apple.MediaKit (16 - 938) <A01852D0-D4E4-30EC-A47C-3B0AB6711F2F> /System/Library/PrivateFrameworks/MediaKit.framework/Versions/A/MediaKit
+       0x1a18cd000 -        0x1a18e3950  libswiftDispatch.dylib (1542.100.32) <460CFC58-0973-3A20-B504-A0A294C1E16D> /usr/lib/swift/libswiftDispatch.dylib
+       0x1a1c2e000 -        0x1a1cbac3f  com.apple.BoardServices (1.0 - 732.1.1) <B4561AEC-EE52-3447-960B-4D2F2F3EF720> /System/Library/PrivateFrameworks/BoardServices.framework/Versions/A/BoardServices
+       0x1a1cfb000 -        0x1a1d0853f  com.apple.GraphicsServices (1.0 - 1.0) <4236E533-C3F8-340F-A462-F15D599395A8> /System/Library/PrivateFrameworks/GraphicsServices.framework/Versions/A/GraphicsServices
+       0x1a2024000 -        0x1a2045e9f  com.apple.DebugSymbols (216 - 217) <13499229-A245-3C95-AC94-1DB8B274CF09> /System/Library/PrivateFrameworks/DebugSymbols.framework/Versions/A/DebugSymbols
+       0x1a2046000 -        0x1a21a2ddf  com.apple.CoreSymbolication (16.0 - 64575.53.2) <C2CC83D4-7E1C-3E78-AEC8-1ABDE74F9FAD> /System/Library/PrivateFrameworks/CoreSymbolication.framework/Versions/A/CoreSymbolication
+       0x1a21a3000 -        0x1a21ad09f  com.apple.CoreTime (334.0.16.3 - 334.0.16.3) <FD342B51-EA5D-388C-9BAB-29F7670FE3FB> /System/Library/PrivateFrameworks/CoreTime.framework/Versions/A/CoreTime
+       0x1a3afb000 -        0x1a3b6d59f  com.apple.BackBoardServices (1.0 - 1.0) <DDC32AF8-8864-3DE0-A855-5283510925B9> /System/Library/PrivateFrameworks/BackBoardServices.framework/Versions/A/BackBoardServices
+       0x1a3b6e000 -        0x1a3ba94ef  com.apple.LDAPFramework (2.4.28 - 194.5) <53F32E19-D2E6-3256-9206-75B92E519199> /System/Library/Frameworks/LDAP.framework/Versions/A/LDAP
+       0x1a3baa000 -        0x1a3bab7b7  com.apple.TrustEvaluationAgent (2.0 - 38) <B2593AAA-A99A-30C1-A0FC-3315ACC16951> /System/Library/PrivateFrameworks/TrustEvaluationAgent.framework/Versions/A/TrustEvaluationAgent
+       0x1a3cd9000 -        0x1a3d9257f  com.apple.DiskImagesFramework (683.100.3 - 683.100.3) <C8288C8D-4483-3393-B249-E952FFAF1EBE> /System/Library/PrivateFrameworks/DiskImages.framework/Versions/A/DiskImages
+       0x1a3dd3000 -        0x1a3de95bf  com.apple.RemoteServiceDiscovery (1.0 - 219.120.2) <CA4D9399-0E89-3014-92DD-B722678ED9F6> /System/Library/PrivateFrameworks/RemoteServiceDiscovery.framework/Versions/A/RemoteServiceDiscovery
+       0x1a3dea000 -        0x1a3dffc3f  com.apple.xpc.RemoteXPC (1.0 - 3102.120.13) <8CA8360A-FE67-33A5-AEE4-097AEE5B945C> /System/Library/PrivateFrameworks/RemoteXPC.framework/Versions/A/RemoteXPC
+       0x1a3e94000 -        0x1a3f14f43  libcurl.4.dylib (166.0.0.0.1) <2F97CC24-F631-37B1-83CA-54632BF597FE> /usr/lib/libcurl.4.dylib
+       0x1a3f1b000 -        0x1a3f5e25f  com.apple.AppSupport (1.0.0 - 29) <7410CCEF-077F-37FF-B0B0-5D65B0D2F66C> /System/Library/PrivateFrameworks/AppSupport.framework/Versions/A/AppSupport
+       0x1a422f000 -        0x1a4231f3f  com.apple.InternationalTextSearch (1.0 - 1) <F227A966-D677-379F-BAEF-89DC18A81AB7> /System/Library/PrivateFrameworks/InternationalTextSearch.framework/Versions/A/InternationalTextSearch
+       0x1a4802000 -        0x1a48023f7  libHeimdalProxy.dylib (88) <A963CA1C-050B-3E90-B2FF-D7989435DB5D> /System/Library/Frameworks/Kerberos.framework/Versions/A/Libraries/libHeimdalProxy.dylib
+       0x1a482d000 -        0x1a484bb9f  com.apple.StreamingZip (1.0 - 1) <F297C9A4-AEDF-3553-B20E-CD7DFC54CC0B> /System/Library/PrivateFrameworks/StreamingZip.framework/Versions/A/StreamingZip
+       0x1a48a5000 -        0x1a48a86bf  libswiftObjectiveC.dylib (951.7) <32C98979-0F18-3513-AFAB-2F5D2B9ED0B9> /usr/lib/swift/libswiftObjectiveC.dylib
+       0x1a48a9000 -        0x1a48c66ff  libswiftos.dylib (1082) <49255E53-3F00-3F06-A64A-76A63C798956> /usr/lib/swift/libswiftos.dylib
+       0x1a5810000 -        0x1a589e85f  com.apple.proactive.support.ProactiveSupport (1.0 - 418.1) <29BBA828-5852-3A0C-94D9-C03990CB86CA> /System/Library/PrivateFrameworks/ProactiveSupport.framework/Versions/A/ProactiveSupport
+       0x1a599b000 -        0x1a59bf29f  com.apple.ASEProcessing (1.55.0 - 1.55.0) <9271A817-7C78-3210-8B0C-91A552667200> /System/Library/PrivateFrameworks/ASEProcessing.framework/Versions/A/ASEProcessing
+       0x1a6c1e000 -        0x1a6cecc1f  com.apple.audio.midi.CoreMIDI (2.0 - 88) <F649A68B-864A-3F02-959A-69FD9980B29C> /System/Library/Frameworks/CoreMIDI.framework/Versions/A/CoreMIDI
+       0x1a792c000 -        0x1a793075f  com.apple.IOSurfaceAccelerator (1.0.0 - 1.0.0) <70103161-0443-3F67-85D7-BD25455F271F> /System/Library/PrivateFrameworks/IOSurfaceAccelerator.framework/Versions/A/IOSurfaceAccelerator
+       0x1ac7d4000 -        0x1ac7e79ff  com.apple.HID (1.0 - 1) <E5C2582B-2B2A-3B7E-A473-DF40A707C4C8> /System/Library/PrivateFrameworks/HID.framework/Versions/A/HID
+       0x1b128f000 -        0x1b129e1ff  com.apple.NetFS (6.0 - 4.0) <EC590F25-F5DD-35D6-A594-4BE577637264> /System/Library/Frameworks/NetFS.framework/Versions/A/NetFS
+       0x1b17ea000 -        0x1b17ec707  libswiftDarwin.dylib (377.120.8) <F2EED553-64EC-398C-98BA-32EFDFAE0FC3> /usr/lib/swift/libswiftDarwin.dylib
+       0x1b384a000 -        0x1b39334bf  libquic.dylib (5812.121.1) <18372066-7FBC-34AD-AD6B-A7D31A879F8D> /usr/lib/libquic.dylib
+       0x1b393f000 -        0x1b3967eff  com.apple.private.SystemPolicy (1.0 - 1) <3B04FCE5-C2EF-3F95-94B5-C2E838F8F8F1> /System/Library/PrivateFrameworks/SystemPolicy.framework/Versions/A/SystemPolicy
+       0x1b4814000 -        0x1b48a2bff  com.apple.LoggingSupport (1.0 - 1861.120.4) <2619A5F3-D97D-3946-B49A-5FA3164FB197> /System/Library/PrivateFrameworks/LoggingSupport.framework/Versions/A/LoggingSupport
+       0x1b48a3000 -        0x1b48afacb  com.apple.MallocStackLogging (1.0 - 65000) <782A39D3-C9FD-3E0B-B8FB-26E5D749BE57> /System/Library/PrivateFrameworks/MallocStackLogging.framework/Versions/A/MallocStackLogging
+       0x1b48d5000 -        0x1b492db3f  libmis.dylib (463.100.17) <B0F26447-E3DF-33C0-AF33-1109BD0701EA> /usr/lib/libmis.dylib
+       0x1b492e000 -        0x1b4931c5f  com.apple.gpusw.GPURawCounter (34 - 34) <A0191D2E-4C57-30F7-A206-78FB4188D01E> /System/Library/PrivateFrameworks/GPURawCounter.framework/Versions/A/GPURawCounter
+       0x1b4932000 -        0x1b495187f  libswiftCoreAudio.dylib (411.601) <23AF0BE1-B688-3E32-90BB-920D0C00036A> /usr/lib/swift/libswiftCoreAudio.dylib
+       0x1b4952000 -        0x1b4958327  libswiftCoreFoundation.dylib (2411) <4C233FFB-F11A-34AA-9515-74C21E8EE968> /usr/lib/swift/libswiftCoreFoundation.dylib
+       0x1b4965000 -        0x1b49b1843  libswiftXPC.dylib (128.120.2) <0AA69D52-271B-38E0-A156-8BD7F73A4C9C> /usr/lib/swift/libswiftXPC.dylib
+       0x1b49b3000 -        0x1b49b38a3  libswiftIOKit.dylib (1) <D47B9CC1-B622-31ED-8957-FA79ED1718CE> /usr/lib/swift/libswiftIOKit.dylib
+       0x1b69e0000 -        0x1b6a192c7  libbootpolicy.dylib (289.100.5) <53AF23CF-CBCF-35E7-A3D6-1C4742A617AD> /usr/lib/libbootpolicy.dylib
+       0x1b84a4000 -        0x1b84bb88b  libswiftsimd.dylib (23) <C949C0B7-988E-3352-9778-3568FC2BC4EA> /usr/lib/swift/libswiftsimd.dylib
+       0x1b9bc9000 -        0x1b9bd237f  com.apple.IOAccelMemoryInfo (1.0 - 1) <3DFF5F1E-C080-3C9D-A8C5-3C56854BD24D> /System/Library/PrivateFrameworks/IOAccelMemoryInfo.framework/Versions/A/IOAccelMemoryInfo
+       0x1bb28c000 -        0x1bb2950be  libswiftCoreMIDI.dylib (6) <68160211-1089-3958-A8A1-3E8B3C389499> /usr/lib/swift/libswiftCoreMIDI.dylib
+       0x1bba78000 -        0x1bba7ebbf  com.apple.MSUDataAccessor (1.0 - 1) <B73070EE-3FE8-354E-A3BB-84894636D3BA> /System/Library/PrivateFrameworks/MSUDataAccessor.framework/Versions/A/MSUDataAccessor
+       0x1bbea0000 -        0x1bbf02a5f  com.apple.SoftwareUpdateCoreSupport (1.0 - 1) <34E714DF-AC10-3E52-862E-7FD8AE96EFA7> /System/Library/PrivateFrameworks/SoftwareUpdateCoreSupport.framework/Versions/A/SoftwareUpdateCoreSupport
+       0x1bf9c4000 -        0x1bfa1b23f  com.apple.biome.BiomeFoundation (1.0 - 209.18) <6F0943D8-345B-328C-8A5E-8D10B3BC3CC3> /System/Library/PrivateFrameworks/BiomeFoundation.framework/Versions/A/BiomeFoundation
+       0x1c28f3000 -        0x1c2900a1f  libswiftMetal.dylib (373.2) <16B01E1B-6BDD-3C6B-9A8B-495C3B661B9B> /usr/lib/swift/libswiftMetal.dylib
+       0x1c2901000 -        0x1c2907e05  libswiftCompression.dylib (11) <5EA10BB9-2198-33D7-811A-BE5EAE0A2EED> /usr/lib/swift/libswiftCompression.dylib
+       0x1c3832000 -        0x1c38dcd5f  libFDR.dylib (1499.100.48) <62340EBF-17DB-3393-9653-003A30263E5D> /usr/lib/libFDR.dylib
+       0x1c395e000 -        0x1c3f28e9f  com.apple.biome.BiomeStreams (1.0 - 209.18) <B05E6A84-BC87-3977-B790-2391073FF393> /System/Library/PrivateFrameworks/BiomeStreams.framework/Versions/A/BiomeStreams
+       0x1c43fc000 -        0x1c44108ff  com.apple.SoftwareUpdateCoreConnect (1.0 - 1) <8B5F0FE6-EFC0-32B3-8414-6E67E97CCD87> /System/Library/PrivateFrameworks/SoftwareUpdateCoreConnect.framework/Versions/A/SoftwareUpdateCoreConnect
+       0x1c684d000 -        0x1c68b7c1f  com.apple.osanalytics.OSAnalytics (1.0 - 1) <D3398082-B264-37E9-B546-1BB0DE974E81> /System/Library/PrivateFrameworks/OSAnalytics.framework/Versions/A/OSAnalytics
+       0x1c7ce7000 -        0x1c7ce8f9f  libswiftQuartzCore.dylib (5) <481AAE69-579E-3DF4-B1F0-113E54B8EAA9> /usr/lib/swift/libswiftQuartzCore.dylib
+       0x1c80da000 -        0x1c80df8e7  com.apple.kperf (1.0 - 1) <23264FF1-B323-3B46-893D-42378F45FE8A> /System/Library/PrivateFrameworks/kperf.framework/Versions/A/kperf
+       0x1c81f1000 -        0x1c81f663f  com.apple.MobileSystemServices (1.0 - 1) <05D57959-6BE2-3FFE-A842-09A3FA930624> /System/Library/PrivateFrameworks/MobileSystemServices.framework/Versions/A/MobileSystemServices
+       0x1c97e2000 -        0x1c980429f  libamsupport.dylib (434.120.4) <C01C56CE-81B4-308E-A1BE-07C445941133> /usr/lib/libamsupport.dylib
+       0x1c9be0000 -        0x1c9c400bf  com.apple.biome.BiomePubSub (1.0 - 209.18) <5BA2374F-9154-3DC4-A761-D3C6E167F148> /System/Library/PrivateFrameworks/BiomePubSub.framework/Versions/A/BiomePubSub
+       0x1c9c41000 -        0x1c9c83fff  com.apple.biome.BiomeStorage (1.0 - 209.18) <A69679B4-A9DF-39B0-B361-F116246BB7D7> /System/Library/PrivateFrameworks/BiomeStorage.framework/Versions/A/BiomeStorage
+       0x1cc77a000 -        0x1cc78913f  libswiftUniformTypeIdentifiers.dylib (877.5.1) <BD304D00-8CE3-3528-914A-DBAD4831A95E> /usr/lib/swift/libswiftUniformTypeIdentifiers.dylib
+       0x1cc78a000 -        0x1cc84fa9b  libswiftAccelerate.dylib (77.100.2) <4A2ADA9C-22FB-307F-AA1E-1D85F1579BCF> /usr/lib/swift/libswiftAccelerate.dylib
+       0x1cc9a4000 -        0x1cc9b511f  libpartition2_dynamic.dylib (3476.120.8.0.2) <B57303C4-A549-35C8-9857-DEAC6891A79D> /usr/lib/libpartition2_dynamic.dylib
+       0x1ccf11000 -        0x1ccf1bfdf  com.apple.AFKUser (1.0 - 1) <51F853F3-E890-3D4D-A00D-12C7869B9B22> /System/Library/PrivateFrameworks/AFKUser.framework/Versions/A/AFKUser
+       0x1d0905000 -        0x1d096675f  libswiftCoreMedia.dylib (3320.8.5.1) <1FA37857-B3AE-320D-A11A-675B3739BA08> /usr/lib/swift/libswiftCoreMedia.dylib
+       0x1d20b8000 -        0x1d20b9bbf  libswiftOSLog.dylib (10) <964AB4ED-4361-33BF-949F-C7DE591C5EBE> /usr/lib/swift/libswiftOSLog.dylib
+       0x1d6187000 -        0x1d6293d5f  com.apple.Symbolication (16.0 - 64575.70.1) <1BAEF090-27B4-316B-8C9F-E891180781AE> /System/Library/PrivateFrameworks/Symbolication.framework/Versions/A/Symbolication
+       0x1da7c9000 -        0x1da7d93df  com.apple.OSLog (1.0 - 1861.120.4) <68746C62-44B2-377E-BB29-B0B4A6A92B5F> /System/Library/Frameworks/OSLog.framework/Versions/A/OSLog
+       0x1daadb000 -        0x1dabec75f  com.apple.InternalSwiftProtobuf (1.0 - 1.26.0) <41595ABE-4110-3482-8DA3-839277732E08> /System/Library/PrivateFrameworks/InternalSwiftProtobuf.framework/Versions/A/InternalSwiftProtobuf
+       0x1dacb2000 -        0x1dacbd0bf  com.apple.HIDDisplay (1.0 - 1) <E74DCF87-47C7-326B-A77B-1CBB94583B79> /System/Library/PrivateFrameworks/HIDDisplay.framework/Versions/A/HIDDisplay
+       0x1e2ca4000 -        0x1e2ca4af3  com.apple.FeatureFlags (1.0 - 103) <9F17EE22-3F47-3F98-A9B9-1C46372AEE83> /System/Library/PrivateFrameworks/FeatureFlags.framework/Versions/A/FeatureFlags
+       0x1ec3b7000 -        0x1ec3b95bf  com.apple.ConfigProfileHelper (18.0 - 1800) <097D7995-F903-3DA6-91D6-31952FBB2D32> /System/Library/PrivateFrameworks/ConfigProfileHelper.framework/Versions/A/ConfigProfileHelper
+       0x22cb1e000 -        0x22cb252a3  libCoreFSCache.dylib (352.1) <6B2BF8F5-A992-3C28-9BCE-CDC8E4D40E78> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreFSCache.dylib
+       0x22cb26000 -        0x22cb2b947  libCoreVMClient.dylib (352.1) <5E0DFF0A-81BA-36FB-9AD5-E3494D15B2CA> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCoreVMClient.dylib
+       0x22cb2c000 -        0x22cb3c2b7  com.apple.opengl (23.1.1 - 23.1.1) <E473AA13-611E-32CB-A676-213173E3AA9E> /System/Library/Frameworks/OpenGL.framework/Versions/A/OpenGL
+       0x22cb3d000 -        0x22cb3f7bf  libCVMSPluginSupport.dylib (23.1.1) <B2CF6AE8-6BAA-3374-BF7E-311343B0104D> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libCVMSPluginSupport.dylib
+       0x22cb40000 -        0x22cb484ff  libGFXShared.dylib (23.1.1) <C699C599-0DD8-302A-A96F-3C50B9BD5BC7> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGFXShared.dylib
+       0x22cb49000 -        0x22cb7c54b  libGLImage.dylib (23.1.1) <FC8B70C2-0EAE-303D-AF43-459CA7FB4B15> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLImage.dylib
+       0x22cb7d000 -        0x22cbb65bf  libGLU.dylib (23.1.1) <04FFC1B1-DD4D-3355-8EBD-FEA62D339822> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGLU.dylib
+       0x22cd0d000 -        0x22cd16bc7  libGL.dylib (23.1.1) <110554B2-60B8-39FE-B33B-27CE9F4E5F05> /System/Library/Frameworks/OpenGL.framework/Versions/A/Libraries/libGL.dylib
+       0x22eba8000 -        0x22ed1bf1f  com.apple.ExtensionFoundation (97 - 97) <A3567BE3-4AA2-3554-81AE-FE7EF41E535B> /System/Library/Frameworks/ExtensionFoundation.framework/Versions/A/ExtensionFoundation
+       0x22ff8c000 -        0x22ffcea1f  com.apple.LightweightCodeRequirements (1.0 - 1) <DB4F053F-0498-30C7-B2B9-697925B9F03B> /System/Library/Frameworks/LightweightCodeRequirements.framework/Versions/A/LightweightCodeRequirements
+       0x230df2000 -        0x230e101ff  com.apple.MPSBenchmarkLoop (1.0 - 1) <A8171300-A2FE-39A3-8166-5ED347A9CD56> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSBenchmarkLoop.framework/Versions/A/MPSBenchmarkLoop
+       0x230e11000 -        0x230e24e7f  com.apple.MPSFunctions (1.0 - 1) <C50883F0-037D-3888-BC83-5DC5EEE82345> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSFunctions.framework/Versions/A/MPSFunctions
+       0x230e25000 -        0x230e2a53f  com.apple.MPSHost (1.0 - 1) <7A6AC05D-88B2-31A8-A0A7-F876BF0451B1> /System/Library/Frameworks/MetalPerformanceShaders.framework/Versions/A/Frameworks/MPSHost.framework/Versions/A/MPSHost
+       0x2340d2000 -        0x23423e4bf  com.apple.SwiftData (1.0 - 135) <69089200-C33B-348E-8E66-8C5954BCF335> /System/Library/Frameworks/SwiftData.framework/Versions/A/SwiftData
+       0x23ad1f000 -        0x23ad33abf  com.apple.AppleDeviceQuerySupport (1.0 - 408.120.3) <B517FF44-3D3C-333E-BA06-5BF7F91B6D7E> /System/Library/PrivateFrameworks/AppleDeviceQuerySupport.framework/Versions/A/AppleDeviceQuerySupport
+       0x23b4af000 -        0x23b52a1d6  com.apple.AppleKeyStore (1.0 - 1.0) <0DE316FC-3C90-3738-8C19-A74D6E247698> /System/Library/PrivateFrameworks/AppleKeyStore.framework/Versions/A/AppleKeyStore
+       0x23be56000 -        0x23be6e9df  com.apple.private.AppleMobileFileIntegrity-fmk (1.0 - 1) <9B11DD7D-75DD-3784-945A-411BAED10953> /System/Library/PrivateFrameworks/AppleMobileFileIntegrity.framework/Versions/A/AppleMobileFileIntegrity
+       0x23c368000 -        0x23c37a799  com.apple.AtomicsInternal (1.1.0 - 5026.5.5) <5BFF8B6A-704D-3822-804F-ED870A72A295> /System/Library/PrivateFrameworks/AtomicsInternal.framework/Versions/A/AtomicsInternal
+       0x23c437000 -        0x23c459dff  com.apple.imgaudio.AudioAnalytics (1.0 - 1) <8B4F7F16-1296-3152-A4E2-A360ACAE9622> /System/Library/PrivateFrameworks/AudioAnalytics.framework/Versions/A/AudioAnalytics
+       0x23ca9b000 -        0x23cae37df  com.apple.BackBoardHIDEventFoundation (1.0 - 1) <0F0C872C-C531-3898-95BF-3BF1817C87FC> /System/Library/PrivateFrameworks/BackBoardHIDEventFoundation.framework/Versions/A/BackBoardHIDEventFoundation
+       0x23cb7c000 -        0x23cb958df  com.apple.biome.BiomeDSL (1.0 - 209.18) <F43D5A2A-4470-3827-8CCD-3E7AAA76242E> /System/Library/PrivateFrameworks/BiomeDSL.framework/Versions/A/BiomeDSL
+       0x23cb96000 -        0x23d44819f  com.apple.BiomeLibrary (274.57) <9C4145CD-3C99-35D4-930E-8F0BA4D34596> /System/Library/PrivateFrameworks/BiomeLibrary.framework/Versions/A/BiomeLibrary
+       0x23d449000 -        0x23d44eb5f  com.apple.biome.BiomeSync (1.0 - 209.18) <BD7C9096-8861-331A-BBD3-FC18BE64D611> /System/Library/PrivateFrameworks/BiomeSync.framework/Versions/A/BiomeSync
+       0x23ea7f000 -        0x23eb178bf  com.apple.biome.CascadeSets (1.0 - 209.18) <137A490E-E366-31C3-A126-FDB5550738F7> /System/Library/PrivateFrameworks/CascadeSets.framework/Versions/A/CascadeSets
+       0x23fecf000 -        0x24000d4ee  com.apple.CollectionsInternal (1.2.0 - 5026.5.5) <9691DBE8-E342-36B5-8BC3-65954843303A> /System/Library/PrivateFrameworks/CollectionsInternal.framework/Versions/A/CollectionsInternal
+       0x247578000 -        0x24758b49f  com.apple.DeviceRecovery (1.0 - 1) <785D04A0-C0D8-3364-BDA5-560381C6553E> /System/Library/PrivateFrameworks/DeviceRecovery.framework/Versions/A/DeviceRecovery
+       0x249816000 -        0x2498192ff  com.apple.FontServices (1.0 - 1) <A46AB82E-AF94-37A8-A8D8-48B6689934EB> /System/Library/PrivateFrameworks/FontServices.framework/Versions/A/FontServices
+       0x24981a000 -        0x249909e2f  libXTFontStaticRegistryData.dylib (335.4.0.6) <9092FEA3-2DFB-32A9-BEFB-01B43E166C48> /System/Library/PrivateFrameworks/FontServices.framework/libXTFontStaticRegistryData.dylib
+       0x24990b000 -        0x249917c9f  com.apple.FramePacing (1.0 - 1) <0CEB865C-17EB-3C26-B9C0-CE3689942DB2> /System/Library/PrivateFrameworks/FramePacing.framework/Versions/A/FramePacing
+       0x24aa39000 -        0x24aa3ef07  libGPUCompilerUtils.dylib (32023.884) <C4FEB8D0-1E65-3664-8CBE-0FFAB464AABC> /System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libGPUCompilerUtils.dylib
+       0x24eeac000 -        0x24eeeb797  libllvm-flatbuffers.dylib (32023.884) <DA37B086-97F7-3DC1-AA07-442AECCB1666> /System/Library/PrivateFrameworks/GPUCompiler.framework/Versions/32023/Libraries/libllvm-flatbuffers.dylib
+       0x2567ca000 -        0x2568d32df  com.apple.InstalledContentLibrary (1.0 - 1.0) <AEEEDDBF-FCD1-3251-B0E9-940CE296B1E1> /System/Library/PrivateFrameworks/InstalledContentLibrary.framework/Versions/A/InstalledContentLibrary
+       0x2591f5000 -        0x2599c3cbf  com.apple.IntelligencePlatformLibrary (274.57) <A1865439-B63E-3211-A2C4-DAE7F7D25698> /System/Library/PrivateFrameworks/IntelligencePlatformLibrary.framework/Versions/A/IntelligencePlatformLibrary
+       0x25b2a5000 -        0x25b93b923  com.apple.MIL (3520.4 - 3520.4.1) <43AB1D6B-D19B-3115-A2C0-25DF31A5786E> /System/Library/PrivateFrameworks/MIL.framework/Versions/A/MIL
+       0x2604b1000 -        0x260512abf  com.apple.MessageSecurity (1.0 - 195.121.2) <0BAED8A7-51DE-39EE-9686-893CE0916B1B> /System/Library/PrivateFrameworks/MessageSecurity.framework/Versions/A/MessageSecurity
+       0x265512000 -        0x26553bb1f  com.apple.OSEligibility (319.121.1) <5C282C8D-F611-3A3F-B0C2-A9F376FE029F> /System/Library/PrivateFrameworks/OSEligibility.framework/Versions/A/OSEligibility
+       0x26619e000 -        0x2662b685f  com.apple.ParsingInternal (0.0.1 - 5026.5.5) <7FD0C201-E1CC-3F69-AD54-681B3CD37313> /System/Library/PrivateFrameworks/ParsingInternal.framework/Versions/A/ParsingInternal
+       0x26964b000 -        0x26966ce1f  com.apple.accessibility.PhotosensitivityProcessing (1.0 - 1) <EA136E97-3E2F-371B-A65D-A0BD5E1898D8> /System/Library/PrivateFrameworks/PhotosensitivityProcessing.framework/Versions/A/PhotosensitivityProcessing
+       0x269a5f000 -        0x269a9ba3c  com.apple.PoirotSQLite (1.0 - 1) <F6CD54D6-1342-3624-9949-5690E8135D66> /System/Library/PrivateFrameworks/PoirotSQLite.framework/Versions/A/PoirotSQLite
+       0x269a9c000 -        0x269b0925f  com.apple.PoirotSchematizer (1.0 - 1) <31B04A5B-1569-37D6-B5E3-22CA260A9A41> /System/Library/PrivateFrameworks/PoirotSchematizer.framework/Versions/A/PoirotSchematizer
+       0x269b0a000 -        0x269b3fbff  com.apple.PoirotUDFs (1.0 - 1) <257AE39F-8DAA-36F7-A806-1A38920A0131> /System/Library/PrivateFrameworks/PoirotUDFs.framework/Versions/A/PoirotUDFs
+       0x26acd8000 -        0x26ae1411f  com.apple.ProDisplayLibrary (10.4.28 - 10.4.28) <C91E3E87-39F7-3515-8D68-33537486959D> /System/Library/PrivateFrameworks/ProDisplayLibrary.framework/Versions/A/ProDisplayLibrary
+       0x26bdce000 -        0x26bdd64df  com.apple.ReflectionInternal (1.0.0 - 5026.5.5) <EA5C8DB0-0187-3AB8-80B0-5AC888E8CDB1> /System/Library/PrivateFrameworks/ReflectionInternal.framework/Versions/A/ReflectionInternal
+       0x26cd21000 -        0x26cd349d7  com.apple.RuntimeInternal (1.0.0 - 5026.5.5) <04ADBC99-92B0-32EE-98A8-A4D73DCCCE6C> /System/Library/PrivateFrameworks/RuntimeInternal.framework/Versions/A/RuntimeInternal
+       0x26cf73000 -        0x26cfe0abf  com.apple.SILManager (53.19 - 53.19) <4D5E48C2-F64C-3E12-B831-9D3BAE05317F> /System/Library/PrivateFrameworks/SILManager.framework/Versions/A/SILManager
+       0x27844e000 -        0x27847a4a1  com.apple.security.SwiftASN1Internal (1.0 - 1) <B9F3D5F5-9880-3CFB-B799-1A2DE78AD70B> /System/Library/PrivateFrameworks/SwiftASN1Internal.framework/Versions/A/SwiftASN1Internal
+       0x27b8a1000 -        0x27b8dd1df  com.apple.tightbeam (1.0 - 483.100.88) <AC90942B-457E-3814-959B-85EFAACBCA58> /System/Library/PrivateFrameworks/Tightbeam.framework/Versions/A/Tightbeam
+       0x280011000 -        0x2800122cf  com.apple.VideoToolboxParavirtualizationSupport (64.4.7 - 64.4.7) <C881C3D9-A5B6-36D5-B11A-4EE6D037DD24> /System/Library/PrivateFrameworks/VideoToolboxParavirtualizationSupport.framework/Versions/A/VideoToolboxParavirtualizationSupport
+       0x28a278000 -        0x28a31235f  libAppleArchive.dylib (450.100.4) <0FBEE8ED-BE69-3AC5-AC4E-6C28EEC29CF6> /usr/lib/libAppleArchive.dylib
+       0x28a3cd000 -        0x28a3d745f  libCoreEntitlements.dylib (80.100.6) <C9580199-FB51-35A3-AFCE-D4B3464E6E23> /usr/lib/libCoreEntitlements.dylib
+       0x28a6c3000 -        0x28a6ca87f  libReverseProxyDevice.dylib (104.120.1.0.1) <37A5DD0C-9615-3BBD-8A88-0451A406D25F> /usr/lib/libReverseProxyDevice.dylib
+       0x28a6cb000 -        0x28a6d2349  libRosetta.dylib (367.9) <8651ED4F-6506-3788-B56B-32EE414A85CA> /usr/lib/libRosetta.dylib
+       0x28a73a000 -        0x28a7433ff  libTLE.dylib (80.100.6) <207A2987-1BD0-3E47-B72C-E81934A6C74C> /usr/lib/libTLE.dylib
+       0x28af3f000 -        0x28b050b17  libcrypto.46.dylib (109.100.2) <F9685724-6622-3592-8336-B3811B583E83> /usr/lib/libcrypto.46.dylib
+       0x28b18b000 -        0x28b1a7762  libhvf.dylib (11) <43426C58-BE90-3643-9103-B9EE4A06A18A> /usr/lib/libhvf.dylib
+       0x28bade000 -        0x28bb16527  libssl.48.dylib (109.100.2) <83762FDF-B375-3BB1-B568-854F8F11CF89> /usr/lib/libssl.48.dylib
+       0x28bb51000 -        0x28bb7f16f  libswiftPrespecialized.dylib (0) <1CC9F48A-BC65-37E0-88A5-260C70D14A8F> /usr/lib/libswiftPrespecialized.dylib
+       0x28be1b000 -        0x28be2d043  libswiftDistributed.dylib (6.3.2 - 6.3.2.1.3) <67A11C98-0E0D-3DF8-846F-34276C54ECF3> /usr/lib/swift/libswiftDistributed.dylib
+       0x28be44000 -        0x28be53ebc  libswiftObservation.dylib (6.3.2 - 6.3.2.1.3) <CE9EF53F-E72B-32EC-A1F9-8EBE59A4F1BA> /usr/lib/swift/libswiftObservation.dylib
+       0x28bf80000 -        0x28bf938ef  libswiftSynchronization.dylib (6.3.2 - 6.3.2.1.3) <1A965373-0DB6-3B50-BE38-52C30D67A090> /usr/lib/swift/libswiftSynchronization.dylib
+       0x28bf94000 -        0x28bface60  libswiftSystem.dylib (75) <A4F80949-97A7-3A1A-A340-45D2D7A5AB89> /usr/lib/swift/libswiftSystem.dylib
+       0x28bfae000 -        0x28bfc479f  libswiftVideoToolbox.dylib (3320.8.5.1) <3C381F76-0925-338E-BEDA-2ECB42333EBC> /usr/lib/swift/libswiftVideoToolbox.dylib
+       0x28bfc6000 -        0x28bfc6669  libswift_Builtin_float.dylib (6.3.2.1.3) <15ED1E36-16BC-327E-8FAA-9130DE11923C> /usr/lib/swift/libswift_Builtin_float.dylib
+       0x28bfc7000 -        0x28c052095  libswift_Concurrency.dylib (6.3.2 - 6.3.2.1.3) <E3545AA1-FF13-3698-8657-91BB23002DF9> /usr/lib/swift/libswift_Concurrency.dylib
+       0x28c053000 -        0x28c055f83  libswift_DarwinFoundation1.dylib (377.120.8) <2601FA08-2913-3370-89B6-C67DC05AC892> /usr/lib/swift/libswift_DarwinFoundation1.dylib
+       0x28c056000 -        0x28c056eeb  libswift_DarwinFoundation2.dylib (377.120.8) <38242BFE-54C8-3838-AE88-0083F7328580> /usr/lib/swift/libswift_DarwinFoundation2.dylib
+       0x28c057000 -        0x28c0577a7  libswift_DarwinFoundation3.dylib (377.120.8) <6CFBAAE9-7293-3A51-83B9-E3988230EAC2> /usr/lib/swift/libswift_DarwinFoundation3.dylib
+       0x28c058000 -        0x28c0f649f  libswift_RegexParser.dylib (6.3.2 - 6.3.2.1.3) <2FED4499-861B-37B8-8C94-5ABC7FD49726> /usr/lib/swift/libswift_RegexParser.dylib
+       0x28c0f7000 -        0x28c1830cd  libswift_StringProcessing.dylib (6.3.2 - 6.3.2.1.3) <13999576-EB4F-3A0D-874F-A95AD5D7F296> /usr/lib/swift/libswift_StringProcessing.dylib
+       0x28c2e8000 -        0x28c2eba4b  libsystem_darwindirectory.dylib (122) <CF277A2C-C818-3F16-8B3F-3C7B39FCD164> /usr/lib/system/libsystem_darwindirectory.dylib
+       0x28c2ec000 -        0x28c2f55d3  libsystem_eligibility.dylib (319.121.1) <DDAC0531-0262-3DDC-8EC8-80EB9438847A> /usr/lib/system/libsystem_eligibility.dylib
+       0x28c2f6000 -        0x28c2fd88b  libsystem_sanitizers.dylib (26.1) <44C4234F-8B2D-38D3-A774-B4B3C75AF3A7> /usr/lib/system/libsystem_sanitizers.dylib
+       0x28c2fe000 -        0x28c2febb7  libsystem_trial.dylib (474.2.18.2) <68C583BA-AFF5-3916-86AE-6E38BFEF98D6> /usr/lib/system/libsystem_trial.dylib

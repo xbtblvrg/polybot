@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Pénzgyár — élő műszerfal</title>
+<style>
+  :root{--bg:#0b0e14;--card:#131826;--line:#1f2637;--tx:#d7dce6;--dim:#7d8698;
+        --green:#3ddc84;--red:#ff5d5d;--amber:#ffb84d;--blue:#5aa9ff;--mono:ui-monospace,Menlo,monospace}
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--bg);color:var(--tx);font:14px/1.45 -apple-system,system-ui,sans-serif}
+  header{padding:14px 20px;border-bottom:1px solid var(--line);display:flex;gap:16px;align-items:baseline}
+  header h1{font-size:16px;margin:0;letter-spacing:.5px}
+  #clock{color:var(--dim);font-family:var(--mono)}
+  #grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(340px,1fr));gap:12px;padding:14px}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px 14px;min-height:90px}
+  .card h2{font-size:12px;margin:0 0 8px;color:var(--dim);text-transform:uppercase;letter-spacing:1px}
+  .big{font-size:26px;font-family:var(--mono)}
+  .green{color:var(--green)}.red{color:var(--red)}.amber{color:var(--amber)}.blue{color:var(--blue)}
+  .dim{color:var(--dim)}
+  .row{display:flex;justify-content:space-between;padding:2px 0;border-bottom:1px dotted var(--line);font-family:var(--mono);font-size:12.5px}
+  .row span:first-child{color:var(--dim)}
+  .feed{max-height:340px;overflow:auto;font-family:var(--mono);font-size:11.5px}
+  .feed div{padding:3px 0;border-bottom:1px dotted var(--line)}
+  .tag{display:inline-block;padding:1px 7px;border-radius:9px;font-size:11px;font-family:var(--mono);margin-right:6px}
+  .t-ok{background:#12331f;color:var(--green)}.t-red{background:#3a1515;color:var(--red)}
+  .t-amb{background:#3a2c10;color:var(--amber)}.t-blue{background:#122740;color:var(--blue)}
+  .wide{grid-column:1/-1}
+  .bar{height:8px;background:var(--line);border-radius:4px;overflow:hidden;margin-top:4px}
+  .bar i{display:block;height:100%;background:var(--green)}
+</style>
+</head>
+<body>
+<header>
+  <h1>🏭 PÉNZGYÁR — élő műszerfal <span class="dim">(read-only)</span></h1>
+  <span id="clock"></span>
+  <span id="stale" class="red"></span>
+</header>
+<div id="grid">
+  <div class="card"><h2>💰 Pénz (ma)</h2><div id="money" class="big">…</div><div id="money2" class="dim"></div></div>
+  <div class="card"><h2>📊 Lefedettség → 144/288</h2><div id="cov" class="big">…</div><div class="bar"><i id="covbar" style="width:0%"></i></div><div id="cov2" class="dim"></div></div>
+  <div class="card"><h2>🛡️ Őrök</h2><div id="guards"></div></div>
+  <div class="card"><h2>⚙️ Guard / végrehajtó</h2><div id="guard"></div></div>
+  <div class="card"><h2>👥 Live roster</h2><div id="roster" class="feed" style="max-height:180px"></div></div>
+  <div class="card"><h2>⛏️ Bánya / kohort</h2><div id="mine"></div></div>
+  <div class="card"><h2>🖥️ Erőforrás</h2><div id="util"></div></div>
+  <div class="card"><h2>📜 Ígéretek (commitments)</h2><div id="commit" class="feed" style="max-height:200px"></div></div>
+  <div class="card"><h2>🧬 Élő-út napló (change journal)</h2><div id="journal" class="feed" style="max-height:200px"></div></div>
+  <div class="card wide"><h2>🧠 Az agyak párbeszéde — HANDOFF (legfrissebb felül)</h2><div id="handoff" class="feed"></div></div>
+  <div class="card wide"><h2>🔬 Gyár-tölcsér (ha épül: factory_funnel_latest.json)</h2><div id="funnel" class="dim">még nincs artifact</div></div>
+</div>
+<script>
+const $=id=>document.getElementById(id);
+const num=x=>(x==null||x==='None'||x==='null'||Number.isNaN(+x))?'–':(+x).toFixed(2);
+function kv(o,keys){return keys.filter(k=>o&&o[k]!=null).map(k=>`<div class="row"><span>${k}</span><span>${String(o[k]).slice(0,60)}</span></div>`).join('')}
+async function tick(){
+ try{
+  const r=await fetch('/api/all');const d=await r.json();
+  $('stale').textContent='';
+  $('clock').textContent=new Date().toISOString().slice(0,19)+'Z';
+  // pénz
+  const p=d.digest.pnl||'';
+  const day=(p.match(/day=([\-0-9.]+)/)||[])[1];
+  const st=(p.match(/since_topup=([\-0-9.]+)/)||[])[1];
+  const fills=(p.match(/fills=(\d+)/)||[])[1];
+  const basis=(p.match(/basis=([^ ]+)/)||[])[1];
+  const recon=(p.match(/basis_recon=([^ ]+)/)||[])[1]||'';
+  const reconStatus=(recon.match(/status:([^,]+)/)||[])[1];
+  const textMinusFill=(recon.match(/text_minus_fill:([^,]+)/)||[])[1];
+  $('money').innerHTML=`<span class="${+day>=0?'green':'red'}">${num(day)} $</span>`;
+  $('money2').textContent=`basis: ${basis||'–'} · text-fill Δ: ${num(textMinusFill)} $ · ${reconStatus||'–'} · since-topup: ${num(st)} $ · fillek ma: ${fills||'–'}`;
+  // lefedettség
+  const v=d.digest.volume||'';
+  const filled=(v.match(/filled=(\d+)\/288/)||[])[1]||0;
+  $('cov').innerHTML=`<span class="${filled>=144?'green':(filled>=60?'amber':'red')}">${filled} / 288</span>`;
+  $('covbar').style.width=Math.min(100,filled/288*100)+'%';
+  $('cov2').textContent='padló: 144 · cél: 288 profitábilisan';
+  // őrök
+  const dm=d.deadman||{},cw=(d.codex_watch||{});
+  const dmS=dm.status||'?';
+  const dmC=dmS==='OK'?'t-ok':(String(dmS).includes('MEASURED')?'t-amb':'t-red');
+  $('guards').innerHTML=
+   `<div class="row"><span>order-flow deadman</span><span class="tag ${dmC}">${dmS}</span></div>`+
+   `<div class="row"><span>idle</span><span>${Math.round((dm.idle_s||0)/60)} perc</span></div>`+
+   `<div class="row"><span>codex-őr</span><span class="tag ${cw.fable_escalation_armed?'t-red':'t-ok'}">${(cw.heartbeat||{}).status||'?'}${cw.fable_escalation_armed?' · ESZKALÁCIÓ':''}</span></div>`+
+   `<div class="row"><span>brainless</span><span class="tag ${(d.brainless||{}).status==='OK'?'t-ok':'t-amb'}">${(d.brainless||{}).status||'?'}</span></div>`;
+  // guard
+  const g=d.guard||{};
+  $('guard').innerHTML=kv(g,['outcome','cycle','pid','started','selected'])+
+   `<div class="row"><span>filter</span><span>$${(g.filter||{}).max_order??'–'} / ≤${(g.filter||{}).max_price??'–'}</span></div>`;
+  // roster
+  const mem=g.members||{};
+  $('roster').innerHTML=Object.entries(mem).map(([w,m])=>
+   `<div><span class="tag ${m.enabled?'t-ok':'t-amb'}">${m.enabled?'LIVE':'pad'}</span>${w} <span class="dim">${m.status||''}</span></div>`).join('')||'<span class="dim">nincs adat</span>';
+  // bánya
+  const c=d.cohort||{};
+  $('mine').innerHTML=kv(c,['cohort_size','cohort_shadow_positive','live_ready_picks','top_live_ready_wallet']);
+  // erőforrás
+  const u=d.utilization||{};
+  const cpu=(u.cpu||{});
+  $('util').innerHTML=kv({lane_szám:u.active_or_gated_lane_count,CPU_headroom:cpu.headroom_pct!=null?num(cpu.headroom_pct)+' %':null,load1:cpu.load1!=null?num(cpu.load1):null},['lane_szám','CPU_headroom','load1']);
+  // ígéretek
+  $('commit').innerHTML=(d.commitments||[]).map(x=>{
+    const over=x.due_ts&&!x.fulfilled&&x.due_ts<new Date().toISOString();
+    return `<div><span class="tag ${x.fulfilled?'t-ok':(over?'t-red':'t-blue')}">${x.fulfilled?'KÉSZ':(over?'LEJÁRT':'fut')}</span>${(x.id||x.change_id||'?').slice(0,44)} <span class="dim">${(x.due_ts||'').slice(5,16)}</span></div>`;
+  }).join('')||'<span class="dim">üres</span>';
+  // journal
+  $('journal').innerHTML=(d.journal||[]).map(x=>
+   `<div><b>${(x.change_id||'?')}</b> <span class="dim">${(x.ts||'').slice(5,16)}</span><br><span class="dim">${(x.justification||'').slice(0,90)}</span></div>`).join('');
+  // handoff
+  $('handoff').innerHTML=(d.handoff||[]).map(h=>{
+    const c=h.includes('codex')?'t-blue':(h.includes('NOTIFY')?'t-red':'t-ok');
+    const who=h.includes('codex')?'CODEX':(h.includes('NOTIFY')?'ŐRSÉG':(h.includes('operator')?'OPERÁTOR':'FABLE'));
+    return `<div><span class="tag ${c}">${who}</span>${h.replace(/^## /,'').slice(0,150)}</div>`;
+  }).join('');
+  // tölcsér
+  if(d.funnel&&Object.keys(d.funnel).length){
+    $('funnel').innerHTML=Object.entries(d.funnel.stages||d.funnel).slice(0,14).map(([k,v])=>`<div class="row"><span>${k}</span><span>${JSON.stringify(v).slice(0,60)}</span></div>`).join('');
+  }
+ }catch(e){$('stale').textContent='⚠ nincs kapcsolat a szerverrel';}
+}
+tick();setInterval(tick,5000);
+</script>
+</body>
+</html>

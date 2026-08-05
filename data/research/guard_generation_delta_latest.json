@@ -1,0 +1,97 @@
+{
+  "changed_count": 2,
+  "citation_allowed": true,
+  "comparison_file_count": 8,
+  "disk_generation_sha256": "5a11a3145f57d5ada506ea0b9995e56e6a007be46c19bbf398227167b6421aa8",
+  "flow_stage": "LIVE/DEFEND/MEASURE",
+  "generated_at": "2026-08-05T04:51:38.795923Z",
+  "historical_loaded_file_count": 8,
+  "kind": "guard_generation_delta",
+  "live_mutation": false,
+  "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+  "loaded_only_paths": [],
+  "loaded_pid": 68863,
+  "loaded_started_at_utc": "2026-08-05T00:05:24.149871Z",
+  "measurement_only": true,
+  "published_loaded_generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+  "reconstructed": true,
+  "reconstructed_loaded_generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+  "reconstruction_status": "MATCH",
+  "rows": [
+    {
+      "changed": true,
+      "disk_exists": true,
+      "disk_sha256": "4c44204856cb65696939227446b82fd5e5f0dca6dd44759217a5951b28d73df5",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "c1ae393b071ec0fca6b39f71bb1a4c59a0d259b7caf177710387b309240314ee",
+      "path": "scripts/run_wallet_copy_live_guard.py"
+    },
+    {
+      "changed": true,
+      "disk_exists": true,
+      "disk_sha256": "dfd51665b35adbab7bc2d760030c67eeb30ab8b024c5dbf51659e6733e70394d",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "70e6aa94596ec0348b9ad90d286140e9db80e191edc2afa1441715bd5f5803f0",
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "ce23472d5d3fb3587a59efb0526744c2c6a70216de05536cd169badb94cfceb2",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "ce23472d5d3fb3587a59efb0526744c2c6a70216de05536cd169badb94cfceb2",
+      "path": "scripts/start_live_guard.sh"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "d24bc903010dce6d9a9479b1db7bb2e037bb7f53e14df76f7cd882b020a3e971",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "d24bc903010dce6d9a9479b1db7bb2e037bb7f53e14df76f7cd882b020a3e971",
+      "path": "launchd/com.belavarga.polymarket.wallet-copy-live-guard.plist"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "d6348ebf966e1e3fde89bee830263c371bccad9c0dda43bf8315ca55f88f0286",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "d6348ebf966e1e3fde89bee830263c371bccad9c0dda43bf8315ca55f88f0286",
+      "path": "src/trade_executor.py"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "ce0b4581b871ee120c8fcb743ffe0b70398a82400b4f7868fcf735e10b64d1c5",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "ce0b4581b871ee120c8fcb743ffe0b70398a82400b4f7868fcf735e10b64d1c5",
+      "path": "src/wallet_copy/execution.py"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "d5e7bac880866d68e1b388e3ffa867b5c810081e51600d976f67e84a2b6827a8",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "d5e7bac880866d68e1b388e3ffa867b5c810081e51600d976f67e84a2b6827a8",
+      "path": "src/wallet_copy/mission.py"
+    },
+    {
+      "changed": false,
+      "disk_exists": true,
+      "disk_sha256": "25bc2cec6d07230814ead63f085659fa02f67f9a146762c0919794531300013d",
+      "loaded_commit": "ff490666e98509e21ce0f9106c316e2d2af89f61",
+      "loaded_exists": true,
+      "loaded_sha256": "25bc2cec6d07230814ead63f085659fa02f67f9a146762c0919794531300013d",
+      "path": "src/wallet_copy/pnl_truth.py"
+    }
+  ],
+  "rule": "per-file delta is citable only when the historical tuple reconstructs the resident aggregate sha",
+  "schema_version": 1,
+  "status": "PASS_CITABLE"
+}

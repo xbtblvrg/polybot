@@ -1,0 +1,9 @@
+{
+  "flow_stage": "LIVE/DEFEND/ROTATE",
+  "status": "RESET_APPLIED",
+  "reset_at": "2026-07-23T15:20:00Z",
+  "reason": "order_accepted_liveness_152013Z",
+  "direction_id": "2026-07-23T15:30Z-fable-peer-active-idle-reset",
+  "scope": "consecutive_peer_active_idle_windows",
+  "rule": "Rows whose canonical window start precedes reset_at remain in the historical total but cannot re-fire the consecutive incident counter."
+}

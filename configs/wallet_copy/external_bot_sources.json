@@ -1,0 +1,509 @@
+{
+  "adoption_rules": [
+    "External dry-run claims are never live-admission evidence by themselves.",
+    "Only BTC 5-minute wallet-copy relevance is active; weather, Kalshi, SOL, fair-value, and generic ML ideas stay research-only unless they improve wallet-copy evidence.",
+    "Any copied pattern must enter this repo through WalletEvent -> CopyIntent -> executable paper fill -> lifecycle ledger -> copy-efficiency scorecard.",
+    "Source-wallet SELL, MERGE, and REDEEM lifecycle evidence must stay visible; TP/SL-only exits are not exact-copy evidence.",
+    "A source can be useful for wallet discovery, latency, order lifecycle, or evidence discipline without being copy-tradeable directly."
+  ],
+  "generated_at": "2026-06-24T18:30:00Z",
+  "kind": "external_wallet_copy_source_registry",
+  "schema_version": 1,
+  "scope": "BTC 5-minute wallet-copy trading only",
+  "sources": [
+    {
+      "btc_5m_relevance": "high",
+      "capability_map": [
+        {
+          "backlog": "Implement post-resolution sweeper queue/fill modeling with tick-level BTC reference price, BTC-5m close clock, CLOB book snapshots, FIFO queue position, fill probability, redeem lifecycle PnL, idle-capital cost, and rare flip/full-loss accounting. Use scripts/analyze_wallet_sweeper_profile.py as the wallet-pattern detector; keep execution paper-only until CLOB-backed fills and latency pass.",
+          "capability": "post_resolution_sweeper_queue_model",
+          "local_modules": [
+            "src/wallet_copy/sweeper.py",
+            "src/wallet_copy/live_tracker.py",
+            "src/wallet_copy/copy_efficiency.py",
+            "src/wallet_copy/profit_engine.py"
+          ],
+          "local_tests": [
+            "tests/test_wallet_copy_core.py::test_sweeper_profile_detects_high_price_near_close_wallet"
+          ],
+          "status": "partial"
+        }
+      ],
+      "clone_status": "not_applicable_social_article",
+      "dry_run_claim_status": "unverified_local_paper_candidate_blocked_from_live",
+      "id": "punisher_x_sweeper_bot_article",
+      "import_actions": [
+        "Resolved the public profile to proxyWallet 0x13f0bcec1e2e60ec9acc3bee4d2da2fe9694a50f and onboarded it as punisher_sweeper_btc5m in paper-only BTC-5m registry.",
+        "Treat the article's post-resolution/FIFO/high-bid strategy as a separate paper-only sweeper research lane until queue priority, CLOB-backed fills, latency, redeem lifecycle PnL, idle capital, and rare flip losses are measured.",
+        "Use the strong local sweeper signature as research evidence only: high-price near-close behavior is not live admission without executable CLOB and copy-efficiency evidence."
+      ],
+      "local_review_paths": [
+        "configs/wallet_copy/wallets.json",
+        "data/research/operator_wallet_onboarding_state.json",
+        "data/research/wallet_copy_sweeper_profile_state.json",
+        "data/research/wallet_copy_live_tracking_state.json",
+        "data/research/wallet_copy_profit_engine_state.json"
+      ],
+      "name": "Punisher X article: My sweeper bot makes about $525/day",
+      "non_import_reasons": [
+        "The PnL/day claim and paid-partnership article are not objective profitability evidence.",
+        "The current local profit candidate is still blocked by unresolved-ratio and missing CLOB-backed candidate fill evidence.",
+        "Sweeper execution is queue-position and latency dependent; source-price or fallback fills are not live-admissible."
+      ],
+      "primary_use": "post_resolution_sweeper_wallet_candidate_and_queue_model",
+      "priority": "P0",
+      "status": "reviewed_wallet_candidate_onboarded_paper_only",
+      "url": "https://x.com/0x_Punisher/status/1911846164636762470",
+      "useful_patterns": [
+        "post-resolution high-price bid ladder",
+        "FIFO queue-position race",
+        "near-close deterministic-outcome inference",
+        "reference exchange price and close-clock gating",
+        "redeem lifecycle PnL",
+        "idle capital and fill-probability tradeoff"
+      ],
+      "wallet_candidates": [
+        {
+          "address": "0x13f0bcec1e2e60ec9acc3bee4d2da2fe9694a50f",
+          "btc_5m_rows_sampled": 810,
+          "buy_rows_sampled": 1266,
+          "decision": "onboarded_paper_only_btc5m_sweeper_research",
+          "latest_sampled_event_ts": 1782315038,
+          "notes": "1500 sampled Data API rows contained 810 BTC-5m rows and fresh activity. Local history has 526 BTC-5m BUY events, all >=0.95 price, with 475 high-price near/post-close buys."
+        }
+      ]
+    },
+    {
+      "btc_5m_relevance": "medium",
+      "clone_status": "not_applicable_social_article",
+      "dry_run_claim_status": "unverified",
+      "id": "kirill_openclaw_clawdbot_article",
+      "import_actions": [
+        "Triage the article wallets separately: 0x1d0034134e339a309700ff2d34e99fa2d48b0313 and 0xde79cc7660d5c05b4cd2f4e72cae30cde2583d9a were onboarded into paper-only BTC-5m registry for historical analysis.",
+        "Keep 0x594edb9112f526fa6a80b8f858a6379c8a2c1c11 research-only for now because its recent profile is weather-dominated, not BTC 5-minute.",
+        "Treat OpenClaw/Simmer/Fast Loop as tool-stack and skill-discovery input; do not import claims as profitability or live-admission evidence."
+      ],
+      "local_review_paths": [
+        "configs/wallet_copy/wallets.json",
+        "data/research/operator_wallet_onboarding_state.json",
+        "data/research/wallet_copy_research_state.json",
+        "data/research/wallet_copy_profit_engine_state.json"
+      ],
+      "name": "kirillk_web3 X article: How to Build Your Own Polymarket Clawdbot",
+      "non_import_reasons": [
+        "The guide mixes affiliate hosting, OpenClaw/Simmer setup, weather, BTC 15-minute assistant, and BTC 5-minute fast-loop ideas.",
+        "The article claims are educational/marketing claims and not objective copy-trading evidence.",
+        "Onboarded BTC candidates are stale/unresolved in the current local resolution index and are not live-ready."
+      ],
+      "primary_use": "wallet_candidate_intake_and_tool_stack_discovery",
+      "priority": "P1",
+      "status": "reviewed_wallet_candidates_onboarded_paper_only",
+      "url": "https://x.com/kirillk_web3/status/2025933391003066796",
+      "useful_patterns": [
+        "OpenClaw agent orchestration",
+        "Simmer skill layer",
+        "Polymarket Copytrading skill concept",
+        "Polymarket Fast Loop BTC 5m/15m concept",
+        "risk limits and stop rules",
+        "wallet candidate discovery"
+      ],
+      "wallet_candidates": [
+        {
+          "address": "0x1d0034134e339a309700ff2d34e99fa2d48b0313",
+          "btc_5m_rows_sampled": 34,
+          "btc_15m_rows_sampled": 317,
+          "decision": "onboarded_paper_only_btc5m_research",
+          "notes": "Resolved from the short @0x1d0034134e Polymarket profile; mixed short-duration wallet, not live-ready."
+        },
+        {
+          "address": "0xde79cc7660d5c05b4cd2f4e72cae30cde2583d9a",
+          "btc_5m_rows_sampled": 593,
+          "btc_15m_rows_sampled": 385,
+          "decision": "onboarded_paper_only_btc5m_research",
+          "notes": "BTC 5m/15m-heavy historical candidate; stale in current local replay and unresolved in current resolution index."
+        },
+        {
+          "address": "0x594edb9112f526fa6a80b8f858a6379c8a2c1c11",
+          "btc_5m_rows_sampled": 0,
+          "decision": "research_only_not_btc5m_registry",
+          "notes": "Weather-dominated profile in the sampled Data API rows."
+        }
+      ]
+    },
+    {
+      "btc_5m_relevance": "medium",
+      "clone_status": "not_applicable_social_article",
+      "dry_run_claim_status": "unverified",
+      "id": "antpalkin_x_polymarket_1m_bot_tools",
+      "import_actions": [
+        "Retrieve the full article/tool list when accessible and add each concrete repository or wallet back to this registry as a separate reviewed source.",
+        "Treat the teaser as discovery pressure only; do not use any claim as profitability, dry-run, or live-admission evidence."
+      ],
+      "local_review_paths": [],
+      "name": "antpalkin X article: 28 tools under the hood of a Polymarket $1M bot",
+      "non_import_reasons": [
+        "The public X status/article content is only partially visible without full article access.",
+        "The teaser mentions 28 repositories and a six-layer stack, but the concrete tool list was not verifiably extracted in this run."
+      ],
+      "primary_use": "ongoing_tool_discovery_and_stack_benchmark",
+      "priority": "P1",
+      "status": "teaser_reviewed_full_article_needed",
+      "url": "https://x.com/antpalkin/status/2046654122892403188",
+      "useful_patterns": [
+        "layered Polymarket bot stack",
+        "tool and repository discovery",
+        "copy-trading architecture benchmark"
+      ]
+    },
+    {
+      "btc_5m_relevance": "medium",
+      "clone_status": "ok",
+      "dry_run_claim_status": "untrusted_until_replayed_by_local_paper_engine",
+      "id": "cloddsbot",
+      "import_actions": [
+        "Borrow audit-ledger and single execution-route patterns where they simplify CopyIntent observability.",
+        "Keep non-wallet strategy modules out of live-admission paths."
+      ],
+      "local_review_paths": [
+        "src/ledger",
+        "src/agents/handlers/polymarket.ts",
+        "src/strategies/crypto-hft/orderbook.ts",
+        "src/utils/polymarket-order-signer.ts"
+      ],
+      "name": "alsk1992/CloddsBot",
+      "non_import_reasons": [
+        "Broad multi-market agent, not a focused BTC 5-minute wallet-copy engine.",
+        "Includes Solana and many direct strategies that are outside the reset scope."
+      ],
+      "primary_use": "architecture_and_audit_patterns",
+      "priority": "P1",
+      "status": "reviewed",
+      "url": "https://github.com/alsk1992/CloddsBot",
+      "useful_patterns": [
+        "single execution route",
+        "audit ledger",
+        "orderbook and whale-tracking vocabulary",
+        "risk layer before execution"
+      ]
+    },
+    {
+      "btc_5m_relevance": "high",
+      "capability_map": [
+        {
+          "backlog": "Add vanished-order and cancel/repost latency fields to live-tracker summary after own-order adapter is gated.",
+          "capability": "lifecycle_fill_monitoring",
+          "local_modules": [
+            "src/wallet_copy/live_tracker.py",
+            "src/wallet_copy/paper.py",
+            "src/wallet_copy/copy_efficiency.py"
+          ],
+          "local_tests": [
+            "tests/test_wallet_copy_core.py::test_live_wallet_tracker_flags_fill_model_reject_in_copy_efficiency",
+            "tests/test_wallet_copy_core.py::test_paper_engine_applies_merge_and_redeem_lifecycle"
+          ],
+          "status": "partial"
+        }
+      ],
+      "clone_status": "ok",
+      "dry_run_claim_status": "untrusted_until_replayed_by_local_paper_engine",
+      "id": "polymarket_lp_tool",
+      "import_actions": [
+        "Port the useful order lifecycle concepts into our paper/live tracker metrics.",
+        "Add vanished-order, cancel/repost latency, depth, spread, and jump-cooldown fields as evidence, not as a separate LP strategy."
+      ],
+      "local_review_paths": [
+        "passive_liquidity/fill_detection.py",
+        "passive_liquidity/order_manager.py",
+        "passive_liquidity/polymarket_ws_market.py",
+        "passive_liquidity/polymarket_ws_user.py"
+      ],
+      "name": "lihanyu81/polymarket_lp_tool",
+      "non_import_reasons": [
+        "It manages our own resting limit orders, while wallet-copy source trades are external observations.",
+        "Liquidity reward optimization is not the active edge."
+      ],
+      "primary_use": "order_lifecycle_and_fill_monitoring",
+      "priority": "P0",
+      "status": "reviewed",
+      "url": "https://github.com/lihanyu81/polymarket_lp_tool",
+      "useful_patterns": [
+        "market websocket orderbook state",
+        "user websocket reconciliation",
+        "vanished-order fill inference",
+        "cancel and repost telemetry",
+        "anti-sniping midpoint jump guards"
+      ]
+    },
+    {
+      "btc_5m_relevance": "low",
+      "clone_status": "ok",
+      "dry_run_claim_status": "not_relevant_to_btc_wallet_copy",
+      "id": "kalshi_weather_model",
+      "import_actions": [
+        "Borrow only evidence-chain and source-error-correction discipline for research notes."
+      ],
+      "local_review_paths": [
+        "README.md",
+        "Final_Prediction_Model.ipynb",
+        "KalshiTradingV2.ipynb"
+      ],
+      "name": "AruneshDev/Automated-Trading-System-Kalshi-Weather-Model",
+      "non_import_reasons": [
+        "Weather/Kalshi domain, not Polymarket BTC 5-minute wallet-copy.",
+        "Model-driven trade placement is outside the wallet-copy-only live path."
+      ],
+      "primary_use": "research_only_evidence_chain",
+      "priority": "research",
+      "status": "reviewed",
+      "url": "https://github.com/AruneshDev/Automated-Trading-System-Kalshi-Weather-Model",
+      "useful_patterns": [
+        "multi-source data reconciliation",
+        "historical forecast error correction",
+        "settlement-specific evidence separation"
+      ]
+    },
+    {
+      "btc_5m_relevance": "blocked",
+      "clone_status": "failed_repository_not_found",
+      "dry_run_claim_status": "unverified",
+      "id": "composio_polymarket_kalshi_arbitrage",
+      "import_actions": [
+        "Do not import until a cloneable repository URL or package source is verified."
+      ],
+      "local_review_paths": [],
+      "name": "Composio-HQ/polymarket-kalshi-arbitrage-bot",
+      "non_import_reasons": [
+        "The supplied GitHub page was reachable, but git clone returned repository not found.",
+        "Cross-venue arbitrage is not the current wallet-copy core."
+      ],
+      "primary_use": "blocked_unverified",
+      "priority": "blocked",
+      "status": "blocked",
+      "url": "https://github.com/Composio-HQ/polymarket-kalshi-arbitrage-bot",
+      "useful_patterns": []
+    },
+    {
+      "btc_5m_relevance": "high",
+      "capability_map": [
+        {
+          "backlog": "Implement src/wallet_copy/discovery.py and scripts/discover_wallet_copy_candidates.py with BTC-5m purity, resolved ROI, drawdown, freshness, unresolved ratio, and copyability scoring.",
+          "capability": "smart_money_discovery",
+          "local_modules": [
+            "src/wallet_copy/onboarding.py",
+            "src/wallet_copy/registry.py",
+            "src/wallet_copy/profit_engine.py"
+          ],
+          "local_tests": [
+            "tests/test_wallet_copy_core.py::test_operator_wallet_onboarding_parses_profile_url_and_builds_plan"
+          ],
+          "status": "missing"
+        }
+      ],
+      "clone_status": "ok",
+      "dry_run_claim_status": "untrusted_until_replayed_by_local_paper_engine",
+      "id": "mrfadiai_polymarket_bot",
+      "import_actions": [
+        "Use as the model for BTC-5m smart-money wallet discovery and top-N candidate onboarding.",
+        "Require our own CLOB-backed paper fill, lifecycle, and copy-efficiency verification before any admission."
+      ],
+      "local_review_paths": [
+        "src/services/smart-money-service.ts",
+        "scripts/smart-money/04-auto-copy-trading.ts",
+        "examples/05-follow-wallet-strategy.ts",
+        "examples/07-realtime-websocket.ts",
+        "scripts/benchmark/order-latency.ts",
+        "scripts/benchmark/ws-latency.ts"
+      ],
+      "name": "MrFadiAi/Polymarket-bot",
+      "non_import_reasons": [
+        "Leaderboard PnL is not enough for narrow BTC 5-minute copyability.",
+        "External dry-run success can be synthetic and must not bypass our executable fill model."
+      ],
+      "primary_use": "smart_money_wallet_discovery",
+      "priority": "P0",
+      "status": "reviewed",
+      "url": "https://github.com/MrFadiAi/Polymarket-bot",
+      "useful_patterns": [
+        "top trader discovery",
+        "PnL and win-rate filters",
+        "consistency and profit-factor scoring",
+        "FOK/FAK copy controls",
+        "sell-ratio exit detection"
+      ]
+    },
+    {
+      "btc_5m_relevance": "very_high",
+      "capability_map": [
+        {
+          "backlog": "Implement src/wallet_copy/onchain_ctf.py to decode read-only CTF OrderFilled logs and benchmark Data API lag; never create CopyIntent without wallet-attributed Data API truth.",
+          "capability": "ctf_orderfilled_tracker",
+          "local_modules": [
+            "src/wallet_copy/live_tracker.py"
+          ],
+          "local_tests": [
+            "tests/test_wallet_copy_core.py::test_onchain_receipt_summary_marks_confirmed_and_wallet_seen"
+          ],
+          "status": "missing"
+        }
+      ],
+      "clone_status": "ok",
+      "dry_run_claim_status": "untrusted_until_replayed_by_local_paper_engine",
+      "id": "harrier_prediction_market_toolkits",
+      "import_actions": [
+        "Implement or benchmark an onchain CTF OrderFilled watcher against our wallet-attributed Data API truth.",
+        "Borrow the shared ingestion -> eligibility -> sizing -> exposure -> risk -> execute pipeline shape.",
+        "Keep SELL/MERGE/REDEEM exact-copy lifecycle mandatory instead of TP/SL-only exits."
+      ],
+      "local_review_paths": [
+        "src/bot/copy_trading.rs",
+        "src/service/parse.rs",
+        "src/service/order_executor.rs",
+        "src/service/risk_guard.rs",
+        "src/service/clob.rs",
+        "src/service/position_store.rs"
+      ],
+      "name": "HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+      "non_import_reasons": [
+        "Its copy bot ignores whale sells by design, which conflicts with exact-copy lifecycle parity.",
+        "Advertised latency and profitability need our own measurement."
+      ],
+      "primary_use": "low_latency_onchain_tracking_and_execution_core",
+      "priority": "P0",
+      "status": "reviewed",
+      "url": "https://github.com/HarrierOnChain/Prediction-Markets-Trading-Bot-Toolkits",
+      "useful_patterns": [
+        "Polygon OrderFilled log subscription",
+        "CTF log parsing",
+        "depth guard",
+        "exposure caps",
+        "circuit breaker",
+        "dry-run through full execution path"
+      ]
+    },
+    {
+      "btc_5m_relevance": "low",
+      "clone_status": "ok",
+      "dry_run_claim_status": "not_relevant_to_btc_wallet_copy",
+      "id": "polyweather",
+      "import_actions": [
+        "Borrow observability, cache invalidation, replayable events, and settlement evidence patterns only."
+      ],
+      "local_review_paths": [
+        "README.md",
+        "CLAUDE.md",
+        "bot_listener.py",
+        "run.py"
+      ],
+      "name": "yangyuan-zhen/PolyWeather",
+      "non_import_reasons": [
+        "Weather analysis domain, not BTC 5-minute wallet-copy.",
+        "Not a directly copy-tradeable Polymarket wallet source."
+      ],
+      "primary_use": "research_only_observability_patterns",
+      "priority": "research",
+      "status": "reviewed",
+      "url": "https://github.com/yangyuan-zhen/PolyWeather",
+      "useful_patterns": [
+        "multi-source evidence chain",
+        "cache invalidation",
+        "health endpoints",
+        "replayable event logs"
+      ]
+    },
+    {
+      "btc_5m_relevance": "medium",
+      "clone_status": "ok",
+      "dry_run_claim_status": "not_a_bot",
+      "id": "awesome_prediction_market_tools",
+      "import_actions": [
+        "Use as a recurring discovery index for wallet analyzers, real-time alerts, and tick-level book data providers.",
+        "Any discovered tool must be added back to this registry before it affects workflow decisions."
+      ],
+      "local_review_paths": [
+        "README.md"
+      ],
+      "name": "aarora4/Awesome-Prediction-Market-Tools",
+      "non_import_reasons": [
+        "Curated index, not an execution bot.",
+        "Entries need separate source review before use."
+      ],
+      "primary_use": "ongoing_tool_discovery",
+      "priority": "P1",
+      "status": "reviewed",
+      "url": "https://github.com/aarora4/Awesome-Prediction-Market-Tools",
+      "useful_patterns": [
+        "wallet analyzers",
+        "copy-score tools",
+        "real-time wallet alerts",
+        "orderbook data providers",
+        "prediction market dashboards"
+      ]
+    },
+    {
+      "btc_5m_relevance": "high",
+      "capability_map": [
+        {
+          "backlog": "Use all-order current_poll_execution_corrections and cumulative_execution_corrections to decide the next active fix: micro-aggregate, CLOB refresh, latency reduction, depth slicing, measured aggressive limit pricing, or position-delta reconciliation. Keep all-order paper proof separate from live-admission truth by requiring current-poll copyability/freshness evidence. Verify with tests/test_wallet_copy_core.py and strict paper tracker state.",
+          "capability": "copy_execution_correction_advisory",
+          "local_modules": [
+            "src/wallet_copy/copy_tactics.py",
+            "src/wallet_copy/live_tracker.py",
+            "src/wallet_copy/paper.py",
+            "src/wallet_copy/fill_model.py"
+          ],
+          "local_tests": [
+            "tests/test_wallet_copy_core.py::test_copy_execution_corrections_turn_rejections_into_next_actions",
+            "tests/test_wallet_copy_core.py::test_copy_execution_corrections_flag_position_delta_gaps",
+            "tests/test_wallet_copy_core.py::test_live_wallet_tracker_all_order_exact_copy_bypasses_profit_filter"
+          ],
+          "status": "implemented"
+        }
+      ],
+      "clone_status": "reviewed_batch_ok_some_sources_marketing_or_binary_only",
+      "dry_run_claim_status": "external_claims_unverified_local_paper_only",
+      "id": "copy_trading_github_batch_2026_06_26",
+      "import_actions": [
+        "Reviewed nine operator-provided copy-trading repositories and ignored all opaque ZIP/binary artifacts.",
+        "Adopted safe patterns as local paper-only diagnostics: activity dedupe, micro-trade aggregation, best-ask slippage classification, depth slicing, position-delta reconciliation, and error taxonomy.",
+        "Integrated the useful ideas into all-order exact-copy paper reporting through execution_corrections; no external live execution path was imported."
+      ],
+      "local_review_paths": [
+        "docs/EXTERNAL_COPY_TRADING_REPO_REVIEW.md",
+        "src/wallet_copy/copy_tactics.py",
+        "src/wallet_copy/live_tracker.py",
+        "tests/test_wallet_copy_core.py"
+      ],
+      "name": "Operator-provided Polymarket copy-trading GitHub batch",
+      "non_import_reasons": [
+        "Some repositories are marketing-only or README-only.",
+        "Several repositories contain ZIP/binary artifacts that are not safe to execute or import.",
+        "Direct live copier logic would bypass local WalletEvent -> CopyIntent -> paper fill -> lifecycle parity.",
+        "Browser automation and MongoDB queue implementations are not adopted as required runtime dependencies."
+      ],
+      "primary_use": "copy_execution_diagnostics_and_paper_correction_loop",
+      "priority": "P0",
+      "related_urls": [
+        "https://github.com/llogiq33/Polymarket-Copy-Trade/",
+        "https://github.com/unitmargaretaustin/Polymarket-copy-trading-bot",
+        "https://github.com/dexorynlabs/polymarket-copy-trading-bot-v2.0",
+        "https://github.com/realfishsam/Polymarket-Copy-Trader/",
+        "https://github.com/Dadel-1/Polymarket-CopyTrading",
+        "https://github.com/mahmoooud194/Polymarket-Copytrading-Bot",
+        "https://github.com/kalliimmunosuppressive504/polymarket-copy-trading-bot",
+        "https://github.com/sherlineconsubstantial217/Polymarket-Trading-Bot",
+        "https://github.com/zioerenkl/Polymarket-Copytrading-Bot"
+      ],
+      "status": "reviewed_patterns_integrated_paper_only",
+      "url": "https://github.com/llogiq33/Polymarket-Copy-Trade/",
+      "useful_patterns": [
+        "activity polling plus dedupe",
+        "micro-trade aggregation buffer",
+        "CLOB book evidence before fill truth",
+        "best ask slippage cap diagnosis",
+        "depth guard and order slicing",
+        "position delta reconciliation",
+        "error taxonomy and processed flags"
+      ]
+    }
+  ]
+}

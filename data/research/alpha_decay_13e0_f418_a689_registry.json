@@ -1,0 +1,37 @@
+{
+  "schema_version": 1,
+  "kind": "wallet_copy_registry",
+  "generated_at": "2026-07-22T00:14:00Z",
+  "order_basis": "Fable 8f4936c5 simultaneous overlap capture scope",
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "wallets": [
+    {
+      "name": "overlap_primary_13e0d447",
+      "address": "0x13e0d447520ebe7f8eeaf7817211201b2c585204",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "asset_allowlist": ["BTC"],
+      "data_api": "https://data-api.polymarket.com",
+      "tags": ["paper_only", "alpha_overlap", "primary"]
+    },
+    {
+      "name": "overlap_incumbent_f418d3a1",
+      "address": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "asset_allowlist": ["BTC"],
+      "data_api": "https://data-api.polymarket.com",
+      "tags": ["paper_only", "alpha_overlap", "incumbent"]
+    },
+    {
+      "name": "overlap_seat_a6896d11",
+      "address": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "asset_allowlist": ["BTC"],
+      "data_api": "https://data-api.polymarket.com",
+      "tags": ["paper_only", "alpha_overlap", "seat"]
+    }
+  ]
+}

@@ -1,0 +1,284 @@
+{
+  "kind": "order_flow_deadman_restart_verification",
+  "created_at_utc": "2026-07-15T00:16:08Z",
+  "flow_stage": "LIVE/DEFEND/ROTATE/SELF-DEV",
+  "source_direction": "RESTART-PAYLOAD-20260715T0000Z",
+  "operator_live_approval_id": "OP-LIVE-20260703-BELA",
+  "restart_contract_status": "LIVE_ARMED_TRADING_WITH_R9_LATENCY_AND_3048_SELECTION_DEFECTS_TO_FABLE",
+  "managed_launchd_restart": {
+    "label": "com.belavarga.polymarket.wallet-copy-live-guard",
+    "state": "running",
+    "pid": 51470,
+    "singleton_process_count": 1,
+    "argv_contains_active_set_evaluate_all_runtime_members_per_cycle": true,
+    "program": "/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python",
+    "evidence": [
+      "launchctl print gui/$(id -u)/com.belavarga.polymarket.wallet-copy-live-guard",
+      "ps -axo pid,ppid,command | grep wallet_copy.live_guard | grep -v grep"
+    ]
+  },
+  "guard_runtime": {
+    "state_path": "data/research/wallet_copy_live_guard_state.json",
+    "generated_at": "2026-07-15T00:14:07.504124+00:00",
+    "pid": 51470,
+    "cycle": 11,
+    "cycle_outcome": "FILTERED_NO_SUBMIT",
+    "execute_live": true,
+    "live_orders_allowed": true,
+    "paper_only": false,
+    "guard_side_halt": null,
+    "active_set_evaluate_all_runtime_members_per_cycle": true,
+    "runtime_member_count": 16,
+    "qualified_active_set_member_count": 15,
+    "selected_live_member": {
+      "candidate_id": "rtds_live_band_e2542ab40de0",
+      "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+      "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+      "max_order_usd": 2.5,
+      "max_price": 0.5,
+      "drip_max_tranche_usd": 2.5,
+      "pass_gate_failed_checks": [],
+      "pass_gate_status": "FABLE_1134_LIVING_QUEUE_REFILL_ADMITTED"
+    },
+    "live_execution_probes": {
+      "enabled": true,
+      "all_runtime_members_per_cycle": true,
+      "evaluation_mode": "all_runtime_members_per_cycle",
+      "paper_only": true,
+      "live_orders_allowed": false,
+      "probed_members": 16
+    }
+  },
+  "initial_post_midnight_selection_event": {
+    "evidence_path": "data/research/wallet_copy_live_guard_events.jsonl",
+    "line": 888,
+    "generated_at": "2026-07-15T00:01:02.634244+00:00",
+    "pid": 12881,
+    "note": "This was the last old-pid post-UTC-reset cycle before the managed launchd restart. It shows why runtime did not remain on the intended 3048 seat.",
+    "fallthrough": {
+      "applied": true,
+      "reason": "selected_candidate_failed_pass_gate",
+      "selected_candidate_id": "market_cohort_alive_94f98a2e7537",
+      "selected_source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "replacement_candidate_id": "rtds_live_band_e2542ab40de0",
+      "replacement_source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+      "attempted_candidates": 3
+    },
+    "selection_attempts": [
+      {
+        "origin": "selected_member",
+        "candidate_id": "market_cohort_alive_94f98a2e7537",
+        "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+        "passed": false,
+        "failed_checks": [
+          "status_live_admissible"
+        ],
+        "status": "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD"
+      },
+      {
+        "origin": "active_set_fallthrough",
+        "candidate_id": "cohort_alive_admit_f418d3a1",
+        "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+        "passed": false,
+        "failed_checks": [
+          "status_live_admissible"
+        ],
+        "status": "FABLE_1232_COHORT_ALIVE_ADMISSION_WIRED_FOR_SINGLE_POST_13Z_RESTART"
+      },
+      {
+        "origin": "active_set_fallthrough",
+        "candidate_id": "rtds_live_band_e2542ab40de0",
+        "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+        "passed": true,
+        "failed_checks": [],
+        "status": "FABLE_1134_LIVING_QUEUE_REFILL_ADMITTED"
+      }
+    ],
+    "fresh_pid_followup": "Fresh pid 51470 selected c50d through last-successful-nondenied priority; current pass-gate diagnostics show c50d passed with no failed checks."
+  },
+  "e6db_midnight_shadow_demotion": {
+    "overlay_path": "data/research/wallet_copy_active_set_auto_degrade_state.json",
+    "status": "APPLIED_SHADOW_ONLY_48H_ENFORCED",
+    "source_wallet": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+    "trigger_pnl_usd": -13.760096,
+    "trigger_threshold_usd": -10.0,
+    "shadow_only_until": "2026-07-17T00:00:00Z",
+    "enforcement_fix_applied_at": "2026-07-15T00:05:50.055419Z",
+    "stale_hour_bench_removed": true,
+    "present_in_current_runtime_members": false
+  },
+  "deadmen": {
+    "order_flow": {
+      "state_path": "data/research/order_flow_deadman_state.json",
+      "checked_at": "2026-07-15T00:11:59.220004+00:00",
+      "status": "OK",
+      "can_trade": true,
+      "liveness_source": "accepted_order",
+      "liveness_ts": "2026-07-15T00:05:28.739774+00:00",
+      "idle_s": 390.480171,
+      "eligible_drought_status": "OK",
+      "deadman_warning": null
+    },
+    "wallet_outflow": {
+      "state_path": "data/research/wallet_outflow_deadman_state.json",
+      "checked_at": "2026-07-15T00:12:05.670119Z",
+      "status": "OK",
+      "incident": false,
+      "matched_order_outflows": 1,
+      "unmatched_outflows": 0,
+      "unmatched_outflow_usd": 0
+    }
+  },
+  "first_utc_day_normal_cap_order": {
+    "submitted_before_managed_reload": true,
+    "post_utc_reset": true,
+    "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+    "market_slug": "btc-updown-5m-1784073600",
+    "side": "NO",
+    "outcome": "Down",
+    "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+    "policy_max_order_usd": 2.5,
+    "policy_max_price": 0.5,
+    "probe_cap_min_order_floor_applied": false,
+    "orders": [
+      {
+        "submitted_at": "2026-07-15T00:00:50.806254+00:00",
+        "order_id": "0xc1327ca18b78a213510f742e5f1dd72d7880f7507ff01230161933b74aec2766",
+        "status": "REJECTED",
+        "limit_price": 0.49,
+        "requested_size_usd": 2.4,
+        "lifecycle_tail": [
+          "INTENT_RECEIVED",
+          "LIVE_SUBMITTED",
+          "LIVE_REJECTED"
+        ]
+      },
+      {
+        "submitted_at": "2026-07-15T00:00:52.496809+00:00",
+        "updated_at": "2026-07-15T00:05:28.739774+00:00",
+        "order_id": "0x9203fbf40b0e545c68bd09762ef4c65a195ed304e0f42b295df0d75596ad44e4",
+        "status": "FILLED",
+        "execution_role": "maker",
+        "limit_price": 0.49,
+        "requested_size_usd": 2.4,
+        "lifecycle_tail": [
+          "INTENT_RECEIVED",
+          "LIVE_SUBMITTED",
+          "LIVE_MAKER_FILLED"
+        ],
+        "maker_fallback_parent_order_id": "0xc1327ca18b78a213510f742e5f1dd72d7880f7507ff01230161933b74aec2766"
+      }
+    ],
+    "scorecard_2026_07_15": {
+      "path": "data/research/wallet_copy_daily_scorecard_2026-07-15.json",
+      "orders": 2,
+      "fills": 1,
+      "rejects": 1,
+      "pnl_usd": 2.55,
+      "windows_traded": 1,
+      "windows_submitted": 1,
+      "windows_total": 288
+    }
+  },
+  "closed_day_scorecard_2026_07_14": {
+    "path": "data/research/wallet_copy_daily_scorecard_2026-07-14.json",
+    "orders": 101,
+    "fills": 77,
+    "rejects": 24,
+    "pnl_usd": -20.229843,
+    "realized_closed_pnl_usd": -20.229843,
+    "windows_traded": 77,
+    "windows_submitted": 80,
+    "windows_total": 288,
+    "e6db_member_pnl_usd": -13.760096
+  },
+  "post_restart_latency_samples": {
+    "evidence_path": "data/research/wallet_copy_live_guard_events.jsonl",
+    "pid": 51470,
+    "steady_state_total_s_gt_30": true,
+    "samples": [
+      {
+        "cycle": 1,
+        "generated_at": "2026-07-15T00:03:42.424095+00:00",
+        "total_s_before_state_write": 60.877785,
+        "top_stages": [
+          {
+            "name": "active_set_live_execution_probes",
+            "duration_s": 28.871659
+          },
+          {
+            "name": "active_set_dataapi_poller",
+            "duration_s": 14.283107
+          },
+          {
+            "name": "active_set_rtds_premerge",
+            "duration_s": 9.026191
+          }
+        ]
+      },
+      {
+        "cycle": 4,
+        "generated_at": "2026-07-15T00:06:52.665544+00:00",
+        "total_s_before_state_write": 50.403011,
+        "top_stages": [
+          {
+            "name": "active_set_live_execution_probes",
+            "duration_s": 27.949387
+          },
+          {
+            "name": "active_set_dataapi_poller",
+            "duration_s": 9.320188
+          },
+          {
+            "name": "active_set_rtds_premerge",
+            "duration_s": 8.974987
+          }
+        ]
+      },
+      {
+        "cycle": 11,
+        "generated_at": "2026-07-15T00:14:07.504124+00:00",
+        "total_s_before_state_write": 61.537156,
+        "top_stages": [
+          {
+            "name": "active_set_live_execution_probes",
+            "duration_s": 30.114614
+          },
+          {
+            "name": "active_set_dataapi_poller",
+            "duration_s": 13.636385
+          },
+          {
+            "name": "active_set_rtds_premerge",
+            "duration_s": 9.212866
+          }
+        ]
+      }
+    ]
+  },
+  "open_defects": [
+    {
+      "id": "R9-LATENCY",
+      "flow_stage": "LIVE/SELF-DEV",
+      "evidence": "Fresh pid 51470 cycles 1-11 remain 47.6s-73.4s, with active_set_live_execution_probes about 25s-31s each cycle.",
+      "next_action": "Ask Fable whether to cap/cadence all-member probes or move probes off the live hot path before any new admission expansion."
+    },
+    {
+      "id": "3048-SELECTION",
+      "flow_stage": "LIVE/ROTATE/DEFEND",
+      "evidence": "Payload expected 3048 to remain the selected seat, but the first post-midnight old-pid cycle failed 3048 on status_live_admissible and selected c50d; fresh pid then stabilized on c50d by last-successful-nondenied priority.",
+      "next_action": "Ask Fable whether c50d is the intended live lane now, or whether 3048 status_live_admissible needs repair."
+    }
+  ],
+  "verification_commands_completed": [
+    "python3 scripts/report_daily_scorecard.py --day 2026-07-14",
+    "python3 scripts/order_flow_deadman.py",
+    "python3 scripts/wallet_outflow_deadman.py",
+    "python3 scripts/report_daily_scorecard.py --day 2026-07-15"
+  ],
+  "verification_pending_after_artifact": [
+    "python3 scripts/update_state_digest.py",
+    "python3 -m pytest -q && python3 -m compileall -q src scripts tests",
+    "./scripts/ask_fable.sh"
+  ]
+}

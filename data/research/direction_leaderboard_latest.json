@@ -1,0 +1,133 @@
+{
+  "daily_scorecard_contract": "embedded in every newly generated wallet_copy_daily_scorecard",
+  "flow_stage": "PROMOTE/LIVE/ROTATE",
+  "generated_at": "2026-08-05T04:42:09.756119Z",
+  "kind": "direction_leaderboard",
+  "ranking_rule": "descending measured promotion-grade expected USD/day, then shortest time-to-live-readiness; the live ledger supersedes projections at each 48h verdict",
+  "rows": [
+    {
+      "direction_id": "t2_exact_cell_portfolio",
+      "evidence": {
+        "current_admission_status": "PASS",
+        "f1_pass_cells": 397,
+        "killed_identity_policy": "no manual re-enable; next all-pass exact cell only",
+        "live_portfolio_day_pnl_usd": 0.0,
+        "measured_expected_usd_per_day": 4.292464,
+        "median_post_fee_pnl_per_resolved_fill_usd": 0.042925,
+        "projection_basis": "median F1-pass exact-cell post-fee PnL/resolved fill \u00d7 T3 target pace; portfolio projection, not a live-PnL claim",
+        "source": "data/research/wide_policy_fingerprint_evidence_latest.json",
+        "target_resolved_windows_per_day": 100
+      },
+      "kill_line": "per-cell -$4 and first 3 resolved fills cumulative post-fee <=$0",
+      "label": "T2 exact-cell portfolio",
+      "measured_expected_usd_per_day": 4.292464,
+      "rank": 1,
+      "status": "LIVE_PORTFOLIO_READY_CELL_ROTATION_REQUIRED",
+      "time_to_live_readiness_h": 0.0,
+      "verdict_clock": "T3 >=50 windows in first 12h of 2026-07-29; then rolling 48h"
+    },
+    {
+      "direction_id": "multivenue_passive_residual",
+      "evidence": {
+        "cell_count": 20,
+        "gate_digits": {
+          "attempts_gte": 50,
+          "both_halves_positive": true,
+          "executable_fill_rate_gte_pct": 60,
+          "post_fee_pnl_gt": 0,
+          "resolved_terminals_gte": 30,
+          "trailing_24h_intents_gte": 1
+        },
+        "selected": null,
+        "source": "data/research/btc5m_multivenue_ttl_passive_residual_selector.json"
+      },
+      "kill_line": "$1 target, $2.50 venue ceiling, per-cell -$4",
+      "label": "Multivenue passive-residual",
+      "measured_expected_usd_per_day": 0.0,
+      "rank": 2,
+      "status": "NO_GATE_COMPLETE_CELL",
+      "time_to_live_readiness_h": 24.0,
+      "verdict_clock": "48h from first gate-complete live cell"
+    },
+    {
+      "direction_id": "frontier_finds",
+      "evidence": {
+        "caveat": "positive pre-fee/watch evidence is not promotion-grade expected PnL",
+        "eligible_count": 0,
+        "frontier_candidate_count": 108,
+        "promotion_grade_expected_usd_per_day": 0.0,
+        "source": "data/research/wide_direct_admissible_frontier_latest.json",
+        "watch_rows": [
+          {
+            "action": "watch_only_zero_own_source_rows",
+            "evidence_authority": "Fable VERIFIED 2026-07-28T19:56Z",
+            "measured_post_fee_pnl_usd": 310.4,
+            "roi_pct": 14.97,
+            "wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1"
+          },
+          {
+            "action": "evidence_only_terminal_park_preserved",
+            "evidence_authority": "data/research/13e0_exact_policy_promotion_packet_latest.json",
+            "measured_prefee_pnl_usd": 0.0,
+            "prefee_usd_per_day": null,
+            "terminal_decision": "PARK_VOLUME_STANDBY_PAPER_ONLY",
+            "wallet": "0x13e0d447520ebe7f8eeaf7817211201b2c585204"
+          }
+        ]
+      },
+      "kill_line": "assigned only after exact-cell admission; then -$4",
+      "label": "Best frontier finds (9796/c539/13e0 class)",
+      "measured_expected_usd_per_day": 0.0,
+      "rank": 3,
+      "status": "EVIDENCE_WATCH_NO_ALL_PASS_TARGET",
+      "time_to_live_readiness_h": null,
+      "verdict_clock": "48h begins only when an all-pass exact identity enters live"
+    },
+    {
+      "direction_id": "structural_scalp_new_identity",
+      "evidence": {
+        "current_forward_fills": 2108,
+        "current_forward_post_fee_pnl_usd": -128.186312,
+        "source": "data/research/btc5m_structural_scalp_paper_lane_state.json",
+        "unlock": {
+          "both_halves_positive": true,
+          "elapsed_h_gte": 72,
+          "new_identity": true,
+          "post_fee_pnl_gt": 0,
+          "resolved_forward_fills_gte": 300
+        }
+      },
+      "kill_line": "$1 target, $2.50 venue ceiling, per-cell -$4",
+      "label": "Structural scalp new-identity re-proof",
+      "measured_expected_usd_per_day": -0.219408,
+      "rank": 4,
+      "status": "PARKED_CURRENT_IDENTITY_NEW_IDENTITY_REQUIRED",
+      "time_to_live_readiness_h": 72.0,
+      "verdict_clock": "48h starts with the new-identity re-proof clock"
+    },
+    {
+      "direction_id": "t1_band_scoped_seats",
+      "evidence": {
+        "admission_status": "DEFECT",
+        "admitted_f1_pass_slices": 0,
+        "admitted_members": 0,
+        "live_portfolio_day_pnl_usd": 0.0,
+        "measured_expected_usd_per_day": null,
+        "post_fee_pnl_per_resolved_fill_usd": null,
+        "post_fee_pnl_usd": 0.0,
+        "projection_basis": "admitted-band post-fee PnL/resolved fill \u00d7 T3 target pace; historical fixed-policy projection, not a live-PnL claim",
+        "resolved_evidence": 0,
+        "source": "data/research/band_scoped_admission_latest.json",
+        "target_resolved_windows_per_day": 100
+      },
+      "kill_line": "per-member -$4 post-fee",
+      "label": "T1 band-scoped seats",
+      "measured_expected_usd_per_day": null,
+      "rank": 5,
+      "status": "LIVE_READY_MIDNIGHT_RELOAD",
+      "time_to_live_readiness_h": 19.29729,
+      "verdict_clock": "T3 >=50 windows in first 12h of 2026-07-29; then rolling 48h"
+    }
+  ],
+  "schema_version": 1
+}

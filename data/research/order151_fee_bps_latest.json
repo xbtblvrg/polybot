@@ -1,0 +1,32 @@
+{
+  "flow_stage": "MEASURE/DEFEND",
+  "kind": "order151_fee_bps",
+  "notional_rows": [
+    {
+      "fee_bps": 561.9096,
+      "fee_usd_proportional": 0.028095,
+      "notional_usd": 0.5
+    },
+    {
+      "fee_bps": 561.9096,
+      "fee_usd_proportional": 0.056191,
+      "notional_usd": 1.0
+    },
+    {
+      "fee_bps": 561.9096,
+      "fee_usd_proportional": 0.682046,
+      "notional_usd": 12.138
+    }
+  ],
+  "per_fill_effect": "no flat per-fill fee was evidenced; actual settlement rounding makes tiny-fill realized bps price/rounding dependent",
+  "proportional_model": "fee scales linearly with shares/notional at fixed price; bps is unchanged across clip sizes",
+  "resolved_fill_basis": {
+    "inferred_fee_usd": 4.91727,
+    "response_cost_usd": 87.509981,
+    "row_count": 53,
+    "source": "data/research/wallet_copy_fee_model_proposal_2026-07-06T1924Z.json",
+    "weighted_fee_bps": 561.9096
+  },
+  "schema_version": 1,
+  "transfer_assumption": "The 53-fill weighted effective bps is transferred unchanged only as a disclosed resolved-fill benchmark; it is not a price-specific fee quote."
+}

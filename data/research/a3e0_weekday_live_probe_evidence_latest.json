@@ -1,0 +1,69 @@
+{
+  "activate_not_before_utc": "2026-07-21T00:00:00Z",
+  "candidate_id": "market_cohort_alive_a3e0985f2d",
+  "direction_id": "2026-07-20T05:53Z-fable-a3e0-weekday-probe-admission",
+  "evaluation_clock": {
+    "elapsed_weekday_hours": 0.0,
+    "rule": "start at first live fill and accumulate only Monday-Friday UTC hours",
+    "target_weekday_hours": 72,
+    "window_close_at": null
+  },
+  "first_fill_at": null,
+  "flow_stage": "PROMOTE/LIVE/OBSERVE",
+  "activated_at": "2026-07-21T00:15:00Z",
+  "activation_observation": {
+    "accepted_live_orders_30m": 0,
+    "can_trade": true,
+    "policy_eligible_intents_30m": 0,
+    "raw_own_source_buy_rows_30m": 238,
+    "seat_action": "KEEP_A689_ZERO_CONVERTING_A3E0_FLOW",
+    "selected_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+  },
+  "generated_at": "2026-07-21T00:15:00Z",
+  "kind": "a3e0_weekday_live_probe_evidence",
+  "live_mutation_before_arm": false,
+  "metrics": {
+    "fee_adjusted_realized_pnl_usd": 0.0,
+    "fills": 0,
+    "per_cell_hour_attribution": {},
+    "slippage_vs_paper_usd": 0.0
+  },
+  "paper_shadow_parity": {
+    "live_only_difference": "execution permission through the sole live guard",
+    "required_from": "2026-07-21T00:00:00Z",
+    "scope": "same selected policy-eligible CopyIntent lifecycle",
+    "status": "PREREGISTERED"
+  },
+  "prearm_deep_history_gate": {
+    "artifact": "data/research/focused_candidate_p1_a3e0985f2d_latest.json",
+    "classification": "WEEKDAY-ONLY",
+    "failures": [],
+    "history_sha256": "440bb7582445ac879c7ddb902b29dbe117f273ed937ed357dc34e27488f39c86",
+    "history_status": "COMPLETE_TO_PREREGISTERED_LOOKBACK",
+    "p1_verdict": "PROBE_READY_PENDING_FABLE_AUDIT",
+    "rule": "if a pre-arm refresh regresses history, P1, or weekday temporal verdict, do not arm",
+    "status": "PASS",
+    "temporal_status": "PASS"
+  },
+  "prearm_deep_history_refresh": {
+    "artifact": "data/research/focused_candidate_p1_a3e0985f2d_refresh_20260720T0617Z.json",
+    "classification": "WEEKDAY-ONLY",
+    "completed_at": "2026-07-20T06:25:22.286216Z",
+    "concentration_discounted": false,
+    "deep_pnl_usd": 3149.9089,
+    "deep_resolved": 2295,
+    "deep_roi_pct": 7.418567,
+    "failures": [],
+    "history_artifact": "data/research/source_active_policy_history_a3e0985f2d_focused_a3e0_refresh_20260720T0617Z.json",
+    "history_sha256": "fa9e61c9ef455dd5008621c031d25c911fde28d723d7cf565cc567297b443b8b",
+    "history_status": "COMPLETE_TO_PREREGISTERED_LOOKBACK",
+    "p1_verdict": "PROBE_READY_PENDING_FABLE_AUDIT",
+    "regression_detected": false,
+    "status": "PASS_CLEAN_TO_ARM",
+    "temporal_status": "PASS"
+  },
+  "schema_version": 1,
+  "source_wallet": "0xa3e0985f2d0b3209a52f171660287863690d095d",
+  "status": "ACTIVATED_SELECTABLE",
+  "verdict_authority": "Fable audit after the 72-weekday-hour window: scale, hold, or retire"
+}

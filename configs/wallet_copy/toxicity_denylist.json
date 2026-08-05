@@ -1,0 +1,422 @@
+{
+  "cell_count": 16,
+  "cells": [
+    {
+      "all_signals": {
+        "avg_price": 0.289167,
+        "count": 24,
+        "pnl_usd": -222.846274,
+        "roi_pct": -100.0,
+        "stake_usd": 222.846274,
+        "win_rate_pct": 0.0,
+        "wins": 0
+      },
+      "deny_rule": "signals_20_roi_le_-50",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "01_25_50",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x719efacc15aa473571cdfca021b5608747d0c5a9",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.077,
+        "count": 20,
+        "pnl_usd": -37.076131,
+        "roi_pct": -100.0,
+        "stake_usd": 37.076131,
+        "win_rate_pct": 0.0,
+        "wins": 0
+      },
+      "deny_rule": "signals_20_roi_le_-50",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "00_00_25",
+      "reason": "toxicity_protection",
+      "source_wallet": "0xe476e7465e86a2e8073bd8e1e2237dae2a52b51d",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.427266,
+        "count": 112,
+        "pnl_usd": -405.447892,
+        "roi_pct": -86.456506,
+        "stake_usd": 468.961691,
+        "win_rate_pct": 11.607143,
+        "wins": 13
+      },
+      "deny_rule": "signals_100_roi_le_0",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "01_25_50",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x04a162e06d1e82745a08b95e247bf3a965693527",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.160008,
+        "count": 187,
+        "pnl_usd": -159.157433,
+        "roi_pct": -14.415963,
+        "stake_usd": 1104.036067,
+        "win_rate_pct": 14.438503,
+        "wins": 27
+      },
+      "deny_rule": "our_fills_5_roi_le_0",
+      "live_fills": {
+        "avg_price": 0.169744,
+        "count": 18,
+        "pnl_usd": -19.144792,
+        "roi_pct": -100.0,
+        "stake_usd": 19.144792,
+        "win_rate_pct": 0.0,
+        "wins": 0
+      },
+      "price_bucket": "00_00_25",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x927f7694de44d19a72bce76254e628d1c141d215",
+      "toxicity_roi_pct": -85.584037
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.59627,
+        "count": 252,
+        "pnl_usd": -302.358057,
+        "roi_pct": -10.963699,
+        "stake_usd": 2757.810528,
+        "win_rate_pct": 49.206349,
+        "wins": 124
+      },
+      "deny_rule": "signals_100_roi_le_0",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "02_50_70",
+      "reason": "toxicity_protection",
+      "source_wallet": "0xe29042f5d913dcc4015aab3455c13c58514ca33f",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.507636,
+        "count": 256,
+        "pnl_usd": -250.474108,
+        "roi_pct": -9.875112,
+        "stake_usd": 2536.417924,
+        "win_rate_pct": 51.953125,
+        "wins": 133
+      },
+      "deny_rule": "signals_100_roi_le_0",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "02_50_70",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x4d8bc628487bbc9931b4d039e6a7529b8ae1a00d",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.793879,
+        "count": 281,
+        "pnl_usd": -103.898128,
+        "roi_pct": -2.463055,
+        "stake_usd": 4218.262533,
+        "win_rate_pct": 77.224199,
+        "wins": 217
+      },
+      "deny_rule": "signals_100_roi_le_0",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "03_70_100",
+      "reason": "toxicity_protection",
+      "source_wallet": "0xe29042f5d913dcc4015aab3455c13c58514ca33f",
+      "toxicity_roi_pct": null
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.154761,
+        "count": 409,
+        "pnl_usd": -64.8585,
+        "roi_pct": -2.049333,
+        "stake_usd": 3164.8585,
+        "win_rate_pct": 15.158924,
+        "wins": 62
+      },
+      "deny_rule": "our_fills_5_roi_le_0",
+      "live_fills": {
+        "avg_price": 0.202137,
+        "count": 8,
+        "pnl_usd": -3.171597,
+        "roi_pct": -36.075323,
+        "stake_usd": 8.791597,
+        "win_rate_pct": 12.5,
+        "wins": 1
+      },
+      "price_bucket": "00_00_25",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x251c1a283703beed41590b0875a8dcb8ddd1541f",
+      "toxicity_roi_pct": -34.02599
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.387773,
+        "count": 985,
+        "pnl_usd": -1247.7688,
+        "roi_pct": -6.533584,
+        "stake_usd": 19097.7688,
+        "win_rate_pct": 36.243655,
+        "wins": 357
+      },
+      "deny_rule": "fable_m8_auto_revert_n8_cell_pnl_lt_0_20260708",
+      "live_fills": {
+        "avg_price": 0.404502,
+        "count": 59,
+        "pnl_usd": 2.321429,
+        "roi_pct": 2.132491,
+        "stake_usd": 108.859969,
+        "win_rate_pct": 32.20339,
+        "wins": 19
+      },
+      "m8_revert_evidence": {
+        "authority": "fable DIRECTION 2026-07-08T01:56Z re-deny if n>=5 and cumulative cell PnL<0",
+        "cell_fills_since_2026_07_08T00_25Z": 8,
+        "resolved_cell_pnl_since_2026_07_08T00_25Z": -3.712338
+      },
+      "price_bucket": "01_25_50",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x251c1a283703beed41590b0875a8dcb8ddd1541f",
+      "toxicity_roi_pct": 8.666075
+    },
+    {
+      "all_signals": {
+        "avg_price": 0.560036,
+        "count": 623,
+        "pnl_usd": -33.17932,
+        "roi_pct": -0.181302,
+        "stake_usd": 18300.625005,
+        "win_rate_pct": 56.340289,
+        "wins": 351
+      },
+      "deny_rule": "signals_100_roi_le_0",
+      "live_fills": {
+        "avg_price": null,
+        "count": 0,
+        "pnl_usd": 0.0,
+        "roi_pct": null,
+        "stake_usd": 0.0,
+        "win_rate_pct": null,
+        "wins": 0
+      },
+      "price_bucket": "02_50_70",
+      "reason": "toxicity_protection",
+      "source_wallet": "0x927f7694de44d19a72bce76254e628d1c141d215",
+      "toxicity_roi_pct": null
+    },
+    {
+      "added_at": "2026-07-08T18:06:10.148621Z",
+      "all_signals": {
+        "count": 130,
+        "pnl_usd": -22.197465,
+        "roi_pct": -14.906758
+      },
+      "deny_rule": "fable_1800_r1_roi_le_minus_8_n_ge_60_demote",
+      "direction": "",
+      "direction_id": "2026-07-08T17:45Z-fable-r1-r2-r3-execution",
+      "live_fills": {
+        "count": 76,
+        "pnl_usd": -22.197465,
+        "roi_pct": -14.906758
+      },
+      "next": "shadow-measure 0x927f; no live BUY intents until Fable re-admits with fresh evidence",
+      "price_bucket": "01_25_50",
+      "reason": "fable_1800_toxicity_demote_shadow_all_buy_buckets",
+      "source_wallet": "0x927f7694de44d19a72bce76254e628d1c141d215",
+      "toxicity_roi_pct": -14.906758
+    },
+    {
+      "added_at": "2026-07-08T18:06:10.148621Z",
+      "all_signals": {
+        "count": 130,
+        "pnl_usd": -22.197465,
+        "roi_pct": -14.906758
+      },
+      "deny_rule": "fable_1800_r1_roi_le_minus_8_n_ge_60_demote",
+      "direction": "",
+      "direction_id": "2026-07-08T17:45Z-fable-r1-r2-r3-execution",
+      "live_fills": {
+        "count": 76,
+        "pnl_usd": -22.197465,
+        "roi_pct": -14.906758
+      },
+      "next": "shadow-measure 0x927f; no live BUY intents until Fable re-admits with fresh evidence",
+      "price_bucket": "03_70_100",
+      "reason": "fable_1800_toxicity_demote_shadow_all_buy_buckets",
+      "source_wallet": "0x927f7694de44d19a72bce76254e628d1c141d215",
+      "toxicity_roi_pct": -14.906758
+    },
+    {
+      "added_at": "2026-07-11T19:51:11.808158Z",
+      "all_signals": {
+        "count": 0,
+        "pnl_usd": null,
+        "roi_pct": null
+      },
+      "deny_rule": "fable_1946_d97_fallback_bypass_containment",
+      "direction": "",
+      "direction_id": "2026-07-11T19:46Z-fable-fallback-bypass-containment",
+      "live_fills": {
+        "count": 1,
+        "pnl_usd": 0.0,
+        "roi_pct": null
+      },
+      "next": "block every d97 BUY bucket until next Fable ruling; verify next d97 signal is toxicity/denylist skipped by the sole guard",
+      "price_bucket": "00_00_25",
+      "reason": "fable_1946_d97_fallback_bypass_containment",
+      "source_wallet": "0xd97ae021645712fe5cf73139049383a100cac068",
+      "toxicity_roi_pct": null
+    },
+    {
+      "added_at": "2026-07-11T19:51:11.808158Z",
+      "all_signals": {
+        "count": 0,
+        "pnl_usd": null,
+        "roi_pct": null
+      },
+      "deny_rule": "fable_1946_d97_fallback_bypass_containment",
+      "direction": "",
+      "direction_id": "2026-07-11T19:46Z-fable-fallback-bypass-containment",
+      "live_fills": {
+        "count": 1,
+        "pnl_usd": 0.0,
+        "roi_pct": null
+      },
+      "next": "block every d97 BUY bucket until next Fable ruling; verify next d97 signal is toxicity/denylist skipped by the sole guard",
+      "price_bucket": "01_25_50",
+      "reason": "fable_1946_d97_fallback_bypass_containment",
+      "source_wallet": "0xd97ae021645712fe5cf73139049383a100cac068",
+      "toxicity_roi_pct": null
+    },
+    {
+      "added_at": "2026-07-11T19:51:11.808158Z",
+      "all_signals": {
+        "count": 0,
+        "pnl_usd": null,
+        "roi_pct": null
+      },
+      "deny_rule": "fable_1946_d97_fallback_bypass_containment",
+      "direction": "",
+      "direction_id": "2026-07-11T19:46Z-fable-fallback-bypass-containment",
+      "live_fills": {
+        "count": 1,
+        "pnl_usd": 0.0,
+        "roi_pct": null
+      },
+      "next": "block every d97 BUY bucket until next Fable ruling; verify next d97 signal is toxicity/denylist skipped by the sole guard",
+      "price_bucket": "02_50_70",
+      "reason": "fable_1946_d97_fallback_bypass_containment",
+      "source_wallet": "0xd97ae021645712fe5cf73139049383a100cac068",
+      "toxicity_roi_pct": null
+    },
+    {
+      "added_at": "2026-07-11T19:51:11.808158Z",
+      "all_signals": {
+        "count": 0,
+        "pnl_usd": null,
+        "roi_pct": null
+      },
+      "deny_rule": "fable_1946_d97_fallback_bypass_containment",
+      "direction": "",
+      "direction_id": "2026-07-11T19:46Z-fable-fallback-bypass-containment",
+      "live_fills": {
+        "count": 1,
+        "pnl_usd": 0.0,
+        "roi_pct": null
+      },
+      "next": "block every d97 BUY bucket until next Fable ruling; verify next d97 signal is toxicity/denylist skipped by the sole guard",
+      "price_bucket": "03_70_100",
+      "reason": "fable_1946_d97_fallback_bypass_containment",
+      "source_wallet": "0xd97ae021645712fe5cf73139049383a100cac068",
+      "toxicity_roi_pct": null
+    }
+  ],
+  "criteria": {
+    "all_signals_min_count": 100,
+    "all_signals_roi_pct_lte": 0.0,
+    "live_positive_override_20260708_fable": {
+      "authority": "fable RULING M8 2026-07-08 (deny-cell counterfactual)",
+      "effect": "signals-based deny rules do not apply to the cell",
+      "our_fills_min_20_roi_gt": 0.0
+    },
+    "m8_auto_revert_20260708_fable": {
+      "authority": "fable DIRECTION 2026-07-08T01:56Z",
+      "effect": "re-deny 0x251c 25-50c bucket cell when n>=5 fills since 00:25Z and cumulative cell PnL<0"
+    },
+    "reject_reason": "toxicity_protection",
+    "scope": "source_wallet_x_price_bucket",
+    "tightened_20260707_fable": {
+      "authority": "fable DIRECTION 2026-07-07T21:20Z (bucket concentration)",
+      "our_fills_min_5_roi_lte": 0.0,
+      "signals_min_20_roi_lte": -50.0
+    }
+  },
+  "generated_at": "2026-07-11T19:51:11.808158Z",
+  "kind": "wallet_copy_toxicity_denylist",
+  "latest_manual_amendment": {
+    "action": "contain_d97_fallback_bypass_by_blocking_all_buy_price_buckets",
+    "copyintent_parity": "unchanged; denylist filters CopyIntent before the single live submitter",
+    "direction_id": "2026-07-11T19:46Z-fable-fallback-bypass-containment",
+    "evidence": {
+      "filled_order_id_prefix": "0xd0756b",
+      "filled_usd": 2.45,
+      "incident": "legacy profitability_filtered_single_wallet_copy fallback selected demoted weekend-proven-negative d97 after guard restart",
+      "submitted_usd": 2.5
+    },
+    "source_wallet": "0xd97ae021645712fe5cf73139049383a100cac068"
+  },
+  "schema_version": 1,
+  "source_report": "data/research/wallet_copy_fill_toxicity_latest.json"
+}

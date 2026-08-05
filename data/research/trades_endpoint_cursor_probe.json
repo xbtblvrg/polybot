@@ -1,0 +1,73 @@
+{
+  "attempts": [
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": false,
+      "oldest_trade_iso": "2026-07-31T02:11:09Z",
+      "oldest_trade_ts": 1785463869.0,
+      "request_key": "before",
+      "request_value": 1785461797,
+      "row_count": 500
+    },
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": false,
+      "oldest_trade_iso": "2026-07-31T02:11:56Z",
+      "oldest_trade_ts": 1785463916.0,
+      "request_key": "end",
+      "request_value": 1785461797,
+      "row_count": 500
+    },
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": false,
+      "oldest_trade_iso": "2026-07-31T02:11:09Z",
+      "oldest_trade_ts": 1785463869.0,
+      "request_key": "end_date",
+      "request_value": "2026-07-31T01:36:37Z",
+      "row_count": 500
+    },
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": true,
+      "oldest_trade_iso": "2026-07-03T18:24:16Z",
+      "oldest_trade_ts": 1783103056.0,
+      "request_key": "market",
+      "request_value": "0x2b82c98a9aed8dbcb503676e4cb69b0dd8210c026296deeb163545e976911daa",
+      "row_count": 500
+    },
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": false,
+      "oldest_trade_iso": "2026-07-31T02:11:09Z",
+      "oldest_trade_ts": 1785463869.0,
+      "request_key": "asset_id",
+      "request_value": "43839787266844863554514640826289545390199479788069367952108146557106978740994",
+      "row_count": 500
+    },
+    {
+      "http_status": 200,
+      "moves_earlier_than_offset_10500_floor": false,
+      "oldest_trade_iso": "2026-07-31T02:11:09Z",
+      "oldest_trade_ts": 1785463869.0,
+      "request_key": "condition_id",
+      "request_value": "0x2b82c98a9aed8dbcb503676e4cb69b0dd8210c026296deeb163545e976911daa",
+      "row_count": 500
+    }
+  ],
+  "endpoint": "https://data-api.polymarket.com/trades",
+  "finding": "NAMED_PARAMETER_PAGES_PAST_OFFSET_FLOOR",
+  "flow_stage": "DISCOVER",
+  "generated_at": "2026-07-31T02:12:19.190316+00:00",
+  "kind": "trades_endpoint_cursor_probe",
+  "live_orders_allowed": false,
+  "market_scoping_available": true,
+  "offset_10500_floor_iso": "2026-07-31T01:36:38Z",
+  "offset_10500_floor_ts": 1785461798.0,
+  "paper_only": true,
+  "parameters_paging_past_floor": [
+    "market"
+  ],
+  "request_count": 6,
+  "schema_version": 1
+}

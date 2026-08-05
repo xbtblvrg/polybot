@@ -1,0 +1,69 @@
+{
+  "criterion_passed": true,
+  "decision": "STRUCTURAL_SCALP_PREREG_PASS_CHECKED_IN",
+  "experiment_id": "btc5m-pair-sum-forward-20260707",
+  "flow_stage": "LEARN",
+  "generated_at": "2026-07-20T00:21:59.823414Z",
+  "kind": "btc5m_pair_sum_forward_prereg_checkin",
+  "maker_first": {
+    "basis": "resolved_paper_pnl_usd",
+    "lane": "maker_first_btc5m_v1",
+    "live_orders_allowed": false,
+    "note": "higher resolved PnL but unresolved-heavy and not promoted by this heartbeat",
+    "paper_only": true,
+    "rank": 2,
+    "rank_score_usd": -827.868893,
+    "resolved_paper_fills": 26504,
+    "resolved_paper_pnl_usd": -827.868893,
+    "resolved_paper_roi_pct": -3.123562,
+    "unresolved_paper_fills": 19814
+  },
+  "preregistration_status": "PASS",
+  "promotion_status": "CHECKIN_ONLY_NO_LIVE_PROMOTION_THIS_HEARTBEAT",
+  "ranking": [
+    {
+      "basis": "pre_registered_forward_gate",
+      "criterion_passed": true,
+      "forward_fills": 348,
+      "forward_pnl_usd": 76.688474,
+      "lane": "btc5m_pair_sum_forward_structural_scalp",
+      "note": "pre-registered gate passed: >=30 forward fills, forward PnL > 0, EV/day > 0",
+      "paper_pnl_usd_all_time": 232.080546,
+      "rank": 1,
+      "rank_score_usd": 76.688474,
+      "study_ev_per_day_usd": 76.688474
+    },
+    {
+      "basis": "resolved_paper_pnl_usd",
+      "lane": "maker_first_btc5m_v1",
+      "live_orders_allowed": false,
+      "note": "higher resolved PnL but unresolved-heavy and not promoted by this heartbeat",
+      "paper_only": true,
+      "rank": 2,
+      "rank_score_usd": -827.868893,
+      "resolved_paper_fills": 26504,
+      "resolved_paper_pnl_usd": -827.868893,
+      "resolved_paper_roi_pct": -3.123562,
+      "unresolved_paper_fills": 19814
+    }
+  ],
+  "schema_version": 1,
+  "source_artifacts": [
+    "data/research/experiment_preregistration_latest.json",
+    "data/research/btc5m_structural_scalp_paper_lane_state.json",
+    "data/research/maker_first_btc5m_paper_state.json"
+  ],
+  "structural_scalp": {
+    "basis": "pre_registered_forward_gate",
+    "criterion_passed": true,
+    "forward_fills": 348,
+    "forward_pnl_usd": 76.688474,
+    "lane": "btc5m_pair_sum_forward_structural_scalp",
+    "note": "pre-registered gate passed: >=30 forward fills, forward PnL > 0, EV/day > 0",
+    "paper_pnl_usd_all_time": 232.080546,
+    "rank": 1,
+    "rank_score_usd": 76.688474,
+    "study_ev_per_day_usd": 76.688474
+  },
+  "success_criterion": "PASS only after at least 30 prospective profile-band BUY observations in aggregate with at least one sampled wallet, positive aggregate paper PnL, positive sampled-wallet mean paper PnL, CopyIntent parity PASS with zero violations, and zero live orders."
+}

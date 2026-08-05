@@ -1,0 +1,6 @@
+{"generated_at":"2026-07-23T22:09:00Z","flow_stage":"LEARN/OBSERVE","paper_only":true,"live_orders_allowed":false,"wallets":[
+{"name":"replacement_01","address":"0x00c8ef6895e2fb38b538cac8c08edd6b82289ccd","enabled":true,"market_filter":"btc_5m","asset_allowlist":["BTC"]},
+{"name":"replacement_02","address":"0x5e4aa0f176014729f5168e821ce614484fbebe6b","enabled":true,"market_filter":"btc_5m","asset_allowlist":["BTC"]},
+{"name":"replacement_03","address":"0xdf7930e89a2c47560165331863c31deca0733dcd","enabled":true,"market_filter":"btc_5m","asset_allowlist":["BTC"]},
+{"name":"replacement_04","address":"0x401a349ab28388e2256b8f356c4f3350f0b9e2b1","enabled":true,"market_filter":"btc_5m","asset_allowlist":["BTC"]}
+]}

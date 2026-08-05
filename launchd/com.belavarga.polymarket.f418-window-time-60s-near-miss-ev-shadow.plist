@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>Label</key><string>com.belavarga.polymarket.f418-window-time-60s-near-miss-ev-shadow</string>
+<key>WorkingDirectory</key><string>/Users/belavarga/claudecode/polymarket-agent</string>
+<key>ProgramArguments</key><array><string>/usr/bin/nice</string><string>-n</string><string>15</string><string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string><string>/Users/belavarga/claudecode/polymarket-agent/scripts/report_f418_window_time_60s_near_miss_ev.py</string><string>--interval-s</string><string>240</string></array>
+<key>RunAtLoad</key><true/><key>KeepAlive</key><true/>
+<key>StandardOutPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/f418_window_time_60s_near_miss_ev_shadow.launchd.out</string>
+<key>StandardErrorPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/f418_window_time_60s_near_miss_ev_shadow.launchd.err</string>
+<key>EnvironmentVariables</key><dict><key>PYTHONUNBUFFERED</key><string>1</string><key>WALLET_COPY_EGRESS</key><string>VPN</string></dict>
+</dict></plist>

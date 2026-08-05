@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "kind": "registry_observation_admissions",
+  "flow_stage": "ROTATE/OBSERVE",
+  "direction_id": "2026-07-21T05:24Z-fable-registry-observation-admission",
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "runtime_observation_top_n": 8,
+  "wallets": [
+    "0x0cb038487586d1119b165466072e9baf666f3a90",
+    "0x9796de6db546a93d9d5134563ec58ba08658d713",
+    "0x251c1a283703beed41590b0875a8dcb8ddd1541f",
+    "0x04a162e06d1e82745a08b95e247bf3a965693527",
+    "0x82311cdedaa7ee25d4672b0e3a3ee0dd0cd2c02e",
+    "0x5d5f7080cf696bf763b3d7d2721201cf2eba1897",
+    "0x25d9b50e33e1d0cc427a45b68e76c0f928292162",
+    "0xc547326c577e21102f85e36b06cdb70d05e87b30",
+    "0x927f7694de44d19a72bce76254e628d1c141d215",
+    "0xffcf591e09d9fffcab04f1082ceb83fab6920fed",
+    "0x612522c3c93bab962db6fcffcf98a4d59b444f6f",
+    "0xdaee998426ebc81d0a15d7c13b2bdddaf8e18559",
+    "0xeb942f0fc3f100cd729d7937afc6c48773cf205e",
+    "0x562a11bcd7354ea82a09ed803cb1739d60862ad4",
+    "0x674887d1ac838099a48b629dff53f25b7b87ee08"
+  ]
+}

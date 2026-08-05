@@ -1,0 +1,50 @@
+{
+  "authority": "fable DIRECTION 2026-07-13T14:37Z",
+  "changed_flags_from_current": {
+    "--drip-max-tranche-usd": "1.0",
+    "--max-order-usd": "1.0"
+  },
+  "current_guard_pid": 46095,
+  "day_floor_paper_only_rung": {
+    "action": "flip the guard to paper_only for the REMAINDER of the UTC day",
+    "authority": "fable DIRECTION 2026-07-14T04:15Z",
+    "resume_rule": "resume live at UTC rollover under standard restore evaluation",
+    "scope": "defensive-posture decision under OP-AUTONOMY; not a permanent halt",
+    "trigger": "day_pnl <= -35.0 at any digest"
+  },
+  "flow_stage": "LIVE/DEFEND",
+  "generated_at": "2026-07-13T14:37:00Z",
+  "kind": "floor_breach_probe_cap_runbook",
+  "live_mutated_now": true,
+  "launchd_reload_sequence": {
+    "authority": "fable DIRECTION 2026-07-19T00:16Z",
+    "reason": "launchctl bootstrap can return rc=5 when a plist edit targets an already-loaded service; treat that as launchd lifecycle hygiene, not a guard defect",
+    "steps": [
+      "capture golden_config snapshot before any live-path touch",
+      "sync the edited LaunchAgent plist into ~/Library/LaunchAgents",
+      "launchctl bootout gui/$(id -u) ~/Library/LaunchAgents/com.belavarga.polymarket.wallet-copy-live-guard.plist; ignore nonzero return if the label is already absent",
+      "launchctl bootstrap gui/$(id -u) ~/Library/LaunchAgents/com.belavarga.polymarket.wallet-copy-live-guard.plist",
+      "verify exactly one scripts/run_wallet_copy_live_guard.py pid owned by launchd and byte-check the expected guard argv flags before considering the reload complete"
+    ]
+  },
+  "mutated_at": "2026-07-14T03:38:10Z",
+  "mutation_reason": "trigger fired: state_digest.defense_tripwires.size_defense_action == PROBE_CAPS_REST_OF_UTC_DAY",
+  "pre_authorized": true,
+  "probe_cap_usd": 1.0,
+  "probe_weight": 0.1,
+  "reason_not_restarted_now": null,
+  "restart_command": "python3 scripts/run_wallet_copy_live_guard.py --operator-approval-id OP-LIVE-20260703-BELA --execute-live --explicit-live-operator-go --live-orders-allowed --rtds-jsonl data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl --rtds-tail-bytes 5242880 --rtds-cold-tail-bytes 5242880 --rtds-offset-state data/research/wallet_copy_history_state.json.rotation_d97.rtds_offset.json --iterations 0 --sleep-s 0.5 --pipeline-timeout-s 60 --live-timeout-s 60 --max-event-age-s 30 --live-build-max-observed-age-s 30 --max-intents 6 --min-live-order-usd 1.0 --wallet-fraction 0.10 --max-order-usd 8.0 --alpha-decay-report data/research/alpha_decay_report.json --enable-drift-buffer --max-drift-buffer-price 0.05 --enable-maker-fallback --copy-model drip --drip-min-tranche-usd 1.0 --drip-max-tranche-usd 2.5 --drip-max-tranches-per-window 12 --per-window-fill-cap 1 --inventory-late-window-stop-s 5 --inventory-max-converge-orders-per-window 6 --inventory-best-ask-timeout-s 1.0 --inventory-future-window-lookahead-s 7200 --price-band-decision-since 2026-07-04T22:22:26Z --no-active-set-dataapi-poller-disable-source-base-overrides",
+  "restore_fired": {
+    "at": "2026-07-14T04:56:46Z",
+    "basis": "2026-07-14T04:45Z fable PULSE DIRECTION since_topup_actual>=20 restore rule",
+    "defenses_remain_armed": [
+      "day_pnl<=-15 probe caps",
+      "day_pnl<=-35 paper_only rest of UTC day"
+    ],
+    "standard_drip_max_tranche_usd": 2.5,
+    "standard_max_order_usd": 8.0
+  },
+  "standard_restore_rule": "restore standard max-order and drip-max-tranche at first hourly check of the next UTC day or when since_topup_actual >= 20.0, whichever the 2026-07-13T14:11Z rule dictates",
+  "standard_restored_at": "2026-07-14T04:56:46Z",
+  "trigger": "state_digest.defense_tripwires.size_defense_action == PROBE_CAPS_REST_OF_UTC_DAY"
+}

@@ -1,0 +1,21 @@
+{
+  "band_end_s": 300.0,
+  "band_start_s": 240.0,
+  "candidate_id": "market_cohort_alive_de8608db55c3",
+  "diagnostics": {
+    "lines_seen": 250000,
+    "not_rtds_btc5m_trade": 212532,
+    "other_wallet": 37468,
+    "rows_loaded": 250000
+  },
+  "generated_at": "2026-07-14T17:00:02.891333+00:00",
+  "kind": "member_source_active_windows_report",
+  "runtime_s": 1.463204,
+  "schema_version": 1,
+  "since_ts": 1784036684.0,
+  "source_active_windows": 0,
+  "source_wallet": "0x86de0516011e2ad7ce3abdc13577de8608db55c3",
+  "target_met": false,
+  "target_windows": 6,
+  "windows": []
+}

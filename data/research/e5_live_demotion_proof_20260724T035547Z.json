@@ -1,0 +1,32 @@
+{
+  "actuator_status": "DISABLED",
+  "demotion_effective_at": "2026-07-24T03:45:56Z",
+  "e5_live_submitted_after_demotion": 0,
+  "flow_stage": "LIVE/ROTATE",
+  "force_reconciliation": {
+    "already_filled_orders": 3,
+    "canceled_or_unfilled_orders": 2,
+    "orders_inspected": 5,
+    "remaining_submitted_orders": 0
+  },
+  "generated_at": "2026-07-24T03:55:54Z",
+  "guard": {
+    "pid": 16725,
+    "sole_authority_count": 1,
+    "status": "RUNNING"
+  },
+  "kind": "e5_live_demotion_proof",
+  "paper_lane_contract": {
+    "live_orders_allowed": false,
+    "paper_only": true,
+    "size_shares": 5.0,
+    "sizing_policy_id": "fixed_shares_5"
+  },
+  "wallet_copy_liveness": {
+    "exchange_order_id": "0x49c7432949079813ddeda19a26e343e9bf0de69948c78f37c7430d129a86c3b5",
+    "fill_status": "FAK_NO_MATCH",
+    "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+    "submitted_at": "2026-07-24T03:55:47.300898+00:00",
+    "within_two_btc5m_windows": true
+  }
+}

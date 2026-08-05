@@ -1,0 +1,92 @@
+{
+  "basis_reconciliation": "Fingerprint halves are full-stream venue-executable rescoring, not the classifier's last-50-trade basis; they cannot falsify the persisted classifier result.",
+  "classifier_algorithm": {
+    "all_positive_comparator": "all.resolved_trades >= 5 and all.roi_pct > 0",
+    "decay_roi_threshold_pct": 0.0,
+    "first_vs_second_half_comparator": "NOT_IMPLEMENTED_BY_CLASSIFIER",
+    "recent_decay_comparator": "all_positive and recent.resolved_trades >= 200 and recent.roi_pct <= 0 and recent.gap_in_sigma <= -1.0",
+    "recent_sample": "last min(50, max(5, len(all_trades)//4)) resolved trades"
+  },
+  "classifier_generated_at": "2026-08-02T08:31:42.017022Z",
+  "classifier_own_basis": {
+    "all_positive": true,
+    "classification": "WEEKEND-ONLY",
+    "classification_reason": "weekend regime is profitable; weekday is not proven positive",
+    "historical_profile": {
+      "actual_minus_required_win_rate_pp": 1.259533,
+      "avg_loss_per_loser_abs_usd": 3.276362,
+      "avg_win_per_winner_usd": 5.678479,
+      "first_event_ts": "2026-07-23T21:12:00Z",
+      "gap_in_sigma": 2.400303,
+      "gap_sigma_pp": 0.524739,
+      "latest_event_age_h": 2.706181,
+      "latest_event_ts": "2026-08-02T05:49:00Z",
+      "loss_abs_pnl_usd": 17158.307142,
+      "losses": 5237,
+      "pnl_usd": 950.361388,
+      "required_win_rate_at_payoff_shape_pct": 36.587607,
+      "resolved_trades": 8426,
+      "roi_pct": 1.804362,
+      "stake_usd": 52670.214885,
+      "unique_windows": 116,
+      "win_pnl_usd": 18108.66853,
+      "win_rate_pct": 37.84714,
+      "wins": 3189
+    },
+    "historical_window_bounds": [
+      "2026-07-23T21:12:00Z",
+      "2026-08-02T05:49:00Z"
+    ],
+    "recent_negative": false,
+    "recent_profile": {
+      "actual_minus_required_win_rate_pp": -3.746881,
+      "avg_loss_per_loser_abs_usd": 3.348475,
+      "avg_win_per_winner_usd": 3.971095,
+      "first_event_ts": "2026-08-02T05:45:03Z",
+      "gap_in_sigma": -0.531816,
+      "gap_sigma_pp": 7.04544,
+      "latest_event_age_h": 2.706181,
+      "latest_event_ts": "2026-08-02T05:49:00Z",
+      "loss_abs_pnl_usd": 97.105772,
+      "losses": 29,
+      "pnl_usd": -13.712778,
+      "required_win_rate_at_payoff_shape_pct": 45.746881,
+      "resolved_trades": 50,
+      "roi_pct": -4.397617,
+      "stake_usd": 311.822934,
+      "unique_windows": 1,
+      "win_pnl_usd": 83.392994,
+      "win_rate_pct": 42.0,
+      "wins": 21
+    },
+    "recent_window_bounds": [
+      "2026-08-02T05:45:03Z",
+      "2026-08-02T05:49:00Z"
+    ]
+  },
+  "classifier_source": "data/research/wallet_temporal_profitability_latest.json",
+  "fading_clear": true,
+  "fingerprint_half_evidence": [
+    {
+      "basis": "venue_executable_full_stream_rescore",
+      "first_half_post_fee_pnl_usd": 40.402713,
+      "resolved_signals": 505,
+      "second_half_post_fee_pnl_usd": 55.539875,
+      "wide_policy_fingerprint": "4028560ff42ee6da51e715295b2e78eeacceb04d9c538cd2df4eb5f2b98a5c46"
+    },
+    {
+      "basis": "venue_executable_full_stream_rescore",
+      "first_half_post_fee_pnl_usd": 40.402713,
+      "resolved_signals": 505,
+      "second_half_post_fee_pnl_usd": 55.539875,
+      "wide_policy_fingerprint": "4028560ff42ee6da51e715295b2e78eeacceb04d9c538cd2df4eb5f2b98a5c46"
+    }
+  ],
+  "flow_stage": "ROTATE/LIVE/MEASURE",
+  "kind": "order151_bf337_fading_adjudication",
+  "live_mutation_performed": false,
+  "rotation_authorized": true,
+  "schema_version": 1,
+  "verdict": "INSUFFICIENT_POWER_FOR_FADING_ROTATION_AUTHORIZED",
+  "wallet": "0xbf337426aa856996b8bb79b238345dd1a0276bf7"
+}

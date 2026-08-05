@@ -1,0 +1,335 @@
+{
+  "created_at": "2026-07-19T07:53:38Z",
+  "direction": "2026-07-10T19:30Z fable DIRECTION SPEED INVARIANT",
+  "flow_stage": "SELF-DEV",
+  "kind": "runtime_speed_baseline_pin",
+  "live_orders_allowed": false,
+  "metrics": {
+    "ask_fable_latest_wall_s": {
+      "comparison_rule": "INFO metric; never contributes to runtime_speed comparison.status",
+      "comparison_status_override": "INFO",
+      "description": "Latest ask_fable provider wall time estimate.",
+      "direction": "lower_is_better",
+      "latest_log": "data/research/ask_fable_provider_logs/20260719T075035Z_claude__69985_rc0.log",
+      "return_code": 0,
+      "slow_threshold_s": 900.0,
+      "source": "data/research/ask_fable_provider_logs latest filename timestamp to mtime",
+      "status": "INFO",
+      "value": 152.726653
+    },
+    "brainless_run_duration_s": {
+      "description": "Latest deterministic brainless_ops run wall time.",
+      "direction": "lower_is_better",
+      "post_stale_lock_reclaim_run_ordinal": 83,
+      "producer_failed_steps": [],
+      "producer_status": "OK",
+      "rolling_step_baseline": {
+        "available": true,
+        "comparison_rule": "rolling_median_last_natural_brainless_runs",
+        "eligible_sample_count": 79,
+        "max_samples_considered": 40,
+        "min_samples_per_step": 5,
+        "sample_count": 40,
+        "sample_status_counts": {
+          "DEGRADED": 2,
+          "OK": 38
+        },
+        "sample_window_finished_at": "2026-07-19T07:47:04Z",
+        "sample_window_started_at": "2026-07-18T23:09:25Z",
+        "step_median_count": 28,
+        "step_medians": {
+          "cli_versions": {
+            "max_sample_s": 3.290637,
+            "median_s": 2.039195,
+            "min_sample_s": 1.640269,
+            "sample_count": 40
+          },
+          "codex_starvation": {
+            "max_sample_s": 0.186608,
+            "median_s": 0.120499,
+            "min_sample_s": 0.084139,
+            "sample_count": 40
+          },
+          "data_layer": {
+            "max_sample_s": 4.435363,
+            "median_s": 3.132219,
+            "min_sample_s": 2.891466,
+            "sample_count": 40
+          },
+          "dr_preflight": {
+            "max_sample_s": 20.024786,
+            "median_s": 16.531666,
+            "min_sample_s": 15.540295,
+            "sample_count": 7
+          },
+          "e6db_price_reject_counterfactual": {
+            "max_sample_s": 16.947875,
+            "median_s": 13.816605,
+            "min_sample_s": 9.964956,
+            "sample_count": 40
+          },
+          "experiment_preregistration": {
+            "max_sample_s": 0.080761,
+            "median_s": 0.064898,
+            "min_sample_s": 0.058393,
+            "sample_count": 40
+          },
+          "factory_funnel": {
+            "max_sample_s": 0.909542,
+            "median_s": 0.76751,
+            "min_sample_s": 0.736127,
+            "sample_count": 40
+          },
+          "inventory_best_ask_route_probe": {
+            "max_sample_s": 0.673773,
+            "median_s": 0.56212,
+            "min_sample_s": 0.535844,
+            "sample_count": 40
+          },
+          "live_guard_auto_restart": {
+            "max_sample_s": 4.342201,
+            "median_s": 0.086163,
+            "min_sample_s": 0.078533,
+            "sample_count": 40
+          },
+          "market_mining_cadence": {
+            "max_sample_s": 111.993143,
+            "median_s": 21.155952,
+            "min_sample_s": 0.233904,
+            "sample_count": 40
+          },
+          "member_dow_profiles": {
+            "max_sample_s": 1.622074,
+            "median_s": 1.365511,
+            "min_sample_s": 1.298153,
+            "sample_count": 40
+          },
+          "member_factory": {
+            "max_sample_s": 0.608544,
+            "median_s": 0.536379,
+            "min_sample_s": 0.507142,
+            "sample_count": 40
+          },
+          "member_queue": {
+            "max_sample_s": 26.784555,
+            "median_s": 21.280781,
+            "min_sample_s": 20.380789,
+            "sample_count": 40
+          },
+          "order_flow_deadman": {
+            "max_sample_s": 0.919303,
+            "median_s": 0.724698,
+            "min_sample_s": 0.682961,
+            "sample_count": 40
+          },
+          "own_positions": {
+            "max_sample_s": 12.95885,
+            "median_s": 11.574676,
+            "min_sample_s": 10.381927,
+            "sample_count": 40
+          },
+          "own_redeemer": {
+            "max_sample_s": 5.301363,
+            "median_s": 0.265578,
+            "min_sample_s": 0.238891,
+            "sample_count": 40
+          },
+          "post_boot_recovery": {
+            "max_sample_s": 2.646225,
+            "median_s": 2.595131,
+            "min_sample_s": 2.558985,
+            "sample_count": 7
+          },
+          "promotion": {
+            "max_sample_s": 1.461,
+            "median_s": 1.391759,
+            "min_sample_s": 1.27936,
+            "sample_count": 40
+          },
+          "research_disk_deadman": {
+            "max_sample_s": 1.389321,
+            "median_s": 0.435461,
+            "min_sample_s": 0.355615,
+            "sample_count": 40
+          },
+          "research_disk_enforce": {
+            "max_sample_s": 38.735371,
+            "median_s": 21.96587,
+            "min_sample_s": 19.993772,
+            "sample_count": 40
+          },
+          "runtime_speed": {
+            "max_sample_s": 2.313317,
+            "median_s": 1.576901,
+            "min_sample_s": 0.856357,
+            "sample_count": 40
+          },
+          "scorecard": {
+            "max_sample_s": 23.552341,
+            "median_s": 21.99043,
+            "min_sample_s": 21.234164,
+            "sample_count": 40
+          },
+          "state_digest": {
+            "max_sample_s": 36.960432,
+            "median_s": 8.457832,
+            "min_sample_s": 7.834241,
+            "sample_count": 40
+          },
+          "strategy_map": {
+            "max_sample_s": 13.072136,
+            "median_s": 10.682704,
+            "min_sample_s": 10.4534,
+            "sample_count": 40
+          },
+          "temporal_profitability": {
+            "max_sample_s": 11.759331,
+            "median_s": 10.529238,
+            "min_sample_s": 10.330398,
+            "sample_count": 40
+          },
+          "utilization_meter": {
+            "max_sample_s": 0.086311,
+            "median_s": 0.076169,
+            "min_sample_s": 0.067592,
+            "sample_count": 40
+          },
+          "wallet_outflow_deadman": {
+            "max_sample_s": 50.62238,
+            "median_s": 11.329601,
+            "min_sample_s": 2.935641,
+            "sample_count": 40
+          },
+          "winner_variation_siblings": {
+            "max_sample_s": 3.86195,
+            "median_s": 3.317188,
+            "min_sample_s": 1.877076,
+            "sample_count": 40
+          }
+        }
+      },
+      "sample_age_s": 394.563774,
+      "sampled_run_duration_s": 172.0,
+      "sampled_run_finished_at": "2026-07-19T07:47:04Z",
+      "sampled_run_started_at": "2026-07-19T07:44:12Z",
+      "slowest_step": {
+        "duration_s": 36.960432,
+        "name": "state_digest"
+      },
+      "source": "data/research/brainless_ops_latest.json started_at..finished_at",
+      "source_mtime": "2026-07-19T07:47:04Z",
+      "stale_sample_threshold_s": 1200.0,
+      "step_duration_count": 26,
+      "step_duration_sum_s": 170.695976,
+      "step_durations": {
+        "cli_versions": 1.98435,
+        "codex_starvation": 0.105862,
+        "data_layer": 2.971781,
+        "e6db_price_reject_counterfactual": 16.295367,
+        "experiment_preregistration": 0.064681,
+        "factory_funnel": 0.909542,
+        "inventory_best_ask_route_probe": 0.558806,
+        "live_guard_auto_restart": 0.081598,
+        "market_mining_cadence": 0.262829,
+        "member_dow_profiles": 1.381382,
+        "member_factory": 0.529414,
+        "member_queue": 21.063916,
+        "order_flow_deadman": 0.729634,
+        "own_positions": 11.199976,
+        "own_redeemer": 0.270048,
+        "promotion": 1.414459,
+        "research_disk_deadman": 0.358729,
+        "research_disk_enforce": 21.535073,
+        "runtime_speed": 1.093608,
+        "scorecard": 21.981127,
+        "state_digest": 36.960432,
+        "strategy_map": 10.703241,
+        "temporal_profitability": 10.493215,
+        "utilization_meter": 0.076364,
+        "wallet_outflow_deadman": 5.652279,
+        "winner_variation_siblings": 2.018263
+      },
+      "timed_sample_count": 79,
+      "value": 172.0
+    },
+    "guard_cycle_recent_p50_s": {
+      "description": "Recent guard loop p50 from retained guard events.",
+      "direction": "lower_is_better",
+      "source": "data/research/wallet_copy_live_guard_events.jsonl.guard_loop_profile.total_s_before_state_write",
+      "value": 10.3617
+    },
+    "guard_cycle_recent_p90_s": {
+      "description": "Recent guard loop p90 from retained guard events.",
+      "direction": "lower_is_better",
+      "source": "data/research/wallet_copy_live_guard_events.jsonl.guard_loop_profile.total_s_before_state_write",
+      "value": 11.610923
+    },
+    "guard_cycle_total_s": {
+      "description": "Latest guard loop wall time before state write.",
+      "direction": "lower_is_better",
+      "source": "data/research/wallet_copy_live_guard_state.json.guard_loop_profile.total_s_before_state_write",
+      "value": 6.930487
+    },
+    "heartbeat_cadence_latest_s": {
+      "description": "Latest max unannotated interval between codex STATUS entries after serving heartbeat markers are applied.",
+      "direction": "lower_is_better",
+      "raw_status_gap_s": 840.0,
+      "regression_rule": "REGRESSION only when max_unannotated_gap_s exceeds 1200s",
+      "regression_threshold_s": 1200.0,
+      "serving_marker_count": 1,
+      "source": "docs/agents/HANDOFF.md codex STATUS timestamp deltas segmented by data/research/codex_serving_heartbeat.jsonl markers",
+      "value": 751.0
+    },
+    "heartbeat_cadence_p50_s": {
+      "description": "Median of the last 20 effective codex STATUS intervals.",
+      "direction": "lower_is_better",
+      "regression_rule": "REGRESSION only when effective cadence exceeds 1200s",
+      "regression_threshold_s": 1200.0,
+      "source": "docs/agents/HANDOFF.md codex STATUS timestamp deltas segmented by data/research/codex_serving_heartbeat.jsonl markers",
+      "value": 916.5
+    },
+    "signal_age_p50_s": {
+      "description": "Fleet median of per-member signal-age p50.",
+      "direction": "lower_is_better",
+      "source": "data/research/order_flow_deadman_state.json.member_signal_age.*.signal_age_p50_s",
+      "value": 0.403215
+    },
+    "signal_age_p90_s": {
+      "absolute_staleness_threshold_s": 10.0,
+      "description": "Worst active-member signal-age p90 using members with enough samples for regression decisions; low-n fallback is annotated PASS_LOW_N.",
+      "direction": "lower_is_better",
+      "eligible_member_signal_age_count": 2,
+      "low_n_excluded_member_count": 1,
+      "low_n_policy": "exclude signal_age_count < 10 from regression decisions",
+      "min_regression_samples": 10,
+      "sample_count": 398,
+      "source": "data/research/order_flow_deadman_state.json.member_signal_age.*.signal_age_p90_s",
+      "status": "MEASURED",
+      "value": 0.403215,
+      "worst_member": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+      "worst_member_signal_age_count": 398
+    },
+    "signal_to_order_p50_s": {
+      "description": "Recent live orders observed-signal to submitted p50.",
+      "direction": "lower_is_better",
+      "source": "data/research/wallet_copy_live_execution_state.json.orders[].source_intent.observed_ts..submitted_at",
+      "value": 14.049731
+    },
+    "signal_to_order_p90_s": {
+      "description": "Recent live orders observed-signal to submitted p90.",
+      "direction": "lower_is_better",
+      "source": "data/research/wallet_copy_live_execution_state.json.orders[].source_intent.observed_ts..submitted_at",
+      "value": 25.093514
+    },
+    "state_digest_generation_s": {
+      "description": "Latest state digest build duration.",
+      "direction": "lower_is_better",
+      "source": "data/research/state_digest.json.generation_duration_s",
+      "value": 32.737399
+    }
+  },
+  "paper_only": true,
+  "reason": "2026-07-19T07:52Z fable runtime_speed state_digest CLASSIFY+REPIN: input_growth in large research JSON artifacts; digest/reporting lane only; money_path_rows_PASS; optimize trigger pre-registered: state_digest_generation_s >75s on two consecutive samples OR any money-path row FAIL => same-day bounded optimize via mtime-keyed parse cache or fat-artifact skip; 20:30Z DR slim-list must flag digest-parsed top files",
+  "regression_threshold_ratio": 1.2,
+  "schema_version": 1
+}

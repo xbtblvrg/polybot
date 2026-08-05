@@ -1,0 +1,36 @@
+{
+  "copy_intent_count": 0,
+  "copy_intents_inserted": 0,
+  "database": "data/derived/wallet_copy_hot_history_accumulator.sqlite3",
+  "event_count": 274037,
+  "events_inserted": 0,
+  "flow_stage": "OBSERVE/LEARN",
+  "generated_at": "2026-08-05T04:44:51.456492Z",
+  "hot_copy_intents_scanned": 0,
+  "hot_events_scanned": 8192,
+  "kind": "wallet_copy_hot_history_accumulator",
+  "newest_source_event_iso": "2026-08-05T03:26:03Z",
+  "newest_source_event_ts": 1785900363.0,
+  "oldest_source_event_iso": "2026-07-19T19:44:46Z",
+  "oldest_source_event_ts": 1784490286.0,
+  "promotion_grade": false,
+  "repoint_allowed": false,
+  "repoint_gate": "separate Fable-audited commit after span >=3 genuine days AND accumulator wallet coverage >= registry resolved-history wallet count",
+  "schema_version": 1,
+  "source": "data/research/wallet_copy_live_guard_hot_history_state.json",
+  "source_freshness": {
+    "freshness_limit_s": 86400.0,
+    "newest_source_event_age_s": 4728.456492,
+    "pass": true
+  },
+  "source_wallet_count": 38,
+  "span_days": 16.320336,
+  "status": "ACCUMULATING_CURRENT_SOURCE",
+  "supplemental_export": {
+    "copy_intent_count": 0,
+    "event_count": 274037,
+    "manifest_file_count": 712,
+    "path": "data/research/wallet_copy_hot_history_accumulator_supplemental.json",
+    "wallet_count": 38
+  }
+}

@@ -1,0 +1,113 @@
+{
+  "attempt_ids": [],
+  "attempt_terminals": [],
+  "cohort": {
+    "cohort_id": "wide_cohort_e50b8115a9c83bb2f8f04a58",
+    "manifest_id": "widemanifest_climb_backup_fd05_20260727T101000Z",
+    "max_fill_lag_s": 5.0,
+    "run_id": "wide_climb_backup_fd05_20260727T101000Z",
+    "run_ids": [
+      "wide_climb_backup_fd05_20260727T101000Z",
+      "wide_20260729T154957Z"
+    ],
+    "source": "direct_polygon_ws_only",
+    "started_at": "2026-07-27T10:10:00Z",
+    "started_at_s": 1785147000.0
+  },
+  "diagnostic_broad_history_is_admission_evidence": false,
+  "flow_stage": "LEARN/OBSERVE/PROMOTE",
+  "kind": "wide_exact_policy_prospective_paper_state",
+  "live_orders_allowed": false,
+  "manifest": {
+    "admitted_wallet_count": 1,
+    "effective_at": "2026-07-27T10:10:00Z",
+    "manifest_id": "widemanifest_climb_backup_fd05_20260727T101000Z",
+    "source_alpha_report": "data/research/alpha_decay_report_wide_20260727T091131Z.json",
+    "wallet_policy_identities": {
+      "0x00033f1089ff061813850e5135483bed39ce3b49": {
+        "fee_model_id": "polymarket_embedded_buy_fee_v1",
+        "max_fill_lag_s": 5.0,
+        "max_order_usd": 1.0,
+        "min_order_usd": 1.0,
+        "move_slice_keys": [
+          "060-120|>0.75",
+          "120-180|>0.75",
+          "180-240|0.50-0.75",
+          "240-300|0.50-0.75",
+          "unknown_seconds|>0.75"
+        ],
+        "policy_id": "wide_positive_alpha_exact_wf0p1_max1_min1",
+        "selection_rule_id": "frozen_positive_70pct_move_slices_v1",
+        "wallet": "0x00033f1089ff061813850e5135483bed39ce3b49",
+        "wallet_fraction": 0.1,
+        "wide_policy_fingerprint": "fd05d1bbcb24ba2f6e58f6e0337db000f24b766d83da8193d7e02fa441916317"
+      }
+    }
+  },
+  "metadata_recovery": {
+    "copyable_delta": 0,
+    "outcome_taxonomy": {},
+    "per_wallet": {},
+    "prior_metadata_missing_rows": 0,
+    "reprocessed_rows": 0,
+    "retry_requested_rows": 0,
+    "retry_source_rows": 0,
+    "rule": "a previously terminal metadata miss is re-evaluated exactly once when the cache later contains market_slug, condition_id, and outcome"
+  },
+  "observed_source_ids": [],
+  "orders": [],
+  "paper_only": true,
+  "policy_id": "wide_positive_alpha_exact_wf0p1_max1_min1",
+  "schema_version": 1,
+  "summary": {
+    "attempted_exact_policy_buys": 0,
+    "copyable_exact_policy_buys": 0,
+    "resolved_orders": 0,
+    "winner_wallets": []
+  },
+  "terminal_reconciliation": {
+    "cohort_id": "wide_cohort_e50b8115a9c83bb2f8f04a58",
+    "direct_event_handoff": false,
+    "input_equals_terminal": true,
+    "input_rows": 0,
+    "run_id": "wide_climb_backup_fd05_20260727T101000Z",
+    "scope": "generation_local_tx_hash_log_index_wallet_buy",
+    "terminal_rows": 0
+  },
+  "terminal_source_ids": [],
+  "updated_at": "2026-07-31T12:07:28.874423+00:00",
+  "wallets": {
+    "0x00033f1089ff061813850e5135483bed39ce3b49": {
+      "all_fill_lags_lte_5s": false,
+      "attempted_exact_policy_buys": 0,
+      "checkpoint": 0,
+      "copyable_exact_policy_buys": 0,
+      "copyable_rate_pct": null,
+      "decision_rank": 1,
+      "fee_coverage_pct": null,
+      "fee_covered_resolved_orders": 0,
+      "fees_usd": 0,
+      "first_half_post_fee_pnl_usd": null,
+      "first_prospective_ts": null,
+      "last_prospective_ts": null,
+      "max_receipt_to_book_fetch_lag_s": null,
+      "p95_receipt_to_book_fetch_lag_s": null,
+      "paper_accounting_gate_pass": false,
+      "post_fee_pnl_usd": 0,
+      "pre_fee_pnl_usd": 0,
+      "promotion_gates": {
+        "copyable_rate_gte_70": false,
+        "every_fill_lag_lte_5s": false,
+        "fees_complete": false,
+        "first_half_post_fee_positive": false,
+        "post_fee_total_positive": false,
+        "resolved_gte_50": false,
+        "second_half_post_fee_positive": false
+      },
+      "refusal_counts": {},
+      "resolved_orders": 0,
+      "second_half_post_fee_pnl_usd": null,
+      "unique_resolved_windows": 0
+    }
+  }
+}

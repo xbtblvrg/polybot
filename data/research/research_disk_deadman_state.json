@@ -1,0 +1,74 @@
+{
+  "disk": {
+    "free_bytes": 748425728000,
+    "free_gib": 697.026,
+    "total_bytes": 1995218165760,
+    "used_bytes": 1246792437760,
+    "used_pct": 62.489
+  },
+  "flow_stage": "LIVE/DEFEND/SELF-DEV",
+  "generated_at": "2026-08-05T04:51:37.239816Z",
+  "incident": false,
+  "incident_keys": [],
+  "inventory_count": 317,
+  "inventory_path": "data/research/research_capture_rotation_inventory.json",
+  "kind": "research_disk_deadman",
+  "large_files": [
+    {
+      "path": "data/research/polygon_orderfilled_ws_shadow_resident.jsonl",
+      "size_bytes": 17188418084
+    },
+    {
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T130751Z.jsonl",
+      "size_bytes": 6110456023
+    },
+    {
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260729T201554Z.jsonl",
+      "size_bytes": 5802840500
+    }
+  ],
+  "memory_swap": {
+    "incident": false,
+    "incident_keys": [],
+    "lane_shedder": {
+      "action": "pause low-priority paper/member/factory refreshes; never stop guard/feeds/ledger",
+      "mechanism": "brainless_ops_memory_pressure_pause"
+    },
+    "memory_pressure": {
+      "critical": false,
+      "critical_free_pct": 5,
+      "free_pct": 53,
+      "ok": true,
+      "pressure_pct": 47,
+      "raw_tail": "The system has 51539607552 (3145728 pages with a page size of 16384).\nSystem-wide memory free percentage: 53%"
+    },
+    "status": "OK",
+    "swapfiles": {
+      "above_threshold": false,
+      "count": 0,
+      "sustained_above_threshold": false,
+      "threshold_count": 20
+    },
+    "swapusage": {
+      "free_mib": 815.25,
+      "ok": true,
+      "raw": "vm.swapusage: total = 16384.00M  used = 15568.75M  free = 815.25M  (encrypted)",
+      "total_mib": 16384.0,
+      "used_mib": 15568.75,
+      "used_pct": 95.024
+    }
+  },
+  "next_action": "continue 10-minute brainless disk deadman",
+  "retention_rule": "raw research captures with no pending decision and no consumer older than 7 days are compressed; compressed archives older than 30 days require Fable deletion ruling",
+  "schema_version": 1,
+  "status": "OK",
+  "thresholds": {
+    "free_incident_bytes": 161061273600,
+    "free_incident_gib": 150.0,
+    "memory_pressure_critical_free_pct": 5,
+    "swapfiles_incident_count": 20,
+    "uninventoried_file_bytes": 5368709120,
+    "uninventoried_file_gib": 5.0
+  },
+  "uninventoried_large_files": []
+}

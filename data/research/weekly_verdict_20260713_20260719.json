@@ -1,0 +1,23 @@
+{
+  "bankroll_usd": 335.0,
+  "days_present": 7,
+  "flow_stage": "LIVE/LEARN/PROMOTE",
+  "generated_at": "2026-07-20T00:25:00Z",
+  "kind": "closed_weekly_verdict",
+  "phase2": {
+    "cumulative_live_pnl_usd": -8.513556,
+    "positive_pnl_days": 8,
+    "ready_for_phase2": false,
+    "resolved_live_fills": 1821,
+    "verdict": "HOLD_CUMULATIVE_LIVE_PNL_NOT_POSITIVE"
+  },
+  "source": "data/research/agent_state_digest.json.closed_weekly_verdict",
+  "target_max_usd": 50.25,
+  "target_min_usd": 33.5,
+  "verdict": "PASS_10PCT_MINIMUM",
+  "week_end_utc": "2026-07-19",
+  "week_start_utc": "2026-07-13",
+  "weekly_pct_of_bankroll": 10.381287,
+  "weekly_pnl_usd": 34.77731,
+  "windows_filled_total": 587
+}

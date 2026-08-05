@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "kind": "wallet_copy_standby_park_exclusions",
+  "flow_stage": "DEFEND/PROMOTE",
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "promotion_authority": false,
+  "exclusions": [
+    {
+      "wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77",
+      "decided_at": "2026-07-31T10:25:00Z",
+      "decided_by": "Fable DIRECTION 2026-07-31T12:06:00Z ORDER 110",
+      "basis": {
+        "artifact_path": "data/research/82c8_park_reconciliation_latest.json",
+        "sha256": "c095f0e8e980fb017be7c064bc049959fae1a33de116860ab16631a009e70490",
+        "replacement_reason": "PARK_SEAT_EVIDENCE_BAR_NOT_CROSSED_AT_DEADLINE",
+        "observed_marginal_post_fee_usd_per_fill": -0.309917
+      },
+      "expires_at": null,
+      "permanent": true,
+      "supersedes": "scripts/order_flow_deadman.py PERMANENT_PARKED_WALLETS literal introduced by e2983057"
+    }
+  ]
+}

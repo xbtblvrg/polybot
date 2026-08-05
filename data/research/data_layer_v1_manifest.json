@@ -1,0 +1,93 @@
+{
+  "bytes_read": 205891498,
+  "duckdb": {
+    "duckdb_path": "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/wallet_copy.duckdb",
+    "parquet_glob": "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/**/*.parquet",
+    "rows": 75368688,
+    "view": "wallet_copy_events"
+  },
+  "files_considered": 1,
+  "files_converted": 26,
+  "flow_stage": "SELF-DEV/LEARN",
+  "generated_at": "2026-08-05T04:49:40.321143Z",
+  "input_globs": [
+    "data/research/*.jsonl"
+  ],
+  "kind": "data_layer_v1_manifest",
+  "missing_dependencies": [],
+  "next_action": "migrate the next corpus scan to DuckDB wallet_copy_events and benchmark",
+  "output_root": "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1",
+  "partitioning": [
+    "dataset",
+    "day",
+    "series"
+  ],
+  "partitions": {
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-24/series=btc_5m/part-000000.parquet": 1609,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-24/series=unknown/part-000000.parquet": 605,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-25/series=btc_5m/part-000000.parquet": 1084,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-25/series=unknown/part-000000.parquet": 657,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-26/series=btc_5m/part-000000.parquet": 1260,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-26/series=unknown/part-000000.parquet": 702,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-27/series=btc_5m/part-000000.parquet": 1895,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-27/series=unknown/part-000000.parquet": 899,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-28/series=btc_5m/part-000000.parquet": 1939,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-28/series=unknown/part-000000.parquet": 924,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-29/series=btc_5m/part-000000.parquet": 1903,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-29/series=unknown/part-000000.parquet": 970,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-30/series=btc_5m/part-000000.parquet": 2068,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-30/series=unknown/part-000000.parquet": 983,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-31/series=btc_5m/part-000000.parquet": 1970,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-31/series=unknown/part-000000.parquet": 932,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-01/series=btc_5m/part-000000.parquet": 737,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-01/series=unknown/part-000000.parquet": 380,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-02/series=btc_5m/part-000000.parquet": 75,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-02/series=unknown/part-000000.parquet": 183,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-03/series=btc_5m/part-000000.parquet": 108,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-03/series=unknown/part-000000.parquet": 213,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-04/series=btc_5m/part-000000.parquet": 168,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-04/series=unknown/part-000000.parquet": 181,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-05/series=btc_5m/part-000000.parquet": 21,
+    "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-05/series=unknown/part-000000.parquet": 22
+  },
+  "raw_jsonl_remains_source_of_record": true,
+  "results": [
+    {
+      "output_files": [
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-24/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-24/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-25/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-25/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-26/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-26/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-27/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-27/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-28/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-28/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-29/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-29/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-30/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-30/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-31/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-07-31/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-01/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-01/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-02/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-02/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-03/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-03/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-04/series=btc_5m/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-04/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-05/series=unknown/part-000000.parquet",
+        "/Users/belavarga/claudecode/polymarket-agent/data/derived/wallet_copy_data_layer_v1/dataset=927f_forward_all_order_exact_copy_paper_events/day=2026-08-05/series=btc_5m/part-000000.parquet"
+      ],
+      "path": "/Users/belavarga/claudecode/polymarket-agent/data/research/927f_forward_all_order_exact_copy_paper_events.jsonl",
+      "rows": 22488,
+      "size": 205891498,
+      "status": "QUEUED"
+    }
+  ],
+  "rows_converted": 22488,
+  "schema_version": 1,
+  "status": "PASS"
+}

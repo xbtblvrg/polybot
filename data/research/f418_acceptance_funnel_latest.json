@@ -1,0 +1,54 @@
+{
+  "accepted_live_orders": 0,
+  "canonical_live_ledger": {
+    "accepted_joined_to_routing_intent_id": 0,
+    "accepted_order_ids": [],
+    "accepted_orders_today": 0,
+    "attempted_orders_today": 0,
+    "routing_to_live_intent_join_gap": 0
+  },
+  "copyintent_parity_violations": 0,
+  "day_utc": "2026-08-05",
+  "eligible_to_accept_pct": 0.0,
+  "eligible_to_submit_pct": 0.0,
+  "flow_stage": "LIVE/LEARN/DEFEND",
+  "generated_at": "2026-08-05T04:50:19.172691Z",
+  "identity_note": "Routing-shadow and canonical live guard independently materialize CopyIntent IDs; canonical_live_ledger is authoritative for actual order acceptance.",
+  "kind": "f418_acceptance_funnel",
+  "live_mutation": false,
+  "measurement_started_at": "2026-08-05T00:00:00Z",
+  "policy_eligible_unique_intents": 0,
+  "rolling_30m": {
+    "actual_accepted_orders": 0,
+    "actual_live_order_attempts": 0,
+    "policy_eligible_unique_intents": 0,
+    "window_started_at": "2026-08-05T04:20:19.172691Z"
+  },
+  "rows": [],
+  "schema_version": 1,
+  "seat_started_at": "2026-07-21T10:18:11Z",
+  "seat_tenure": {
+    "actual_acceptance_pct": 0.0,
+    "actual_accepted_orders": 0,
+    "actual_live_order_attempts": 0,
+    "actual_rejected_orders": 0,
+    "routing_policy_eligible_unique_intents": 0,
+    "routing_terminal_stage_counts": {}
+  },
+  "selected_member_attribution": {
+    "defect_classification": "NONE",
+    "guard_terminal": 0,
+    "rule": "a selected eligible intent with a positive post-window-fill-cap count and no exact ledger order is a wiring defect; an otherwise selected intent lacking an exact terminal gate row is a telemetry defect",
+    "status": "PASS",
+    "submitted": 0,
+    "telemetry_defects": 0,
+    "wiring_defects": 0
+  },
+  "selected_member_rows": [],
+  "selected_policy_eligible_unique_intents": 0,
+  "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "status": "PASS",
+  "submitted_intents": 0,
+  "terminal_stage_counts": {},
+  "unattributed_selected_intents": 0
+}

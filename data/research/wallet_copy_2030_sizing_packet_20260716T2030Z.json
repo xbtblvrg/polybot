@@ -1,0 +1,530 @@
+{
+  "compound_trigger_2030z": {
+    "basis": "order_flow_deadman + boot_recovery_audit at/after 20:30Z",
+    "idle_s": 9296.99001,
+    "latest_accepted_order_ts": "2026-07-16T17:55:49.636914+00:00",
+    "leg1_no_accepted_since_2026_07_16T17_55_49Z": true,
+    "leg2": {
+      "can_trade": false,
+      "deadman_warning": null,
+      "failed_gates": null,
+      "order_flow_status": "OK",
+      "post_boot_status": "PASS",
+      "rtds_offset_identity_ok": true,
+      "wallet_outflow_status": "OK"
+    },
+    "leg2_all_false": true,
+    "verdict": "DONT_NOTIFY_PACKET_PROCEEDS"
+  },
+  "direction": "2026-07-16T20:05Z fable DIRECTION RULING 3 trigger-then-packet",
+  "flow_stage": "LIVE/MEASURE/DEFEND",
+  "generated_at": "2026-07-16T20:33:27Z",
+  "inputs": {
+    "boot_recovery_audit": "data/research/boot_recovery_audit_state.json",
+    "guard_state": "data/research/wallet_copy_live_guard_state.json",
+    "order_flow_deadman": "data/research/order_flow_deadman_state.json",
+    "scorecard": "data/research/wallet_copy_daily_scorecard_2026-07-16.json",
+    "state_digest": "data/research/state_digest.json"
+  },
+  "kind": "wallet_copy_2030_sizing_packet",
+  "live_path_mutation": "NONE_REPORTING_ONLY",
+  "loser_band_drift": {
+    "basis": "current day scorecard plus Fable-carried peak context; no live mutation from this packet",
+    "current_day_pnl_usd": 9.300098,
+    "current_negative_windows": 47,
+    "current_positive_windows": 51,
+    "current_worst_windows": [
+      {
+        "bucket": "-5_to_-1",
+        "market_slug": "btc-updown-5m-1784192100",
+        "pnl_usd": -2.45,
+        "resolved_fills": 1
+      },
+      {
+        "bucket": "-5_to_-1",
+        "market_slug": "btc-updown-5m-1784196900",
+        "pnl_usd": -2.45,
+        "resolved_fills": 1
+      },
+      {
+        "bucket": "-5_to_-1",
+        "market_slug": "btc-updown-5m-1784217600",
+        "pnl_usd": -2.45,
+        "resolved_fills": 1
+      },
+      {
+        "bucket": "-5_to_-1",
+        "market_slug": "btc-updown-5m-1784223300",
+        "pnl_usd": -2.45,
+        "resolved_fills": 1
+      },
+      {
+        "bucket": "-5_to_-1",
+        "market_slug": "btc-updown-5m-1784190300",
+        "pnl_usd": -2.4,
+        "resolved_fills": 1
+      }
+    ],
+    "legacy_structural_negative_edge_reference": {
+      "generated_at": "2026-07-15T00:00:29.882276+00:00",
+      "path": "data/research/e6db_loser_autopsy_latest.json",
+      "summary": {
+        "actual_minus_required_win_rate_pp": -5.7012,
+        "actual_win_rate": 0.44,
+        "actual_win_rate_pct": 44.0,
+        "avg_loss_per_loser_abs_usd": 2.399106,
+        "avg_win_per_winner_usd": 2.427949,
+        "basis": "response_filled_size_usd realized PnL; expected_fee_usd is diagnostic and not subtracted again",
+        "classification": "structural_negative_edge",
+        "day_utc": "2026-07-14",
+        "diagnostic_pre_expected_fee_pnl_usd": -9.47753,
+        "expected_fee_share_of_gross_pnl_swing_pct": 3.551348,
+        "expected_fee_share_of_realized_loss_pct": 31.123082,
+        "expected_fee_usd": 4.282566,
+        "fees_flip_sign": false,
+        "fills": 50,
+        "flat_windows": 0,
+        "flow_stage": "LIVE/DEFEND",
+        "gap_in_sigma": -0.806291,
+        "gap_sigma_pp": 7.070942,
+        "gross_loss_abs_usd": 67.174981,
+        "gross_win_pnl_usd": 53.414885,
+        "losing_windows": 28,
+        "pre_expected_fee_still_negative": true,
+        "realized_pnl_usd": -13.760096,
+        "required_win_rate_at_payoff_shape": 0.497012,
+        "required_win_rate_at_payoff_shape_pct": 49.701238,
+        "resolved_windows": 50,
+        "rule": "fee_drag if expected fees alone flip the sign; structural_negative_edge if pre-fee diagnostic remains negative and actual win rate trails required payoff-shape breakeven by more than 2pp; otherwise variance",
+        "source_wallet": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+        "winning_windows": 22
+      }
+    },
+    "peak_context_usd": "Fable-carried +14.45 day peak; current +9.300098, drift -5.149902"
+  },
+  "max_consecutive_loss": {
+    "resolved_fill_basis": 4,
+    "runs": [
+      {
+        "end_market_slug": "btc-updown-5m-1784197200",
+        "length": 4,
+        "start_market_slug": "btc-updown-5m-1784196300"
+      },
+      {
+        "end_market_slug": "btc-updown-5m-1784221200",
+        "length": 4,
+        "start_market_slug": "btc-updown-5m-1784220300"
+      },
+      {
+        "end_market_slug": "btc-updown-5m-1784215200",
+        "length": 3,
+        "start_market_slug": "btc-updown-5m-1784214600"
+      },
+      {
+        "end_market_slug": "btc-updown-5m-1784223300",
+        "length": 3,
+        "start_market_slug": "btc-updown-5m-1784222100"
+      },
+      {
+        "end_market_slug": "btc-updown-5m-1784190300",
+        "length": 2,
+        "start_market_slug": "btc-updown-5m-1784190000"
+      }
+    ]
+  },
+  "member_attribution": {
+    "active_set_roster": {
+      "flow_stage": "LIVE/PROMOTE/ROTATE",
+      "members": [
+        {
+          "candidate_id": "market_cohort_alive_41206ad03db1",
+          "candidate_type": "SINGLE_WALLET",
+          "enabled": true,
+          "is_current_cycle_member": true,
+          "max_order_usd": 1.0,
+          "max_price": 0.5,
+          "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+          "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+          "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY",
+          "wallet_fraction": 0.1
+        },
+        {
+          "candidate_id": "runtime_auto_degrade_f418d3a1a9",
+          "candidate_type": "SINGLE_WALLET",
+          "enabled": true,
+          "is_current_cycle_member": false,
+          "max_order_usd": 0.5,
+          "max_price": 0.5,
+          "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+          "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+          "status": "AUTO_DEGRADE_RUNTIME_ROSTER_PROTECTION_BOUNDED",
+          "wallet_fraction": 0.1
+        }
+      ],
+      "qualified_member_count": 2,
+      "target_member_count_max": 9,
+      "target_member_count_min": 3
+    },
+    "basis": "scorecard today.per_member and active_set_roster",
+    "per_member": {
+      "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": {
+        "cost_usd": 234.12994,
+        "fills": 98,
+        "orders": 119,
+        "payout_usd": 243.430038,
+        "pnl_usd": 9.300098,
+        "rejects": 21,
+        "resolved_fill_rate_pct": 100.0,
+        "resolved_fills": 98,
+        "roi_pct": 3.972195,
+        "unresolved_fills": 0
+      }
+    }
+  },
+  "participation_table": [
+    {
+      "adjusted_missed_active_window": true,
+      "dominant_skip_reason": "window_time_gte_180s",
+      "market_slug": "btc-updown-5m-1784224800",
+      "our_fills": 0,
+      "our_submits": 0,
+      "participation_skip_category": "PROTECTED_SKIP",
+      "wallet_eligible_orders": 7
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784224800",
+      "our_fills": 1,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 3
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784224500",
+      "our_fills": 1,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 3
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784224200",
+      "our_fills": 1,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 3
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784223900",
+      "our_fills": 1,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 5
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784223600",
+      "our_fills": 0,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 1
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784223300",
+      "our_fills": 0,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 1
+    },
+    {
+      "adjusted_missed_active_window": false,
+      "dominant_skip_reason": "inventory_target_already_met",
+      "market_slug": "btc-updown-5m-1784222400",
+      "our_fills": 1,
+      "our_submits": 1,
+      "participation_skip_category": "SUBMITTED",
+      "wallet_eligible_orders": 1
+    }
+  ],
+  "reject_reasons": {
+    "guard_current_reject_taxonomy_counts": {
+      "drip_min_tranche_exceeds_window_budget": 342,
+      "drip_residual_gap_below_min_tranche": 2,
+      "filled": 1,
+      "filtered_after_inventory_build": 30,
+      "hard_entry_floor_skip": 20,
+      "inventory_best_ask_above_vwap_plus_buffer": 23,
+      "inventory_best_ask_missing": 24,
+      "inventory_late_window_guard": 209,
+      "inventory_residual_gap_below_min_order": 11,
+      "inventory_target_already_met": 144,
+      "window_time_gte_180s": 157
+    },
+    "guard_dominant_skip_reason_counts": {
+      "drip_min_tranche_exceeds_window_budget": 342,
+      "drip_residual_gap_below_min_tranche": 2,
+      "filled": 1,
+      "filtered_after_inventory_build": 30,
+      "hard_entry_floor_skip": 20,
+      "inventory_best_ask_above_vwap_plus_buffer": 23,
+      "inventory_best_ask_missing": 24,
+      "inventory_late_window_guard": 209,
+      "inventory_residual_gap_below_min_order": 11,
+      "inventory_target_already_met": 144,
+      "window_time_gte_180s": 157
+    },
+    "live_ledger_rejects": 21
+  },
+  "schema_version": 1,
+  "score": {
+    "defense_posture": "WATCH_TIGHTENED_PROBE_TRIGGER",
+    "denominator_windows": 288,
+    "distance_to_plus20_usd": -3.469887,
+    "fills": 98,
+    "orders": 119,
+    "pnl_usd": 9.300098,
+    "rejects": 21,
+    "resolved_fills": 98,
+    "roi_pct": 3.972195,
+    "since_topup_actual_usd": 16.530113,
+    "since_topup_reconciled_actual_usd": 17.713647,
+    "windows_filled": 98,
+    "windows_filled_pct": 34.027778,
+    "windows_submitted": 98
+  },
+  "tranche_vs_cap_forgone_fill_quantification": {
+    "guard_taxonomy_count": 342,
+    "interpretation": "budget/tranche suppression dominates current retained participation; conservative forgone-fill upper bound is unique_windows_with_reason if each affected window would have produced one accepted min tranche, but this packet does not loosen live eligibility",
+    "midday_due_check": {
+      "breakeven_win_rate_pct": 49.710667,
+      "distance_to_probe_trigger_usd": 16.326086,
+      "generated_at": "2026-07-16T11:52:03Z",
+      "pinned_filled_orders": 37,
+      "pnl_usd": 8.326086,
+      "probe_trigger_usd": -8.0,
+      "resolved_pinned_fills": 36,
+      "scorecard_generated_at": "2026-07-16T11:51:52.137830+00:00",
+      "sizing_gate_20_30z": {
+        "all_criteria_met": false,
+        "breached_probe_trigger_false": true,
+        "candidate_step": "pin window budget 1 -> 2 min tranches (max about $5/window)",
+        "cumulative_pinned_pnl_gte_10": false,
+        "direction": "2026-07-16T09:15Z-fable-pinned-sizing-preregistration",
+        "lte_minus_5_windows_zero": true,
+        "resolved_pinned_n_gte_50": false,
+        "wilson_95_lower_bound_gt_breakeven": false
+      },
+      "status": "TRIGGER_MET_PACKET_READY",
+      "threshold_change_allowed": false,
+      "trigger_n": 35,
+      "wilson_95_lower_bound_win_rate_pct": 39.581062,
+      "wilson_lower_bound_gt_breakeven": false,
+      "win_rate_pct": 55.555556
+    },
+    "pinned_economics": {
+      "breakeven_win_rate_pct": 50.576698,
+      "distance_to_probe_trigger_usd": 18.336292,
+      "generated_at": "2026-07-16T09:39:44Z",
+      "pinned_filled_orders": 18,
+      "pinned_status_counts": {
+        "FILLED": 18,
+        "REJECTED": 3
+      },
+      "pnl_usd": 10.336292,
+      "probe_trigger_usd": -8.0,
+      "resolved_pinned_fills": 15,
+      "scorecard_generated_at": "2026-07-16T09:30:17.124689+00:00",
+      "sizing_gate_20_30z": {
+        "all_criteria_met": false,
+        "breached_probe_trigger_false": true,
+        "candidate_step": "pin window budget 1 -> 2 min tranches (max about $5/window)",
+        "cumulative_pinned_pnl_gte_10": true,
+        "direction": "2026-07-16T09:15Z-fable-pinned-sizing-preregistration",
+        "lte_minus_5_windows_zero": true,
+        "resolved_pinned_n_gte_50": false,
+        "wilson_95_lower_bound_gt_breakeven": false
+      },
+      "status": "TRIGGER_MET_PACKET_READY",
+      "threshold_change_allowed": false,
+      "wilson_95_lower_bound_win_rate_pct": 41.713548,
+      "wilson_lower_bound_gt_breakeven": false,
+      "win_rate_pct": 66.666667,
+      "worst_bucket": {
+        "cost_usd": 35.739991,
+        "fills": 15,
+        "losses": 5,
+        "pnl_usd": 10.336292,
+        "price_bucket": "01_25_50",
+        "roi_pct": 28.920802,
+        "wins": 10
+      }
+    },
+    "reason": "drip_min_tranche_exceeds_window_budget",
+    "retained_rows_with_reason": 342,
+    "sum_gap_usd_at_vwap_on_rows": 313.016489,
+    "sum_window_budget_usd_on_rows": 332.515625,
+    "threshold_change_allowed": false,
+    "unique_windows_with_reason": 171,
+    "wallet_eligible_orders_rows_sum": 2900
+  },
+  "tri_basis_roster": {
+    "bases": [
+      "runtime_active_set/current_candidate",
+      "scorecard_active_set_roster",
+      "ledger_today.per_member"
+    ],
+    "ledger_live_member_today": {
+      "0xdf2c0702fc00be90bd795234a86e28f1ed39118a": {
+        "cost_usd": 234.12994,
+        "fills": 98,
+        "orders": 119,
+        "payout_usd": 243.430038,
+        "pnl_usd": 9.300098,
+        "rejects": 21,
+        "resolved_fill_rate_pct": 100.0,
+        "resolved_fills": 98,
+        "roi_pct": 3.972195,
+        "unresolved_fills": 0
+      }
+    },
+    "runtime_member_count": 2,
+    "runtime_selected_policy": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+    "runtime_selected_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+    "scorecard_active_set_roster_members": [
+      {
+        "candidate_id": "market_cohort_alive_41206ad03db1",
+        "candidate_type": "SINGLE_WALLET",
+        "enabled": true,
+        "is_current_cycle_member": true,
+        "max_order_usd": 1.0,
+        "max_price": 0.5,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+        "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY",
+        "wallet_fraction": 0.1
+      },
+      {
+        "candidate_id": "runtime_auto_degrade_f418d3a1a9",
+        "candidate_type": "SINGLE_WALLET",
+        "enabled": true,
+        "is_current_cycle_member": false,
+        "max_order_usd": 0.5,
+        "max_price": 0.5,
+        "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+        "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+        "status": "AUTO_DEGRADE_RUNTIME_ROSTER_PROTECTION_BOUNDED",
+        "wallet_fraction": 0.1
+      }
+    ]
+  },
+  "utc_hour_win_loss": [
+    {
+      "fills": 1,
+      "flats": 0,
+      "losses": 0,
+      "pnl_usd": 1.910869,
+      "utc_hour": "07",
+      "win_rate_pct": 100.0,
+      "wins": 1
+    },
+    {
+      "fills": 11,
+      "flats": 0,
+      "losses": 4,
+      "pnl_usd": 6.610635,
+      "utc_hour": "08",
+      "win_rate_pct": 63.636364,
+      "wins": 7
+    },
+    {
+      "fills": 8,
+      "flats": 0,
+      "losses": 2,
+      "pnl_usd": 9.585701,
+      "utc_hour": "09",
+      "win_rate_pct": 75.0,
+      "wins": 6
+    },
+    {
+      "fills": 9,
+      "flats": 0,
+      "losses": 6,
+      "pnl_usd": -7.652039,
+      "utc_hour": "10",
+      "win_rate_pct": 33.333333,
+      "wins": 3
+    },
+    {
+      "fills": 10,
+      "flats": 0,
+      "losses": 6,
+      "pnl_usd": -5.220739,
+      "utc_hour": "11",
+      "win_rate_pct": 40.0,
+      "wins": 4
+    },
+    {
+      "fills": 9,
+      "flats": 0,
+      "losses": 5,
+      "pnl_usd": -2.685908,
+      "utc_hour": "12",
+      "win_rate_pct": 44.444444,
+      "wins": 4
+    },
+    {
+      "fills": 11,
+      "flats": 0,
+      "losses": 5,
+      "pnl_usd": 1.502213,
+      "utc_hour": "13",
+      "win_rate_pct": 54.545455,
+      "wins": 6
+    },
+    {
+      "fills": 10,
+      "flats": 0,
+      "losses": 3,
+      "pnl_usd": 10.078037,
+      "utc_hour": "14",
+      "win_rate_pct": 70.0,
+      "wins": 7
+    },
+    {
+      "fills": 9,
+      "flats": 0,
+      "losses": 5,
+      "pnl_usd": -1.482979,
+      "utc_hour": "15",
+      "win_rate_pct": 44.444444,
+      "wins": 4
+    },
+    {
+      "fills": 10,
+      "flats": 0,
+      "losses": 6,
+      "pnl_usd": -2.615801,
+      "utc_hour": "16",
+      "win_rate_pct": 40.0,
+      "wins": 4
+    },
+    {
+      "fills": 10,
+      "flats": 0,
+      "losses": 5,
+      "pnl_usd": -0.729891,
+      "utc_hour": "17",
+      "win_rate_pct": 50.0,
+      "wins": 5
+    }
+  ]
+}

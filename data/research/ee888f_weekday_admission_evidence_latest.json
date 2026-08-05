@@ -1,0 +1,46 @@
+{
+  "a689_pin_unchanged": true,
+  "activate_not_before_utc": "2026-07-21T00:00:00Z",
+  "candidate_id": "market_cohort_alive_ddb0ae19ed10",
+  "copyintent_parity_violations": 0,
+  "direction_id": "2026-07-20T17:11Z-fable-ee888f-weekday-admission",
+  "flow_stage": "PROMOTE/LIVE/DEFEND",
+  "activated_at": "2026-07-21T00:15:00Z",
+  "activation_observation": {
+    "accepted_live_orders_30m": 0,
+    "can_trade": true,
+    "policy_eligible_intents_30m": 0,
+    "raw_own_source_buy_rows_30m": 22,
+    "seat_action": "KEEP_A689_ZERO_CONVERTING_EE888F_FLOW",
+    "selected_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+  },
+  "generated_at": "2026-07-21T00:15:00Z",
+  "kind": "ee888f_weekday_admission_evidence",
+  "live_mutation_before_activation": false,
+  "prearm_four_way_gate": {
+    "artifact": "data/research/cohort_alive_admission_packets_latest.json",
+    "candidate_object": "top_four_way_candidate",
+    "external_liveness_status": "PASS",
+    "failures": [],
+    "history_completeness": "complete",
+    "hour_match_status": "PASS_PROVEN_POSITIVE_ACTIVE_SLICE",
+    "matched_slice": {
+      "label": "PROVEN-POSITIVE",
+      "min_trades": 5,
+      "pnl_usd": 48.855835,
+      "reason": "n=632 >= min_trades=5; roi=3.8942 > 0",
+      "resolved_trades": 632,
+      "roi_pct": 3.8942,
+      "slice": "weekday"
+    },
+    "policy_eligible_status": "PASS",
+    "rule": "hold admission if any audited four-way fact regresses before activation",
+    "source_active_status": "PASS",
+    "status": "PASS"
+  },
+  "schema_version": 1,
+  "selectable_not_forced": true,
+  "single_submitter": "scripts/run_wallet_copy_live_guard.py",
+  "source_wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10",
+  "status": "ACTIVATED_SELECTABLE"
+}

@@ -1,0 +1,49 @@
+{
+  "accepted_order_rows": 0,
+  "basis": "Fable 2026-07-16T06:42Z f418 structural-bind branch (b) post-restart tripwire",
+  "dominant_skip_reason_counts": {},
+  "floor_budget_bind": {
+    "budget_bind_rows": 0,
+    "budget_values": [],
+    "effective_min_values": [],
+    "leak_check": "DISABLED_EXPECTED_POLICY_MAX",
+    "min_required_rows": 3,
+    "policy_leak_max_usd": 0.0,
+    "policy_max_1_rows": 0,
+    "policy_max_values": [],
+    "rows": 0,
+    "samples": []
+  },
+  "flow_stage": "LIVE/DEFEND/MEASURE",
+  "generated_at": "2026-07-16T06:55:26.859688+00:00",
+  "guard_state_path": "data/research/wallet_copy_live_guard_state.json",
+  "live_order_rows": 0,
+  "live_state_path": "data/research/wallet_copy_live_execution_state.json",
+  "our_fills": 0,
+  "our_submits": 0,
+  "participation_category_counts": {},
+  "pipeline_late": {
+    "rows": 0,
+    "samples": []
+  },
+  "policy_defect": {
+    "rows": 0,
+    "samples": []
+  },
+  "policy_id": "fast_wf_0.10_cap_4_all_prices_minusd_0_all_window",
+  "postfix_start_iso": "2026-07-16T06:50:53.345212Z",
+  "pre_ruled_action": "KEEP_CANARY_ARMED_STANDING_ONE_LINER",
+  "recent_rows": [],
+  "rows": 0,
+  "rule": "f418 $2.50 cap / $1 min / 0.50 max_price; keep armed until the resolved-live-fill tripwire fires",
+  "schema_version": 1,
+  "source_late": {
+    "rows": 0,
+    "samples": []
+  },
+  "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "tripwire_class_counts": {},
+  "verdict": "SOURCE_BEHAVIOR_NOT_DEFECT",
+  "wallet_eligible_orders": 0,
+  "windows": 0
+}

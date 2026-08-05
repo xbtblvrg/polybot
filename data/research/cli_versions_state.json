@@ -1,0 +1,115 @@
+{
+  "changed_tools": [],
+  "freshness": {
+    "agy": {
+      "installed_version": "1.1.7",
+      "latest": {
+        "checked_at": "2026-08-05T04:53:10Z",
+        "latest_version": "1.1.7",
+        "manual_policy": "R4 env-sweeper verifies AGY release freshness weekly; env CLI_VERSION_LATEST_AGY overrides this when known",
+        "next_check_due_at": "2026-08-12T04:53:10Z",
+        "package": null,
+        "source": "manual_env_sweep",
+        "status": "MANUAL_ENV_SWEEP"
+      },
+      "next_action": "no update needed before next weekly freshness check",
+      "stale": false,
+      "status": "CURRENT",
+      "update_policy": "one_brain_at_a_time_quiet_moment_smoke_test_after"
+    },
+    "claude": {
+      "installed_version": "2.1.220 (Claude Code)",
+      "latest": {
+        "checked_at": "2026-08-05T04:53:08Z",
+        "error": "npm not on PATH",
+        "latest_version": null,
+        "next_check_due_at": "2026-08-12T04:53:08Z",
+        "package": "@anthropic-ai/claude-code",
+        "source": "npm",
+        "status": "LATEST_TOOL_UNAVAILABLE"
+      },
+      "next_action": "configure a latest-version source or retry at next weekly freshness check",
+      "stale": null,
+      "status": "LATEST_TOOL_UNAVAILABLE",
+      "update_policy": "one_brain_at_a_time_quiet_moment_smoke_test_after"
+    },
+    "codex": {
+      "installed_version": "codex-cli 0.144.6",
+      "latest": {
+        "checked_at": "2026-08-05T04:53:08Z",
+        "error": "npm not on PATH",
+        "latest_version": null,
+        "next_check_due_at": "2026-08-12T04:53:08Z",
+        "package": "@openai/codex",
+        "source": "npm",
+        "status": "LATEST_TOOL_UNAVAILABLE"
+      },
+      "next_action": "configure a latest-version source or retry at next weekly freshness check",
+      "stale": null,
+      "status": "LATEST_TOOL_UNAVAILABLE",
+      "update_policy": "one_brain_at_a_time_quiet_moment_smoke_test_after"
+    },
+    "grok": {
+      "installed_version": "grok 0.2.101 (5bc4b5dfadcf)",
+      "latest": {
+        "channel": "stable",
+        "checked_at": "2026-08-05T04:53:08Z",
+        "current_version": "0.2.101",
+        "installer": "internal",
+        "latest_version": "0.2.118",
+        "next_check_due_at": "2026-08-12T04:53:08Z",
+        "package": null,
+        "rc": 0,
+        "source": "grok_update_check",
+        "status": "CHECKED",
+        "update_available": true
+      },
+      "next_action": "update this CLI in a quiet window, one brain at a time, then run the ask_fable smoke test",
+      "stale": true,
+      "status": "STALE",
+      "update_policy": "one_brain_at_a_time_quiet_moment_smoke_test_after"
+    }
+  },
+  "kind": "cli_versions_state",
+  "pending_smoke_test": null,
+  "schema_version": 1,
+  "stale_tools": [
+    "grok"
+  ],
+  "status": "STALE_UPDATE_DUE",
+  "unknown_latest_tools": [
+    "claude",
+    "codex"
+  ],
+  "updated_at": "2026-08-05T04:53:10Z",
+  "versions": {
+    "agy": {
+      "available": true,
+      "path": "/Users/belavarga/.local/bin/agy",
+      "path_source": "prior_absolute_path",
+      "rc": 0,
+      "version": "1.1.7"
+    },
+    "claude": {
+      "available": true,
+      "path": "/Users/belavarga/.local/bin/claude",
+      "path_source": "prior_absolute_path",
+      "rc": 0,
+      "version": "2.1.220 (Claude Code)"
+    },
+    "codex": {
+      "available": true,
+      "path": "/Users/belavarga/.local/bin/codex",
+      "path_source": "prior_absolute_path",
+      "rc": 0,
+      "version": "codex-cli 0.144.6"
+    },
+    "grok": {
+      "available": true,
+      "path": "/Users/belavarga/.local/bin/grok",
+      "path_source": "prior_absolute_path",
+      "rc": 0,
+      "version": "grok 0.2.101 (5bc4b5dfadcf)"
+    }
+  }
+}

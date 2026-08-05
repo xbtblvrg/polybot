@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Label</key>
+	<string>com.belavarga.polymarket.wide-multiwallet-consensus</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/nice</string>
+		<string>-n</string>
+		<string>15</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_wide_multiwallet_consensus_slice.py</string>
+		<string>--manifest</string>
+		<string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_exact_policy_manifest_wide_20260725T090549Z.json</string>
+		<string>--watch</string>
+		<string>--interval-s</string>
+		<string>5</string>
+	</array>
+	<key>WorkingDirectory</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent</string>
+	<key>EnvironmentVariables</key>
+	<dict>
+		<key>PYTHONUNBUFFERED</key>
+		<string>1</string>
+	</dict>
+	<key>RunAtLoad</key>
+	<true/>
+	<key>KeepAlive</key>
+	<true/>
+	<key>StandardOutPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_multiwallet_consensus.launchd.out</string>
+	<key>StandardErrorPath</key>
+	<string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_multiwallet_consensus.launchd.err</string>
+</dict>
+</plist>

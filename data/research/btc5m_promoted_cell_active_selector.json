@@ -1,0 +1,20 @@
+{
+  "activation_refresh_allowed": false,
+  "activation_ttl_s": 3600,
+  "candidate_count": 0,
+  "emergency_forward_resolved_required": 10,
+  "generated_at": "2026-08-03T09:46:35.460248+00:00",
+  "kind": "btc5m_promoted_cell_active_selector",
+  "permanent_promotion_resolved_required": 200,
+  "schema_version": 1,
+  "selected": null,
+  "selection_order": "post_fee_pnl_desc,resolved_desc,generation_checksum_asc,cell_id_asc",
+  "single_submitter": "scripts/run_wallet_copy_live_guard.py",
+  "source_diagnostics": {
+    "data/research/btc5m_cross_exchange_promoted_cell_latest.json": "not_ready",
+    "data/research/btc5m_multivenue_ttl_maker_first_residual_selector.json": "not_ready",
+    "data/research/btc5m_multivenue_ttl_passive_residual_selector.json": "not_ready",
+    "data/research/btc5m_perp_microstructure_selector.json": "not_ready"
+  },
+  "status": "NO_GATE_COMPLETE_CELL"
+}

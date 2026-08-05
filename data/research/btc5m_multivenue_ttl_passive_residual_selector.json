@@ -1,0 +1,920 @@
+{
+  "activation_contract": {
+    "max_accepted_orders_per_window": 1,
+    "order_usd": 1.0,
+    "ttl_refresh_allowed": false,
+    "ttl_s": 3600
+  },
+  "cells": [
+    {
+      "cell_id": "multivenue_15s_passive_residual_010m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "aff83c6059a580a3fa067f78c6f33158cd6d72967e6cf370deb33aba54947f15",
+      "record_checksum": "6544bc2d2787fafa6ede5fcfdbbd2fcdd2cbec97fb45d89e1355615aa5683702",
+      "schema_version": 1,
+      "signal_offset_s": 15,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_15s_passive_residual_010m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_15s_passive_residual_020m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "1199316ddcbc30a4220b8e5697f237e896f56d6467fc03eb748268e177989444",
+      "record_checksum": "670f3c6a8d524656d1a33e024d82ff078c84a6fe9cbbbe486cf99bdfb50e2482",
+      "schema_version": 1,
+      "signal_offset_s": 15,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_15s_passive_residual_020m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_15s_passive_residual_030m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "53a982077050e98f8f78e90416498a40b6848c017e7d19e41687c75703e485b0",
+      "record_checksum": "1906c4a048c76fa88b19b5d85a075de3d223cc737cd3b45c25ae2e50622a9b9e",
+      "schema_version": 1,
+      "signal_offset_s": 15,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_15s_passive_residual_030m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_15s_passive_residual_040m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "0406aa8c26149bb66c65382f4633a4d8c2aa7f8cdcd5276baedfba084214e14e",
+      "record_checksum": "d9fdf7c0fbee73cf6887a26f227e0a02733a8541d720d79af8faf7cac95358dd",
+      "schema_version": 1,
+      "signal_offset_s": 15,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_15s_passive_residual_040m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_15s_passive_residual_050m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "747cf9c79ece8cea6d88fe57de55ad4c5358e9c7aed1a04732a0fcdb3e014903",
+      "record_checksum": "7264ddd7919e9306e70c849b7dcdbe7f770fc5eb96d0daa1bf606814ac15a824",
+      "schema_version": 1,
+      "signal_offset_s": 15,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_15s_passive_residual_050m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_30s_passive_residual_010m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": false,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": -1.048298,
+        "resolved_fills": 1,
+        "rows_sha256": "9cfb33b68437b901124e89116862fbb86506caa7b43d7cdb0d26a696d7978e32",
+        "second_half": {
+          "post_fee_pnl_usd": -1.048298,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "3c299120fed79b01d31a4bec2606ca870812dd11f59cab80dd932b459737c2b3",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "5bbc279379197a077e3b62b29400b3eca83226d8dd7c142606b1191581fe0c87",
+      "record_checksum": "d5a1b4a4681bad89e02ea946f79c77708108b8a2b02ce46a31cbcccfb224fc89",
+      "schema_version": 1,
+      "signal_offset_s": 30,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_30s_passive_residual_010m_state.json",
+      "status": "TERMINAL_PARK_NEGATIVE"
+    },
+    {
+      "cell_id": "multivenue_30s_passive_residual_020m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": false,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": -1.048298,
+        "resolved_fills": 1,
+        "rows_sha256": "11ae164486b02055ba3f3bf4c51e1cab4dde5d64cd42931e1c9633763f7b4e1c",
+        "second_half": {
+          "post_fee_pnl_usd": -1.048298,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "93bb62c7a0e53f71c1dfa6e4299835c433266ebe990cbc2413d77583524f70f3",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "3dadb2827314604a2cb6ccfd104016a87dafe81b8a390ec6b82c4989d109b7e1",
+      "record_checksum": "062ed85b8233e1f0de3f5f5c8b35816c696bea0220a871e8ce336b9fa40710a8",
+      "schema_version": 1,
+      "signal_offset_s": 30,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_30s_passive_residual_020m_state.json",
+      "status": "TERMINAL_PARK_NEGATIVE"
+    },
+    {
+      "cell_id": "multivenue_30s_passive_residual_030m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": false,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": -1.048298,
+        "resolved_fills": 1,
+        "rows_sha256": "7935e4c275dcc8f6fafd45e46a5dbaa250d78c070d749eb1a8a87b1d72ba0360",
+        "second_half": {
+          "post_fee_pnl_usd": -1.048298,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "9b7859e2a74bc7e0902aba427ea04204f4c80b8b81d84a7210f84c96cf3144dc",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "cd49b1551e7590dd01f99d9962f981eea28009d8f30b09ebaa2bd140cbbf268d",
+      "record_checksum": "c5957c178a74a2d0fab759d0a824d454e6044a0206244f5aadd6fb14ed29a739",
+      "schema_version": 1,
+      "signal_offset_s": 30,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_30s_passive_residual_030m_state.json",
+      "status": "TERMINAL_PARK_NEGATIVE"
+    },
+    {
+      "cell_id": "multivenue_30s_passive_residual_040m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": false,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": -1.048298,
+        "resolved_fills": 1,
+        "rows_sha256": "f953261003f046ff1d113ff953a7b8abd9e20180101f75a3ef5edd8be5be4153",
+        "second_half": {
+          "post_fee_pnl_usd": -1.048298,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "5e7570c0b1466a9ff9238961366783ccc77c61fb36e770e78a65f991e8bfabf9",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "898cf0966fefa896db4037d4c75f8398a7a302e15ca220655a0252acc0fc7751",
+      "record_checksum": "f6ec129fed638d19d8733e0e4b26fdbdc0a062f29da54a9dd5dc857c6d876dd4",
+      "schema_version": 1,
+      "signal_offset_s": 30,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_30s_passive_residual_040m_state.json",
+      "status": "TERMINAL_PARK_NEGATIVE"
+    },
+    {
+      "cell_id": "multivenue_30s_passive_residual_050m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": false,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": -1.048298,
+        "resolved_fills": 1,
+        "rows_sha256": "9d74c406d8bcb3f43e365567c99f56689c34ac52fc6c5c17377f4c02fc52ae1a",
+        "second_half": {
+          "post_fee_pnl_usd": -1.048298,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "94fb61797831e5040a5ce7c766320525aec0a895ded2ec3bf2760622622b5ff3",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "e81bf052f0cd16aedf3fab55af9c1f24960b4d0ef44ac2e786dbbd779015f7ab",
+      "record_checksum": "a7429c7c6b17e38481d292e17c7be965639c449838684990ad75318857489259",
+      "schema_version": 1,
+      "signal_offset_s": 30,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_30s_passive_residual_050m_state.json",
+      "status": "TERMINAL_PARK_NEGATIVE"
+    },
+    {
+      "cell_id": "multivenue_45s_passive_residual_010m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 1.458001,
+        "resolved_fills": 1,
+        "rows_sha256": "164b250b629a53c942214460069fbe62075827240aaf5215fc4565e459bc25c5",
+        "second_half": {
+          "post_fee_pnl_usd": 1.458001,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "8131480d606f8cd946f1fc752b4ba5ff351fbed7f80bb3f8d28d35d5890c2d39",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "4ec2b29562fd86c8765a9c6087331b34f421be4f99209346bcd37d1198d61d62",
+      "record_checksum": "65fbd8b78ab7871adf227cd69ea3e4cd66d573a3d3cb6f5df016618bbdc5e7c8",
+      "schema_version": 1,
+      "signal_offset_s": 45,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_45s_passive_residual_010m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_45s_passive_residual_020m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 1.458001,
+        "resolved_fills": 1,
+        "rows_sha256": "24f8cc971768ce035f296464f6dec071d5c45a9948c218dbf1aed5e8efcb95e5",
+        "second_half": {
+          "post_fee_pnl_usd": 1.458001,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "f51ed08c629413adef3cc510b96d936bdff182e94a7ff9ae831ac1a7dc9aff34",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "2f9e13c0622f104872495cd187bc3305264f314900fc1a42917706db732fbfa4",
+      "record_checksum": "dccee2d15f529dfb440e3a29181b7e2bda4b865acc21d937d32cba3f63ccfd02",
+      "schema_version": 1,
+      "signal_offset_s": 45,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_45s_passive_residual_020m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_45s_passive_residual_030m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 1.458001,
+        "resolved_fills": 1,
+        "rows_sha256": "b51a7c70fc04aa4b00922cb9ae031f5f5a87e4cbaa7808e75fc911f44eb54632",
+        "second_half": {
+          "post_fee_pnl_usd": 1.458001,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "be6be7da7582cceb4ec83e586abac8caab0a8cba3e66d70d4a06c4ef4383dfcc",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "4986ebd8e86645871907de9aecfc91d9119d2439f51efbeac823205b19c6db8f",
+      "record_checksum": "9c8c2bd6b04cc25ddf65fedb338f6d40112a5f1db0b449ee7c1d23e8787fe94d",
+      "schema_version": 1,
+      "signal_offset_s": 45,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_45s_passive_residual_030m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_45s_passive_residual_040m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "00a6937d291fb756af43bf50fa4c3fc318c711a43edbfbc42ae59ff9ac789a22",
+      "record_checksum": "25c16758429a96681324eca7c0448b0b33b079e05e5bcd821fae878672fe3cb2",
+      "schema_version": 1,
+      "signal_offset_s": 45,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_45s_passive_residual_040m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_45s_passive_residual_050m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": false,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": false,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 0,
+        "resolved_fills": 0,
+        "rows_sha256": "1633902c6cbba5e7770dbed172df754a25078bb76efe1f23474edc87f1a47655",
+        "second_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        }
+      },
+      "evidence_snapshot_checksum": "89cc2c242910b5349820b6649d35d6e17eb69d106394a8cff7631749858f029e",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "15fc2c6ee4382733dd8074416701452e1de05916adf96fae12fbfd749e6568cd",
+      "record_checksum": "4fb6c00ee1b439406869cae7ccc0d64eb98aad1022c24ce7d2bd77df71650333",
+      "schema_version": 1,
+      "signal_offset_s": 45,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_45s_passive_residual_050m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_60s_passive_residual_010m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 2.284335,
+        "resolved_fills": 1,
+        "rows_sha256": "6d5e0d542e29d56743b44d1bec2a81c95fdc7060e4b3fd9cc19b370ccc69a380",
+        "second_half": {
+          "post_fee_pnl_usd": 2.284335,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "de1404afca8a900c6f3fbaef7fea2a0e4dea2aa5f3931d8fb994f4bc5d6c5c9d",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "2dd6cb7acaa3a2d63df9fe05b03dd679ed87d02e67228a946c6a30ab81912c87",
+      "record_checksum": "ddacaf480bc9fb3894da7da62a6e63704f3abc376bff619708f8de3bb93cfe23",
+      "schema_version": 1,
+      "signal_offset_s": 60,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_60s_passive_residual_010m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_60s_passive_residual_020m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 2.284335,
+        "resolved_fills": 1,
+        "rows_sha256": "23874e6031163145979fa35daa5479ce5cfb148b89b5a92e43b893297f4012f3",
+        "second_half": {
+          "post_fee_pnl_usd": 2.284335,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "45d49f107d902ae04a2bca5e225dd9c48a6f9b2ac3404045a3b85f87e4d87fef",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "033dbf92eff36301d75536ae0fc50417a61a57d3b241ab39c591527bae15c2dc",
+      "record_checksum": "dfbd6387dc7617136769cd97ba04171d56a2282b659cfff9be721c425f377ef2",
+      "schema_version": 1,
+      "signal_offset_s": 60,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_60s_passive_residual_020m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_60s_passive_residual_030m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 2.284335,
+        "resolved_fills": 1,
+        "rows_sha256": "237fdbe54ff645f723851df2239a91866426f1dbaa720ce9b38a81cbfb30117a",
+        "second_half": {
+          "post_fee_pnl_usd": 2.284335,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "4756df21d62e68fb62f5a8de79a7db31c89e84fd9ef01fcaf0b7969224172862",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "d45bde7a0311d7f33733e595185b95e02f3f1429e399a882721f40ec2bf38f23",
+      "record_checksum": "bda292240a0a303c78ad39167e34f1de0e7f1f1bb37130cafaba9f6657f1f731",
+      "schema_version": 1,
+      "signal_offset_s": 60,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_60s_passive_residual_030m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_60s_passive_residual_040m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 2.284335,
+        "resolved_fills": 1,
+        "rows_sha256": "b69c7823f5aa210af3915ec6a11c85373a19c1c81423712c60bac222ca3f1538",
+        "second_half": {
+          "post_fee_pnl_usd": 2.284335,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "e0a25ccedc52cc3478608386cc69bb9014070e51a77b8488e5a2a811efc3dd56",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "c0ba332aed041db11e43c075856d1da2d8a82c981b642d25f7082c2c15880632",
+      "record_checksum": "2bfb6dacab352d09dbce77b1bd8c5d599fccfab6258bcfb370b7ad88f49a6e7d",
+      "schema_version": 1,
+      "signal_offset_s": 60,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_60s_passive_residual_040m_state.json",
+      "status": "ACCRUING"
+    },
+    {
+      "cell_id": "multivenue_60s_passive_residual_050m",
+      "evidence_snapshot": {
+        "checks": {
+          "actual_depth_verified": true,
+          "aggregate_post_fee_positive": true,
+          "distinct_generation_checksum": true,
+          "first_half_positive": false,
+          "model_checksum_exact": true,
+          "model_checksum_not_forbidden": true,
+          "not_previously_terminal_parked": true,
+          "paper_only": true,
+          "passive_fill_model_verified": true,
+          "preregistration_checksum_exact": true,
+          "resolved_gte_10": false,
+          "second_half_positive": true,
+          "zero_duplicate_disagreement": true,
+          "zero_lookahead_violations": true,
+          "zero_parity_disagreement": true,
+          "zero_sign_disagreement": true,
+          "zero_unresolved_disagreement": true
+        },
+        "first_half": {
+          "post_fee_pnl_usd": 0,
+          "resolved_fills": 0
+        },
+        "post_fee_pnl_usd": 2.284335,
+        "resolved_fills": 1,
+        "rows_sha256": "73aab1bf2d288a7d1162f4050eeb51eeded3f2e70ca5587e351b43c8349538f5",
+        "second_half": {
+          "post_fee_pnl_usd": 2.284335,
+          "resolved_fills": 1
+        }
+      },
+      "evidence_snapshot_checksum": "cf44b9538e863f2414369a7675a547ea27c98687b8b59a2c7fad1ffb5fe1aeca",
+      "execution_mode": "passive",
+      "gate_pass": false,
+      "model_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "preregistration_checksum": "0f215b70f6df1dcf50beaa437784d191b21981491174bee14b79b36fbb39312e",
+      "record_checksum": "7b816c491609b28f9931717f2fd14dcfb4f466e68cdfecbb2b7c7ee69552b5f9",
+      "schema_version": 1,
+      "signal_offset_s": 60,
+      "state_path": "data/research/btc5m_multivenue_7a5a32b1d1fc_60s_passive_residual_050m_state.json",
+      "status": "ACCRUING"
+    }
+  ],
+  "emergency_forward_resolved_required": 10,
+  "flow_stage": "LIVE/ROTATE/PROMOTE/LEARN/SELF-DEV",
+  "generated_at": "2026-07-25T12:35:02.405859+00:00",
+  "kind": "btc5m_cross_exchange_promoted_cell_selector",
+  "permanent_promotion_resolved_required": 200,
+  "schema_version": 1,
+  "selected": null,
+  "selection_order": "post_fee_pnl_desc,fill_count_desc,offset_asc,cell_id_asc",
+  "single_submitter": "scripts/run_wallet_copy_live_guard.py",
+  "status": "NO_GATE_COMPLETE_CELL"
+}

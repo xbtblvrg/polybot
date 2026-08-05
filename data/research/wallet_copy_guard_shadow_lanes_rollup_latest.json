@@ -1,0 +1,61 @@
+{
+  "event_counts": {
+    "shadow_book_test": 378,
+    "shadow_intent_first_seen": 378,
+    "shadow_would_have_filled": 1,
+    "wallet_copy_guard_shadow_lanes_snapshot": 25
+  },
+  "event_log_size_bytes": 676506,
+  "evidence_event_counts": {
+    "shadow_book_test": 378,
+    "shadow_intent_first_seen": 378,
+    "shadow_would_have_filled": 1
+  },
+  "generated_at": "2026-07-13T21:28:22.975341+00:00",
+  "kind": "wallet_copy_guard_shadow_lanes_rollup",
+  "lanes": {
+    "btc5m_structural_scalp_v1": {
+      "book_aware_fill_test_counts": {
+        "missing": 200
+      },
+      "event_counts": {
+        "shadow_book_test": 86,
+        "shadow_intent_first_seen": 86
+      },
+      "fallback_reason_histogram": {},
+      "orders_submitted": 0,
+      "pricing_provenance_split": {
+        "no_fill_evidence": 200
+      },
+      "rows_seen": 200,
+      "unique_intents": 59,
+      "would_have_filled_first_seen": 0
+    },
+    "e5_maker_first_btc5m_v1": {
+      "book_aware_fill_test_counts": {
+        "BLOCKED": 2,
+        "PASS": 2
+      },
+      "event_counts": {
+        "shadow_book_test": 292,
+        "shadow_intent_first_seen": 292,
+        "shadow_would_have_filled": 1
+      },
+      "fallback_reason_histogram": {},
+      "orders_submitted": 0,
+      "pricing_provenance_split": {
+        "book_derived": 4
+      },
+      "rows_seen": 4,
+      "unique_intents": 4,
+      "would_have_filled_first_seen": 0
+    }
+  },
+  "schema_version": 1,
+  "source_events": "data/research/wallet_copy_guard_shadow_lanes_events.jsonl",
+  "source_state": "data/research/wallet_copy_guard_shadow_lanes_state.json",
+  "zero_live_assertion": {
+    "orders_submitted": 0,
+    "status": "PASS"
+  }
+}

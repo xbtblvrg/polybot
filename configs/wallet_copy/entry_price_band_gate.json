@@ -1,0 +1,35 @@
+{
+  "schema_version": 1,
+  "kind": "wallet_copy_entry_price_band_gate",
+  "flow_stage": "LIVE/LEARN/DEFEND",
+  "enabled": true,
+  "shadow_mode": "inverted_post_removal",
+  "generated_at": "2026-07-23T21:30:00Z",
+  "direction_id": "2026-07-23T21:30Z-fable-entry-price-band-gate-activation-0.50-0.70",
+  "experiment_id": "entry-price-loss-band-gate-0.50-0.70-20260723",
+  "shadow_experiment_id": "entry-price-loss-band-gate-readd-shadow-20260723",
+  "closure": {
+    "status": "FAIL_REMOVED",
+    "resolved_gated_flow_windows": 125,
+    "gated_live_post_fee_pnl_usd": 0.0,
+    "ungated_counterfactual_post_fee_pnl_usd": 3.537011,
+    "gated_minus_ungated_post_fee_pnl_usd": -3.537011,
+    "decision_rule": "keep only if gated-minus-ungated post-fee PnL is positive at the first sample/time boundary"
+  },
+  "source_artifact": "data/research/fee_edge_decomposition_latest.json",
+  "selection_rule": "fee_cal_measured entry_price_band with n_resolved_windows >= 50 and post_fee_pnl_usd < 0",
+  "blocked_bands": [
+    {
+      "slice": "[0.5,0.7)",
+      "min_price_inclusive": 0.5,
+      "max_price_exclusive": 0.7,
+      "n_resolved_windows": 50,
+      "post_fee_pnl_usd": -0.316572
+    }
+  ],
+  "invariants": {
+    "copyintent_parity": "preserved; gate filters the same constructed CopyIntent before live parity and submission",
+    "single_submitter": "scripts/run_wallet_copy_live_guard.py",
+    "caps_changed": false
+  }
+}

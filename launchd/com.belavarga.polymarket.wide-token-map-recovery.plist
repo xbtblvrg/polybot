@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.belavarga.polymarket.wide-token-map-recovery</string>
+  <key>ProgramArguments</key><array>
+    <string>/usr/bin/nice</string><string>-n</string><string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_wide_conversion_recovery_cell.py</string>
+    <string>--cell</string><string>token_map</string>
+    <string>--preregistration</string><string>data/research/wide_token_map_recovery_preregistration.json</string>
+    <string>--state</string><string>data/research/wide_token_map_recovery_state.json</string>
+    <string>--watch</string><string>--interval-s</string><string>10</string>
+  </array>
+  <key>WorkingDirectory</key><string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>RunAtLoad</key><true/><key>KeepAlive</key><true/>
+  <key>StandardOutPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_token_map_recovery.launchd.out</string>
+  <key>StandardErrorPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/wide_token_map_recovery.launchd.err</string>
+</dict></plist>

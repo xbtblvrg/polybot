@@ -1,0 +1,40 @@
+{
+  "band_end_s": 300.0,
+  "band_start_s": 240.0,
+  "candidate_id": "cohort_alive_admit_f418d3a1",
+  "diagnostics": {
+    "lines_seen": 250000,
+    "not_rtds_btc5m_trade": 212482,
+    "other_wallet": 37421,
+    "outside_band": 89,
+    "rows_loaded": 250000
+  },
+  "generated_at": "2026-07-14T17:00:01.220710+00:00",
+  "kind": "member_source_active_windows_report",
+  "runtime_s": 1.465723,
+  "schema_version": 1,
+  "since_ts": 1784034240.0,
+  "source_active_windows": 1,
+  "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "target_met": false,
+  "target_windows": 6,
+  "windows": [
+    {
+      "candidate_id": "cohort_alive_admit_f418d3a1",
+      "condition_id": "0x7fad7707b55ef4f84c67b750655f3762ffd92c3d00e99ec4f007d1f58b2104be",
+      "first_event_ts": 1784047455.0,
+      "last_event_ts": 1784047479.0,
+      "market_slug": "btc-updown-5m-1784047200",
+      "max_seconds_from_open": 279.0,
+      "min_seconds_from_open": 255.0,
+      "outcomes": [
+        "Down",
+        "Up"
+      ],
+      "source_usd": 426.5602,
+      "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "wallet_eligible_orders": 8,
+      "window_start_s": 1784047200.0
+    }
+  ]
+}

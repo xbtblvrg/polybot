@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.wallet-copy-e6-whale-net-flow-paper-lane</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/nice</string>
+    <string>-n</string>
+    <string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_e6_whale_net_flow_paper_lane.py</string>
+    <string>--max-feed-events</string>
+    <string>5000</string>
+    <string>--max-event-age-s</string>
+    <string>900</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+    <key>WALLET_COPY_EGRESS</key>
+    <string>VPN</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>60</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/e6_whale_net_flow_paper_lane.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/e6_whale_net_flow_paper_lane.launchd.err</string>
+</dict>
+</plist>

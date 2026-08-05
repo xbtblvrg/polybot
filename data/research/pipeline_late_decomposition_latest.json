@@ -1,0 +1,4346 @@
+{
+  "first_evaluation_late_gte_180s": {
+    "pct": 18.75,
+    "threshold_s": 180.0,
+    "windows": 3
+  },
+  "first_touch_timely_lt_180s": {
+    "pct": 81.25,
+    "threshold_s": 180.0,
+    "windows": 13
+  },
+  "flow_stage": "LIVE/DEFEND/MEASURE",
+  "generated_at": "2026-07-16T05:18:44.957490+00:00",
+  "guard_cycle_wall_time_estimate": {
+    "cycle_duration_s": {
+      "avg": 11.65082,
+      "count": 147,
+      "max": 17.839541,
+      "min": 7.793282,
+      "p50": 10.715927,
+      "p90": 16.730704
+    },
+    "event_generated_gap_histogram": {
+      "gt_10_lte_30s": 84,
+      "gt_30_lte_60s": 0,
+      "gt_60s": 0,
+      "lte_10s": 62
+    },
+    "event_generated_gap_s": {
+      "avg": 13.651461,
+      "count": 146,
+      "max": 24.638884,
+      "min": 7.330969,
+      "p50": 12.309494,
+      "p90": 22.589469
+    },
+    "malformed_events": 0,
+    "parsed_events_since_postfix": 147,
+    "path": "data/research/wallet_copy_live_guard_events.jsonl",
+    "rule": "cycle_duration_s uses guard_loop_profile.cycle_duration_s when present, else total_s_before_state_write/stage elapsed",
+    "status": "DERIVED_FROM_GUARD_EVENT_PROFILES",
+    "top_stage_duration_p50_s": [
+      {
+        "duration_s": {
+          "avg": 2.582686,
+          "count": 147,
+          "max": 3.311039,
+          "min": 1.707335,
+          "p50": 2.670642,
+          "p90": 3.064208
+        },
+        "name": "live_execution"
+      },
+      {
+        "duration_s": {
+          "avg": 1.725335,
+          "count": 147,
+          "max": 2.221649,
+          "min": 1.542486,
+          "p50": 1.697799,
+          "p90": 1.886457
+        },
+        "name": "active_set_rtds_premerge"
+      },
+      {
+        "duration_s": {
+          "avg": 0.811835,
+          "count": 147,
+          "max": 0.964627,
+          "min": 0.739506,
+          "p50": 0.814241,
+          "p90": 0.860384
+        },
+        "name": "select_active_set_runtime"
+      },
+      {
+        "duration_s": {
+          "avg": 0.53492,
+          "count": 147,
+          "max": 0.764557,
+          "min": 0.468133,
+          "p50": 0.523804,
+          "p90": 0.587861
+        },
+        "name": "routing_shadow_validation"
+      },
+      {
+        "duration_s": {
+          "avg": 1.351257,
+          "count": 147,
+          "max": 5.012163,
+          "min": 0.327146,
+          "p50": 0.370425,
+          "p90": 4.259898
+        },
+        "name": "self_feed_ledger_diff"
+      },
+      {
+        "duration_s": {
+          "avg": 0.359529,
+          "count": 147,
+          "max": 0.477843,
+          "min": 0.324029,
+          "p50": 0.349678,
+          "p90": 0.390959
+        },
+        "name": "active_set_cap_step_revert_post_live"
+      },
+      {
+        "duration_s": {
+          "avg": 0.084712,
+          "count": 147,
+          "max": 0.303463,
+          "min": 0.070017,
+          "p50": 0.075397,
+          "p90": 0.113062
+        },
+        "name": "window_participation_merge"
+      },
+      {
+        "duration_s": {
+          "avg": 0.08004,
+          "count": 147,
+          "max": 0.15979,
+          "min": 0.061822,
+          "p50": 0.066221,
+          "p90": 0.139584
+        },
+        "name": "load_candidate"
+      }
+    ]
+  },
+  "guard_events_path": "data/research/wallet_copy_live_guard_events.jsonl",
+  "guard_state_path": "data/research/wallet_copy_live_guard_state.json",
+  "pipeline_late_rows": 18,
+  "pipeline_late_windows": 16,
+  "postfix_start_iso": "2026-07-16T02:29:18Z",
+  "pre_ruled_action": "FIX_TRIPWIRE_CLASSIFIER_USE_FIRST_TOUCH_DELTA",
+  "rule": "Fable 04:37Z branch (b): first evaluations were majority-timely and late labels should use first-touch delta.",
+  "schema_version": 1,
+  "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+  "timely_first_eval_with_later_late_skip": {
+    "pct": 62.5,
+    "windows": 10
+  },
+  "tripwire_basis": {
+    "pipeline_late_rows": 11,
+    "pre_ruled_action": "HOLD_DRIP_MIN_CHANGE_AND_ASK_FABLE",
+    "tripwire_class_counts": {
+      "FLOOR_BUDGET_BIND": 15,
+      "LATE_BENIGN_UNDER_THRESHOLD": 10,
+      "MEASURED_SKIP": 2,
+      "PIPELINE_LATE": 11,
+      "PROTECTED_SKIP": 16,
+      "SOURCE_LATE": 10,
+      "WINDOW_AGED_OUT_AFTER_TIMELY_TOUCH": 19
+    },
+    "verdict": "CONFIG_LEAK_DEFECT_POLICY_MAX_1"
+  },
+  "tripwire_path": "data/research/a689_0200_tripwire_latest.json",
+  "verdict": "TAXONOMY_ARTIFACT_FIRST_TOUCH_TIMELY",
+  "window_records": [
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 279.040091,
+      "first_evaluation_late_gte_180s": true,
+      "first_late_evaluation_delta_s": 7819.990676,
+      "first_state_row_seen_delta_s": 279.040091,
+      "first_touch_timely_lt_180s": false,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309493,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 9813.103928,
+      "market_slug": "btc-updown-5m-1784169300",
+      "outcomes": [
+        "Up"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 7819.990676,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 7831.270864,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 7846.533525,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 7856.331057,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 7878.292905,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 7887.771879,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 7903.048198,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 7912.544013,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 7936.257691,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 7946.049051,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 7961.275342,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 7970.717612,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "last_seen_delta_s": 301.617035,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 286.0,
+          "effective_latest_observed_ts": 1784169586.0,
+          "first_seen_at": "2026-07-16T02:39:39.040091+00:00",
+          "first_seen_delta_s": 279.040091,
+          "last_seen_at": "2026-07-16T02:40:01.617035+00:00",
+          "latest_observed_ts": 1784169307.675381,
+          "market_slug": "btc-updown-5m-1784169300",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Up",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 7.675381,
+          "source_detection_observed_ts": 1784169307.675381,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784169300.0
+        }
+      ],
+      "window_start_s": 1784169300.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "inventory_late_window_guard": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 64.340961,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 7519.990676,
+      "first_state_row_seen_delta_s": 64.340961,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309493,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 9513.103928,
+      "market_slug": "btc-updown-5m-1784169600",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 7519.990676,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 7531.270864,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 7546.533525,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 7556.331057,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 7578.292905,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 7587.771879,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 7603.048198,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 7612.544013,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 7636.257691,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 7646.049051,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 7661.275342,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 7670.717612,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "last_seen_delta_s": 301.457192,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 9
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "effective_delta_s": 296.0,
+          "effective_latest_observed_ts": 1784169896.0,
+          "first_seen_at": "2026-07-16T02:41:04.340961+00:00",
+          "first_seen_delta_s": 64.340961,
+          "last_seen_at": "2026-07-16T02:45:01.457192+00:00",
+          "latest_observed_ts": 1784169710.450652,
+          "market_slug": "btc-updown-5m-1784169600",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "CORRECT_SKIP",
+          "policy_max_order_usd": null,
+          "source_delta_s": 110.450652,
+          "source_detection_observed_ts": 1784169710.450652,
+          "wallet_eligible_orders": 4,
+          "window_budget_usd": null,
+          "window_start_s": 1784169600.0
+        }
+      ],
+      "window_start_s": 1784169600.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 78.069021,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 6619.990676,
+      "first_state_row_seen_delta_s": 78.069021,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 8613.103928,
+      "market_slug": "btc-updown-5m-1784170500",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 6619.990676,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 6631.270864,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 6646.533525,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 6656.331057,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 6678.292905,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 6687.771879,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 6703.048198,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 6712.544013,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 6736.257691,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 6746.049051,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 6761.275342,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 6770.717612,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "last_seen_delta_s": 215.919646,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 8
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 212.360976,
+          "effective_latest_observed_ts": 1784170712.360976,
+          "first_seen_at": "2026-07-16T02:56:18.069021+00:00",
+          "first_seen_delta_s": 78.069021,
+          "last_seen_at": "2026-07-16T02:58:35.919646+00:00",
+          "latest_observed_ts": 1784170608.690504,
+          "market_slug": "btc-updown-5m-1784170500",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 108.690504,
+          "source_detection_observed_ts": 1784170608.690504,
+          "wallet_eligible_orders": 8,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784170500.0
+        }
+      ],
+      "window_start_s": 1784170500.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 86.689677,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 6319.990676,
+      "first_state_row_seen_delta_s": 86.689677,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 8313.103928,
+      "market_slug": "btc-updown-5m-1784170800",
+      "outcomes": [
+        "Up"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 6319.990676,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 6331.270864,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 6346.533525,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 6356.331057,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 6378.292905,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 6387.771879,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 6403.048198,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 6412.544013,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 6436.257691,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 6446.049051,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 6461.275342,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 6470.717612,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "last_seen_delta_s": 246.069672,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 18
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 242.562881,
+          "effective_latest_observed_ts": 1784171042.562881,
+          "first_seen_at": "2026-07-16T03:01:26.689677+00:00",
+          "first_seen_delta_s": 86.689677,
+          "last_seen_at": "2026-07-16T03:04:06.069672+00:00",
+          "latest_observed_ts": 1784170954.85139,
+          "market_slug": "btc-updown-5m-1784170800",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Up",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 154.85139,
+          "source_detection_observed_ts": 1784170954.85139,
+          "wallet_eligible_orders": 12,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784170800.0
+        }
+      ],
+      "window_start_s": 1784170800.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 113.868242,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 6019.990676,
+      "first_state_row_seen_delta_s": 113.868242,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 8013.103928,
+      "market_slug": "btc-updown-5m-1784171100",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 6019.990676,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 6031.270864,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 6046.533525,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 6056.331057,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 6078.292905,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 6087.771879,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 6103.048198,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 6112.544013,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 6136.257691,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 6146.049051,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 6161.275342,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 6170.717612,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "last_seen_delta_s": 278.431909,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 275.077812,
+          "effective_latest_observed_ts": 1784171375.077812,
+          "first_seen_at": "2026-07-16T03:06:53.868242+00:00",
+          "first_seen_delta_s": 113.868242,
+          "last_seen_at": "2026-07-16T03:09:38.431909+00:00",
+          "latest_observed_ts": 1784171105.646967,
+          "market_slug": "btc-updown-5m-1784171100",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 5.646967,
+          "source_detection_observed_ts": 1784171105.646967,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784171100.0
+        }
+      ],
+      "window_start_s": 1784171100.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 161.471629,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 5719.990676,
+      "first_state_row_seen_delta_s": 161.471629,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 7713.103928,
+      "market_slug": "btc-updown-5m-1784171400",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 5719.990676,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 5731.270864,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 5746.533525,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 5756.331057,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 5778.292905,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 5787.771879,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 5803.048198,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 5812.544013,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 5836.257691,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 5846.049051,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 5861.275342,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 5870.717612,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "last_seen_delta_s": 303.50604,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 287.0,
+          "effective_latest_observed_ts": 1784171687.0,
+          "first_seen_at": "2026-07-16T03:12:41.471629+00:00",
+          "first_seen_delta_s": 161.471629,
+          "last_seen_at": "2026-07-16T03:15:03.506040+00:00",
+          "latest_observed_ts": 1784171441.933085,
+          "market_slug": "btc-updown-5m-1784171400",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 41.933085,
+          "source_detection_observed_ts": 1784171441.933085,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784171400.0
+        }
+      ],
+      "window_start_s": 1784171400.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "inventory_late_window_guard": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 13.092769,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 5419.990676,
+      "first_state_row_seen_delta_s": 13.092769,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 7413.103928,
+      "market_slug": "btc-updown-5m-1784171700",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 5419.990676,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 5431.270864,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 5446.533525,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 5456.331057,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 5478.292905,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 5487.771879,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 5503.048198,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 5512.544013,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 5536.257691,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 5546.049051,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 5561.275342,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 5570.717612,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "last_seen_delta_s": 300.577569,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 1
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "effective_delta_s": 295.0,
+          "effective_latest_observed_ts": 1784171995.0,
+          "first_seen_at": "2026-07-16T03:15:13.092769+00:00",
+          "first_seen_delta_s": 13.092769,
+          "last_seen_at": "2026-07-16T03:20:00.577569+00:00",
+          "latest_observed_ts": 1784171703.753577,
+          "market_slug": "btc-updown-5m-1784171700",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "CORRECT_SKIP",
+          "policy_max_order_usd": null,
+          "source_delta_s": 3.753577,
+          "source_detection_observed_ts": 1784171703.753577,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": null,
+          "window_start_s": 1784171700.0
+        }
+      ],
+      "window_start_s": 1784171700.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "inventory_late_window_guard": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 249.978077,
+      "first_evaluation_late_gte_180s": true,
+      "first_late_evaluation_delta_s": 5119.990676,
+      "first_state_row_seen_delta_s": 249.978077,
+      "first_touch_timely_lt_180s": false,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 7113.103928,
+      "market_slug": "btc-updown-5m-1784172000",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 5119.990676,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 5131.270864,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 5146.533525,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 5156.331057,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 5178.292905,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 5187.771879,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 5203.048198,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 5212.544013,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 5236.257691,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 5246.049051,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 5261.275342,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 5270.717612,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "last_seen_delta_s": 300.821268,
+          "outcomes": [
+            "Down"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "effective_delta_s": 297.605773,
+          "effective_latest_observed_ts": 1784172297.605773,
+          "first_seen_at": "2026-07-16T03:24:09.978077+00:00",
+          "first_seen_delta_s": 249.978077,
+          "last_seen_at": "2026-07-16T03:25:00.821268+00:00",
+          "latest_observed_ts": 1784172076.260485,
+          "market_slug": "btc-updown-5m-1784172000",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "CORRECT_SKIP",
+          "policy_max_order_usd": null,
+          "source_delta_s": 76.260485,
+          "source_detection_observed_ts": 1784172076.260485,
+          "wallet_eligible_orders": 2,
+          "window_budget_usd": null,
+          "window_start_s": 1784172000.0
+        }
+      ],
+      "window_start_s": 1784172000.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 10.693497,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 4819.990676,
+      "first_state_row_seen_delta_s": 69.1673,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 6813.103928,
+      "market_slug": "btc-updown-5m-1784172300",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 4819.990676,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 4831.270864,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 4846.533525,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 4856.331057,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 4878.292905,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 4887.771879,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 4903.048198,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 4912.544013,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 4936.257691,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 4946.049051,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 4961.275342,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T03:25:10.693497+00:00",
+          "first_seen_delta_s": 10.693497,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 4970.717612,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "last_seen_delta_s": 307.784015,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 291.0,
+          "effective_latest_observed_ts": 1784172591.0,
+          "first_seen_at": "2026-07-16T03:26:09.167300+00:00",
+          "first_seen_delta_s": 69.1673,
+          "last_seen_at": "2026-07-16T03:30:07.784015+00:00",
+          "latest_observed_ts": 1784172421.576897,
+          "market_slug": "btc-updown-5m-1784172300",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 121.576897,
+          "source_detection_observed_ts": 1784172421.576897,
+          "wallet_eligible_orders": 2,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784172300.0
+        }
+      ],
+      "window_start_s": 1784172300.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "inventory_late_window_guard": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 42.146044,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 4219.990676,
+      "first_state_row_seen_delta_s": 42.146044,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.58947
+      },
+      "last_evaluation_delta_s": 6213.103928,
+      "market_slug": "btc-updown-5m-1784172900",
+      "outcomes": [
+        "Down",
+        "Up"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 4219.990676,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 4231.270864,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 4246.533525,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 4256.331057,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 4278.292905,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 4287.771879,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 4303.048198,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 4312.544013,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 4336.257691,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 4346.049051,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 4361.275342,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 4370.717612,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "last_seen_delta_s": 300.126402,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "CORRECT_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 13
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "effective_delta_s": 295.0,
+          "effective_latest_observed_ts": 1784173195.0,
+          "first_seen_at": "2026-07-16T03:36:56.779841+00:00",
+          "first_seen_delta_s": 116.779841,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "latest_observed_ts": 1784172995.719794,
+          "market_slug": "btc-updown-5m-1784172900",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "CORRECT_SKIP",
+          "policy_max_order_usd": null,
+          "source_delta_s": 95.719794,
+          "source_detection_observed_ts": 1784172995.719794,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": null,
+          "window_start_s": 1784172900.0
+        },
+        {
+          "dominant_skip_reason": "inventory_late_window_guard",
+          "effective_delta_s": 295.0,
+          "effective_latest_observed_ts": 1784173195.0,
+          "first_seen_at": "2026-07-16T03:35:42.146044+00:00",
+          "first_seen_delta_s": 42.146044,
+          "last_seen_at": "2026-07-16T03:40:00.126402+00:00",
+          "latest_observed_ts": 1784173059.883594,
+          "market_slug": "btc-updown-5m-1784172900",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Up",
+          "participation_skip_category": "CORRECT_SKIP",
+          "policy_max_order_usd": null,
+          "source_delta_s": 159.883594,
+          "source_detection_observed_ts": 1784173059.883594,
+          "wallet_eligible_orders": 12,
+          "window_budget_usd": null,
+          "window_start_s": 1784172900.0
+        }
+      ],
+      "window_start_s": 1784172900.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 81.803185,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 2719.990676,
+      "first_state_row_seen_delta_s": 81.803185,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309494,
+        "p90": 22.589469
+      },
+      "last_evaluation_delta_s": 4713.103928,
+      "market_slug": "btc-updown-5m-1784174400",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 2719.990676,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 2731.270864,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 2746.533525,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 2756.331057,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 2778.292905,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 2787.771879,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 2803.048198,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 2812.544013,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 2836.257691,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 2846.049051,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 2861.275342,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 2870.717612,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "last_seen_delta_s": 217.992917,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 214.403674,
+          "effective_latest_observed_ts": 1784174614.403674,
+          "first_seen_at": "2026-07-16T04:01:21.803185+00:00",
+          "first_seen_delta_s": 81.803185,
+          "last_seen_at": "2026-07-16T04:03:37.992917+00:00",
+          "latest_observed_ts": 1784174495.321874,
+          "market_slug": "btc-updown-5m-1784174400",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 95.321874,
+          "source_detection_observed_ts": 1784174495.321874,
+          "wallet_eligible_orders": 3,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784174400.0
+        }
+      ],
+      "window_start_s": 1784174400.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 32.828987,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 1519.990676,
+      "first_state_row_seen_delta_s": 32.828987,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309493,
+        "p90": 22.589469
+      },
+      "last_evaluation_delta_s": 3513.103928,
+      "market_slug": "btc-updown-5m-1784175600",
+      "outcomes": [
+        "Down",
+        "Up"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 1519.990676,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 1531.270864,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 1546.533525,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 1556.331057,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 1578.292905,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 1587.771879,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 1603.048198,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 1612.544013,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 1636.257691,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 1646.049051,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 1661.275342,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 1670.717612,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "last_seen_delta_s": 295.943482,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": true,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 280.0,
+          "effective_latest_observed_ts": 1784175880.0,
+          "first_seen_at": "2026-07-16T04:20:32.828987+00:00",
+          "first_seen_delta_s": 32.828987,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "latest_observed_ts": 1784175606.338466,
+          "market_slug": "btc-updown-5m-1784175600",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 6.338466,
+          "source_detection_observed_ts": 1784175606.338466,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784175600.0
+        },
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 280.0,
+          "effective_latest_observed_ts": 1784175880.0,
+          "first_seen_at": "2026-07-16T04:23:12.414393+00:00",
+          "first_seen_delta_s": 192.414393,
+          "last_seen_at": "2026-07-16T04:24:55.943482+00:00",
+          "latest_observed_ts": 1784175770.970996,
+          "market_slug": "btc-updown-5m-1784175600",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Up",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 170.970996,
+          "source_detection_observed_ts": 1784175770.970996,
+          "wallet_eligible_orders": 4,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784175600.0
+        }
+      ],
+      "window_start_s": 1784175600.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 147
+      },
+      "evaluation_count": 147,
+      "first_evaluation_delta_s": 190.141159,
+      "first_evaluation_late_gte_180s": true,
+      "first_late_evaluation_delta_s": 1219.990676,
+      "first_state_row_seen_delta_s": 190.141159,
+      "first_touch_timely_lt_180s": false,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 84,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 62
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.651461,
+        "count": 146,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 12.309493,
+        "p90": 22.589469
+      },
+      "last_evaluation_delta_s": 3213.103928,
+      "market_slug": "btc-updown-5m-1784175900",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 600,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:45:19.990676+00:00",
+          "generated_delta_s": 1219.990676,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 601,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:45:31.270864+00:00",
+          "generated_delta_s": 1231.270864,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 602,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:45:46.533525+00:00",
+          "generated_delta_s": 1246.533525,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 603,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:45:56.331057+00:00",
+          "generated_delta_s": 1256.331057,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 604,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:46:18.292905+00:00",
+          "generated_delta_s": 1278.292905,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 605,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:46:27.771879+00:00",
+          "generated_delta_s": 1287.771879,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 606,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:46:43.048198+00:00",
+          "generated_delta_s": 1303.048198,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 607,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:46:52.544013+00:00",
+          "generated_delta_s": 1312.544013,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 608,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:47:16.257691+00:00",
+          "generated_delta_s": 1336.257691,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 609,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:47:26.049051+00:00",
+          "generated_delta_s": 1346.049051,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 610,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:47:41.275342+00:00",
+          "generated_delta_s": 1361.275342,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 611,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "generated_at": "2026-07-16T04:47:50.717612+00:00",
+          "generated_delta_s": 1370.717612,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "last_seen_delta_s": 239.24068,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 235.761442,
+          "effective_latest_observed_ts": 1784176135.761442,
+          "first_seen_at": "2026-07-16T04:28:10.141159+00:00",
+          "first_seen_delta_s": 190.141159,
+          "last_seen_at": "2026-07-16T04:28:59.240680+00:00",
+          "latest_observed_ts": 1784175990.094593,
+          "market_slug": "btc-updown-5m-1784175900",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 90.094593,
+          "source_detection_observed_ts": 1784175990.094593,
+          "wallet_eligible_orders": 2,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784175900.0
+        }
+      ],
+      "window_start_s": 1784175900.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 79
+      },
+      "evaluation_count": 79,
+      "first_evaluation_delta_s": 74.539797,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 74.539797,
+      "first_state_row_seen_delta_s": 74.539797,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 43,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 35
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.314925,
+        "count": 78,
+        "max": 24.638884,
+        "min": 7.330969,
+        "p50": 11.697664,
+        "p90": 22.519391
+      },
+      "last_evaluation_delta_s": 1113.103928,
+      "market_slug": "btc-updown-5m-1784178000",
+      "outcomes": [
+        "Up"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 668,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:01:14.539797+00:00",
+          "generated_delta_s": 74.539797,
+          "last_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "last_seen_delta_s": 74.539797,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 669,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:01:24.536786+00:00",
+          "generated_delta_s": 84.536786,
+          "last_seen_at": "2026-07-16T05:01:24.536786+00:00",
+          "last_seen_delta_s": 84.536786,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 670,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:01:38.730954+00:00",
+          "generated_delta_s": 98.730954,
+          "last_seen_at": "2026-07-16T05:01:38.730954+00:00",
+          "last_seen_delta_s": 98.730954,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 671,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:01:46.968609+00:00",
+          "generated_delta_s": 106.968609,
+          "last_seen_at": "2026-07-16T05:01:46.968609+00:00",
+          "last_seen_delta_s": 106.968609,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 672,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:02:09.560376+00:00",
+          "generated_delta_s": 129.560376,
+          "last_seen_at": "2026-07-16T05:02:09.560376+00:00",
+          "last_seen_delta_s": 129.560376,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 673,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:02:19.866676+00:00",
+          "generated_delta_s": 139.866676,
+          "last_seen_at": "2026-07-16T05:02:19.866676+00:00",
+          "last_seen_delta_s": 139.866676,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 674,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:02:33.713985+00:00",
+          "generated_delta_s": 153.713985,
+          "last_seen_at": "2026-07-16T05:02:33.713985+00:00",
+          "last_seen_delta_s": 153.713985,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 675,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:02:42.010767+00:00",
+          "generated_delta_s": 162.010767,
+          "last_seen_at": "2026-07-16T05:02:42.010767+00:00",
+          "last_seen_delta_s": 162.010767,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 676,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:03:04.766625+00:00",
+          "generated_delta_s": 184.766625,
+          "last_seen_at": "2026-07-16T05:03:04.766625+00:00",
+          "last_seen_delta_s": 184.766625,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 677,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:03:13.356466+00:00",
+          "generated_delta_s": 193.356466,
+          "last_seen_at": "2026-07-16T05:03:13.356466+00:00",
+          "last_seen_delta_s": 193.356466,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 678,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:03:28.347939+00:00",
+          "generated_delta_s": 208.347939,
+          "last_seen_at": "2026-07-16T05:03:28.347939+00:00",
+          "last_seen_delta_s": 208.347939,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 2
+        },
+        {
+          "cycle": 679,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "generated_at": "2026-07-16T05:03:37.601690+00:00",
+          "generated_delta_s": 217.60169,
+          "last_seen_at": "2026-07-16T05:03:37.601690+00:00",
+          "last_seen_delta_s": 217.60169,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 260.934641,
+          "effective_latest_observed_ts": 1784178260.934641,
+          "first_seen_at": "2026-07-16T05:01:14.539797+00:00",
+          "first_seen_delta_s": 74.539797,
+          "last_seen_at": "2026-07-16T05:04:24.611575+00:00",
+          "latest_observed_ts": 1784178050.846684,
+          "market_slug": "btc-updown-5m-1784178000",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Up",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 50.846684,
+          "source_detection_observed_ts": 1784178050.846684,
+          "wallet_eligible_orders": 1,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784178000.0
+        }
+      ],
+      "window_start_s": 1784178000.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 56
+      },
+      "evaluation_count": 56,
+      "first_evaluation_delta_s": 75.147868,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 75.147868,
+      "first_state_row_seen_delta_s": 75.147868,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 31,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 24
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.417383,
+        "count": 55,
+        "max": 23.542974,
+        "min": 7.422566,
+        "p50": 13.000409,
+        "p90": 22.48821
+      },
+      "last_evaluation_delta_s": 813.103928,
+      "market_slug": "btc-updown-5m-1784178300",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 691,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:06:15.147868+00:00",
+          "generated_delta_s": 75.147868,
+          "last_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "last_seen_delta_s": 75.147868,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 692,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:06:37.242433+00:00",
+          "generated_delta_s": 97.242433,
+          "last_seen_at": "2026-07-16T05:06:37.242433+00:00",
+          "last_seen_delta_s": 97.242433,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 693,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:06:46.025071+00:00",
+          "generated_delta_s": 106.025071,
+          "last_seen_at": "2026-07-16T05:06:46.025071+00:00",
+          "last_seen_delta_s": 106.025071,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 694,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:07:00.480865+00:00",
+          "generated_delta_s": 120.480865,
+          "last_seen_at": "2026-07-16T05:07:00.480865+00:00",
+          "last_seen_delta_s": 120.480865,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 695,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:07:09.034182+00:00",
+          "generated_delta_s": 129.034182,
+          "last_seen_at": "2026-07-16T05:07:09.034182+00:00",
+          "last_seen_delta_s": 129.034182,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 696,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:07:31.621354+00:00",
+          "generated_delta_s": 151.621354,
+          "last_seen_at": "2026-07-16T05:07:31.621354+00:00",
+          "last_seen_delta_s": 151.621354,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 697,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:07:41.963629+00:00",
+          "generated_delta_s": 161.963629,
+          "last_seen_at": "2026-07-16T05:07:41.963629+00:00",
+          "last_seen_delta_s": 161.963629,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 698,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:07:56.044536+00:00",
+          "generated_delta_s": 176.044536,
+          "last_seen_at": "2026-07-16T05:07:56.044536+00:00",
+          "last_seen_delta_s": 176.044536,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 699,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:08:04.680291+00:00",
+          "generated_delta_s": 184.680291,
+          "last_seen_at": "2026-07-16T05:08:04.680291+00:00",
+          "last_seen_delta_s": 184.680291,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 700,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:08:27.150914+00:00",
+          "generated_delta_s": 207.150914,
+          "last_seen_at": "2026-07-16T05:08:27.150914+00:00",
+          "last_seen_delta_s": 207.150914,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 701,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:08:35.764575+00:00",
+          "generated_delta_s": 215.764575,
+          "last_seen_at": "2026-07-16T05:08:35.764575+00:00",
+          "last_seen_delta_s": 215.764575,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        },
+        {
+          "cycle": 702,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "generated_at": "2026-07-16T05:08:50.297274+00:00",
+          "generated_delta_s": 230.297274,
+          "last_seen_at": "2026-07-16T05:08:50.297274+00:00",
+          "last_seen_delta_s": 230.297274,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 6
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 281.936104,
+          "effective_latest_observed_ts": 1784178581.936104,
+          "first_seen_at": "2026-07-16T05:06:15.147868+00:00",
+          "first_seen_delta_s": 75.147868,
+          "last_seen_at": "2026-07-16T05:09:45.723368+00:00",
+          "latest_observed_ts": 1784178386.450321,
+          "market_slug": "btc-updown-5m-1784178300",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 86.450321,
+          "source_detection_observed_ts": 1784178386.450321,
+          "wallet_eligible_orders": 3,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784178300.0
+        }
+      ],
+      "window_start_s": 1784178300.0
+    },
+    {
+      "dominant_skip_reason_counts": {
+        "window_time_gte_180s": 32
+      },
+      "evaluation_count": 32,
+      "first_evaluation_delta_s": 96.996624,
+      "first_evaluation_late_gte_180s": false,
+      "first_late_evaluation_delta_s": 96.996624,
+      "first_state_row_seen_delta_s": 96.996624,
+      "first_touch_timely_lt_180s": true,
+      "inter_evaluation_gap_histogram": {
+        "gt_10_lte_30s": 18,
+        "gt_30_lte_60s": 0,
+        "gt_60s": 0,
+        "lte_10s": 13
+      },
+      "inter_evaluation_gap_s": {
+        "avg": 13.422816,
+        "count": 31,
+        "max": 23.093504,
+        "min": 7.422566,
+        "p50": 13.000409,
+        "p90": 22.499934
+      },
+      "last_evaluation_delta_s": 513.103928,
+      "market_slug": "btc-updown-5m-1784178600",
+      "outcomes": [
+        "Down"
+      ],
+      "raw_observation_sample_limit": 12,
+      "raw_observation_samples": [
+        {
+          "cycle": 715,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:11:36.996624+00:00",
+          "generated_delta_s": 96.996624,
+          "last_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "last_seen_delta_s": 96.996624,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 3
+        },
+        {
+          "cycle": 716,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:12:00.090128+00:00",
+          "generated_delta_s": 120.090128,
+          "last_seen_at": "2026-07-16T05:12:00.090128+00:00",
+          "last_seen_delta_s": 120.090128,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 4
+        },
+        {
+          "cycle": 717,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:12:08.705180+00:00",
+          "generated_delta_s": 128.70518,
+          "last_seen_at": "2026-07-16T05:12:08.705180+00:00",
+          "last_seen_delta_s": 128.70518,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 718,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:12:22.858729+00:00",
+          "generated_delta_s": 142.858729,
+          "last_seen_at": "2026-07-16T05:12:22.858729+00:00",
+          "last_seen_delta_s": 142.858729,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 719,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:12:31.392389+00:00",
+          "generated_delta_s": 151.392389,
+          "last_seen_at": "2026-07-16T05:12:31.392389+00:00",
+          "last_seen_delta_s": 151.392389,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 720,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:12:53.892323+00:00",
+          "generated_delta_s": 173.892323,
+          "last_seen_at": "2026-07-16T05:12:53.892323+00:00",
+          "last_seen_delta_s": 173.892323,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 721,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:13:04.287243+00:00",
+          "generated_delta_s": 184.287243,
+          "last_seen_at": "2026-07-16T05:13:04.287243+00:00",
+          "last_seen_delta_s": 184.287243,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 722,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:13:18.482838+00:00",
+          "generated_delta_s": 198.482838,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "last_seen_delta_s": 198.482838,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 723,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:13:26.097159+00:00",
+          "generated_delta_s": 206.097159,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "last_seen_delta_s": 198.482838,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 724,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:13:47.944389+00:00",
+          "generated_delta_s": 227.944389,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "last_seen_delta_s": 198.482838,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 725,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:13:55.385505+00:00",
+          "generated_delta_s": 235.385505,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "last_seen_delta_s": 198.482838,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        },
+        {
+          "cycle": 726,
+          "dominant_skip_reason": "window_time_gte_180s",
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "generated_at": "2026-07-16T05:14:08.385914+00:00",
+          "generated_delta_s": 248.385914,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "last_seen_delta_s": 198.482838,
+          "outcomes": [
+            "Down",
+            "Up"
+          ],
+          "participation_skip_category": "PROTECTED_SKIP",
+          "source": "recent_window_rollups",
+          "wallet_eligible_orders": 5
+        }
+      ],
+      "timely_first_eval_with_later_late_skip": false,
+      "tripwire_rows": [
+        {
+          "dominant_skip_reason": "window_time_gte_180s",
+          "effective_delta_s": 195.058507,
+          "effective_latest_observed_ts": 1784178795.058507,
+          "first_seen_at": "2026-07-16T05:11:36.996624+00:00",
+          "first_seen_delta_s": 96.996624,
+          "last_seen_at": "2026-07-16T05:13:18.482838+00:00",
+          "latest_observed_ts": 1784178691.707913,
+          "market_slug": "btc-updown-5m-1784178600",
+          "our_fills": 0,
+          "our_submits": 0,
+          "outcome": "Down",
+          "participation_skip_category": "PROTECTED_SKIP",
+          "policy_max_order_usd": 2.0,
+          "source_delta_s": 91.707913,
+          "source_detection_observed_ts": 1784178691.707913,
+          "wallet_eligible_orders": 2,
+          "window_budget_usd": 2.0,
+          "window_start_s": 1784178600.0
+        }
+      ],
+      "window_start_s": 1784178600.0
+    }
+  ]
+}

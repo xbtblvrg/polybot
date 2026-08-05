@@ -1,0 +1,148 @@
+{
+  "batch_count": 9,
+  "batch_files": [
+    "data/research/source_active_liveness_batch_20260714T1310Z_b00_offset000_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b01_offset050_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b02_offset100_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b03_offset150_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b04_offset200_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b05_offset250_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b06_offset300_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b07_offset350_limit050.json",
+    "data/research/source_active_liveness_batch_20260714T1310Z_b08_offset400_limit035.json"
+  ],
+  "batch_prefix": "20260714T1310Z",
+  "cohort_live_ready_wallets": 435,
+  "flow_stage": "PROMOTE/LEARN",
+  "kind": "source_active_liveness_cohort_summary",
+  "policy_eligible_pass": 122,
+  "policy_eligible_pending": 313,
+  "schema_version": 1,
+  "source_active_pass": 190,
+  "source_active_pending": 245,
+  "top_source_active": [
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_16bc7faccd_20260714T1310Z_b02.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0x16bc7faccdb6dedd07d47333a6f06fef635dd23a"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_1f19c48aee_20260714T1310Z_b03.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0x1f19c48aee80ec95396d91f0d21ac249b8a7f57a"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_9d57c42e84_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0x9d57c42e847173d06841703825d3fe2299e456ea"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_df7930e89a_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0xdf7930e89a2c47560165331863c31deca0733dcd"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_eebde7a0e0_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_f6ab262d36_20260714T1310Z_b02.json",
+      "policy_eligible_windows": 6,
+      "source_active_windows": 6,
+      "wallet": "0xf6ab262d360c85f98782b84a04db35c6e18d3579"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_0cb0384875_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 6,
+      "wallet": "0x0cb038487586d1119b165466072e9baf666f3a90"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_4582c77130_20260714T1310Z_b02.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 6,
+      "wallet": "0x4582c77130a649d807fac08fd455615f851a8fa2"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_a3e0985f2d_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 6,
+      "wallet": "0xa3e0985f2d0b3209a52f171660287863690d095d"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_e3575b1f6c_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 6,
+      "wallet": "0xe3575b1f6cf47c49cf9262637ab40b14fb1cb709"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_1d99336f5c_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 4,
+      "source_active_windows": 6,
+      "wallet": "0x1d99336f5c7dabec1b890cb2237f9b4aa139b04c"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_dc81489a20_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 4,
+      "source_active_windows": 6,
+      "wallet": "0xdc81489a205efc4d3a3e42fa80cf107da665242f"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_e7e828cb74_20260714T1310Z_b03.json",
+      "policy_eligible_windows": 4,
+      "source_active_windows": 6,
+      "wallet": "0xe7e828cb74e6caa5292a27b5f996dc764e006f45"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_d47cf8a429_20260714T1310Z_b02.json",
+      "policy_eligible_windows": 3,
+      "source_active_windows": 6,
+      "wallet": "0xd47cf8a42917e91504a50da5dcee3347da373f0e"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_8fea570710_20260714T1310Z_b06.json",
+      "policy_eligible_windows": 1,
+      "source_active_windows": 6,
+      "wallet": "0x8fea5707100f02d51ead9d7b75fe4040b3d14923"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_1160696549_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 5,
+      "wallet": "0x1160696549a6e3e5d9b4a7ccaed0403902307d8a"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_20d2309cd9_20260714T1310Z_b02.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 5,
+      "wallet": "0x20d2309cd92b797ae7ca175ed828ed8a27fbe29d"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_3048d65321_20260714T1310Z_b01.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 5,
+      "wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_30e7ee8c54_20260714T1310Z_b06.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 5,
+      "wallet": "0x30e7ee8c541f92807a0a740b1bdc68bd6b27ac4f"
+    },
+    {
+      "output": "/Users/belavarga/claudecode/polymarket-agent/data/research/source_active_liveness_32de91fa20_20260714T1310Z_b04.json",
+      "policy_eligible_windows": 5,
+      "source_active_windows": 5,
+      "wallet": "0x32de91fa203321fa7735e7854f2b1c844e71ce9d"
+    }
+  ],
+  "total_policy_eligible_windows": 396,
+  "total_source_active_windows": 647,
+  "wallet_count": 435
+}

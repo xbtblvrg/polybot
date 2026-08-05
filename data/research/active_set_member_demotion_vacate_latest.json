@@ -1,0 +1,20 @@
+{
+  "copyintent_parity_preserved": true,
+  "deadman_sha256_after": "8dec88eea758b650edbf3762c7f25487b331a31e980714155cf729fa1c1c1f4d",
+  "deadman_sha256_before": "6d96c8672a634c599d00a1ba69f07f0a87afb2a31c0274798e5a6167184ea055",
+  "direction_id": "2026-07-26T01:08:08Z-fable-false-demotion-vacate",
+  "evidence": "order=0x64b3202a09bfdc415cc74e405803c250ae564d75d09cea9e47ac00ae942e2f99; resolved=true; gamma_direction=UP; side=YES; pnl_usd=3.346899",
+  "flow_stage": "LIVE/ROTATE",
+  "generated_at": "2026-07-26T01:09:51.114075Z",
+  "kind": "active_set_member_demotion_vacate",
+  "overlay_sha256_after": "f8728ef0890d674530095cae041791fe8f70db765decc40688dc6978e2065d8d",
+  "overlay_sha256_before": "1bc9291f97b5d6f3f3981b29a7753184afb99e609da4d065cf6df0c8dffc7670",
+  "pin_expires_at": "2026-07-26T01:42:54.491646+00:00",
+  "pin_expiry_unchanged": true,
+  "removed_false_cooloff": "2026-07-27T00:55:56.483623+00:00",
+  "schema_version": 1,
+  "single_submitter_preserved": true,
+  "status": "APPLIED",
+  "target_candidate_id": "policy_choke_rung_direct_c5463f624f",
+  "target_wallet": "0xc1b4bfdc36eaa5c09e7231c61e5e44c5463f624f"
+}

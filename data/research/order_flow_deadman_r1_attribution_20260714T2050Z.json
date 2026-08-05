@@ -1,0 +1,135 @@
+{
+  "direction_id": "2026-07-14T20:48Z-fable-deadman-reconciliation",
+  "expires_at": "2026-07-15T00:00:00Z",
+  "fallthrough_attempts": [
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_94f98a2e7537",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "selected_member",
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "status": "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD"
+    },
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_aeda7b217d5f",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "active_set_fallthrough",
+      "source_wallet": "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_95e31865a945",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "active_set_fallthrough",
+      "source_wallet": "0x2d7c9298b64713de86402bd8a41695e31865a945",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_41206ad03db1",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "active_set_fallthrough",
+      "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_16c5f15ba419",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "active_set_fallthrough",
+      "source_wallet": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+      "status": "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY"
+    },
+    {
+      "blockers": [
+        "live_guard_candidate_not_pass"
+      ],
+      "candidate_id": "market_cohort_alive_de8608db55c3",
+      "failed_checks": [
+        "status_live_admissible"
+      ],
+      "origin": "active_set_fallthrough",
+      "source_wallet": "0x86de0516011e2ad7ce3abdc13577de8608db55c3",
+      "status": "FABLE_1412_86DE_WEEKDAY_ONLY_1USD_PROBE_CONFIG_RELOAD"
+    }
+  ],
+  "flow_stage": "LIVE/DEFEND",
+  "fresh_actionable_mapping": [
+    {
+      "evidence": "e6db disabled by 20:00Z cap-cut after pnl=-13.760096; latest accepted order remains 17:53:10Z",
+      "scope": "2026-07-14T17:53:10Z..2026-07-14T20:02:54Z",
+      "selected_seat": "e6db",
+      "terminal_bucket": "E6DB_DISABLED_BY_2000_CAP_CUT_OR_APPROVED_SUPPRESSION"
+    },
+    {
+      "fresh_buy_rows_le_10s": 1,
+      "pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "policy_compatible_fresh_buy_rows_le_30s": 1,
+      "policy_reject_counts_fresh_buy_le_30s": {
+        "price_outside_policy": 1
+      },
+      "runtime_status": "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD",
+      "scope": "2026-07-14T20:10:34Z..artifact_generated_at",
+      "selected_seat": "3048",
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "terminal_bucket": "STATUS_LIVE_ADMISSIBLE_FAIL"
+    }
+  ],
+  "generated_at": "2026-07-14T20:50:49Z",
+  "kind": "order_flow_deadman_r1_attribution",
+  "midnight_restart_mandatory": true,
+  "next_action": "load the dormant FABLE_1554 allowlist entry only in the mandatory 00:00Z managed restart payload",
+  "no_restart_before_expiry": true,
+  "schema_version": 1,
+  "source_artifacts": {
+    "active_set_poller": "data/research/wallet_copy_active_set_dataapi_poller_state.json",
+    "deadman_state": "data/research/order_flow_deadman_state.json",
+    "guard_state": "data/research/wallet_copy_live_guard_state.json",
+    "live_ledger": "data/research/wallet_copy_live_execution_state.json"
+  },
+  "status": "RULED_QUIET_GUARD_SIDE_DEFECT_ATTRIBUTED",
+  "summary": {
+    "allowlist_entry": "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD",
+    "deadman_top_status": "OK",
+    "deadman_warning": null,
+    "fallthrough_admissible_targets": 0,
+    "fresh_buy_rows_le_10s": 1,
+    "gated_quiet_classification": "GUARD_SIDE_HALT",
+    "latest_live_order_ts": "2026-07-14T17:53:10.496422+00:00",
+    "policy_compatible_fresh_buy_rows_le_30s": 1,
+    "policy_reject_counts_fresh_buy_le_30s": {
+      "price_outside_policy": 1
+    },
+    "repair_status": "DORMANT_CODE_ONLY_UNTIL_2026-07-15T00:00Z",
+    "selected_failed_checks": [
+      "status_live_admissible"
+    ],
+    "selected_live_protection_passed": true,
+    "selected_status": "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD",
+    "selected_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537"
+  }
+}

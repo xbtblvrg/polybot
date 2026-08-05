@@ -1,0 +1,66 @@
+{
+  "band": {
+    "max_offset_s": 300.0,
+    "max_price": 0.5,
+    "min_offset_s": 0.0
+  },
+  "file_size_bytes": 202939544815,
+  "flow_stage": "LIVE/PROMOTE",
+  "generated_at": "2026-07-14T13:12:57.503747+00:00",
+  "kind": "source_active_windows_report_v1",
+  "latest_rows": [
+    {
+      "event_iso": "2026-07-14T13:05:44Z",
+      "event_ts": 1784034344.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 44.0,
+      "outcome": "Up",
+      "price": 0.48,
+      "received_iso": "2026-07-14T13:05:44.813533Z",
+      "received_ts": 1784034344.813533,
+      "size": 5.0,
+      "transaction_hash": "0xe2da6d1a1a646b7d99ba65deeac52c4d8ca43331c5f34b06b882416dcf8d1a43",
+      "window_start_s": 1784034300.0
+    }
+  ],
+  "rtds_jsonl": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+  "scan_tail_bytes": 384000000,
+  "since_iso": "2026-07-13T13:12:57.516614Z",
+  "since_ts": 1783948377.516614,
+  "source_wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10",
+  "summary": {
+    "btc5m_buy_rows_since": 1,
+    "btc5m_buy_windows_since": 1,
+    "policy_eligible_rows": 1,
+    "policy_eligible_tally_status": "PASS",
+    "policy_eligible_windows": 1,
+    "required_source_active_windows": 1,
+    "source_active_rows": 1,
+    "source_active_tally_status": "PASS",
+    "source_active_windows": 1
+  },
+  "windows": [
+    {
+      "first_event_iso": "2026-07-14T13:05:44Z",
+      "first_policy_event_iso": "2026-07-14T13:05:44Z",
+      "first_policy_received_iso": "2026-07-14T13:05:44.813533Z",
+      "first_received_iso": "2026-07-14T13:05:44.813533Z",
+      "last_event_iso": "2026-07-14T13:05:44Z",
+      "last_policy_event_iso": "2026-07-14T13:05:44Z",
+      "last_policy_received_iso": "2026-07-14T13:05:44.813533Z",
+      "last_received_iso": "2026-07-14T13:05:44.813533Z",
+      "le_max_price_rows": 1,
+      "market_slug": "btc-updown-5m-1784034300",
+      "max_offset_s": 44.0,
+      "min_offset_s": 44.0,
+      "outcomes": [
+        "Up"
+      ],
+      "prices": [
+        0.48
+      ],
+      "rows": 1,
+      "window_start_s": 1784034300.0
+    }
+  ]
+}

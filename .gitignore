@@ -1,0 +1,43 @@
+# Secrets and local credentials
+.env
+.env*
+!.env.example
+.claude_ai_proxy_session_id*
+
+# Runtime data, logs, and local rollback snapshots
+data/
+logs/
+runtime_logs/
+snapshots/
+.ai_change_snapshots/
+
+# DR stores the large wallet registry as a compressed artifact.
+configs/wallet_copy/wallets.json
+
+# Python/local tooling
+__pycache__/
+*.pyc
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Generated ML/build artifacts
+catboost_info/
+*.joblib
+*.pkl
+*.pickle
+
+# Local OS/editor noise
+.DS_Store
+*.swp
+*.tmp
+
+# Local backups and exported binary analysis artifacts
+*.bak
+*.bak-*
+*.stale-*
+*.xlsx
+*.docx
+polymarket-agent * bak/

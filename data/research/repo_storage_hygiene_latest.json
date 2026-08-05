@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kind": "repo_storage_hygiene",
+  "flow_stage": "SELF-DEV",
+  "generated_at": "2026-07-20T04:42:00Z",
+  "authority": "Fable DIRECTION 2026-07-20T04:10Z",
+  "status": "PASS",
+  "action": "git gc --prune=now",
+  "before": {
+    "pack_size_gib": 5.41,
+    "object_count_approx": 1200000,
+    "orphan_tmp_obj_files": "hundreds"
+  },
+  "after": {
+    "loose_object_count": 0,
+    "packed_object_count": 33461,
+    "pack_count": 1,
+    "pack_size_mib": 417.52,
+    "garbage_count": 0,
+    "garbage_size_bytes": 0,
+    "orphan_tmp_obj_files": 0
+  },
+  "large_artifact_commit_policy": {
+    "full_payloads": "ignored local state",
+    "committed_artifacts": [
+      "data/research/routing_shadow_validation_latest_digest.json",
+      "data/research/wallet_market_cohort_replay_latest_digest.json"
+    ]
+  }
+}

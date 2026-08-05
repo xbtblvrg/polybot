@@ -1,0 +1,1013 @@
+{
+  "all_time": {
+    "rows": [
+      {
+        "discarded": 334675,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-28T13:10:01Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:10:00Z",
+        "n": 56109,
+        "stream": "guard",
+        "wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1"
+      },
+      {
+        "discarded": 33397,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-18T08:20:01Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-18T14:35:03Z",
+        "n": 1511,
+        "stream": "guard",
+        "wallet": "0x59603775762a631d4bcd156980c0a174bbc4c2d2"
+      },
+      {
+        "discarded": 7867,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-28T01:35:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:45:00Z",
+        "n": 1250,
+        "stream": "watch_tier",
+        "wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1"
+      },
+      {
+        "discarded": 11960,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-24T05:30:04Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-25T13:35:09Z",
+        "n": 1027,
+        "stream": "watch_tier",
+        "wallet": "0xd97ae021645712fe5cf73139049383a100cac068"
+      },
+      {
+        "discarded": 7774,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-18T03:05:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-18T14:35:03Z",
+        "n": 546,
+        "stream": "watch_tier",
+        "wallet": "0x11c058db73b3c3c5322da3caf5e94c41486e34b0"
+      },
+      {
+        "discarded": 4243,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-29T19:30:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:45:00Z",
+        "n": 270,
+        "stream": "watch_tier",
+        "wallet": "0x5e4aa0f176014729f5168e821ce614484fbebe6b"
+      },
+      {
+        "discarded": 4767,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-18T07:00:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-18T14:35:03Z",
+        "n": 216,
+        "stream": "watch_tier",
+        "wallet": "0x59603775762a631d4bcd156980c0a174bbc4c2d2"
+      },
+      {
+        "discarded": 4503,
+        "early_entry_rate": 0.999330656,
+        "first_event_ts": "2026-07-29T21:40:03Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T12:05:03Z",
+        "n": 2988,
+        "stream": "watch_tier",
+        "wallet": "0x8bc176d95c3312d8264ba26c5e26ee43a5c1b473"
+      },
+      {
+        "discarded": 8184,
+        "early_entry_rate": 0.871177611,
+        "first_event_ts": "2026-07-16T14:58:55Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:56:06Z",
+        "n": 82540,
+        "stream": "guard",
+        "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+      },
+      {
+        "discarded": 462,
+        "early_entry_rate": 0.612356967,
+        "first_event_ts": "2026-07-30T12:30:42Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:41:17Z",
+        "n": 110901,
+        "stream": "watch_tier",
+        "wallet": "0x9796de6db546a93d9d5134563ec58ba08658d713"
+      },
+      {
+        "discarded": 13578,
+        "early_entry_rate": 0.54812398,
+        "first_event_ts": "2026-07-15T15:40:04Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-19T10:45:09Z",
+        "n": 57009,
+        "stream": "guard",
+        "wallet": "0x40138697bf1a0d655593f3be6237d60c1dc7ab35"
+      },
+      {
+        "discarded": 776,
+        "early_entry_rate": 0.457159976,
+        "first_event_ts": "2026-07-22T17:35:43Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T03:36:24Z",
+        "n": 8345,
+        "stream": "watch_tier",
+        "wallet": "0x436d5cdd83c063d9b6f490a9c8749ea9745adade"
+      },
+      {
+        "discarded": 195,
+        "early_entry_rate": 0.436684847,
+        "first_event_ts": "2026-07-15T18:37:11Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-30T18:58:06Z",
+        "n": 8434,
+        "stream": "watch_tier",
+        "wallet": "0x1016041c3c437ae7e9114b678845b117d8d3b09b"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.385321101,
+        "first_event_ts": "2026-07-15T15:58:20Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-26T10:30:40Z",
+        "n": 4251,
+        "stream": "watch_tier",
+        "wallet": "0x99457dde6034fd678cb4ce6ef73d7365e533b5ac"
+      },
+      {
+        "discarded": 6475,
+        "early_entry_rate": 0.384129847,
+        "first_event_ts": "2026-07-18T09:55:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-18T18:05:01Z",
+        "n": 1109,
+        "stream": "watch_tier",
+        "wallet": "0xdf2c0702fc00be90bd795234a86e28f1ed39118a"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.368452523,
+        "first_event_ts": "2026-07-15T08:31:16Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-17T11:02:30Z",
+        "n": 8362,
+        "stream": "watch_tier",
+        "wallet": "0x0f2ebdcb20c9037f9b79d6773256e5aefac91103"
+      },
+      {
+        "discarded": 18,
+        "early_entry_rate": 0.368305531,
+        "first_event_ts": "2026-07-30T14:11:08Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T12:50:14Z",
+        "n": 2278,
+        "stream": "watch_tier",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.358435208,
+        "first_event_ts": "2026-07-31T00:40:29Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:37:29Z",
+        "n": 12270,
+        "stream": "watch_tier",
+        "wallet": "0x0cb038487586d1119b165466072e9baf666f3a90"
+      },
+      {
+        "discarded": 54,
+        "early_entry_rate": 0.354741803,
+        "first_event_ts": "2026-07-29T14:21:24Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:54:59Z",
+        "n": 19307,
+        "stream": "watch_tier",
+        "wallet": "0x82311cdedaa7ee25d4672b0e3a3ee0dd0cd2c02e"
+      },
+      {
+        "discarded": 1642,
+        "early_entry_rate": 0.344016302,
+        "first_event_ts": "2026-07-30T16:33:21Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:35:00Z",
+        "n": 5398,
+        "stream": "watch_tier",
+        "wallet": "0x927f7694de44d19a72bce76254e628d1c141d215"
+      },
+      {
+        "discarded": 129,
+        "early_entry_rate": 0.342198442,
+        "first_event_ts": "2026-07-29T19:38:35Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:20:26Z",
+        "n": 12709,
+        "stream": "watch_tier",
+        "wallet": "0x612522c3c93bab962db6fcffcf98a4d59b444f6f"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.341311134,
+        "first_event_ts": "2026-07-26T04:21:18Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-07-27T15:57:07Z",
+        "n": 89373,
+        "stream": "guard",
+        "wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.341311134,
+        "first_event_ts": "2026-07-26T04:21:18Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-07-27T15:57:07Z",
+        "n": 12493,
+        "stream": "watch_tier",
+        "wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59"
+      },
+      {
+        "discarded": 3906,
+        "early_entry_rate": 0.304568528,
+        "first_event_ts": "2026-07-04T10:12:26Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-10T18:36:34Z",
+        "n": 36642,
+        "stream": "guard",
+        "wallet": "0xc03c7cc1478a750a59ce44183ede1b85e7606cd9"
+      },
+      {
+        "discarded": 504,
+        "early_entry_rate": 0.304568528,
+        "first_event_ts": "2026-07-04T10:12:26Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-10T18:36:34Z",
+        "n": 4728,
+        "stream": "watch_tier",
+        "wallet": "0xc03c7cc1478a750a59ce44183ede1b85e7606cd9"
+      },
+      {
+        "discarded": 28,
+        "early_entry_rate": 0.288888889,
+        "first_event_ts": "2026-03-01T09:06:25Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-23T17:35:15Z",
+        "n": 1890,
+        "stream": "watch_tier",
+        "wallet": "0xcea22c79667242226adfd466094d4a93ffe50f20"
+      },
+      {
+        "discarded": 237,
+        "early_entry_rate": 0.279230081,
+        "first_event_ts": "2026-07-24T10:40:48Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T10:00:30Z",
+        "n": 11170,
+        "stream": "watch_tier",
+        "wallet": "0x4af96ca7ac6d49026a8d89884fa97937138a2352"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.274509804,
+        "first_event_ts": "2026-07-31T03:00:23Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-08-01T11:16:44Z",
+        "n": 51,
+        "stream": "watch_tier",
+        "wallet": "0x674887d1ac838099a48b629dff53f25b7b87ee08"
+      },
+      {
+        "discarded": 66,
+        "early_entry_rate": 0.26540032,
+        "first_event_ts": "2026-07-30T05:51:45Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:58:14Z",
+        "n": 11266,
+        "stream": "watch_tier",
+        "wallet": "0xc547326c577e21102f85e36b06cdb70d05e87b30"
+      },
+      {
+        "discarded": 324,
+        "early_entry_rate": 0.261639755,
+        "first_event_ts": "2026-07-31T00:44:36Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:35:33Z",
+        "n": 19137,
+        "stream": "watch_tier",
+        "wallet": "0x251c1a283703beed41590b0875a8dcb8ddd1541f"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.257859532,
+        "first_event_ts": "2026-08-01T12:16:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T15:26:26Z",
+        "n": 2990,
+        "stream": "guard",
+        "wallet": "0xbf337426aa856996b8bb79b238345dd1a0276bf7"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.231578947,
+        "first_event_ts": "2026-07-09T18:50:26Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-28T07:34:54Z",
+        "n": 7980,
+        "stream": "watch_tier",
+        "wallet": "0x0fbbd830c971092e8fc73ea6d052e26d59cb98d4"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.223836493,
+        "first_event_ts": "2026-07-30T21:15:12Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T02:04:39Z",
+        "n": 8122,
+        "stream": "watch_tier",
+        "wallet": "0xffcf591e09d9fffcab04f1082ceb83fab6920fed"
+      },
+      {
+        "discarded": 516,
+        "early_entry_rate": 0.215848068,
+        "first_event_ts": "2026-07-30T02:29:29Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T15:04:05Z",
+        "n": 15270,
+        "stream": "watch_tier",
+        "wallet": "0x25d9b50e33e1d0cc427a45b68e76c0f928292162"
+      },
+      {
+        "discarded": 40,
+        "early_entry_rate": 0.212873796,
+        "first_event_ts": "2026-07-30T09:11:48Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-08-01T11:30:27Z",
+        "n": 5919,
+        "stream": "watch_tier",
+        "wallet": "0x951bd740ef681d05891ca35440232488271d433e"
+      },
+      {
+        "discarded": 81,
+        "early_entry_rate": 0.211567164,
+        "first_event_ts": "2026-07-30T22:24:44Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:42:56Z",
+        "n": 2680,
+        "stream": "watch_tier",
+        "wallet": "0x3725d52f3c252e8374999cc8617292ea2608ad88"
+      },
+      {
+        "discarded": 177,
+        "early_entry_rate": 0.20918886,
+        "first_event_ts": "2026-07-30T08:09:47Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-30T17:17:03Z",
+        "n": 4919,
+        "stream": "watch_tier",
+        "wallet": "0x5d5f7080cf696bf763b3d7d2721201cf2eba1897"
+      },
+      {
+        "discarded": 24,
+        "early_entry_rate": 0.206223994,
+        "first_event_ts": "2026-07-15T04:43:47Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-31T01:20:03Z",
+        "n": 11536,
+        "stream": "watch_tier",
+        "wallet": "0xa0af35d8d6c55b479e2f2652ed6dab814e61484c"
+      },
+      {
+        "discarded": 141,
+        "early_entry_rate": 0.174102905,
+        "first_event_ts": "2026-07-31T02:26:41Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:12:54Z",
+        "n": 5267,
+        "stream": "watch_tier",
+        "wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30"
+      },
+      {
+        "discarded": 70,
+        "early_entry_rate": 0.142241379,
+        "first_event_ts": "2026-06-05T09:33:06Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-15T11:16:44Z",
+        "n": 3248,
+        "stream": "watch_tier",
+        "wallet": "0xc3a318ad2d5bfff06b05155f2e1884fd69ea1804"
+      },
+      {
+        "discarded": 28785,
+        "early_entry_rate": 0.133480697,
+        "first_event_ts": "2026-07-24T21:41:49Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-31T22:32:02Z",
+        "n": 256509,
+        "stream": "watch_tier",
+        "wallet": "0x04a162e06d1e82745a08b95e247bf3a965693527"
+      },
+      {
+        "discarded": 14,
+        "early_entry_rate": 0.120833333,
+        "first_event_ts": "2026-07-02T20:17:34Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-14T12:30:23Z",
+        "n": 6720,
+        "stream": "watch_tier",
+        "wallet": "0x2faaa96d4f2dca32e59dd38cf7323c9756bf87bf"
+      },
+      {
+        "discarded": 1325,
+        "early_entry_rate": 0.081848696,
+        "first_event_ts": "2026-07-29T05:24:53Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:17:14Z",
+        "n": 3873,
+        "stream": "watch_tier",
+        "wallet": "0xdaee998426ebc81d0a15d7c13b2bdddaf8e18559"
+      },
+      {
+        "discarded": 33,
+        "early_entry_rate": 0.080915111,
+        "first_event_ts": "2026-07-25T03:53:28Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T07:03:39Z",
+        "n": 8305,
+        "stream": "watch_tier",
+        "wallet": "0xbe285f036120817114f342b4a57a140e74f578ec"
+      },
+      {
+        "discarded": 3255,
+        "early_entry_rate": 0.074179743,
+        "first_event_ts": "2026-07-05T06:41:40Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-11T02:06:52Z",
+        "n": 65193,
+        "stream": "guard",
+        "wallet": "0xa95b27b0626973f7bc7600e65cd88cd7b42d0d14"
+      },
+      {
+        "discarded": 65,
+        "early_entry_rate": 0.067893055,
+        "first_event_ts": "2026-07-13T22:13:50Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:03:24Z",
+        "n": 12829,
+        "stream": "watch_tier",
+        "wallet": "0x06da6377f52f23531cd14ed9609892d79741b8f1"
+      },
+      {
+        "discarded": 15,
+        "early_entry_rate": 0.062027833,
+        "first_event_ts": "2026-07-12T10:27:26Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:54:54Z",
+        "n": 10060,
+        "stream": "watch_tier",
+        "wallet": "0xe9ced41ea5bc3f122bc64c4c75f19223010801a9"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.040925267,
+        "first_event_ts": "2026-07-12T18:29:10Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:22:53Z",
+        "n": 12926,
+        "stream": "watch_tier",
+        "wallet": "0x988c285a7511bb94557030e089cbb0cb97927a05"
+      },
+      {
+        "discarded": 13,
+        "early_entry_rate": 0.010601887,
+        "first_event_ts": "2026-07-29T04:43:45Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T05:18:38Z",
+        "n": 11979,
+        "stream": "watch_tier",
+        "wallet": "0xe476e7465e86a2e8073bd8e1e2237dae2a52b51d"
+      },
+      {
+        "discarded": 1190,
+        "early_entry_rate": 0.006912442,
+        "first_event_ts": "2026-07-18T01:56:28Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-18T18:13:34Z",
+        "n": 12152,
+        "stream": "watch_tier",
+        "wallet": "0x960bf404c1eca257411203164357a925e33fae8d"
+      },
+      {
+        "discarded": 24,
+        "early_entry_rate": 0.002043597,
+        "first_event_ts": "2026-07-27T20:13:25Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T05:04:42Z",
+        "n": 11744,
+        "stream": "watch_tier",
+        "wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0"
+      },
+      {
+        "discarded": 28,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-29T21:41:06Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:11:47Z",
+        "n": 10819,
+        "stream": "watch_tier",
+        "wallet": "0xeb942f0fc3f100cd729d7937afc6c48773cf205e"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-31T00:14:21Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T10:44:03Z",
+        "n": 1226,
+        "stream": "watch_tier",
+        "wallet": "0x562a11bcd7354ea82a09ed803cb1739d60862ad4"
+      }
+    ]
+  },
+  "direction_id": "2026-08-01T14:57Z-fable-order136-d-amended",
+  "filters": {
+    "action": "BUY",
+    "asset": "BTC",
+    "duration": "5m",
+    "early_entry": "window_time_s < 60",
+    "min_n": 20,
+    "row_type": "trade",
+    "valid_window_time_s": "0 <= window_time_s < 300",
+    "wallet": null
+  },
+  "flow_stage": "DISCOVER/LEARN",
+  "formula": "window_time_s = event_ts - integer suffix of btc-updown-5m-<epoch>",
+  "generated_at": "2026-08-01T15:27:51.387959Z",
+  "inputs": {
+    "guard": {
+      "filtered_rows": 788364,
+      "invalid_json_or_schema": 2,
+      "path": "data/research/wallet_copy_live_guard_wallet_events.jsonl",
+      "rows_read": 807254
+    },
+    "watch_tier": {
+      "filtered_rows": 771999,
+      "invalid_json_or_schema": 0,
+      "path": "data/research/wallet_copy_watch_tier_wallet_events.jsonl",
+      "rows_read": 792336
+    }
+  },
+  "kind": "order136d_observed_universe_early_entry_ranking",
+  "last_7d": {
+    "rows": [
+      {
+        "discarded": 334675,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-28T13:10:01Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:10:00Z",
+        "n": 56109,
+        "stream": "guard",
+        "wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1"
+      },
+      {
+        "discarded": 7867,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-28T01:35:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:45:00Z",
+        "n": 1250,
+        "stream": "watch_tier",
+        "wallet": "0xc5391c6dfda1174e456b1bc7e05eb9d0179673d1"
+      },
+      {
+        "discarded": 4243,
+        "early_entry_rate": 1.0,
+        "first_event_ts": "2026-07-29T19:30:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:45:00Z",
+        "n": 270,
+        "stream": "watch_tier",
+        "wallet": "0x5e4aa0f176014729f5168e821ce614484fbebe6b"
+      },
+      {
+        "discarded": 4503,
+        "early_entry_rate": 0.999330656,
+        "first_event_ts": "2026-07-29T21:40:03Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T12:05:03Z",
+        "n": 2988,
+        "stream": "watch_tier",
+        "wallet": "0x8bc176d95c3312d8264ba26c5e26ee43a5c1b473"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.8,
+        "first_event_ts": "2026-07-26T09:56:51Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-26T10:30:40Z",
+        "n": 65,
+        "stream": "watch_tier",
+        "wallet": "0x99457dde6034fd678cb4ce6ef73d7365e533b5ac"
+      },
+      {
+        "discarded": 1866,
+        "early_entry_rate": 0.748062731,
+        "first_event_ts": "2026-07-25T22:30:52Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:56:06Z",
+        "n": 10840,
+        "stream": "guard",
+        "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+      },
+      {
+        "discarded": 462,
+        "early_entry_rate": 0.612356967,
+        "first_event_ts": "2026-07-30T12:30:42Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:41:17Z",
+        "n": 110901,
+        "stream": "watch_tier",
+        "wallet": "0x9796de6db546a93d9d5134563ec58ba08658d713"
+      },
+      {
+        "discarded": 65,
+        "early_entry_rate": 0.469072165,
+        "first_event_ts": "2026-07-28T14:21:02Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-30T18:58:06Z",
+        "n": 5044,
+        "stream": "watch_tier",
+        "wallet": "0x1016041c3c437ae7e9114b678845b117d8d3b09b"
+      },
+      {
+        "discarded": 488,
+        "early_entry_rate": 0.407817693,
+        "first_event_ts": "2026-07-26T03:32:01Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T03:36:24Z",
+        "n": 6319,
+        "stream": "watch_tier",
+        "wallet": "0x436d5cdd83c063d9b6f490a9c8749ea9745adade"
+      },
+      {
+        "discarded": 18,
+        "early_entry_rate": 0.368305531,
+        "first_event_ts": "2026-07-30T14:11:08Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T12:50:14Z",
+        "n": 2278,
+        "stream": "watch_tier",
+        "wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.358435208,
+        "first_event_ts": "2026-07-31T00:40:29Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:37:29Z",
+        "n": 12270,
+        "stream": "watch_tier",
+        "wallet": "0x0cb038487586d1119b165466072e9baf666f3a90"
+      },
+      {
+        "discarded": 54,
+        "early_entry_rate": 0.354741803,
+        "first_event_ts": "2026-07-29T14:21:24Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:54:59Z",
+        "n": 19307,
+        "stream": "watch_tier",
+        "wallet": "0x82311cdedaa7ee25d4672b0e3a3ee0dd0cd2c02e"
+      },
+      {
+        "discarded": 1642,
+        "early_entry_rate": 0.344016302,
+        "first_event_ts": "2026-07-30T16:33:21Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T13:35:00Z",
+        "n": 5398,
+        "stream": "watch_tier",
+        "wallet": "0x927f7694de44d19a72bce76254e628d1c141d215"
+      },
+      {
+        "discarded": 129,
+        "early_entry_rate": 0.342198442,
+        "first_event_ts": "2026-07-29T19:38:35Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:20:26Z",
+        "n": 12709,
+        "stream": "watch_tier",
+        "wallet": "0x612522c3c93bab962db6fcffcf98a4d59b444f6f"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.341311134,
+        "first_event_ts": "2026-07-26T04:21:18Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-07-27T15:57:07Z",
+        "n": 89373,
+        "stream": "guard",
+        "wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.341311134,
+        "first_event_ts": "2026-07-26T04:21:18Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-07-27T15:57:07Z",
+        "n": 12493,
+        "stream": "watch_tier",
+        "wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59"
+      },
+      {
+        "discarded": 234,
+        "early_entry_rate": 0.276281668,
+        "first_event_ts": "2026-07-25T23:35:37Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T10:00:30Z",
+        "n": 10026,
+        "stream": "watch_tier",
+        "wallet": "0x4af96ca7ac6d49026a8d89884fa97937138a2352"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.274509804,
+        "first_event_ts": "2026-07-31T03:00:23Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-08-01T11:16:44Z",
+        "n": 51,
+        "stream": "watch_tier",
+        "wallet": "0x674887d1ac838099a48b629dff53f25b7b87ee08"
+      },
+      {
+        "discarded": 66,
+        "early_entry_rate": 0.26540032,
+        "first_event_ts": "2026-07-30T05:51:45Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:58:14Z",
+        "n": 11266,
+        "stream": "watch_tier",
+        "wallet": "0xc547326c577e21102f85e36b06cdb70d05e87b30"
+      },
+      {
+        "discarded": 324,
+        "early_entry_rate": 0.261639755,
+        "first_event_ts": "2026-07-31T00:44:36Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:35:33Z",
+        "n": 19137,
+        "stream": "watch_tier",
+        "wallet": "0x251c1a283703beed41590b0875a8dcb8ddd1541f"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.257859532,
+        "first_event_ts": "2026-08-01T12:16:00Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T15:26:26Z",
+        "n": 2990,
+        "stream": "guard",
+        "wallet": "0xbf337426aa856996b8bb79b238345dd1a0276bf7"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.223836493,
+        "first_event_ts": "2026-07-30T21:15:12Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T02:04:39Z",
+        "n": 8122,
+        "stream": "watch_tier",
+        "wallet": "0xffcf591e09d9fffcab04f1082ceb83fab6920fed"
+      },
+      {
+        "discarded": 516,
+        "early_entry_rate": 0.215848068,
+        "first_event_ts": "2026-07-30T02:29:29Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T15:04:05Z",
+        "n": 15270,
+        "stream": "watch_tier",
+        "wallet": "0x25d9b50e33e1d0cc427a45b68e76c0f928292162"
+      },
+      {
+        "discarded": 40,
+        "early_entry_rate": 0.212873796,
+        "first_event_ts": "2026-07-30T09:11:48Z",
+        "in_134_pool": true,
+        "last_event_ts": "2026-08-01T11:30:27Z",
+        "n": 5919,
+        "stream": "watch_tier",
+        "wallet": "0x951bd740ef681d05891ca35440232488271d433e"
+      },
+      {
+        "discarded": 81,
+        "early_entry_rate": 0.211567164,
+        "first_event_ts": "2026-07-30T22:24:44Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:42:56Z",
+        "n": 2680,
+        "stream": "watch_tier",
+        "wallet": "0x3725d52f3c252e8374999cc8617292ea2608ad88"
+      },
+      {
+        "discarded": 177,
+        "early_entry_rate": 0.20918886,
+        "first_event_ts": "2026-07-30T08:09:47Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-30T17:17:03Z",
+        "n": 4919,
+        "stream": "watch_tier",
+        "wallet": "0x5d5f7080cf696bf763b3d7d2721201cf2eba1897"
+      },
+      {
+        "discarded": 141,
+        "early_entry_rate": 0.174102905,
+        "first_event_ts": "2026-07-31T02:26:41Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:12:54Z",
+        "n": 5267,
+        "stream": "watch_tier",
+        "wallet": "0xeebde7a0e019a63e6b476eb425505b7b3e6eba30"
+      },
+      {
+        "discarded": 24,
+        "early_entry_rate": 0.163751396,
+        "first_event_ts": "2026-07-28T06:15:09Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-31T01:20:03Z",
+        "n": 5374,
+        "stream": "watch_tier",
+        "wallet": "0xa0af35d8d6c55b479e2f2652ed6dab814e61484c"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.158878505,
+        "first_event_ts": "2026-07-25T15:30:30Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-28T07:34:54Z",
+        "n": 1284,
+        "stream": "watch_tier",
+        "wallet": "0x0fbbd830c971092e8fc73ea6d052e26d59cb98d4"
+      },
+      {
+        "discarded": 1325,
+        "early_entry_rate": 0.081848696,
+        "first_event_ts": "2026-07-29T05:24:53Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T14:17:14Z",
+        "n": 3873,
+        "stream": "watch_tier",
+        "wallet": "0xdaee998426ebc81d0a15d7c13b2bdddaf8e18559"
+      },
+      {
+        "discarded": 33,
+        "early_entry_rate": 0.081444673,
+        "first_event_ts": "2026-07-28T04:55:36Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T07:03:39Z",
+        "n": 8251,
+        "stream": "watch_tier",
+        "wallet": "0xbe285f036120817114f342b4a57a140e74f578ec"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.078683834,
+        "first_event_ts": "2026-07-25T16:58:04Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:22:53Z",
+        "n": 2097,
+        "stream": "watch_tier",
+        "wallet": "0x988c285a7511bb94557030e089cbb0cb97927a05"
+      },
+      {
+        "discarded": 13,
+        "early_entry_rate": 0.010601887,
+        "first_event_ts": "2026-07-29T04:43:45Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T05:18:38Z",
+        "n": 11979,
+        "stream": "watch_tier",
+        "wallet": "0xe476e7465e86a2e8073bd8e1e2237dae2a52b51d"
+      },
+      {
+        "discarded": 24,
+        "early_entry_rate": 0.002043597,
+        "first_event_ts": "2026-07-27T20:13:25Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T05:04:42Z",
+        "n": 11744,
+        "stream": "watch_tier",
+        "wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0"
+      },
+      {
+        "discarded": 26,
+        "early_entry_rate": 0.000441014,
+        "first_event_ts": "2026-07-25T15:38:34Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T11:03:24Z",
+        "n": 4535,
+        "stream": "watch_tier",
+        "wallet": "0x06da6377f52f23531cd14ed9609892d79741b8f1"
+      },
+      {
+        "discarded": 28,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-29T21:41:06Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:11:47Z",
+        "n": 10819,
+        "stream": "watch_tier",
+        "wallet": "0xeb942f0fc3f100cd729d7937afc6c48773cf205e"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-26T19:38:34Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-07-31T22:32:02Z",
+        "n": 1573,
+        "stream": "watch_tier",
+        "wallet": "0x04a162e06d1e82745a08b95e247bf3a965693527"
+      },
+      {
+        "discarded": 0,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-31T00:14:21Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T10:44:03Z",
+        "n": 1226,
+        "stream": "watch_tier",
+        "wallet": "0x562a11bcd7354ea82a09ed803cb1739d60862ad4"
+      },
+      {
+        "discarded": 2,
+        "early_entry_rate": 0.0,
+        "first_event_ts": "2026-07-31T22:34:35Z",
+        "in_134_pool": false,
+        "last_event_ts": "2026-08-01T09:54:54Z",
+        "n": 34,
+        "stream": "watch_tier",
+        "wallet": "0xe9ced41ea5bc3f122bc64c4c75f19223010801a9"
+      }
+    ]
+  },
+  "lead_gate_verification": {
+    "checks": {
+      "f1_measured_positive_regime_cell": false,
+      "f2_fresh_rows_and_own_policy_copyable": false,
+      "f3_not_enabled_or_cooloff_or_fading": true,
+      "f4_external_liveness": true
+    },
+    "eligible": false,
+    "evidence": {
+      "f3": {
+        "active": false,
+        "cooloff_active": false,
+        "temporal_classification": "WEEKDAY-ONLY"
+      },
+      "regime": {
+        "pnl_usd": -31.051657,
+        "resolved_trades": 632,
+        "roi_pct": -3.078566
+      },
+      "source": {
+        "btc5m_buys_30m": 0,
+        "latest_trade_age_h": 1.387759,
+        "policy_compatible_inband_buy_rows_24h": 3,
+        "probe_generated_at": "2026-08-01T15:19:22.681536+00:00"
+      },
+      "venue_executable_regime": {
+        "pnl_usd": -29.044182,
+        "resolved_trades": 493,
+        "roi_pct": -3.790776
+      }
+    },
+    "regime": "weekend",
+    "rule": "F1 current-regime and venue-executable n>=200/PnL>0/ROI>0; F2 fresh BUYs>=10 plus policy-compatible rows>0; F3 inactive/no-cooloff/not-FADING; F4 external age<=24h",
+    "wallet": "0xee888fa7b96007f7fa270988e92bddb0ae19ed10"
+  },
+  "pool_coverage": {
+    "coverage_ratio": 0.02238806,
+    "intersection_wallets": [
+      "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59",
+      "0x674887d1ac838099a48b629dff53f25b7b87ee08",
+      "0x951bd740ef681d05891ca35440232488271d433e"
+    ],
+    "observed_intersection_pool": 3,
+    "observed_wallets": 51,
+    "pool_wallets": 134
+  },
+  "quality_bars_changed": false,
+  "recency": {
+    "cutoff": "2026-07-25T15:27:51.387959Z",
+    "days": 7.0,
+    "through": "2026-08-01T15:27:51.387959Z"
+  },
+  "report_only": true,
+  "schema_version": 1
+}

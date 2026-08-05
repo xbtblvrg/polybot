@@ -1,0 +1,25 @@
+{
+  "generated_at": "2026-06-25T01:33:46.083742+00:00",
+  "kind": "operator_wallet_scoped_registry",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "schema_version": 1,
+  "wallets": [
+    {
+      "address": "0x32ed2e546b187ca15e2841edc82b22c713cf8ec3",
+      "asset_allowlist": [
+        "BTC"
+      ],
+      "data_api": "https://data-api.polymarket.com",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "name": "operator_wallet_0x32ed2e54",
+      "notes": "btc_5m_copy_candidate",
+      "tags": [
+        "operator_provided",
+        "btc_5m",
+        "candidate"
+      ]
+    }
+  ]
+}

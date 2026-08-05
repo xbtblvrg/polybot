@@ -1,0 +1,66 @@
+{
+  "activation": {
+    "arbiter": "scripts/arbitrate_btc5m_promoted_cells.py",
+    "legacy_guard_watched_output": "data/research/btc5m_cross_exchange_promoted_cell_latest.json",
+    "pin": "singular_1usd_nonrefreshing_3600s"
+  },
+  "calibration_method": "complement_microprice_parity_to_executable_same_outcome_ask",
+  "checksum": "235bc5a3a13259af0f332c419d337c0aff4499bb400df2bebd3ae8619f00384f",
+  "costs": {
+    "adverse_selection_per_share": 0.01,
+    "fee": "exact_embedded_buy_fee",
+    "slippage_per_share": 0.005
+  },
+  "economic_edge": "native_receipt_clock_cross_outcome_parity_fair_vs_same_outcome_ask",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "entry_window_s": [
+    30,
+    180
+  ],
+  "features": {
+    "max_receipt_gap_s": 5.0,
+    "min_dual_book_overlap_s": 0.0,
+    "min_executable_depth_usd": 1.0,
+    "min_net_cross_edge_per_share": 0.0
+  },
+  "fill_model": "contemporaneous_observed_btc_executable_ask_and_size",
+  "forward_start_s": 1785009900,
+  "generation_checksum": "3e5a73494025b7fc0b85effa3c3d1a3efa7b03926727bfb4c1dbd889ca4199a3",
+  "immutable": true,
+  "kind": "btc5m_native_l2_cross_outcome_parity_stale_ask_preregistration",
+  "live_orders_allowed": false,
+  "market_identity": {
+    "outcomes": [
+      "Up",
+      "Down"
+    ],
+    "target": "btc-updown-5m-{window}"
+  },
+  "matched_baseline": "same_cross_outcome_parity_event_windows_with_immutable_empty_btc_cash_flows",
+  "method": "btc5m_native_l2_cross_outcome_parity_stale_ask_v1",
+  "model_checksum": "3e5a73494025b7fc0b85effa3c3d1a3efa7b03926727bfb4c1dbd889ca4199a3",
+  "one_intent_per_window": true,
+  "order_usd": 1.0,
+  "paper_only": true,
+  "promotion": {
+    "positive_increment_vs_matched_no_trade": true,
+    "positive_post_cost_total_and_halves": true,
+    "raw_equals_terminal": true,
+    "single_guard_accepted_order_within_two_post_activation_windows": true,
+    "zero_identity_clock_lookahead_parity_disagreement": true
+  },
+  "registered_before_forward_outcome_inspection": true,
+  "schema_version": 1,
+  "signal_rule": "fair_outcome_equals_one_minus_complement_microprice; strictly_positive_post_cost_edge; higher_net_edge_wins; exact_equal_edge_abstains",
+  "source_schema": "immutable_gap_bounded_dual_outcome_l2_receipts_v1",
+  "terminal_clock": {
+    "max_complete_windows": 6,
+    "required_resolutions": 10,
+    "sixth_terminal_deadline_s": 1785011670,
+    "zero_intent_complete_windows": 2
+  },
+  "training_cutoff_s": 1785009300
+}

@@ -1,0 +1,11 @@
+{
+  "flow_stage": "ROTATE/PROMOTE/OBSERVE",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "wallets": [
+    {
+      "direction_id": "2026-07-24T20:41:26Z-fable-prospective-current-source",
+      "wallet": "0x805a8bbd411324a1c121dd87fac96c2fb13012c8"
+    }
+  ]
+}

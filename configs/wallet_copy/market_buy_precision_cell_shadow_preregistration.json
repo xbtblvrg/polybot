@@ -1,0 +1,22 @@
+{
+  "candidate_id": "market-buy-precision-cell-shadow-v1",
+  "flow_stage": "LIVE/LEARN",
+  "frozen_dimensions": [
+    "absolute_nearest_tick_price_delta",
+    "nearest_executable_price",
+    "source_age",
+    "window_offset"
+  ],
+  "gate": {
+    "amount_max": "current_effective_cap_usd + 0.10",
+    "chronological_holdout_resolved_min": 20,
+    "copyintent_parity_violations": 0,
+    "development_resolved_min": 50,
+    "development_post_fee_pnl": "positive",
+    "holdout_post_fee_pnl": "positive"
+  },
+  "kind": "experiment_preregistration",
+  "live_mutation": false,
+  "preregistered_at": "2026-07-24T04:19:00Z",
+  "status": "PREREGISTERED_BEFORE_CELL_RECOMPUTE"
+}

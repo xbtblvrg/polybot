@@ -1,0 +1,69 @@
+{
+  "activation": {
+    "arbiter": "scripts/arbitrate_btc5m_promoted_cells.py",
+    "legacy_guard_watched_output": "data/research/btc5m_cross_exchange_promoted_cell_latest.json",
+    "pin": "singular_1usd_nonrefreshing_3600s"
+  },
+  "calibration_method": "rolling_signed_notional_imbalance_to_stale_executable_ask",
+  "checksum": "9b727f891cea13529fe0b62f2776ef63b76e1d1eb7b72723b7c3547d3535c8b1",
+  "costs": {
+    "adverse_selection_per_share": 0.01,
+    "fee": "exact_embedded_buy_fee",
+    "slippage_per_share": 0.005
+  },
+  "economic_edge": "native_btc_signed_tape_imbalance_before_resting_ask_reprice",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "entry_window_s": [
+    30,
+    180
+  ],
+  "features": {
+    "imbalance_window_s": 5.0,
+    "max_ask_reprice_fraction_of_microprice_move": 0.5,
+    "max_receipt_gap_s": 5.0,
+    "max_tape_to_entry_lag_s": 3.0,
+    "min_abs_signed_notional_usd": 20.0,
+    "min_microprice_displacement": 0.008,
+    "min_sign_imbalance": 0.55
+  },
+  "fill_model": "contemporaneous_observed_btc_executable_ask_and_size",
+  "forward_start_s": 1785006600,
+  "generation_checksum": "01bea240a384475f0e20c0886160b637c2340d268369b657741774d18e49c49d",
+  "immutable": true,
+  "kind": "btc5m_native_signed_tape_imbalance_stale_ask_preregistration",
+  "live_orders_allowed": false,
+  "market_identity": {
+    "outcomes": [
+      "Up",
+      "Down"
+    ],
+    "target": "btc-updown-5m-{window}"
+  },
+  "matched_baseline": "same_signed_tape_event_windows_with_immutable_empty_btc_cash_flows",
+  "method": "btc5m_native_signed_tape_imbalance_stale_ask_v1",
+  "model_checksum": "01bea240a384475f0e20c0886160b637c2340d268369b657741774d18e49c49d",
+  "one_intent_per_window": true,
+  "order_usd": 1.0,
+  "paper_only": true,
+  "promotion": {
+    "positive_increment_vs_matched_no_trade": true,
+    "positive_post_cost_total_and_halves": true,
+    "raw_equals_terminal": true,
+    "single_guard_accepted_order_within_two_post_activation_windows": true,
+    "zero_identity_clock_lookahead_parity_disagreement": true
+  },
+  "registered_before_forward_outcome_inspection": true,
+  "schema_version": 1,
+  "signal_rule": "rolling_btc_signed_notional_imbalance_to_stale_same_or_complement_outcome_ask; higher_net_edge_wins; exact_equal_edge_abstains",
+  "source_schema": "immutable_native_btc_trade_receipts_and_gap_bounded_dual_outcome_l2_v1",
+  "terminal_clock": {
+    "max_complete_windows": 6,
+    "required_resolutions": 10,
+    "sixth_terminal_deadline_s": 1785008370,
+    "zero_intent_complete_windows": 2
+  },
+  "training_cutoff_s": 1785006000
+}

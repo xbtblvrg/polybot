@@ -1,0 +1,13 @@
+{
+  "archives": [],
+  "kind": "order_flow_incident_archive_manifest",
+  "ledger_scope": {
+    "first_armed_at": "2026-07-29T21:18:11.812248+00:00",
+    "first_armed_commit": "09176b85",
+    "prior_episodes_unrecorded": true,
+    "prior_incident_rows_at_arming": 12,
+    "prior_recorded_clears": 0,
+    "rule": "episodes closing before first_armed_at are permanently unrecorded; an empty or short ledger is NOT evidence of zero episodes"
+  },
+  "schema_version": 1
+}

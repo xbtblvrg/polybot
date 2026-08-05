@@ -1,0 +1,40 @@
+{
+  "byte_count": 101651410,
+  "counters": {
+    "batch_wallets": 32,
+    "budget_exhausted": false,
+    "cohort_shadow_positive": 12187,
+    "cohort_size": 29684,
+    "errors": 0,
+    "live_ready_picks": 6312,
+    "ranked_queue_size": 19776,
+    "route_class_counts": {
+      "ROUTE_RECOVERED_DEGRADED": 33
+    },
+    "status_counts": {
+      "LIVE_READY_SHADOW_PICK": 6312,
+      "SHADOW_POSITIVE_THIN_SAMPLE": 5877,
+      "WATCH_ONLY_NO_COPYABLE_BUYS": 538,
+      "WATCH_ONLY_PENDING_POSITIVE_REPLAY": 16957
+    },
+    "top_live_ready_wallet": "0x5fe14b52584c83c18496914db0b30a28d4510981",
+    "top_shadow_positive_wallet": "0x5fe14b52584c83c18496914db0b30a28d4510981"
+  },
+  "flow_stage": "DISCOVER/LEARN/PROMOTE",
+  "full_payload_policy": "local ignored state; verify integrity with sha256 before use",
+  "generated_at": "2026-07-31T08:35:22.546492+00:00",
+  "kind": "bounded_research_artifact_digest",
+  "preregistered_clock_fields": {},
+  "row_count": 271268,
+  "schema_version": 1,
+  "sha256": "e750ead3c0e07d27b6fe774ebbc00d4b8c132bbbfcbd42709041b005ffbdc580",
+  "source_artifact": "data/research/wallet_market_cohort_replay_latest.json",
+  "source_generated_at": "2026-07-31T08:14:27.143552Z",
+  "source_status": "BATCH_REPLAY_COMPLETE",
+  "top_level_list_counts": {
+    "errors": 0,
+    "live_ready_picks": 6312,
+    "shadow_positive_wallets": 12187,
+    "wallets": 29684
+  }
+}

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.wallet-copy-realtime-shadow-watch</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/opt/homebrew/bin/python3</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_realtime_shadow_watch.py</string>
+    <string>--iterations</string>
+    <string>0</string>
+    <string>--sleep-s</string>
+    <string>2</string>
+    <string>--tail-bytes</string>
+    <string>2000000</string>
+    <string>--max-events</string>
+    <string>50</string>
+    <string>--book-timeout-s</string>
+    <string>1.0</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/runtime_logs/realtime_shadow_watch.out.log</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/runtime_logs/realtime_shadow_watch.err.log</string>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>KeepAlive</key>
+  <true/>
+</dict>
+</plist>

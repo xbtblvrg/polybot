@@ -1,0 +1,14 @@
+{
+  "candidate_id": "cohort_alive_admit_f418d3a1",
+  "decision": "NO_ROTATION_FREEZE_FOR_FABLE",
+  "flow_stage": "PROMOTE/LIVE/DEFEND",
+  "generated_at": "2026-07-20T00:25:00Z",
+  "kind": "f418_midnight_gate_adjudication",
+  "packet_status": "PRE_RULED_ADMIT_F418_ACTIVATION",
+  "reason": "The packet's latest observed BUY is 423241.165245 seconds old and its liveness inputs are dated 2026-07-15. The binding midnight rule requires no rotation when any criterion is stale or ambiguous.",
+  "rotation_executed": false,
+  "source_packet": "data/research/f418_readmission_packet_latest.json",
+  "source_packet_generated_at": "2026-07-20T00:21:59.757688Z",
+  "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+  "status": "FROZEN_STALE_EVIDENCE"
+}

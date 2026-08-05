@@ -1,0 +1,66 @@
+{
+  "consumers_checked": [
+    {
+      "classification": "AUTHORITY_LIVE_PIN",
+      "path": "scripts/run_wallet_copy_live_guard.py",
+      "source": "active_set_auto_degrade_state.selection_pin",
+      "uses_packet_pin_expiry": false
+    },
+    {
+      "classification": "ROTATION_TRIGGER_ONLY_WRITES_LIVE_PIN",
+      "path": "scripts/execute_active_set_selected_rotation.py",
+      "source": "active_set_rotation_packet.quiet_clock.fires_now",
+      "uses_packet_pin_expiry": false
+    },
+    {
+      "classification": "DISPLAY_MEASUREMENT_ROTATION_AT_ONLY",
+      "path": "scripts/report_active_set_post_rotation_windows.py",
+      "source": "active_set_selected_rotation_execution.selection_pin.created_at",
+      "uses_packet_pin_expiry": false
+    },
+    {
+      "classification": "DISPLAY_ONLY_DIGEST",
+      "path": "scripts/update_state_digest.py",
+      "source": "packet quiet_clock / consumer sweep artifact",
+      "uses_packet_pin_expiry": false
+    }
+  ],
+  "dangerous_consumers": [],
+  "direction_id": "2026-07-18T09:34Z-fable-pin-consumer-sweep",
+  "finding": "No checked consumer enforces pin expiry from packet snapshots; live pin expiry authority remains the auto-degrade overlay selection_pin.",
+  "flow_stage": "LIVE/DEFEND/ROTATE",
+  "generated_at": "2026-07-18T09:52:43.455929Z",
+  "kind": "active_set_pin_consumer_sweep",
+  "live_pin": {
+    "expires_at": "2026-07-18T13:30:43.143819Z",
+    "pin_id": "weekend-seat-loss-f418-to-a689",
+    "quiet_clock_anchor_iso": "2026-07-18T09:30:43.143819Z",
+    "quiet_clock_earliest_fire_iso": "2026-07-18T13:30:43.143819Z",
+    "quiet_clock_expiry_derived": true,
+    "source_wallet": "0xa6896d11f76dfa2820662c1f441496f51553559b"
+  },
+  "next_action": "keep packet pin copies display-only; use live overlay selection_pin for expiry authority",
+  "packet_snapshots": [
+    {
+      "generated_at": "2026-07-18T09:27:25.273437Z",
+      "path": "data/research/active_set_rotation_packet_latest.json",
+      "quiet_clock_anchor_iso": "2026-07-18T09:10:46.141765Z",
+      "quiet_clock_earliest_fire_iso": "2026-07-18T13:10:46.141765Z",
+      "snapshot_authority": "DISPLAY_ONLY_NOT_PIN_EXPIRY_AUTHORITY",
+      "status": "PRESTAGED_NO_LIVE_CHANGE"
+    },
+    {
+      "generated_at": "2026-07-18T06:05:23.749918Z",
+      "path": "data/research/active_set_selected_rotation_execution_latest.json",
+      "quiet_clock_anchor_iso": "2026-07-17T23:55:03.914090Z",
+      "quiet_clock_earliest_fire_iso": "2026-07-18T03:55:03.914090Z",
+      "selection_pin_expires_at": "2026-07-18T07:00:23.749918Z",
+      "selection_pin_source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "snapshot_authority": "DISPLAY_ONLY_NOT_PIN_EXPIRY_AUTHORITY",
+      "status": "SELECTED_ROTATION_PIN_WRITTEN"
+    }
+  ],
+  "schema_version": 1,
+  "source_of_truth": "data/research/wallet_copy_active_set_auto_degrade_state.json.selection_pin",
+  "status": "PASS_NO_PACKET_EXPIRY_CONSUMERS"
+}

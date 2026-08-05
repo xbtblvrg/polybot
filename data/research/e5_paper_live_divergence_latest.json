@@ -1,0 +1,217 @@
+{
+  "decision": "diagnose historical-paper optimism; live lane remains demoted",
+  "flow_stage": "LEARN/ROTATE",
+  "generated_at": "2026-07-24T03:55:51.447445+00:00",
+  "kind": "e5_paper_live_divergence",
+  "lane": "e5_maker_first_btc5m_v1",
+  "live": {
+    "by_entry_price": {
+      "03_45_50": {
+        "cost_usd": 29.297835,
+        "filled_orders": 13,
+        "orders": 15,
+        "pnl_usd": -4.297835,
+        "resolved_fills": 12,
+        "roi_pct": -14.669463
+      }
+    },
+    "by_partial_cancel": {
+      "FILLED": {
+        "cost_usd": 26.898943,
+        "filled_orders": 12,
+        "orders": 12,
+        "pnl_usd": -1.898943,
+        "resolved_fills": 11,
+        "roi_pct": -7.059545
+      },
+      "PARTIAL_FILL_CANCEL_RESIDUAL": {
+        "cost_usd": 2.398892,
+        "filled_orders": 1,
+        "orders": 1,
+        "pnl_usd": -2.398892,
+        "resolved_fills": 1,
+        "roi_pct": -100.0
+      },
+      "REJECTED": {
+        "cost_usd": 0,
+        "filled_orders": 0,
+        "orders": 2,
+        "pnl_usd": 0,
+        "resolved_fills": 0,
+        "roi_pct": null
+      }
+    },
+    "by_side": {
+      "DOWN": {
+        "cost_usd": 17.148943,
+        "filled_orders": 7,
+        "orders": 8,
+        "pnl_usd": -7.148943,
+        "resolved_fills": 7,
+        "roi_pct": -41.687368
+      },
+      "UP": {
+        "cost_usd": 12.148892,
+        "filled_orders": 6,
+        "orders": 7,
+        "pnl_usd": 2.851108,
+        "resolved_fills": 5,
+        "roi_pct": 23.46805
+      }
+    },
+    "by_window_offset": {
+      "00_0_60s": {
+        "cost_usd": 29.297835,
+        "filled_orders": 13,
+        "orders": 15,
+        "pnl_usd": -4.297835,
+        "resolved_fills": 12,
+        "roi_pct": -14.669463
+      }
+    },
+    "summary": {
+      "cost_usd": 29.297835,
+      "fill_rate_pct": 86.666667,
+      "filled_orders": 13,
+      "median_fill_observation_delay_s": 1157.537211,
+      "orders": 15,
+      "pnl_usd": -4.297835,
+      "resolved_fills": 12,
+      "roi_pct": -14.669463
+    }
+  },
+  "optimism_components": {
+    "interpretation": "The paper regrade treats cumulative later SELL volume at/below the quote as our fill. Live results include queue position, partial/cancel lifecycle, actual entry timing, and realized winner.",
+    "named_primary_component": "POST_QUOTE_TRADE_THROUGH_IS_NOT_QUEUE_FILL",
+    "realized_roi_gap_percentage_points": 20.536207,
+    "terminal_fill_rate_gap_percentage_points": 5.87832
+  },
+  "paper": {
+    "by_entry_price": {
+      "00_00_25": {
+        "cost_usd": 6.25,
+        "filled_orders": 7,
+        "orders": 7,
+        "pnl_usd": 3.421885,
+        "resolved_fills": 5,
+        "roi_pct": 54.75016
+      },
+      "01_25_40": {
+        "cost_usd": 59.273145,
+        "filled_orders": 49,
+        "orders": 51,
+        "pnl_usd": 17.971593,
+        "resolved_fills": 36,
+        "roi_pct": 30.319959
+      },
+      "02_40_45": {
+        "cost_usd": 38.4,
+        "filled_orders": 26,
+        "orders": 27,
+        "pnl_usd": 10.059914,
+        "resolved_fills": 18,
+        "roi_pct": 26.197693
+      },
+      "03_45_50": {
+        "cost_usd": 472.0076,
+        "filled_orders": 278,
+        "orders": 304,
+        "pnl_usd": 2.334989,
+        "resolved_fills": 196,
+        "roi_pct": 0.494693
+      }
+    },
+    "by_partial_cancel": {
+      "CANCELLED": {
+        "cost_usd": 0,
+        "filled_orders": 0,
+        "orders": 29,
+        "pnl_usd": 0,
+        "resolved_fills": 0,
+        "roi_pct": null
+      },
+      "FULL_FILL": {
+        "cost_usd": 571.411245,
+        "filled_orders": 353,
+        "orders": 353,
+        "pnl_usd": 32.245594,
+        "resolved_fills": 250,
+        "roi_pct": 5.64315
+      },
+      "PARTIAL_FILL_CANCEL_RESIDUAL": {
+        "cost_usd": 4.5195,
+        "filled_orders": 7,
+        "orders": 7,
+        "pnl_usd": 1.542787,
+        "resolved_fills": 5,
+        "roi_pct": 34.136232
+      }
+    },
+    "by_side": {
+      "DOWN": {
+        "cost_usd": 467.171475,
+        "filled_orders": 273,
+        "orders": 298,
+        "pnl_usd": 26.946175,
+        "resolved_fills": 201,
+        "roi_pct": 5.767941
+      },
+      "UP": {
+        "cost_usd": 108.75927,
+        "filled_orders": 87,
+        "orders": 91,
+        "pnl_usd": 6.842206,
+        "resolved_fills": 54,
+        "roi_pct": 6.291147
+      }
+    },
+    "by_window_offset": {
+      "00_0_60s": {
+        "cost_usd": 495.5076,
+        "filled_orders": 304,
+        "orders": 330,
+        "pnl_usd": -2.317311,
+        "resolved_fills": 211,
+        "roi_pct": -0.467664
+      },
+      "01_60_180s": {
+        "cost_usd": 57.50927,
+        "filled_orders": 41,
+        "orders": 42,
+        "pnl_usd": 19.992534,
+        "resolved_fills": 32,
+        "roi_pct": 34.76402
+      },
+      "02_180_270s": {
+        "cost_usd": 22.913875,
+        "filled_orders": 15,
+        "orders": 17,
+        "pnl_usd": 16.113158,
+        "resolved_fills": 12,
+        "roi_pct": 70.320529
+      }
+    },
+    "source_contract": {
+      "fee_formula": "fee_usd = rate * shares * price * (1 - price)",
+      "fee_rate": 0.069997697,
+      "fill_rule": "cumulative post-quote executable SELL volume at or below maker price",
+      "max_notional_usd": 2.5,
+      "partial_fill_rule": "partial executions count; residual cancels at window_end_minus_30s",
+      "size_shares": 5.0,
+      "size_usd_rule": "round(5 * limit_price, 6)",
+      "sizing_policy_id": "fixed_shares_5",
+      "wallet_copy_freshness_gate_s": 60.0
+    },
+    "summary": {
+      "cost_usd": 575.930745,
+      "fill_rate_pct": 92.544987,
+      "filled_orders": 360,
+      "median_fill_observation_delay_s": 206.926522,
+      "orders": 389,
+      "pnl_usd": 33.788381,
+      "resolved_fills": 255,
+      "roi_pct": 5.866744
+    }
+  },
+  "schema_version": 1
+}

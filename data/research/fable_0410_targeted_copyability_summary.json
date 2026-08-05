@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "kind": "targeted_copyability_summary",
+  "flow_stage": "PROMOTE/LEARN",
+  "generated_at": "2026-07-20T04:34:00Z",
+  "authority": "Fable DIRECTION 2026-07-20T04:10Z",
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "source_artifact": "data/research/fable_0410_targeted_corrected_copyability_probe.json",
+  "criteria": {
+    "min_btc5m_buys": 20,
+    "median_entry_offset_lt_s": 60.0,
+    "inband_buy_share_min_pct": 50.0
+  },
+  "wallets": [
+    {
+      "wallet": "0x141d08cb2efe0b57ee1d7d7d4f524cce12f40f59",
+      "local_feed_rows": 397,
+      "btc5m_buys": 397,
+      "inband_025_050_buy_share_pct": 31.234257,
+      "median_entry_offset_s": 121.0,
+      "fresh_flow": true,
+      "p1_promotion_eligible": false,
+      "p1_reject_reasons": [
+        "median_entry_offset_not_lt_60s",
+        "inband_buy_share_below_50pct"
+      ],
+      "admission_disposition": "BENCH_ALIVE_NOT_READY"
+    },
+    {
+      "wallet": "0x927f7694de44d19a72bce76254e628d1c141d215",
+      "local_feed_rows": 1121,
+      "btc5m_buys": 1121,
+      "inband_025_050_buy_share_pct": 49.152542,
+      "median_entry_offset_s": 141.0,
+      "fresh_flow": true,
+      "p1_promotion_eligible": false,
+      "p1_reject_reasons": [
+        "median_entry_offset_not_lt_60s",
+        "inband_buy_share_below_50pct"
+      ],
+      "admission_disposition": "PRIOR_LIVE_DEMOTION_REQUIRES_FRESH_READMISSION"
+    },
+    {
+      "wallet": "0x251c1a283703beed41590b0875a8dcb8ddd1541f",
+      "local_feed_rows": 665,
+      "btc5m_buys": 665,
+      "inband_025_050_buy_share_pct": 29.774436,
+      "median_entry_offset_s": 138.0,
+      "fresh_flow": true,
+      "p1_promotion_eligible": false,
+      "p1_reject_reasons": [
+        "median_entry_offset_not_lt_60s",
+        "inband_buy_share_below_50pct"
+      ],
+      "admission_disposition": "PRIOR_LIVE_DEMOTION_REQUIRES_FRESH_READMISSION"
+    }
+  ],
+  "recommendation": "NO_SWAP_NO_P1_PASSING_NON_ACTIVE_SOURCE"
+}

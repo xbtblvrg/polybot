@@ -1,0 +1,18 @@
+{
+  "decision": "PARK_METHOD_LANE_PAPER_ONLY",
+  "decision_at": "2026-07-24T17:10:00Z",
+  "direction_id": "2026-07-24T17:08:00Z-fable-union-repair-onchain-hot-source",
+  "flow_stage": "LEARN/SELF-DEV",
+  "lane": "alpha_decay_eligible_profiles",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "reason": "negative paper result at the ruled decision boundary",
+  "resident_service_stopped": true,
+  "status": "PARKED",
+  "terminal": true,
+  "terminal_evidence": {
+    "btc5m_buys": 206,
+    "copyable_buys": 178,
+    "paper_pnl_usd": -4.63527
+  }
+}

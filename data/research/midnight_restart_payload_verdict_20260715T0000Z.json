@@ -1,0 +1,111 @@
+{
+  "e6db_verdict": {
+    "applied_at": "2026-07-15T00:01:20.739932Z",
+    "candidate_id": "runtime_auto_degrade_e6db20932f",
+    "classification": "structural_negative_edge",
+    "copyintent_parity": "unchanged; single live guard remains sole submitter",
+    "direction_id": "RESTART-PAYLOAD-20260715T0000Z",
+    "eval_all_flag_enabled_at_restart": true,
+    "evidence": {
+      "e6db_autopsy": "data/research/e6db_loser_autopsy_latest.json",
+      "member_decomposition": "data/research/wallet_copy_member_day_pnl_decomposition_latest.json",
+      "routing_shadow": "data/research/routing_shadow_validation_latest.json",
+      "staging_snapshot": "data/research/midnight_restart_staging_snapshot_20260714T2345Z.json"
+    },
+    "flow_stage": "LIVE/ROTATE/DEFEND",
+    "normal_caps_resume_utc_day": "2026-07-15",
+    "replacement_basis": "member_day_decomposition_positive_pnl; selected seat remains 3048 unless decomposition rotates it",
+    "replacement_candidate": {
+      "candidate_id": "",
+      "fills": 5,
+      "orders": 8,
+      "pnl_usd": 8.32866,
+      "source_wallet": "0xdf2c0702fc00be90bd795234a86e28f1ed39118a"
+    },
+    "selected_seat_verdict": {
+      "allowlist_code_change_required": false,
+      "reason": "routing_shadow runtime_selected_wallet at freeze is 3048 and no decomposition-positive rotation order superseded it",
+      "seat_stays": "0x3048d65321be3497164cdfc2996f94f98a2e7537"
+    },
+    "shadow_duration_h": 48,
+    "shadow_only_until": "2026-07-17T00:00:00Z",
+    "source_wallet": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+    "status": "APPLIED_SHADOW_ONLY_48H",
+    "trigger": "e6db_full_day_close_lte_minus_10",
+    "trigger_pnl_usd": -13.760096,
+    "trigger_threshold_usd": -10.0,
+    "wave_verdict": {
+      "copyintent_parity_status": "PASS",
+      "extra_would_submit_windows": 214,
+      "judged_on_routing_shadow_only": true,
+      "runtime_selected_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "runtime_selected_wallet_source": "selected_member",
+      "status": "ACCRUING_UNDER_PREREGISTERED_CLOCK",
+      "validation_elapsed_hours": 91.252274,
+      "would_submit_windows": 605
+    }
+  },
+  "flow_stage": "LIVE/DEFEND/ROTATE/SELF-DEV",
+  "generated_at": "2026-07-15T00:01:20.739932Z",
+  "id": "RESTART-PAYLOAD-20260715T0000Z",
+  "kind": "midnight_restart_payload_verdict",
+  "live_path_mutated": true,
+  "member_decomposition_total": {
+    "avg_filled_size_usd": 2.357687,
+    "avg_resolved_filled_size_usd": 2.357687,
+    "candidate_id": "",
+    "enabled": false,
+    "expected_fee_share_of_day_fee_pct": 100.0,
+    "expected_fee_share_of_filled_cost_pct": 3.620185,
+    "expected_fee_usd": 6.572152,
+    "filled_cost_usd": 181.541877,
+    "fills": 77,
+    "flat_fills": 0,
+    "latest_submitted_at": "2026-07-14T22:56:04.414761+00:00",
+    "loss_fills": 44,
+    "orders": 101,
+    "payout_usd": 161.312034,
+    "pnl_usd": -20.229843,
+    "policy_id": "",
+    "rejects": 24,
+    "resolved_cost_usd": 181.541877,
+    "resolved_expected_fee_share_of_day_fee_pct": 100.0,
+    "resolved_expected_fee_share_of_resolved_cost_pct": 3.620185,
+    "resolved_expected_fee_usd": 6.572152,
+    "resolved_fills": 77,
+    "source_wallet": "TOTAL",
+    "unresolved_fills": 0,
+    "win_fills": 33
+  },
+  "next_action": "commit payload files, reload LaunchAgent through launchd, verify singleton pid + eval-all flag + deadmen + selected-seat admissibility + latency sample",
+  "positive_members_sorted_by_pnl": [
+    {
+      "candidate_id": "",
+      "expected_fee_usd": 0.425865,
+      "fills": 5,
+      "orders": 8,
+      "pnl_usd": 8.32866,
+      "source_wallet": "0xdf2c0702fc00be90bd795234a86e28f1ed39118a"
+    },
+    {
+      "candidate_id": "rtds_live_band_e2542ab40de0",
+      "expected_fee_usd": 0.336344,
+      "fills": 4,
+      "orders": 5,
+      "pnl_usd": 1.880994,
+      "source_wallet": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0"
+    }
+  ],
+  "reporting_only": false,
+  "routing_shadow_freeze": {
+    "copyintent_parity_status": "PASS",
+    "extra_would_submit_windows": 214,
+    "judged_on_routing_shadow_only": true,
+    "runtime_selected_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+    "runtime_selected_wallet_source": "selected_member",
+    "status": "ACCRUING_UNDER_PREREGISTERED_CLOCK",
+    "validation_elapsed_hours": 91.252274,
+    "would_submit_windows": 605
+  },
+  "staging_snapshot_generated_at": "2026-07-14T23:47:45.011207Z"
+}

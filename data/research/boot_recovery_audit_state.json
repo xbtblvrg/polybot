@@ -1,0 +1,258 @@
+{
+  "defects": [
+    "stale_tmp_or_lock_remnants"
+  ],
+  "flow_stage": "LIVE/SELF-DEV",
+  "generated_at": "2026-08-05T02:59:22Z",
+  "hot_json_states": {
+    "failures": [],
+    "rows": [
+      {
+        "bytes": 22689526,
+        "ok": true,
+        "path": "data/research/wallet_copy_live_guard_state.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 337580924,
+        "ok": true,
+        "path": "data/research/wallet_copy_live_execution_state.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 33320,
+        "ok": true,
+        "path": "data/research/wallet_copy_live_execution_arm_state.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 328060285,
+        "ok": true,
+        "path": "data/research/wallet_copy_history_state.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 395,
+        "ok": true,
+        "path": "data/research/wallet_copy_history_state.json.rotation_d97.rtds_offset.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 63410,
+        "ok": true,
+        "path": "data/research/wallet_copy_full_pool_member_queue.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 9303623,
+        "ok": true,
+        "path": "data/research/state_digest.json",
+        "type": "dict"
+      },
+      {
+        "bytes": 62245,
+        "ok": true,
+        "path": "data/research/member_factory_kpi_state.json",
+        "type": "dict"
+      }
+    ]
+  },
+  "kind": "boot_recovery_audit",
+  "ledger": {
+    "fills": 2514,
+    "latest_order_status": "REJECTED",
+    "latest_order_ts": "2026-08-04T20:45:56.378554+00:00",
+    "orders": 5072,
+    "rejects": 2558,
+    "submitted_rows": 0,
+    "submitted_summary": 0
+  },
+  "rtds_capture": {
+    "capture_inode": 140664713,
+    "capture_mtime_age_s": 1.484743,
+    "capture_size": 1743245216,
+    "current_capture_fresh": true,
+    "initial_capture_size": 1743245216,
+    "offset": 1741401277,
+    "ok": true,
+    "race_classification": null,
+    "restat_capture_size": null,
+    "restat_recovered": false,
+    "rotation_fully_consumed": false,
+    "rotation_growing": false,
+    "state_inode": 140664713,
+    "state_size": 1741401277,
+    "state_size_consistent": true
+  },
+  "schema_version": 1,
+  "single_submitter": {
+    "pid_count": 1,
+    "processes": [
+      {
+        "command": "/opt/homebrew/Cellar/python@3.14/3.14.2_1/Frameworks/Python.framework/Versions/3.14/Resources/Python.app/Contents/MacOS/Python scripts/run_wallet_copy_live_guard.py --operator-approval-id OP-LIVE-20260703-BELA --execute-live --explicit-live-operator-go --live-orders-allowed --rtds-tail-bytes 33554432 --rtds-cold-tail-bytes 33554432 --rtds-offset-state data/research/wallet_copy_history_state.json.rotation_d97.rtds_offset.json --iterations 0 --sleep-s 0.5 --pipeline-timeout-s 60 --live-timeout-s 60 --max-event-age-s 30 --live-build-max-observed-age-s 30 --max-intents 6 --min-live-order-usd 1.0 --wallet-fraction 0.20 --max-order-usd 8.0 --alpha-decay-report data/research/alpha_decay_report.json --enable-drift-buffer --max-drift-buffer-price 0.05 --enable-maker-fallback --copy-model drip --drip-min-tranche-usd 1.0 --drip-max-tranche-usd 2.5 --drip-max-tranches-per-window 12 --per-window-fill-cap 1 --inventory-late-window-stop-s 5 --inventory-max-converge-orders-per-window 6 --inventory-best-ask-timeout-s 1.0 --inventory-future-window-lookahead-s 7200 --price-band-decision-since 2026-07-04T22:22:26Z --active-set-dataapi-poller-every-n-cycles 4 --active-set-live-execution-probes-every-n-cycles 16 --active-set-runtime-refresh-every-n-cycles 16 --cap-step-revert-every-n-cycles 16 --active-set-rtds-premerge-member-limit 1 --post-live-reporting-every-n-cycles 8 --shadow-lanes-every-n-cycles 16 --self-feed-ledger-diff-every-n-cycles 16 --no-active-set-dataapi-poller-disable-source-base-overrides --no-cross-exchange-live-actuator --no-e5-live-actuator --cross-exchange-promoted-cell-state data/research/btc5m_promoted_cell_active_selector.json --cross-exchange-promoted-cell-sources data/research/btc5m_cross_exchange_promoted_cell_latest.json,data/research/btc5m_multivenue_ttl_passive_residual_selector.json,data/research/btc5m_multivenue_ttl_maker_first_residual_selector.json,data/research/btc5m_perp_microstructure_selector.json",
+        "pid": 68863
+      }
+    ]
+  },
+  "stale_remnants": {
+    "cyclic_active_locks": [],
+    "held_locks": [
+      {
+        "age_s": 267088.609737,
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": false,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": true,
+        "lock_mtime_ts": 1785631669.8418474,
+        "path": "data/research/order_flow_deadman.lock"
+      },
+      {
+        "age_s": 333170.581641,
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": false,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": true,
+        "lock_mtime_ts": 1785565587.8699427,
+        "path": "data/research/wide_forward_sibling_lanes.lock"
+      },
+      {
+        "age_s": 119855.388008,
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": false,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": true,
+        "lock_mtime_ts": 1785778903.0635765,
+        "path": "data/research/wide_prospective_supervisor.lock"
+      }
+    ],
+    "held_tmp": [],
+    "lock_observations": {
+      "data/research/.btc5m_late_window_penny_watcher_state.json.lock": 1783374405.9611456,
+      "data/research/.btc_resolutions_from_btcusdt_ticks.jsonl.lock": 1785896738.8771038,
+      "data/research/.e7_1_spot_open_paper_lane_state.json.lock": 1783374397.8258455,
+      "data/research/.e7_spot_open_paper_lane_state.json.lock": 1783374399.3705196,
+      "data/research/.wallet_copy_live_execution_state.json.lock": 1783374398.3223855,
+      "data/research/.wallet_copy_ready_shadow_lanes_state.json.lock": 1785895142.5808954,
+      "data/research/brainless_handoff_commit.lock": 1785308574.6483612,
+      "data/research/brainless_ops.lock": 1785898033.324454,
+      "data/research/order_flow_deadman.lock": 1785631669.8418474,
+      "data/research/order_flow_deadman_episodes.jsonl.lock": 1785359949.5383923,
+      "data/research/order_flow_deadman_incidents.jsonl.lock": 1785898752.8596392,
+      "data/research/wallet_copy_live_guard.lock": 1785888324.1498635,
+      "data/research/wide_direct_handoff_journal.jsonl.lock": 1785896923.1983335,
+      "data/research/wide_forward_sibling_lanes.lock": 1785565587.8699427,
+      "data/research/wide_prospective_supervisor.lock": 1785778903.0635765
+    },
+    "stale_lock_evidence": [
+      {
+        "age_s": 3615.870689,
+        "classification": "STALE_UNHELD",
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": true,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": false,
+        "lock_mtime_ts": 1785895142.5808954,
+        "path": "data/research/.wallet_copy_ready_shadow_lanes_state.json.lock"
+      },
+      {
+        "age_s": 590183.803223,
+        "classification": "STALE_UNHELD",
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": true,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": false,
+        "lock_mtime_ts": 1785308574.6483612,
+        "path": "data/research/brainless_handoff_commit.lock"
+      },
+      {
+        "age_s": 538808.913192,
+        "classification": "STALE_UNHELD",
+        "collector_start_matches_lock_mtime": false,
+        "collector_start_mtime_delta_s": null,
+        "collector_start_ts": null,
+        "collector_state": null,
+        "flock_acquired": true,
+        "flock_error": null,
+        "flock_probe_ok": true,
+        "holder_alive": false,
+        "holder_command": null,
+        "holder_pid": null,
+        "kernel_holder_present": false,
+        "lock_mtime_ts": 1785359949.5383923,
+        "path": "data/research/order_flow_deadman_episodes.jsonl.lock"
+      }
+    ],
+    "stale_locks": [
+      "data/research/.wallet_copy_ready_shadow_lanes_state.json.lock",
+      "data/research/brainless_handoff_commit.lock",
+      "data/research/order_flow_deadman_episodes.jsonl.lock"
+    ],
+    "stale_tmp": [
+      "data/research/.wallet_copy_orderfilled_fast_lane_state.json.s34_barc.tmp",
+      "data/research/.wallet_copy_orderfilled_fast_lane_state.json.tan7r6nc.tmp",
+      "data/research/.wallet_copy_orderfilled_sidecar_live_cursor_state.json.2ufr2de0.tmp"
+    ],
+    "stale_tmp_evidence": [
+      {
+        "age_s": 308834.154814,
+        "lsof_error": null,
+        "lsof_probe_ok": true,
+        "open_handle_pids": [],
+        "open_handle_present": false,
+        "path": "data/research/.wallet_copy_orderfilled_fast_lane_state.json.s34_barc.tmp"
+      },
+      {
+        "age_s": 48284.004622,
+        "lsof_error": null,
+        "lsof_probe_ok": true,
+        "open_handle_pids": [],
+        "open_handle_present": false,
+        "path": "data/research/.wallet_copy_orderfilled_fast_lane_state.json.tan7r6nc.tmp"
+      },
+      {
+        "age_s": 444180.249176,
+        "lsof_error": null,
+        "lsof_probe_ok": true,
+        "open_handle_pids": [],
+        "open_handle_present": false,
+        "path": "data/research/.wallet_copy_orderfilled_sidecar_live_cursor_state.json.2ufr2de0.tmp"
+      }
+    ]
+  },
+  "status": "DEFECT"
+}

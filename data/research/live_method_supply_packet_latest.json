@@ -1,0 +1,92 @@
+{
+  "activation": {
+    "copyintent_parity_required": true,
+    "live_mutation_allowed": false,
+    "requires_fable_activation": true,
+    "single_submitter": "scripts/run_wallet_copy_live_guard.py",
+    "status": "ZERO_LIVE_PACKET_EVIDENCE_GATE_CLOSED"
+  },
+  "candidate": {
+    "all_gate_checks_pass": false,
+    "chronological_holdout": {
+      "distinct_windows": 70,
+      "positive": true,
+      "post_fee_pnl_usd": 16.15007,
+      "resolved_signals": 70,
+      "win_rate_pct": 64.285714,
+      "wins": 45
+    },
+    "experiment_id": "btc5m-cross-exchange-probability-edge-v1-20260724T1356Z",
+    "lane_id": "paper_struct_btc5m_cross_exchange_probability_edge_v1",
+    "live_orders_allowed": false,
+    "model_checksum": "848f22460923a497d0026973be9b1f6e2f43659ccdd1556979907a4ac9e98170",
+    "paper_only": true,
+    "promotion_checks": {
+      "copyintent_parity": true,
+      "distinct_windows_gte_10": true,
+      "positive_post_fee_chronological_holdout": true,
+      "positive_post_fee_train": true,
+      "prospective_executable_book_post_fee_pnl_positive": false,
+      "resolved_signals_gte_200": false,
+      "single_guard_only": true
+    },
+    "prospective_executable_book": {
+      "distinct_windows": 46,
+      "positive": false,
+      "post_fee_pnl_usd": -0.812811,
+      "resolved_signals": 46,
+      "scheduled_windows": 331,
+      "terminal_counts": {
+        "PROTECTED_SKIP": 240,
+        "SIGNAL": 91
+      }
+    },
+    "walk_forward_train": {
+      "distinct_windows": 163,
+      "positive": true,
+      "post_fee_pnl_usd": 36.035163,
+      "resolved_signals": 163,
+      "win_rate_pct": 63.803681,
+      "wins": 104
+    }
+  },
+  "excluded_methods": {
+    "927f": "unready",
+    "a689": "proven-negative/excluded",
+    "btc5m_structural_scalp": "negative prospective paper evidence",
+    "c50d": "mechanical negative rotation",
+    "e5": "negative live block",
+    "f418": "mechanically demoted"
+  },
+  "flow_stage": "LIVE/ROTATE/PROMOTE",
+  "generated_at": "2026-07-27T20:00:08.993415Z",
+  "kind": "live_method_supply_packet",
+  "schema_version": 1,
+  "source_acquisition": {
+    "ambiguous_aliases": {},
+    "current_rows": 0,
+    "enabled_wallets": [
+      "0x32de91fa203321fa7735e7854f2b1c844e71ce9d"
+    ],
+    "identity_market_outcome_parity_violations": 0,
+    "proxy_aliases": {},
+    "status": "SOURCE_SILENT_32DE",
+    "wallet": "0x32de91fa203321fa7735e7854f2b1c844e71ce9d"
+  },
+  "unchanged_bar_sweep": {
+    "candidate_count": 11,
+    "eligible_count": 0,
+    "quality_bars_unchanged": true,
+    "refusal_counts": {
+      "active_temporal_not_proven_negative": 7,
+      "both_resolved_halves_positive": 11,
+      "f1_measured_positive_regime_cell": 9,
+      "f2_fresh_own_source_buy_rows_gte_10": 9,
+      "f3_not_enabled_or_cooloff_or_fading": 1,
+      "f4_external_liveness": 0,
+      "not_terminal_park_red_clock_or_measured_loser": 1,
+      "own_evidenced_policy_available": 9
+    },
+    "status": "MEASURED_EMPTY_SEAT_HOLD_FREEZE_NOT_ALL_PASS"
+  }
+}

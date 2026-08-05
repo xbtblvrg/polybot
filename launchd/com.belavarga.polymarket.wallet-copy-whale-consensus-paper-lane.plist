@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN"
+  "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+  <key>Label</key>
+  <string>com.belavarga.polymarket.wallet-copy-whale-consensus-paper-lane</string>
+  <key>ProgramArguments</key>
+  <array>
+    <string>/usr/bin/nice</string>
+    <string>-n</string>
+    <string>15</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string>
+    <string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_whale_consensus_paper_lane.py</string>
+    <string>--threshold</string>
+    <string>0.5</string>
+    <string>--pmax</string>
+    <string>0.55</string>
+    <string>--max-feed-events</string>
+    <string>2500</string>
+    <string>--decision-deadline-utc</string>
+    <string>2026-07-06T20:00:00Z</string>
+  </array>
+  <key>WorkingDirectory</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent</string>
+  <key>EnvironmentVariables</key>
+  <dict>
+    <key>PYTHONUNBUFFERED</key>
+    <string>1</string>
+    <key>WALLET_COPY_EGRESS</key>
+    <string>VPN</string>
+  </dict>
+  <key>RunAtLoad</key>
+  <true/>
+  <key>StartInterval</key>
+  <integer>300</integer>
+  <key>StandardOutPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/whale_consensus_paper_lane.launchd.out</string>
+  <key>StandardErrorPath</key>
+  <string>/Users/belavarga/claudecode/polymarket-agent/data/research/whale_consensus_paper_lane.launchd.err</string>
+</dict>
+</plist>

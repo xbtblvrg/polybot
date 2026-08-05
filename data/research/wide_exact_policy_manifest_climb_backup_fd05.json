@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "kind": "wide_exact_policy_frozen_manifest",
+  "flow_stage": "LEARN/OBSERVE/PROMOTE",
+  "generated_at": "2026-07-27T10:10:00Z",
+  "paper_only": true,
+  "live_orders_allowed": false,
+  "manifest_id": "widemanifest_climb_backup_fd05_20260727T101000Z",
+  "source_alpha_report": "data/research/alpha_decay_report_wide_20260727T091131Z.json",
+  "source_alpha_sha256": "e3bf9b696d02db30ae4654fbc77bd5d5e5117a091741bac555d266bfee6c7609",
+  "source_alpha_status": "PASS_CURRENT_SOURCE",
+  "source_identity": {
+    "source_artifact": "data/research/alpha_decay_report_wide_20260727T091131Z.json",
+    "source_sha256": "e3bf9b696d02db30ae4654fbc77bd5d5e5117a091741bac555d266bfee6c7609",
+    "source_status": "PASS_CURRENT_SOURCE",
+    "source_timestamp": "2026-07-27T09:42:25.390283+00:00",
+    "intersection_required": false
+  },
+  "effective_at": "2026-07-27T10:10:00Z",
+  "score_run_id": "wide_climb_backup_fd05_20260727T101000Z",
+  "selection_rule": "fable_direction_20260727T100815Z_isolated_climb_backup",
+  "capture_selection_rule": "single exact fingerprint paper-only backup insurance; zero promotion authority",
+  "fingerprint_slice_freeze": {
+    "source_roster_drought_firing": true,
+    "frozen_wallets": [
+      "0x00033f1089ff061813850e5135483bed39ce3b49"
+    ],
+    "rule": "isolated same-wallet backup fingerprint; never replaces primary freeze"
+  },
+  "ready_queue_count": 0,
+  "excluded_wallets": [],
+  "capture_watch_wallets": [
+    {
+      "wallet": "0x00033f1089ff061813850e5135483bed39ce3b49",
+      "queue_rank": 0,
+      "move_slice_keys": [
+        "060-120|>0.75",
+        "120-180|>0.75",
+        "180-240|0.50-0.75",
+        "240-300|0.50-0.75",
+        "unknown_seconds|>0.75"
+      ],
+      "wide_policy_fingerprint": "fd05d1bbcb24ba2f6e58f6e0337db000f24b766d83da8193d7e02fa441916317",
+      "slice_freeze": {
+        "status": "FROZEN_CLIMB_BACKUP_PAPER_FEEDSTOCK",
+        "reason": "climb_backup_parallel_paper_insurance_not_primary",
+        "capture_exclusion_overridden": false
+      },
+      "capture_exclusion_overridden": false,
+      "promotion_authority": false,
+      "paper_measurement_only": true
+    }
+  ],
+  "promotion_admitted_wallets": [],
+  "admitted_wallets": [],
+  "refusal_census": [],
+  "summary": {
+    "ready_queue_wallets": 0,
+    "capture_watch_wallets": 1,
+    "promotion_admitted_wallets": 0
+  }
+}

@@ -1,0 +1,45 @@
+{
+  "all_pass": false,
+  "checks": {
+    "clock_start_exact": true,
+    "copyintent_parity_exact": false,
+    "first_half_positive": false,
+    "historical_or_foreign_rows_excluded": true,
+    "post_fee_aggregate_positive": false,
+    "resolved_gte_30": false,
+    "second_half_positive": false,
+    "source_binding_exact": true,
+    "wallet_present": true
+  },
+  "clock_start": "2026-07-23T18:32:33.543905Z",
+  "decision_at": "2026-07-25T18:32:33.543905Z",
+  "due": false,
+  "evidence": {
+    "first_half": {
+      "post_fee_pnl_usd": 0,
+      "resolved": 0
+    },
+    "generic_72h_reporter_allowed": false,
+    "historical_clearance_rows_allowed": false,
+    "post_fee_pnl_usd": 0,
+    "rejected_rows": [],
+    "resolved": 0,
+    "second_half": {
+      "post_fee_pnl_usd": 0,
+      "resolved": 0
+    },
+    "source": "ready-shadow lane post_bind_resolved_rows only"
+  },
+  "flow_stage": "PROMOTE/ROTATE/SELF-DEV",
+  "generated_at": "2026-07-25T15:51:08.046755Z",
+  "kind": "82c8_48h_terminal_decision",
+  "live_orders_allowed": false,
+  "next": "run --execute at or after 2026-07-25T18:32:33.543905Z",
+  "paper_only": true,
+  "required_hours": 48,
+  "required_resolved": 30,
+  "schema_version": 1,
+  "source_binding": "FABLE_20260723_82C8_READY_SHADOW",
+  "status": "NOT_DUE",
+  "wallet": "0x82c857cb4d18e919c1b7d3c6865be4debe50da77"
+}

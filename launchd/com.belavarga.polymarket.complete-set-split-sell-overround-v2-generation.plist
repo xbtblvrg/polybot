@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList.dtd">
+<plist version="1.0"><dict>
+  <key>Label</key><string>com.belavarga.polymarket.complete-set-split-sell-overround-v2-generation</string>
+  <key>ProgramArguments</key><array><string>/usr/bin/nice</string><string>-n</string><string>15</string><string>/Users/belavarga/claudecode/polymarket-agent/.venv/bin/python</string><string>/Users/belavarga/claudecode/polymarket-agent/scripts/run_btc5m_multivenue_residual_matrix.py</string><string>--generation-id</string><string>btc5m-complete-set-split-sell-overround-v2</string><string>--generation-family</string><string>complete_set_split_sell_overround</string><string>--execution-mode</string><string>taker</string><string>--state</string><string>data/research/btc5m_complete_set_split_sell_overround_v2_state.json</string><string>--cache</string><string>data/research/btc5m_complete_set_split_sell_overround_v2_clock.json</string><string>--selector-state</string><string>data/research/btc5m_perp_microstructure_selector.json</string><string>--watch</string><string>--interval-s</string><string>1</string></array>
+  <key>WorkingDirectory</key><string>/Users/belavarga/claudecode/polymarket-agent</string><key>RunAtLoad</key><true/><key>KeepAlive</key><dict><key>SuccessfulExit</key><false/></dict>
+  <key>StandardOutPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_complete_set_split_sell_overround_v2.out</string><key>StandardErrorPath</key><string>/Users/belavarga/claudecode/polymarket-agent/data/research/btc5m_complete_set_split_sell_overround_v2.err</string>
+</dict></plist>

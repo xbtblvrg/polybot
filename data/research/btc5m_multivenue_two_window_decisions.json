@@ -1,0 +1,503 @@
+{
+  "schema_version": 1,
+  "kind": "btc5m_multivenue_two_window_liveness_decisions",
+  "decision_at": "2026-07-25T12:05:09.373976Z",
+  "liveness_clock_start_window_s": 1784980500,
+  "liveness_decision_at_s": 1784981100,
+  "immutable": true,
+  "decisions": [
+    {
+      "generation_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+      "decision": "CONTINUE_POSITIVE_INTENT_TO_ISOLATED_RESOLVED_GATE",
+      "completed_windows": 2,
+      "positive_edge_intents": 21,
+      "required_resolved": 10,
+      "evidence_pooling_allowed": false
+    },
+        {
+            "generation_checksum": "e6185753df8149919b7d10f5336b178ca191498e8178c1f3418aedb5c0157ce0",
+      "decision": "PARK_ZERO_INTENT_GENERATION",
+      "completed_windows": 2,
+      "positive_edge_intents": 0,
+      "dominant_refusals": [
+        "inside_spread_strict_post_only_failed",
+        "hard_entry_bounds",
+        "residual_below_frozen_margin"
+            ],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "fa14803b71347ab9abf0feb96fcf851bb229a0d1c55c682c485e2ed4dca931d0",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [
+                1784982300,
+                1784982600
+            ],
+            "complete_clock_offsets": [
+                15,
+                30,
+                45,
+                60
+            ],
+            "positive_edge_intents": 0,
+            "dominant_refusals": [
+                "paired_actual_book_or_bounds",
+                "paired_worst_case_post_cost_edge_nonpositive",
+                "two_of_three_consensus_missing"
+            ],
+            "shared_raw_cache": "data/research/btc5m_multivenue_two_sided_post_only_cache.json",
+            "incomplete_pre_repair_rows_evidence_eligible": false,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "02239a664d1d50735575e66a0235eb4ccd917c2c463e60e61caf0e5ab2512156",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784982900, 1784983200],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["fill_then_hedge_locked_value_nonpositive_or_depth_missing"],
+            "execution_mechanism_version": "passive_first_executable_depth_hedge_v1",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "76f0ba4b90ed05940249e2acfd657a86e891e4a2939b1ad4cc81d14d641dafa2",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784982900, 1784983200],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["dual_ioc_depth_or_bounds"],
+            "execution_mechanism_version": "chronological_dual_ioc_depth_v1",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "5f6267568627e45eda120f94337def77107397f551bf716be7cf2c7655390a4a",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784982900, 1784983200],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["three_venue_basis_displacement_below_trigger"],
+            "execution_mechanism_version": "three_venue_basis_post_only_reversal_cancel_v1",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "7a5a32b1d1fc5a63a805ee1bec873f7af2f04ade8895dc03bc92eaff0dd67cce",
+            "decision_kind": "fixed_execution_deadline",
+            "decision_at_s": 1784982900,
+            "decision_recorded_at": "2026-07-25T12:35:02.423012+00:00",
+            "decision": "PARK_INSUFFICIENT_EXECUTABLE_FILL_RATE",
+            "positive_edge_intents": 47,
+            "resolved_selector_cells": 0,
+            "selector_status": "NO_GATE_COMPLETE_CELL",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "cd50f373669a0e61439539e76a400680b9896ce135829249c0c87c7b90fdd28c",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_aggressor_consensus_taker",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "5579570711109aa70b08888d9ed6b50d3f22f56df2481db92e3c64554b1f91d4",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "perp_spot_basis_impulse_taker",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "85ec2798dc4ac8ffe927dbe86492bbb2667f6d3ff2afadf97b7d005cf72050d4",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_lead_post_only",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "supersedes_preregistration_checksums": [
+                "cd50f373669a0e61439539e76a400680b9896ce135829249c0c87c7b90fdd28c",
+                "5579570711109aa70b08888d9ed6b50d3f22f56df2481db92e3c64554b1f91d4",
+                "85ec2798dc4ac8ffe927dbe86492bbb2667f6d3ff2afadf97b7d005cf72050d4"
+            ],
+            "decision": "PARK_TRANSPORT_CLOCK_SKEW_PREOBSERVATION",
+            "completed_windows": 0,
+            "positive_edge_intents": 0,
+            "measured_transport_skew_s": [1.566536, 2.136052],
+            "reason": "pre-first-window measured sequential public API transport exceeded frozen 1.5s limit",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "9245a17483e3456c826a54f964ea2f6043b711b37e7c7611bfa52872683d3523",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_aggressor_consensus_taker",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "max_clock_skew_s": 3.0,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "f5defb1bad35cb2e7e9813518d859b10e7b086b3912569856992c5a90dad7815",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "perp_spot_basis_impulse_taker",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "max_clock_skew_s": 3.0,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "674a3950c15b8a151dd91209b49b7b205806d493dd1f90f8e6840db5f8189d45",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_lead_post_only",
+            "decision": "PREREGISTERED_PROSPECTIVE_ACTUATOR",
+            "max_clock_skew_s": 3.0,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "required_incremental_vs_matched_cross_exchange": true,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "9245a17483e3456c826a54f964ea2f6043b711b37e7c7611bfa52872683d3523",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784984700, 1784985000],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["dual_perp_aggressor_microprice_consensus_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "f5defb1bad35cb2e7e9813518d859b10e7b086b3912569856992c5a90dad7815",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784984700, 1784985000],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["dual_perp_basis_impulse_confirmation_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "674a3950c15b8a151dd91209b49b7b205806d493dd1f90f8e6840db5f8189d45",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784984700, 1784985000],
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["dual_perp_aggressor_microprice_consensus_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "6842da96a6b8ea5c9ff74d9cc57260d9028bed0895159d27aa832b4bb55bf7b5",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_aggressor_consensus_taker",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_clock_role": "SOLE_WRITER",
+            "aggregate_selector_role": "SOLE_WRITER",
+            "aggregate_selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "8c35169c3cf26e9c29813db19f26d92b715a433ad12c3393c3d1e5b0bf01b703",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "perp_spot_basis_impulse_taker",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "aggregate_selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "3a52c2fafe7cc613e1b33f1f86ca139ebd4404ac3c5dbce92d0d929cf2487890",
+            "method": "btc5m_perp_microstructure_lead_v1",
+            "family": "dual_perp_lead_post_only",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "aggregate_selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "supersedes_preregistration_checksums": [
+                "6842da96a6b8ea5c9ff74d9cc57260d9028bed0895159d27aa832b4bb55bf7b5",
+                "8c35169c3cf26e9c29813db19f26d92b715a433ad12c3393c3d1e5b0bf01b703",
+                "3a52c2fafe7cc613e1b33f1f86ca139ebd4404ac3c5dbce92d0d929cf2487890"
+            ],
+            "decision": "SUPERSEDE_BEFORE_LAUNCH_WITH_SHARED_RAW_SOURCE_FENCE",
+            "completed_windows": 0,
+            "positive_edge_intents": 0,
+            "shared_raw_source_checksum": "eae1a190f6d63b43c181dd69c8f4e064664f9992157c0077ba010f84f871ccc2",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "8641192912a956c6946721f68995aed69b79e780f5488d27433207132354d086",
+            "family": "dual_perp_aggressor_consensus_taker",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_source_checksum": "eae1a190f6d63b43c181dd69c8f4e064664f9992157c0077ba010f84f871ccc2",
+            "shared_raw_clock_role": "SOLE_WRITER",
+            "aggregate_selector_role": "SOLE_WRITER",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "1fef5caa0b6f018dc7ba8850b10247f79f7696707cd48232865a33620249b1c0",
+            "family": "perp_spot_basis_impulse_taker",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_source_checksum": "eae1a190f6d63b43c181dd69c8f4e064664f9992157c0077ba010f84f871ccc2",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "0ef7337982ccf75a049ea8fb89458ea058d0f497fa3243f9e08916f99a7db95b",
+            "family": "dual_perp_lead_post_only",
+            "decision": "PREREGISTERED_SINGLE_WRITER_SHARED_CLOCK_ACTUATOR",
+            "shared_raw_source_checksum": "eae1a190f6d63b43c181dd69c8f4e064664f9992157c0077ba010f84f871ccc2",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "supersedes_generation_checksums": [
+                "8641192912a956c6946721f68995aed69b79e780f5488d27433207132354d086",
+                "1fef5caa0b6f018dc7ba8850b10247f79f7696707cd48232865a33620249b1c0",
+                "0ef7337982ccf75a049ea8fb89458ea058d0f497fa3243f9e08916f99a7db95b"
+            ],
+            "decision": "SUPERSEDE_INCOMPLETE_CLOCK_TERMINAL_RACE",
+            "completed_windows": 0,
+            "positive_edge_intents": 0,
+            "evidence_pooling_allowed": false,
+            "next_action": "retry incomplete shared-clock slices without consuming the immutable generation/window terminal id"
+        },
+        {
+            "generation_checksum": "051fdb552b0b728dd8a36b071316c901771396596ff1459892cd48b5cc002e88",
+            "family": "dual_perp_aggressor_consensus_taker",
+            "decision": "PREREGISTERED_COMPLETE_CLOCK_ONLY_SHARED_ACTUATOR",
+            "terminalization_policy": "complete_clock_only_retry_incomplete_v1",
+            "shared_raw_clock_role": "SOLE_WRITER",
+            "aggregate_selector_role": "SOLE_WRITER",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "d12880cfa0b950cb45bc15dc76edb8bbce1e54e0c5e2e06ebd4dfba4f1f3a1ea",
+            "family": "perp_spot_basis_impulse_taker",
+            "decision": "PREREGISTERED_COMPLETE_CLOCK_ONLY_SHARED_ACTUATOR",
+            "terminalization_policy": "complete_clock_only_retry_incomplete_v1",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "034f186ba3d8a5e0f7197e6e2bcf1b50fab306ccf8dde607ab80c4939c7b49e0",
+            "family": "dual_perp_lead_post_only",
+            "decision": "PREREGISTERED_COMPLETE_CLOCK_ONLY_SHARED_ACTUATOR",
+            "terminalization_policy": "complete_clock_only_retry_incomplete_v1",
+            "shared_raw_clock_role": "READ_ONLY_PEER",
+            "aggregate_selector_role": "NONE",
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved": 10,
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "051fdb552b0b728dd8a36b071316c901771396596ff1459892cd48b5cc002e88",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784985900, 1784986200],
+            "positive_edge_intents": 0,
+            "complete_window_input_equals_terminal_window": true,
+            "dominant_refusals": ["dual_perp_aggressor_microprice_consensus_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "d12880cfa0b950cb45bc15dc76edb8bbce1e54e0c5e2e06ebd4dfba4f1f3a1ea",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784985900, 1784986200],
+            "positive_edge_intents": 0,
+            "complete_window_input_equals_terminal_window": true,
+            "dominant_refusals": ["dual_perp_basis_impulse_confirmation_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "034f186ba3d8a5e0f7197e6e2bcf1b50fab306ccf8dde607ab80c4939c7b49e0",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784985900, 1784986200],
+            "positive_edge_intents": 0,
+            "complete_window_input_equals_terminal_window": true,
+            "dominant_refusals": ["dual_perp_aggressor_microprice_consensus_missing"],
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "525770f28158c4a6d55f511da68fe0cebe5553392291af561c5516a9f4f76e2e",
+            "family": "complete_set_paired_maker",
+            "decision": "PREREGISTERED_BOOK_ONLY_COMPLETE_SET_ACTUATOR",
+            "terminalization_policy": "first_lawful_bundle_or_window_270s_complete_v1",
+            "bundle_total_notional_usd": 1.0,
+            "leg_notional_usd": 0.5,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved_bundle_cycles": 10,
+            "permanent_resolved_bundle_cycles": 50,
+            "orphan_accounting": "canonical_resolution_full_realized_pnl",
+            "selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "evidence_pooling_allowed": false,
+            "registered_before_outcome_inspection": true
+        },
+        {
+            "generation_checksum": "525770f28158c4a6d55f511da68fe0cebe5553392291af561c5516a9f4f76e2e",
+            "decision": "SUPERSEDE_PREMATURE_COMPLETE_WINDOW_CLOCK",
+            "completed_windows_accepted": 0,
+            "positive_edge_intents": 0,
+            "contaminated_window_start_s": 1784987400,
+            "evidence_pooling_allowed": false,
+            "next_action": "start checksum-isolated v2 with completion no earlier than window+270s"
+        },
+        {
+            "generation_checksum": "c5de4d401e3dc087cf9b96d5fd273a6c213e07ddd876b53bfde5f51c2ace53cc",
+            "family": "complete_set_paired_maker",
+            "decision": "PREREGISTERED_BOOK_ONLY_COMPLETE_SET_ACTUATOR",
+            "terminalization_policy": "first_lawful_bundle_or_window_270s_complete_v1",
+            "bundle_total_notional_usd": 1.0,
+            "leg_notional_usd": 0.5,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved_bundle_cycles": 10,
+            "permanent_resolved_bundle_cycles": 50,
+            "orphan_accounting": "canonical_resolution_full_realized_pnl",
+            "selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "evidence_pooling_allowed": false,
+            "registered_before_outcome_inspection": true
+        },
+        {
+            "generation_checksum": "c5de4d401e3dc087cf9b96d5fd273a6c213e07ddd876b53bfde5f51c2ace53cc",
+            "decision": "SUPERSEDE_LEGACY_OFFSET_CLOCK_LEAK",
+            "completed_windows_accepted": 0,
+            "positive_edge_intents": 0,
+            "contaminated_window_start_s": 1784987700,
+            "evidence_pooling_allowed": false,
+            "next_action": "isolate complete-set clock from all legacy spot-offset completeness paths"
+        },
+        {
+            "generation_checksum": "2c92543487b6a7518c24e500a178aed8252badde6f9145fe3b1644833196e5c9",
+            "family": "complete_set_paired_maker",
+            "decision": "PREREGISTERED_BOOK_ONLY_COMPLETE_SET_ACTUATOR",
+            "terminalization_policy": "sole_complete_predicate_all_cells_terminal_and_window_gte_270s_v1",
+            "bundle_total_notional_usd": 1.0,
+            "leg_notional_usd": 0.5,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved_bundle_cycles": 10,
+            "permanent_resolved_bundle_cycles": 50,
+            "orphan_accounting": "canonical_resolution_full_realized_pnl",
+            "selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "evidence_pooling_allowed": false,
+            "registered_before_outcome_inspection": true
+        },
+        {
+            "generation_checksum": "2c92543487b6a7518c24e500a178aed8252badde6f9145fe3b1644833196e5c9",
+            "decision": "PARK_ZERO_INTENT_GENERATION",
+            "completed_windows": 2,
+            "complete_window_starts_s": [1784988300, 1784988600],
+            "complete_window_min_elapsed_s": 270,
+            "positive_edge_intents": 0,
+            "dominant_refusals": ["complete_set_actual_book_or_post_only_bounds"],
+            "selector_status": "NO_GATE_COMPLETE_CELL",
+            "evidence_pooling_allowed": false
+        },
+        {
+            "generation_checksum": "ae779f0d1331efc1dffc02927da997351d2688c90dbf95171fe0823cce2563e0",
+            "family": "complete_set_split_sell_overround",
+            "decision": "PREREGISTERED_CTF_SPLIT_ACTUAL_BID_DEPTH_SELL_ACTUATOR",
+            "terminalization_policy": "sole_complete_predicate_all_cells_terminal_and_window_gte_270s_v1",
+            "split_collateral_usd": 1.0,
+            "split_shares_per_leg": 1.0,
+            "ctf_gas_settlement_reserve_usd": 0.01,
+            "slippage_reserve_per_leg_usd": 0.005,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved_bundle_cycles": 10,
+            "permanent_resolved_bundle_cycles": 50,
+            "orphan_accounting": "unsold_leg_canonical_resolution_full_realized_pnl",
+            "selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "evidence_pooling_allowed": false,
+            "registered_before_outcome_inspection": true
+        },
+        {
+            "generation_checksum": "b4ad4b0c857de970439702be6f623e398602d3a1df266589637783817ef31a99",
+            "family": "complete_set_split_sell_overround",
+            "decision": "SUPERSEDE_UNREGISTERED_LAUNCH_IDENTITY",
+            "completed_windows_accepted": 0,
+            "positive_edge_intents_rejected": 4,
+            "first_clock_window_s": 1784990400,
+            "evidence_pooling_allowed": false,
+            "next_action": "load committed preregistered checksum ae779f0d1331"
+        },
+        {
+            "generation_checksum": "ae779f0d1331efc1dffc02927da997351d2688c90dbf95171fe0823cce2563e0",
+            "family": "complete_set_split_sell_overround",
+            "decision": "SUPERSEDE_PARTIAL_LAUNCH_WINDOW_EVIDENCE",
+            "completed_windows_accepted": 0,
+            "positive_edge_intents_rejected": 1,
+            "partial_window_start_s": 1784990400,
+            "first_eligible_full_window_s": 1784990700,
+            "evidence_pooling_allowed": false,
+            "next_action": "launch v2 with an enforced window_start_gte_liveness_start seam"
+        },
+        {
+            "generation_checksum": "9a0c9deb55daf7f5c763b5c0047b0bc270a10f2e25e92072ba97aad6c2179bd7",
+            "family": "complete_set_split_sell_overround",
+            "decision": "PREREGISTERED_FULL_WINDOW_CTF_SPLIT_SELL_ACTUATOR",
+            "terminalization_policy": "window_start_gte_liveness_start_and_all_cells_terminal_at_window_gte_270s_v2",
+            "split_collateral_usd": 1.0,
+            "split_shares_per_leg": 1.0,
+            "ctf_gas_settlement_reserve_usd": 0.01,
+            "slippage_reserve_per_leg_usd": 0.005,
+            "zero_intent_decision_windows": 2,
+            "positive_intent_max_windows": 6,
+            "required_resolved_bundle_cycles": 10,
+            "permanent_resolved_bundle_cycles": 50,
+            "orphan_accounting": "unsold_leg_canonical_resolution_full_realized_pnl",
+            "selector_path": "data/research/btc5m_perp_microstructure_selector.json",
+            "evidence_pooling_allowed": false,
+            "registered_before_outcome_inspection": true
+        }
+  ]
+}

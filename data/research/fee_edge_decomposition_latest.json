@@ -1,0 +1,391 @@
+{
+  "bins": {
+    "entry_price_band": [
+      "[0,0.2)",
+      "[0.2,0.4)",
+      "[0.4,0.6)",
+      "[0.6,0.8)",
+      "[0.8,1.01)"
+    ],
+    "seconds_remaining_at_fill": [
+      "[0,30)",
+      "[30,60)",
+      "[60,120)",
+      "[120,180)",
+      "[180,301)"
+    ],
+    "source_wallet": "categorical",
+    "tranche_notional_usd": [
+      "[0,1)",
+      "[1,2)",
+      "[2,4)",
+      "[4,inf)"
+    ]
+  },
+  "cohorts": {
+    "fee_cal_measured": {
+      "axes": {
+        "entry_price_band": [
+          {
+            "expected_fee_usd": 2.070593,
+            "n_resolved_windows": 34,
+            "post_fee_pnl_usd": 22.784486,
+            "pre_fee_pnl_usd": 24.855079,
+            "slice": "[0,0.2)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 8.460137,
+            "n_resolved_windows": 181,
+            "post_fee_pnl_usd": -35.41294,
+            "pre_fee_pnl_usd": -26.952803,
+            "slice": "[0.2,0.4)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 5.243242,
+            "n_resolved_windows": 148,
+            "post_fee_pnl_usd": 6.167941,
+            "pre_fee_pnl_usd": 11.411183,
+            "slice": "[0.4,0.6)",
+            "success": true
+          },
+          {
+            "expected_fee_usd": 1.865366,
+            "n_resolved_windows": 75,
+            "post_fee_pnl_usd": 3.651767,
+            "pre_fee_pnl_usd": 5.517133,
+            "slice": "[0.6,0.8)",
+            "success": false
+          }
+        ],
+        "seconds_remaining_at_fill": [
+          {
+            "expected_fee_usd": 0.825567,
+            "n_resolved_windows": 17,
+            "post_fee_pnl_usd": 12.536679,
+            "pre_fee_pnl_usd": 13.362246,
+            "slice": "[0,30)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 5.54003,
+            "n_resolved_windows": 126,
+            "post_fee_pnl_usd": -16.792597,
+            "pre_fee_pnl_usd": -11.252567,
+            "slice": "[120,180)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 7.378894,
+            "n_resolved_windows": 207,
+            "post_fee_pnl_usd": -20.813872,
+            "pre_fee_pnl_usd": -13.434978,
+            "slice": "[180,301)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 2.154453,
+            "n_resolved_windows": 47,
+            "post_fee_pnl_usd": -9.868975,
+            "pre_fee_pnl_usd": -7.714522,
+            "slice": "[30,60)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 4.434327,
+            "n_resolved_windows": 100,
+            "post_fee_pnl_usd": -7.820972,
+            "pre_fee_pnl_usd": -3.386645,
+            "slice": "[60,120)",
+            "success": false
+          }
+        ],
+        "source_wallet": [
+          {
+            "expected_fee_usd": 7.500867,
+            "n_resolved_windows": 208,
+            "post_fee_pnl_usd": -13.041983,
+            "pre_fee_pnl_usd": -5.541116,
+            "slice": "0xa6896d11f76dfa2820662c1f441496f51553559b",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 7.404332,
+            "n_resolved_windows": 172,
+            "post_fee_pnl_usd": -22.866267,
+            "pre_fee_pnl_usd": -15.461935,
+            "slice": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+            "success": false
+          }
+        ],
+        "tranche_notional_usd": [
+          {
+            "expected_fee_usd": 7.744265,
+            "n_resolved_windows": 197,
+            "post_fee_pnl_usd": -15.491677,
+            "pre_fee_pnl_usd": -7.747412,
+            "slice": "[0,1)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 8.11441,
+            "n_resolved_windows": 206,
+            "post_fee_pnl_usd": -25.063734,
+            "pre_fee_pnl_usd": -16.949324,
+            "slice": "[1,2)",
+            "success": false
+          }
+        ]
+      },
+      "excluded_rows": {
+        "unresolved": 1661
+      },
+      "input_rows": 5000,
+      "normalized_resolved_rows": 3339
+    },
+    "routing_shadow_extra_would": {
+      "axes": {
+        "entry_price_band": [
+          {
+            "expected_fee_usd": 2.426094,
+            "n_resolved_windows": 46,
+            "post_fee_pnl_usd": 6.913606,
+            "pre_fee_pnl_usd": 9.3397,
+            "slice": "[0.2,0.4)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 8.960387,
+            "n_resolved_windows": 159,
+            "post_fee_pnl_usd": 8.395767,
+            "pre_fee_pnl_usd": 17.356154,
+            "slice": "[0.4,0.6)",
+            "success": true
+          }
+        ],
+        "seconds_remaining_at_fill": [
+          {
+            "expected_fee_usd": 11.303219,
+            "n_resolved_windows": 204,
+            "post_fee_pnl_usd": 17.342635,
+            "pre_fee_pnl_usd": 28.645854,
+            "slice": "[180,301)",
+            "success": true
+          }
+        ],
+        "source_wallet": [
+          {
+            "expected_fee_usd": 0.084662,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": 2.865338,
+            "pre_fee_pnl_usd": 2.95,
+            "slice": "0x40138697bf1a0d655593f3be6237d60c1dc7ab35",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.087462,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": -2.537462,
+            "pre_fee_pnl_usd": -2.45,
+            "slice": "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.087448,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": -2.528198,
+            "pre_fee_pnl_usd": -2.44075,
+            "slice": "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.087182,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": -2.437182,
+            "pre_fee_pnl_usd": -2.35,
+            "slice": "0x5e4aa0f176014729f5168e821ce614484fbebe6b",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.087357,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": -2.487357,
+            "pre_fee_pnl_usd": -2.4,
+            "slice": "0x80be724a3511017be131fdcd188296128fea7ee7",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.782686,
+            "n_resolved_windows": 9,
+            "post_fee_pnl_usd": 18.173429,
+            "pre_fee_pnl_usd": 18.956115,
+            "slice": "0xac0586732786905d285959613f1813bc89246729",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.087357,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": 2.512643,
+            "pre_fee_pnl_usd": 2.6,
+            "slice": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.722446,
+            "n_resolved_windows": 9,
+            "post_fee_pnl_usd": 2.577554,
+            "pre_fee_pnl_usd": 3.3,
+            "slice": "0xc50d0f25cb8eafadcf7059b6a8f4e2542ab40de0",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.783036,
+            "n_resolved_windows": 9,
+            "post_fee_pnl_usd": -6.682876,
+            "pre_fee_pnl_usd": -5.89984,
+            "slice": "0xd9189593701e94574ee140295a2ff6042317813b",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.174145,
+            "n_resolved_windows": 2,
+            "post_fee_pnl_usd": -4.849145,
+            "pre_fee_pnl_usd": -4.675,
+            "slice": "0xdf2c0702fc00be90bd795234a86e28f1ed39118a",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 1.045951,
+            "n_resolved_windows": 12,
+            "post_fee_pnl_usd": 0.714699,
+            "pre_fee_pnl_usd": 1.76065,
+            "slice": "0xe6db20932faf0f9780acf75d95c74c9984407dac",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.085393,
+            "n_resolved_windows": 1,
+            "post_fee_pnl_usd": -2.197673,
+            "pre_fee_pnl_usd": -2.11228,
+            "slice": "0xe88db6a8c559410a627a528264a441206ad03db1",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 0.225183,
+            "n_resolved_windows": 3,
+            "post_fee_pnl_usd": 5.074817,
+            "pre_fee_pnl_usd": 5.3,
+            "slice": "0xf07fabf154d537b266916d53f12a4bef7b06c118",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 7.121617,
+            "n_resolved_windows": 155,
+            "post_fee_pnl_usd": 0.299607,
+            "pre_fee_pnl_usd": 7.421224,
+            "slice": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+            "success": true
+          },
+          {
+            "expected_fee_usd": 0.256393,
+            "n_resolved_windows": 3,
+            "post_fee_pnl_usd": 3.282417,
+            "pre_fee_pnl_usd": 3.53881,
+            "slice": "0xf54209347a46f0f19fbd011efe9d0589b9dd4791",
+            "success": false
+          }
+        ],
+        "tranche_notional_usd": [
+          {
+            "expected_fee_usd": 2.894301,
+            "n_resolved_windows": 73,
+            "post_fee_pnl_usd": -2.758897,
+            "pre_fee_pnl_usd": 0.135404,
+            "slice": "[0,1)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 3.278393,
+            "n_resolved_windows": 72,
+            "post_fee_pnl_usd": 3.470322,
+            "pre_fee_pnl_usd": 6.748715,
+            "slice": "[1,2)",
+            "success": false
+          },
+          {
+            "expected_fee_usd": 5.213787,
+            "n_resolved_windows": 60,
+            "post_fee_pnl_usd": 14.597948,
+            "pre_fee_pnl_usd": 19.811735,
+            "slice": "[2,4)",
+            "success": false
+          }
+        ]
+      },
+      "excluded_rows": {
+        "invalid_seconds_remaining": 145,
+        "missing_measurement": 59,
+        "unresolved": 109
+      },
+      "input_rows": 529,
+      "normalized_resolved_rows": 216
+    }
+  },
+  "dedupe_rule": "earliest observed timestamp, then wallet, then intent per cohort/axis/slice/window",
+  "experiment_id": "fee-edge-decomposition-20260720",
+  "flow_stage": "LEARN",
+  "generated_at": "2026-07-20T16:43:59Z",
+  "guardrail": "No live gate, threshold, roster, policy, or size change; candidates require explicit Fable direction.",
+  "kind": "fee_edge_decomposition",
+  "live_mutation": false,
+  "measurement_only": true,
+  "preregistered_at": "2026-07-20T16:40:41Z",
+  "schema_version": 1,
+  "source_generated_at": "2026-07-20T16:43:46.656015+00:00",
+  "success_rule": "post_fee_pnl_usd > 0 and n_resolved_windows >= 100",
+  "verdict": "WINNER",
+  "winner_count": 4,
+  "winners": [
+    {
+      "axis": "entry_price_band",
+      "cohort": "fee_cal_measured",
+      "expected_fee_usd": 5.243242,
+      "n_resolved_windows": 148,
+      "post_fee_pnl_usd": 6.167941,
+      "pre_fee_pnl_usd": 11.411183,
+      "slice": "[0.4,0.6)",
+      "success": true
+    },
+    {
+      "axis": "entry_price_band",
+      "cohort": "routing_shadow_extra_would",
+      "expected_fee_usd": 8.960387,
+      "n_resolved_windows": 159,
+      "post_fee_pnl_usd": 8.395767,
+      "pre_fee_pnl_usd": 17.356154,
+      "slice": "[0.4,0.6)",
+      "success": true
+    },
+    {
+      "axis": "seconds_remaining_at_fill",
+      "cohort": "routing_shadow_extra_would",
+      "expected_fee_usd": 11.303219,
+      "n_resolved_windows": 204,
+      "post_fee_pnl_usd": 17.342635,
+      "pre_fee_pnl_usd": 28.645854,
+      "slice": "[180,301)",
+      "success": true
+    },
+    {
+      "axis": "source_wallet",
+      "cohort": "routing_shadow_extra_would",
+      "expected_fee_usd": 7.121617,
+      "n_resolved_windows": 155,
+      "post_fee_pnl_usd": 0.299607,
+      "pre_fee_pnl_usd": 7.421224,
+      "slice": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "success": true
+    }
+  ]
+}

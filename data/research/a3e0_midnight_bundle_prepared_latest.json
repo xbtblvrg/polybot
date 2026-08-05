@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "kind": "a3e0_midnight_bundle_preparation",
+  "flow_stage": "PROMOTE_PREP",
+  "generated_at": "2026-07-20T09:34:23.558332Z",
+  "status": "READY_FOR_MIDNIGHT_AUDIT_HELD_UNTIL_ACTIVATION",
+  "activate_not_before_utc": "2026-07-21T00:00:00Z",
+  "candidate_id": "market_cohort_alive_a3e0985f2d",
+  "source_wallet": "0xa3e0985f2d0b3209a52f171660287863690d095d",
+  "live_mutation_before_arm": false,
+  "current_gate": {
+    "status": "PASS_CLEAN_TO_ARM",
+    "failures": [],
+    "history_status": "COMPLETE_TO_PREREGISTERED_LOOKBACK",
+    "history_sha256": "55fbc96e55aae6cdf9bf61022a9776e7e7182aa3ff09e15f14ca1fc8660b047b",
+    "p1_verdict": "PROBE_READY_PENDING_FABLE_AUDIT",
+    "temporal_status": "PASS",
+    "candidate_classification": "WEEKDAY-ONLY",
+    "resolved_trades": 2317,
+    "pnl_usd": 3042.5335,
+    "roi_pct": 7.076498,
+    "unique_markets": 923,
+    "top1_positive_pnl_share_pct": 2.43232,
+    "top3_positive_pnl_share_pct": 6.216592,
+    "regression_detected": false
+  },
+  "activation_contract": {
+    "max_order_usd": 1.0,
+    "policy_id": "fast_wf_0.10_cap_1_all_prices_minusd_0_all_window",
+    "evaluation_clock": "72 accumulated UTC weekday hours from first live fill",
+    "sole_submitter": "scripts/run_wallet_copy_live_guard.py",
+    "current_live_fills": 0,
+    "hold_status": "FABLE_0553_A3E0_WEEKDAY_PROBE_ARMED_NOT_BEFORE"
+  },
+  "artifact_integrity": {
+    "focused_packet": "data/research/focused_candidate_p1_a3e0985f2d_midnight_20260720T0933Z.json",
+    "focused_packet_sha256": "db39534ef57a8796c4212cec82d1d1f1334f0f693154e263e3f7732a483592f0",
+    "history": "data/research/source_active_policy_history_a3e0985f2d_focused_a3e0_midnight_20260720T0933Z.json",
+    "history_sha256": "55fbc96e55aae6cdf9bf61022a9776e7e7182aa3ff09e15f14ca1fc8660b047b",
+    "temporal": "data/research/focused_a3e0_midnight_temporal_20260720T0933Z.json",
+    "temporal_sha256": "5b97362dbdd339a8765ce3735eeb572ea8c576d8c0ea3a498d124fd90cfb5d83",
+    "evidence": "data/research/a3e0_weekday_live_probe_evidence_latest.json",
+    "evidence_sha256": "a946cc9e2b91dfc4e7bda50cb13f5658d57f24da736aa95ac2907e052d15bf7c",
+    "overlay_snapshot_sha256": "37c819249fb53abba5323173e3ea78b73a752fe382a91bd16204c0c43422e543"
+  },
+  "midnight_sequence": [
+    "recompute and compare pre-arm history, P1, and weekday-temporal gates",
+    "do not arm on any regression or integrity mismatch",
+    "verify activation gate release at or after 2026-07-21T00:00:00Z",
+    "capture guard release line and first CopyIntent/fill, or explicit no-signal evidence",
+    "start the 72-weekday-hour clock only on the first live fill"
+  ],
+  "pending_midnight_evidence": {
+    "fresh_prearm_refresh": "data/research/focused_candidate_p1_a3e0985f2d_midnight_20260720T0933Z.json",
+    "activation_gate_release": null,
+    "first_copyintent_or_no_signal": null,
+    "first_fill_at": null
+  }
+}

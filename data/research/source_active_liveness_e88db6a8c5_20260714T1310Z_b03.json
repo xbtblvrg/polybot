@@ -1,0 +1,407 @@
+{
+  "band": {
+    "max_offset_s": 300.0,
+    "max_price": 0.5,
+    "min_offset_s": 0.0
+  },
+  "file_size_bytes": 202938504171,
+  "flow_stage": "LIVE/PROMOTE",
+  "generated_at": "2026-07-14T13:12:53.896293+00:00",
+  "kind": "source_active_windows_report_v1",
+  "latest_rows": [
+    {
+      "event_iso": "2026-07-14T12:50:14Z",
+      "event_ts": 1784033414.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 14.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T12:50:14.891167Z",
+      "received_ts": 1784033414.891167,
+      "size": 49.019606,
+      "transaction_hash": "0x028374cd5257e713f7cb3e5946d127adac8e53905ab0c09926d6816da4da258a",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:50:14Z",
+      "event_ts": 1784033414.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 14.0,
+      "outcome": "Down",
+      "price": 0.5199999908479997,
+      "received_iso": "2026-07-14T12:50:15.003538Z",
+      "received_ts": 1784033415.003538,
+      "size": 48.076922,
+      "transaction_hash": "0x4be4e13a1433b654b839e07b4b62f3cc2e8ed69a0d23500fba41b9a03e89eb8a",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:50:15Z",
+      "event_ts": 1784033415.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 15.0,
+      "outcome": "Down",
+      "price": 0.5199999908479997,
+      "received_iso": "2026-07-14T12:50:15.653599Z",
+      "received_ts": 1784033415.653599,
+      "size": 48.076922,
+      "transaction_hash": "0x4be4e13a1433b654b839e07b4b62f3cc2e8ed69a0d23500fba41b9a03e89eb8a",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:50:15Z",
+      "event_ts": 1784033415.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 15.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T12:50:16.050750Z",
+      "received_ts": 1784033416.05075,
+      "size": 49.019606,
+      "transaction_hash": "0x028374cd5257e713f7cb3e5946d127adac8e53905ab0c09926d6816da4da258a",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:50:26Z",
+      "event_ts": 1784033426.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 26.0,
+      "outcome": "Down",
+      "price": 0.4599999907999998,
+      "received_iso": "2026-07-14T12:50:26.867552Z",
+      "received_ts": 1784033426.867552,
+      "size": 54.347825,
+      "transaction_hash": "0x65c2537ea183cc58d6ba95e55eb92fe565cc2f505d8cf0761deaa4ac83eed23d",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:50:26Z",
+      "event_ts": 1784033426.0,
+      "market_slug": "btc-updown-5m-1784033400",
+      "offset_s": 26.0,
+      "outcome": "Down",
+      "price": 0.4599999907999998,
+      "received_iso": "2026-07-14T12:50:26.935307Z",
+      "received_ts": 1784033426.935307,
+      "size": 54.347825,
+      "transaction_hash": "0x65c2537ea183cc58d6ba95e55eb92fe565cc2f505d8cf0761deaa4ac83eed23d",
+      "window_start_s": 1784033400.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:12Z",
+      "event_ts": 1784033712.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 12.0,
+      "outcome": "Down",
+      "price": 0.5399999935199998,
+      "received_iso": "2026-07-14T12:55:12.442596Z",
+      "received_ts": 1784033712.442596,
+      "size": 46.296295,
+      "transaction_hash": "0x3a88dfde077f1a4dd5e4d26cf80dc9c299a060335d11b4b41a72f6a309945059",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:12Z",
+      "event_ts": 1784033712.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 12.0,
+      "outcome": "Down",
+      "price": 0.5399999935199998,
+      "received_iso": "2026-07-14T12:55:13.038705Z",
+      "received_ts": 1784033713.038705,
+      "size": 46.296295,
+      "transaction_hash": "0x3a88dfde077f1a4dd5e4d26cf80dc9c299a060335d11b4b41a72f6a309945059",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:15Z",
+      "event_ts": 1784033715.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 15.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T12:55:15.777012Z",
+      "received_ts": 1784033715.777012,
+      "size": 49.019606,
+      "transaction_hash": "0xc784c4fb4bc45241cfd0e223a162ddb1ac4b25a52dd2fc136d0257a2290017d2",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:15Z",
+      "event_ts": 1784033715.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 15.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T12:55:15.981275Z",
+      "received_ts": 1784033715.981275,
+      "size": 49.019606,
+      "transaction_hash": "0xc784c4fb4bc45241cfd0e223a162ddb1ac4b25a52dd2fc136d0257a2290017d2",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:47Z",
+      "event_ts": 1784033747.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 47.0,
+      "outcome": "Down",
+      "price": 0.5199999908479997,
+      "received_iso": "2026-07-14T12:55:47.937735Z",
+      "received_ts": 1784033747.937735,
+      "size": 48.076922,
+      "transaction_hash": "0x160b5931a5f031903db80ef589e98623e1e63f4610ebffa6628299ffe79b5bf6",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:55:48Z",
+      "event_ts": 1784033748.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 48.0,
+      "outcome": "Down",
+      "price": 0.5199999908479997,
+      "received_iso": "2026-07-14T12:55:48.834953Z",
+      "received_ts": 1784033748.834953,
+      "size": 48.076922,
+      "transaction_hash": "0x160b5931a5f031903db80ef589e98623e1e63f4610ebffa6628299ffe79b5bf6",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:56:58Z",
+      "event_ts": 1784033818.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 118.0,
+      "outcome": "Down",
+      "price": 0.2399999942399999,
+      "received_iso": "2026-07-14T12:56:58.755206Z",
+      "received_ts": 1784033818.755206,
+      "size": 104.166665,
+      "transaction_hash": "0xe1cb795ea964dd62a596bb8061929e82aa0f2430fb1dd94c1b5ead29b9712893",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T12:56:59Z",
+      "event_ts": 1784033819.0,
+      "market_slug": "btc-updown-5m-1784033700",
+      "offset_s": 119.0,
+      "outcome": "Down",
+      "price": 0.2399999942399999,
+      "received_iso": "2026-07-14T12:56:59.980639Z",
+      "received_ts": 1784033819.980639,
+      "size": 104.166665,
+      "transaction_hash": "0xe1cb795ea964dd62a596bb8061929e82aa0f2430fb1dd94c1b5ead29b9712893",
+      "window_start_s": 1784033700.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:40Z",
+      "event_ts": 1784034400.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 100.0,
+      "outcome": "Down",
+      "price": 0.5,
+      "received_iso": "2026-07-14T13:06:40.442077Z",
+      "received_ts": 1784034400.442077,
+      "size": 50.0,
+      "transaction_hash": "0xcaae127e01b5acbdb12938c0a017968e630555072387ea62309b2cc6b830b3ac",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:40Z",
+      "event_ts": 1784034400.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 100.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T13:06:40.501868Z",
+      "received_ts": 1784034400.501868,
+      "size": 49.019606,
+      "transaction_hash": "0x988401b82ccf3348aa97ef3727dd883063f8853f349f6f1b0a32d4fee342d2ee",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:40Z",
+      "event_ts": 1784034400.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 100.0,
+      "outcome": "Down",
+      "price": 0.509999998776,
+      "received_iso": "2026-07-14T13:06:41.041468Z",
+      "received_ts": 1784034401.041468,
+      "size": 49.019606,
+      "transaction_hash": "0x988401b82ccf3348aa97ef3727dd883063f8853f349f6f1b0a32d4fee342d2ee",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:06:41Z",
+      "event_ts": 1784034401.0,
+      "market_slug": "btc-updown-5m-1784034300",
+      "offset_s": 101.0,
+      "outcome": "Down",
+      "price": 0.5,
+      "received_iso": "2026-07-14T13:06:41.237544Z",
+      "received_ts": 1784034401.237544,
+      "size": 50.0,
+      "transaction_hash": "0xcaae127e01b5acbdb12938c0a017968e630555072387ea62309b2cc6b830b3ac",
+      "window_start_s": 1784034300.0
+    },
+    {
+      "event_iso": "2026-07-14T13:12:10Z",
+      "event_ts": 1784034730.0,
+      "market_slug": "btc-updown-5m-1784034600",
+      "offset_s": 130.0,
+      "outcome": "Down",
+      "price": 0.2699999938439999,
+      "received_iso": "2026-07-14T13:12:10.666369Z",
+      "received_ts": 1784034730.666369,
+      "size": 92.592591,
+      "transaction_hash": "0x2a75fd8590ce1054c03fed1af232f6f1530bb66683f16bd4e1b43ff41fb4d557",
+      "window_start_s": 1784034600.0
+    },
+    {
+      "event_iso": "2026-07-14T13:12:10Z",
+      "event_ts": 1784034730.0,
+      "market_slug": "btc-updown-5m-1784034600",
+      "offset_s": 130.0,
+      "outcome": "Down",
+      "price": 0.2699999938439999,
+      "received_iso": "2026-07-14T13:12:10.740017Z",
+      "received_ts": 1784034730.740017,
+      "size": 92.592591,
+      "transaction_hash": "0x2a75fd8590ce1054c03fed1af232f6f1530bb66683f16bd4e1b43ff41fb4d557",
+      "window_start_s": 1784034600.0
+    }
+  ],
+  "rtds_jsonl": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+  "scan_tail_bytes": 384000000,
+  "since_iso": "2026-07-13T13:12:53.909454Z",
+  "since_ts": 1783948373.909454,
+  "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+  "summary": {
+    "btc5m_buy_rows_since": 22,
+    "btc5m_buy_windows_since": 5,
+    "policy_eligible_rows": 10,
+    "policy_eligible_tally_status": "PASS",
+    "policy_eligible_windows": 5,
+    "required_source_active_windows": 1,
+    "source_active_rows": 22,
+    "source_active_tally_status": "PASS",
+    "source_active_windows": 5
+  },
+  "windows": [
+    {
+      "first_event_iso": "2026-07-14T12:48:38Z",
+      "first_policy_event_iso": "2026-07-14T12:48:38Z",
+      "first_policy_received_iso": "2026-07-14T12:48:38.849646Z",
+      "first_received_iso": "2026-07-14T12:48:38.849646Z",
+      "last_event_iso": "2026-07-14T12:48:39Z",
+      "last_policy_event_iso": "2026-07-14T12:48:39Z",
+      "last_policy_received_iso": "2026-07-14T12:48:39.345142Z",
+      "last_received_iso": "2026-07-14T12:48:39.345142Z",
+      "le_max_price_rows": 2,
+      "market_slug": "btc-updown-5m-1784033100",
+      "max_offset_s": 219.0,
+      "min_offset_s": 218.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.0495459917276225
+      ],
+      "rows": 2,
+      "window_start_s": 1784033100.0
+    },
+    {
+      "first_event_iso": "2026-07-14T12:50:14Z",
+      "first_policy_event_iso": "2026-07-14T12:50:26Z",
+      "first_policy_received_iso": "2026-07-14T12:50:26.867552Z",
+      "first_received_iso": "2026-07-14T12:50:14.891167Z",
+      "last_event_iso": "2026-07-14T12:50:26Z",
+      "last_policy_event_iso": "2026-07-14T12:50:26Z",
+      "last_policy_received_iso": "2026-07-14T12:50:26.935307Z",
+      "last_received_iso": "2026-07-14T12:50:26.935307Z",
+      "le_max_price_rows": 2,
+      "market_slug": "btc-updown-5m-1784033400",
+      "max_offset_s": 26.0,
+      "min_offset_s": 14.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.4599999907999998,
+        0.509999998776,
+        0.5199999908479997
+      ],
+      "rows": 6,
+      "window_start_s": 1784033400.0
+    },
+    {
+      "first_event_iso": "2026-07-14T12:55:12Z",
+      "first_policy_event_iso": "2026-07-14T12:56:58Z",
+      "first_policy_received_iso": "2026-07-14T12:56:58.755206Z",
+      "first_received_iso": "2026-07-14T12:55:12.442596Z",
+      "last_event_iso": "2026-07-14T12:56:59Z",
+      "last_policy_event_iso": "2026-07-14T12:56:59Z",
+      "last_policy_received_iso": "2026-07-14T12:56:59.980639Z",
+      "last_received_iso": "2026-07-14T12:56:59.980639Z",
+      "le_max_price_rows": 2,
+      "market_slug": "btc-updown-5m-1784033700",
+      "max_offset_s": 119.0,
+      "min_offset_s": 12.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.2399999942399999,
+        0.509999998776,
+        0.5199999908479997,
+        0.5399999935199998
+      ],
+      "rows": 8,
+      "window_start_s": 1784033700.0
+    },
+    {
+      "first_event_iso": "2026-07-14T13:06:40Z",
+      "first_policy_event_iso": "2026-07-14T13:06:40Z",
+      "first_policy_received_iso": "2026-07-14T13:06:40.442077Z",
+      "first_received_iso": "2026-07-14T13:06:40.442077Z",
+      "last_event_iso": "2026-07-14T13:06:41Z",
+      "last_policy_event_iso": "2026-07-14T13:06:41Z",
+      "last_policy_received_iso": "2026-07-14T13:06:41.237544Z",
+      "last_received_iso": "2026-07-14T13:06:41.237544Z",
+      "le_max_price_rows": 2,
+      "market_slug": "btc-updown-5m-1784034300",
+      "max_offset_s": 101.0,
+      "min_offset_s": 100.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.5,
+        0.509999998776
+      ],
+      "rows": 4,
+      "window_start_s": 1784034300.0
+    },
+    {
+      "first_event_iso": "2026-07-14T13:12:10Z",
+      "first_policy_event_iso": "2026-07-14T13:12:10Z",
+      "first_policy_received_iso": "2026-07-14T13:12:10.666369Z",
+      "first_received_iso": "2026-07-14T13:12:10.666369Z",
+      "last_event_iso": "2026-07-14T13:12:10Z",
+      "last_policy_event_iso": "2026-07-14T13:12:10Z",
+      "last_policy_received_iso": "2026-07-14T13:12:10.740017Z",
+      "last_received_iso": "2026-07-14T13:12:10.740017Z",
+      "le_max_price_rows": 2,
+      "market_slug": "btc-updown-5m-1784034600",
+      "max_offset_s": 130.0,
+      "min_offset_s": 130.0,
+      "outcomes": [
+        "Down"
+      ],
+      "prices": [
+        0.2699999938439999
+      ],
+      "rows": 2,
+      "window_start_s": 1784034600.0
+    }
+  ]
+}

@@ -1,0 +1,3825 @@
+{
+  "entries": [
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_orderfilled_only.jsonl",
+      "readers": [
+        "scripts/run_wallet_copy_live_guard.py",
+        "scripts/run_orderfilled_sidecar_parity_shadow.py",
+        "Polygon OrderFilled shadow service"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "archive_compress_after_s": 3600,
+      "archive_dir": "data/research/log_archives",
+      "archive_retention_cap_bytes": 32212254720,
+      "archive_retention_scope": "compressed RTDS raw-capture archives only; oldest-first delete when over cap",
+      "cap_bytes": 2147483648,
+      "event_log_path": "data/research/rtds_capture_rotation_events.jsonl",
+      "keep_tail_bytes": 67108864,
+      "max_consumer_tail_bytes": 67108864,
+      "max_segment_age_s": 604800,
+      "path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+      "readers": [
+        "scripts/run_wallet_copy_live_guard.py --rtds-jsonl (5MiB hot/cold tail)",
+        "scripts/report_e6db_price_reject_counterfactual.py --tail-bytes bounded by RTDS 2GiB/weekly segment policy",
+        "scripts/report_member_factory_kpi.py --max-event-tail-bytes default 50MB",
+        "scripts/report_member_dow_profiles.py --max-tail-bytes default 80MB",
+        "scripts/run_realtime_shadow_watch.py --tail-bytes default 2MB"
+      ],
+      "rotation_action": "structured_jsonl_archive_reseed",
+      "rotation_policy": "rotate at 2GiB or weekly, whichever comes first; archive full prior segment, reseed hot path with a 64MiB line-aligned tail, gzip log_archives/*.jsonl after 1h, and retain compressed RTDS raw-capture archives under 30GiB",
+      "state_path": "data/research/rtds_capture_rotation_state.json"
+    },
+    {
+      "cap_bytes": 17179869184,
+      "keep_tail_bytes": 17179869184,
+      "max_consumer_tail_bytes": 8589934592,
+      "path": "data/research/polygon_orderfilled_ws_shadow_resident.jsonl",
+      "readers": [
+        "scripts/run_wallet_copy_live_guard.py --polygon-ws-premerge-jsonl (64MiB tail)",
+        "scripts/merge_rtds_wallet_events.py --polygon-jsonl",
+        "scripts/build_rtds_premerge_equivalence_artifact.py",
+        "polygon WS shadow service restart child appends"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/p0f_observation_live_tracking_events.jsonl",
+      "readers": [
+        "scripts/run_p0f_observation_tracker.sh",
+        "scripts/run_wallet_live_tracker.py p0f observation paper evidence consumers"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/wallet_copy_live_guard_wallet_events.jsonl",
+      "readers": [
+        "scripts/report_e6db_price_reject_counterfactual.py --tail-bytes default 8GiB; cap accepted by 2026-07-16 SOS inventory because live guard wallet-event consumers otherwise read recent evidence only",
+        "scripts/probe_inventory_best_ask_route.py --tail-bytes default 128MiB",
+        "scripts/report_member_factory_kpi.py --max-event-tail-bytes default 50MB",
+        "scripts/report_member_dow_profiles.py --max-tail-bytes default 80MB",
+        "scripts/merge_dataapi_active_set_events.py"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "archive_compress_after_s": 3600,
+      "archive_dir": "data/research/log_archives",
+      "archive_retention_exempt": true,
+      "cap_bytes": 536870912,
+      "event_log_path": "data/research/wallet_copy_runtime_log_rotation_events.jsonl",
+      "keep_tail_bytes": 67108864,
+      "max_consumer_tail_bytes": 67108864,
+      "path": "data/research/wallet_copy_live_guard_events.jsonl",
+      "readers": [
+        "scripts/update_state_digest.py guard-loop profile fallback from current-pid recent cycle events",
+        "scripts/report_runtime_speed_baseline.py current guard cadence samples",
+        "guard-cycle diagnostics; full pre-rotation JSONL is archived before hot-path tail reseed"
+      ],
+      "rotation_action": "structured_jsonl_archive_reseed",
+      "state_path": "data/research/wallet_copy_guard_event_log_rotation_state.json"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/dataapi_first_seen.jsonl",
+      "readers": [
+        "scripts/report_detection_latency.py",
+        "scripts/report_shadow_arming.py",
+        "scripts/build_full_pool_member_queue.py",
+        "scripts/build_realtime_runtime_proof.py",
+        "polygon WS shadow service restart child appends"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_ws_dataapi_active_set_comparison.jsonl",
+      "readers": [
+        "scripts/report_detection_latency.py",
+        "scripts/build_strategy_map.py",
+        "polygon WS shadow service restart child appends"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/wallet_copy_watch_tier_wallet_events.jsonl",
+      "readers": [
+        "scripts/run_wallet_copy_live_guard.py watch-tier dataapi poller",
+        "watch-tier EV/readmission measurement packets"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 2147483648,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/watch_tier_first_seen.jsonl",
+      "readers": [
+        "scripts/run_wallet_copy_live_guard.py --watch-tier-first-seen",
+        "watch-tier first-seen latency and readmission evidence consumers"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 536870912,
+      "keep_tail_bytes": 536870912,
+      "max_consumer_tail_bytes": 536870912,
+      "path": "data/research/runtime_logs/realtime_shadow_watch.out.log",
+      "readers": [
+        "launchd stdout diagnostics for com.belavarga.polymarket.wallet-copy-realtime-shadow-watch"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 536870912,
+      "keep_tail_bytes": 67108864,
+      "max_consumer_tail_bytes": 67108864,
+      "path": "data/research/wide_multiwallet_consensus.launchd.out",
+      "readers": [
+        "launchd stdout diagnostics for com.belavarga.polymarket.wide-multiwallet-consensus"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260729T201554Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T021804Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T062300Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T071134Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T073533Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T081730Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T082523Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T083348Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T091042Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T110559Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T123652Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T130751Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T191003Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260730T230239Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T012556Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T021420Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T024447Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T044203Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T055254Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T075933Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T132747Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T134546Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T141707Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T144829Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T151932Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T155036Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T162209Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T165322Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T172500Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T175638Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T182807Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T185917Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T193050Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T194829Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T200900Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T204035Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T205915Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T213103Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T214212Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T221348Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T224501Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T231616Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260731T234739Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T001845Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T005101Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T012207Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T014705Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T021818Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T023531Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T030652Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T033813Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T040954Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T044100Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T051247Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T054415Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T061523Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T062222Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T062749Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T062942Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T064722Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T065050Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T065253Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T070458Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T071420Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T071627Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T072809Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T073531Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T073736Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T073944Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T075034Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T075608Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T075803Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T080001Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T080152Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T081241Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T081615Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T081954Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T082150Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T082347Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T082916Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T083430Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T083814Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T084157Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T084355Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T085505Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T085650Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T090024Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T090218Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T090410Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T090602Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T090806Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T091902Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T092050Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T092233Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T092423Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T092611Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T092807Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T093015Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T093222Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T093558Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T094312Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T094705Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T094902Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T095053Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T095254Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T095652Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T100606Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T100944Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T101132Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T101330Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T101732Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T102309Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T102642Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T103025Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T103221Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T103410Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T103609Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T103814Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T104532Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T104907Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T105056Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T105252Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T105443Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T105639Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T105844Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T110824Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T111400Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T111547Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T111938Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T112144Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T112354Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T112422Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T112614Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T113144Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T113407Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T120642Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T122913Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T123226Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T124249Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T130014Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T133529Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T140132Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T142353Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T144136Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T150754Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T151954Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T153026Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T160233Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T163340Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T170642Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T174001Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T181112Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T184238Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T191533Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T194848Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T202006Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T205319Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T212528Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T215819Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T223122Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T230413Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260801T233649Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T000823Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T004007Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T011237Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T014344Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T021607Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T024720Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T031937Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T035206Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T042521Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T045654Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T052834Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T060043Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T063417Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T070727Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T074008Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T081400Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T083542Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T090656Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T093738Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T101050Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T102909Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T103552Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T104019Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T111228Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T114404Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T121532Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T124733Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T132146Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T135255Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T142435Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T145643Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T152900Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T160117Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T163449Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T170417Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T173819Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T181315Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T184454Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T191844Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T195214Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T202356Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T205513Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T212817Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T215940Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T223051Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T230202Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260802T233320Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T000513Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T003634Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T011114Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T014535Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T021909Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T025154Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T032405Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T035524Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T042822Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T045958Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T053307Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T060632Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T063843Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T071217Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T074436Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T081802Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T085147Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T092511Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T095705Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T103009Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T110138Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T113511Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T121131Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T124254Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T131430Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T134802Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T141948Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T145630Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T152813Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T155959Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T163158Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T170504Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T174143Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T181349Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T184735Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T192236Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T195550Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T202847Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T210235Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T213545Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T220711Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T224016Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T231350Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260803T234514Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T001803Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T005009Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T012322Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T015612Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T022943Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T030237Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T033544Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T040718Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T044308Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T051513Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T054646Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T062612Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T070117Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T073630Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T081105Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T084514Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T091718Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T094842Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T102159Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T105508Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T112801Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T120047Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T123345Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T130740Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T133934Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T141326Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T144632Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T151745Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T155107Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T162257Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T165427Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T172837Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T180318Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T183642Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T191026Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T194420Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T201622Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T204912Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T212220Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T215558Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T222905Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T230224Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260804T233555Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T000715Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T004006Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T011311Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T014412Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T021727Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T024828Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T032041Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T035214Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    },
+    {
+      "cap_bytes": 6442450944,
+      "keep_tail_bytes": 2147483648,
+      "max_consumer_tail_bytes": 2147483648,
+      "path": "data/research/polygon_orderfilled_ws_capture_alpha_decay_wide_20260805T042354Z.jsonl",
+      "readers": [
+        "scripts/run_wide_prospective_supervisor.py direct-event reconcile",
+        "scripts/capture_clob_book_snapshots.py --polygon-jsonl tail scanner",
+        "scripts/report_alpha_decay.py current rolling WIDE capture"
+      ],
+      "rotation_action": "copytruncate_line_aligned_tail"
+    }
+  ],
+  "flow_stage": "LIVE/DEFEND/SELF-DEV",
+  "generated_at": "2026-08-05T04:23:59.398479Z",
+  "kind": "research_capture_rotation_inventory",
+  "rule": "Every data/research file above 5GiB must be listed here or the research disk deadman incidents."
+}

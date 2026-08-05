@@ -1,0 +1,13 @@
+{
+  "wallets": [
+    {
+      "name": "weird_peak",
+      "address": "0x9f5ffe76a818dce37c70f947998b52b70671a008",
+      "enabled": true,
+      "market_filter": "btc_5m",
+      "asset_allowlist": ["BTC"],
+      "tags": ["seed", "weird_peak", "paper_first"],
+      "notes": "Initial wallet-copy seed. Full/raw losing slices stay visible; live readiness must be proven from fresh paper evidence."
+    }
+  ]
+}

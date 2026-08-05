@@ -1,0 +1,56 @@
+{
+  "aggregate_paper_pnl_usd": -1.331592,
+  "copy_intent_parity": {
+    "copy_intents": 59,
+    "source_signals": 59,
+    "status": "PASS",
+    "violations": 0
+  },
+  "copyable_buy_events": 54,
+  "copyable_rate_pct": 91.525424,
+  "decision_rule": "Preregistered failure: aggregate paper PnL non-positive after n>=30 prospective profile-band BUY observations; no selective wallet/band salvage.",
+  "experiment_id": "alpha-decay-eligible-profiles-paper-20260719",
+  "fail_reason": "non_positive_aggregate_paper_pnl_at_n_ge_30",
+  "flow_stage": "OBSERVE/PROMOTE_PREP",
+  "generated_at": "2026-07-19T20:31:32.286775Z",
+  "kind": "alpha_decay_eligible_profiles_paper_lane_result",
+  "live_orders_allowed": false,
+  "n_buy": 59,
+  "orders_submitted": 0,
+  "paper_only": true,
+  "per_wallet": {
+    "0x224a89dbe0db0d6124b335edabd15b3f877da3d5": {
+      "buy_events": 1,
+      "copyable_buy_events": 1,
+      "copyable_rate_pct": 100.0,
+      "paper_pnl_usd": -0.156863
+    },
+    "0x2e25b222e2080c377fc1fb2b9f926315f0f4d49e": {
+      "buy_events": 0,
+      "copyable_buy_events": 0,
+      "copyable_rate_pct": null,
+      "paper_pnl_usd": 0.0
+    },
+    "0x6f398b378fd614e2c4c4e3f710d39707ef195030": {
+      "buy_events": 57,
+      "copyable_buy_events": 53,
+      "copyable_rate_pct": 92.982456,
+      "paper_pnl_usd": -1.174729
+    },
+    "0x8bc176d95c3312d8264ba26c5e26ee43a5c1b473": {
+      "buy_events": 1,
+      "copyable_buy_events": 0,
+      "copyable_rate_pct": 0.0,
+      "paper_pnl_usd": 0.0
+    },
+    "0xf0318c32136c2db7fec88b84869aee6a1106c80c": {
+      "buy_events": 0,
+      "copyable_buy_events": 0,
+      "copyable_rate_pct": null,
+      "paper_pnl_usd": 0.0
+    }
+  },
+  "schema_version": 1,
+  "source_state": "data/research/alpha_decay_eligible_profiles_paper_lane_state.json",
+  "status": "FAIL_TOMBSTONE"
+}

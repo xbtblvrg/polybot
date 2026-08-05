@@ -1,0 +1,20 @@
+{
+  "candidate": null,
+  "checksums": [
+    "0fbc6161f18275a1e594bf3f297399e3a13460a17942307a8ef06e62d82dd65f",
+    "3f7d125f6fff61efbf91fa327ca48195810d4b0869a66b68a752bd8df58de570"
+  ],
+  "decided_at": "2026-07-25T11:17:02.123665+00:00",
+  "eligible_tuple_count": 0,
+  "identity": "63226362d1344deced84feceb5f23961e8d66cc56e21b784c03d93908d9515ba",
+  "immutable": true,
+  "joint_deadline_at": "2026-07-25T11:16:58.303494+00:00",
+  "kind": "wide_recovery_method_switch_decision",
+  "next_generations": [
+    "multivenue_passive_residual",
+    "multivenue_maker_first_residual"
+  ],
+  "schema_version": 1,
+  "status": "TTL_NO_ALL_PASS_METHOD_SWITCH",
+  "tuple_count": 21
+}

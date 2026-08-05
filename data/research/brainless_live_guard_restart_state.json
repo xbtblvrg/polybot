@@ -1,0 +1,616 @@
+{
+  "consecutive_guard_liveness_breaches": 0,
+  "deadman": {
+    "deadman_class": "ZERO_SUPPLY_SEAT",
+    "guard_side_halt": false,
+    "idle_s": 58493.814583,
+    "min_red_s": 1800.0,
+    "raw_limb_class": "ORDER_FLOW_DEAD",
+    "raw_limb_firing": true,
+    "raw_limb_ruled_posture_exemption": false,
+    "red_basis": "raw_accepted_order_limb",
+    "ruled_posture_exemption": false,
+    "status": "INCIDENT_ZERO_SUPPLY_SEAT"
+  },
+  "deadman_restart_authority": true,
+  "disk_generation": {
+    "files": [
+      {
+        "exists": true,
+        "path": "scripts/run_wallet_copy_live_guard.py",
+        "sha256": "4c44204856cb65696939227446b82fd5e5f0dca6dd44759217a5951b28d73df5"
+      },
+      {
+        "exists": true,
+        "path": "scripts/run_wallet_copy_live_execution.py",
+        "sha256": "dfd51665b35adbab7bc2d760030c67eeb30ab8b024c5dbf51659e6733e70394d"
+      },
+      {
+        "exists": true,
+        "path": "scripts/start_live_guard.sh",
+        "sha256": "ce23472d5d3fb3587a59efb0526744c2c6a70216de05536cd169badb94cfceb2"
+      },
+      {
+        "exists": true,
+        "path": "launchd/com.belavarga.polymarket.wallet-copy-live-guard.plist",
+        "sha256": "d24bc903010dce6d9a9479b1db7bb2e037bb7f53e14df76f7cd882b020a3e971"
+      },
+      {
+        "exists": true,
+        "path": "src/trade_executor.py",
+        "sha256": "d6348ebf966e1e3fde89bee830263c371bccad9c0dda43bf8315ca55f88f0286"
+      },
+      {
+        "exists": true,
+        "path": "src/wallet_copy/execution.py",
+        "sha256": "ce0b4581b871ee120c8fcb743ffe0b70398a82400b4f7868fcf735e10b64d1c5"
+      },
+      {
+        "exists": true,
+        "path": "src/wallet_copy/mission.py",
+        "sha256": "d5e7bac880866d68e1b388e3ffa867b5c810081e51600d976f67e84a2b6827a8"
+      },
+      {
+        "exists": true,
+        "path": "src/wallet_copy/pnl_truth.py",
+        "sha256": "25bc2cec6d07230814ead63f085659fa02f67f9a146762c0919794531300013d"
+      }
+    ],
+    "flow_stage": "LIVE/SELF-DEV",
+    "rule": "stable content hash, not raw mtime, gates brainless live-guard restarts",
+    "schema_version": 1,
+    "sha256": "5a11a3145f57d5ada506ea0b9995e56e6a007be46c19bbf398227167b6421aa8"
+  },
+  "feed_health_preflight": {
+    "canonical_feed_path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+    "checks": {
+      "feed_fresh_lt_max": true,
+      "parse_tail_clean": true,
+      "path_canonical": true,
+      "writer_pid_alive": true,
+      "writer_status_ok": true,
+      "writer_uptime_gte_min": true
+    },
+    "feed_age_s": 0.118381,
+    "feed_path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+    "flow_stage": "LIVE/DEFEND",
+    "maximum_feed_age_s": 60.0,
+    "minimum_writer_uptime_s": 900.0,
+    "next_action": "feed-health preflight passed; canonical live-guard restart may proceed",
+    "parse_tail": {
+      "clean": true,
+      "invalid_rows": 0,
+      "reason": "clean",
+      "rows_checked": 100
+    },
+    "passed": true,
+    "schema_version": 1,
+    "status": "PASS",
+    "writer_pid": 78800,
+    "writer_uptime_s": 636179.291968
+  },
+  "feed_health_preflight_required": true,
+  "flow_stage": "LIVE/SELF-DEV",
+  "forced_restart": {
+    "enabled": false,
+    "reason": ""
+  },
+  "generated_at": "2026-08-05T04:51:37.576498Z",
+  "generation_adoption_budget": {
+    "clear": false,
+    "count_basis": "all_RESTART_EXECUTED_events_regardless_of_reason",
+    "max_restarts_per_day": 1,
+    "reasons": [
+      "generation_mismatch_adoption",
+      "red_order_flow_generation_mismatch"
+    ],
+    "restarts_today": 1
+  },
+  "generation_mismatch": true,
+  "generation_mismatch_quiescence": {
+    "clear": false,
+    "required_s": 900.0,
+    "unchanged_age_s": 0.0,
+    "unchanged_since": "2026-08-05T04:51:37.576498Z"
+  },
+  "generation_reload": {
+    "allowed": false,
+    "reason": ""
+  },
+  "generation_verdict": {
+    "age_s": 0.0,
+    "generated_at": "2026-08-05T04:51:37.576498Z",
+    "generation_mismatch_citable": true,
+    "loaded_generation_started_at_utc": "2026-08-05T00:05:24.149871Z",
+    "max_age_s": 600.0,
+    "reasons": [],
+    "stale": false,
+    "status": "GENERATION_VERDICT_FRESH"
+  },
+  "generation_verdict_status": "GENERATION_VERDICT_FRESH",
+  "guard_liveness": {
+    "age_s": 21.882053,
+    "consecutive_breaches": 0,
+    "generated_at": "2026-08-05T04:51:15.694445+00:00",
+    "max_age_s": 300.0,
+    "pid": 68863,
+    "pid_alive": true,
+    "pid_dead": false,
+    "raw_breach": false,
+    "required_consecutive_breaches": 2,
+    "stale_already_running_state": false,
+    "stale_breach": false,
+    "status": "LIVE_GUARD_RUNNING"
+  },
+  "kind": "brainless_live_guard_restart",
+  "last_restart_at": "2026-08-05T00:05:19.505157Z",
+  "latest_decision": {
+    "consecutive_guard_liveness_breaches": 0,
+    "deadman": {
+      "deadman_class": "ZERO_SUPPLY_SEAT",
+      "guard_side_halt": false,
+      "idle_s": 58493.814583,
+      "min_red_s": 1800.0,
+      "raw_limb_class": "ORDER_FLOW_DEAD",
+      "raw_limb_firing": true,
+      "raw_limb_ruled_posture_exemption": false,
+      "red_basis": "raw_accepted_order_limb",
+      "ruled_posture_exemption": false,
+      "status": "INCIDENT_ZERO_SUPPLY_SEAT"
+    },
+    "deadman_restart_authority": true,
+    "disk_generation": {
+      "files": [
+        {
+          "exists": true,
+          "path": "scripts/run_wallet_copy_live_guard.py",
+          "sha256": "4c44204856cb65696939227446b82fd5e5f0dca6dd44759217a5951b28d73df5"
+        },
+        {
+          "exists": true,
+          "path": "scripts/run_wallet_copy_live_execution.py",
+          "sha256": "dfd51665b35adbab7bc2d760030c67eeb30ab8b024c5dbf51659e6733e70394d"
+        },
+        {
+          "exists": true,
+          "path": "scripts/start_live_guard.sh",
+          "sha256": "ce23472d5d3fb3587a59efb0526744c2c6a70216de05536cd169badb94cfceb2"
+        },
+        {
+          "exists": true,
+          "path": "launchd/com.belavarga.polymarket.wallet-copy-live-guard.plist",
+          "sha256": "d24bc903010dce6d9a9479b1db7bb2e037bb7f53e14df76f7cd882b020a3e971"
+        },
+        {
+          "exists": true,
+          "path": "src/trade_executor.py",
+          "sha256": "d6348ebf966e1e3fde89bee830263c371bccad9c0dda43bf8315ca55f88f0286"
+        },
+        {
+          "exists": true,
+          "path": "src/wallet_copy/execution.py",
+          "sha256": "ce0b4581b871ee120c8fcb743ffe0b70398a82400b4f7868fcf735e10b64d1c5"
+        },
+        {
+          "exists": true,
+          "path": "src/wallet_copy/mission.py",
+          "sha256": "d5e7bac880866d68e1b388e3ffa867b5c810081e51600d976f67e84a2b6827a8"
+        },
+        {
+          "exists": true,
+          "path": "src/wallet_copy/pnl_truth.py",
+          "sha256": "25bc2cec6d07230814ead63f085659fa02f67f9a146762c0919794531300013d"
+        }
+      ],
+      "flow_stage": "LIVE/SELF-DEV",
+      "rule": "stable content hash, not raw mtime, gates brainless live-guard restarts",
+      "schema_version": 1,
+      "sha256": "5a11a3145f57d5ada506ea0b9995e56e6a007be46c19bbf398227167b6421aa8"
+    },
+    "dry_run": false,
+    "feed_health_preflight": {
+      "canonical_feed_path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+      "checks": {
+        "feed_fresh_lt_max": true,
+        "parse_tail_clean": true,
+        "path_canonical": true,
+        "writer_pid_alive": true,
+        "writer_status_ok": true,
+        "writer_uptime_gte_min": true
+      },
+      "feed_age_s": 0.118381,
+      "feed_path": "data/research/polymarket_activity_ws_capture_vpn_burnin_20260703T180934Z.jsonl",
+      "flow_stage": "LIVE/DEFEND",
+      "maximum_feed_age_s": 60.0,
+      "minimum_writer_uptime_s": 900.0,
+      "next_action": "feed-health preflight passed; canonical live-guard restart may proceed",
+      "parse_tail": {
+        "clean": true,
+        "invalid_rows": 0,
+        "reason": "clean",
+        "rows_checked": 100
+      },
+      "passed": true,
+      "schema_version": 1,
+      "status": "PASS",
+      "writer_pid": 78800,
+      "writer_uptime_s": 636179.291968
+    },
+    "feed_health_preflight_required": true,
+    "flow_stage": "LIVE/SELF-DEV",
+    "forced_restart": {
+      "enabled": false,
+      "reason": ""
+    },
+    "generated_at": "2026-08-05T04:51:37.576498Z",
+    "generation_adoption_budget": {
+      "clear": false,
+      "count_basis": "all_RESTART_EXECUTED_events_regardless_of_reason",
+      "max_restarts_per_day": 1,
+      "reasons": [
+        "generation_mismatch_adoption",
+        "red_order_flow_generation_mismatch"
+      ],
+      "restarts_today": 1
+    },
+    "generation_mismatch": true,
+    "generation_mismatch_quiescence": {
+      "clear": false,
+      "required_s": 900.0,
+      "unchanged_age_s": 0.0,
+      "unchanged_since": "2026-08-05T04:51:37.576498Z"
+    },
+    "generation_reload": {
+      "allowed": false,
+      "reason": ""
+    },
+    "generation_verdict": {
+      "age_s": 0.0,
+      "generated_at": "2026-08-05T04:51:37.576498Z",
+      "generation_mismatch_citable": true,
+      "loaded_generation_started_at_utc": "2026-08-05T00:05:24.149871Z",
+      "max_age_s": 600.0,
+      "reasons": [],
+      "stale": false,
+      "status": "GENERATION_VERDICT_FRESH"
+    },
+    "generation_verdict_status": "GENERATION_VERDICT_FRESH",
+    "guard_liveness": {
+      "age_s": 21.882053,
+      "consecutive_breaches": 0,
+      "generated_at": "2026-08-05T04:51:15.694445+00:00",
+      "max_age_s": 300.0,
+      "pid": 68863,
+      "pid_alive": true,
+      "pid_dead": false,
+      "raw_breach": false,
+      "required_consecutive_breaches": 2,
+      "stale_already_running_state": false,
+      "stale_breach": false,
+      "status": "LIVE_GUARD_RUNNING"
+    },
+    "kind": "brainless_live_guard_restart",
+    "live_orders_allowed": false,
+    "live_path_mutated": false,
+    "loaded_generation": {
+      "generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+      "pid": 68863,
+      "script_sha256": "c1ae393b071ec0fca6b39f71bb1a4c59a0d259b7caf177710387b309240314ee",
+      "sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+      "started_at_utc": "2026-08-05T00:05:24.149871Z"
+    },
+    "local_skip_reload_budget": {
+      "clear": true,
+      "due": false,
+      "max_restarts_per_day": 1,
+      "restarts_today": 0
+    },
+    "mismatch_generation_sha256": "5a11a3145f57d5ada506ea0b9995e56e6a007be46c19bbf398227167b6421aa8",
+    "mismatch_generation_unchanged_since": "2026-08-05T04:51:37.576498Z",
+    "next_eligible_restart_at": "2026-08-05T05:06:37.576498Z",
+    "next_eligible_restart_reasons": [
+      "generation_mismatch_quiescence"
+    ],
+    "no_admissible_target": false,
+    "paper_only": false,
+    "reason": "no_restart_condition",
+    "restart_allowed": false,
+    "restart_required": false,
+    "rule": "restart only on red selection adoption, red order-flow generation mismatch, or guard unresponsive; 30m cooldown, max 3/day plus one generation adoption/day",
+    "schema_version": 1,
+    "selection_adoption_due": false,
+    "snapshot_of": "restart_actuator_decision_at_generated_at",
+    "stale": false,
+    "status": "WATCH",
+    "storm_escalated_today": false,
+    "storm_escalation_events_today": 0,
+    "storm_guard": {
+      "cooldown_clear": true,
+      "cooldown_remaining_s": 0.0,
+      "cooldown_s": 1800.0,
+      "count_basis": "all_RESTART_EXECUTED_events_regardless_of_reason",
+      "daily_cap_clear": true,
+      "excluded_non_storm_reasons": [],
+      "last_restart_at": "2026-08-05T00:05:19.505157Z",
+      "max_restarts_per_day": 3,
+      "restarts_today": 1
+    },
+    "superseded_by_guard_state": {
+      "authority": "after a restart, guard_code_identity in the live guard state is authoritative for the resident PID and loaded generation",
+      "path": "data/research/wallet_copy_live_guard_state.json"
+    }
+  },
+  "live_orders_allowed": false,
+  "live_path_mutated": false,
+  "loaded_generation": {
+    "generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+    "pid": 68863,
+    "script_sha256": "c1ae393b071ec0fca6b39f71bb1a4c59a0d259b7caf177710387b309240314ee",
+    "sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+    "started_at_utc": "2026-08-05T00:05:24.149871Z"
+  },
+  "local_skip_reload_budget": {
+    "clear": true,
+    "due": false,
+    "max_restarts_per_day": 1,
+    "restarts_today": 0
+  },
+  "mismatch_generation_sha256": "5a11a3145f57d5ada506ea0b9995e56e6a007be46c19bbf398227167b6421aa8",
+  "mismatch_generation_unchanged_since": "2026-08-05T04:51:37.576498Z",
+  "next_eligible_restart_at": "2026-08-05T05:06:37.576498Z",
+  "next_eligible_restart_reasons": [
+    "generation_mismatch_quiescence"
+  ],
+  "no_admissible_target": false,
+  "paper_only": false,
+  "reason": "no_restart_condition",
+  "restart_allowed": false,
+  "restart_events": [
+    {
+      "at": "2026-08-03T02:03:33.293655Z",
+      "disk_generation_sha256": "e55d9d6399e7ccffb5a7611af8e68c695abb356039b1bfc3eb711dc08c55d6da",
+      "reason": "selection_pending_adoption",
+      "started_pid": 58519
+    },
+    {
+      "at": "2026-08-03T06:07:05.307552Z",
+      "disk_generation_sha256": "714ed77c3c0048e30f6e4b4ffb98d8cf989501f4a84f8ad5602523de7bfcae3a",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 59567
+    },
+    {
+      "at": "2026-08-03T06:50:02.938236Z",
+      "disk_generation_sha256": "a6035fce150b0551e836773cdb049dc079b19b4ab39e8e794d9ae869f784f879",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 76988
+    },
+    {
+      "at": "2026-08-03T07:40:30.979107Z",
+      "disk_generation_sha256": "6ca14acbaf1a0c5ea758b3cabeb5c402f8d8fcf4dd1f5f108dfbc4578dd48c50",
+      "reason": "red_order_flow_generation_mismatch",
+      "started_pid": 97475
+    },
+    {
+      "at": "2026-08-03T09:47:16.165959Z",
+      "disk_generation_sha256": "3913d5b70b098ac5f2c7499088f2e6fced0c559c2a312494190bf27e23d07734",
+      "reason": "selection_pending_adoption",
+      "started_pid": 62415
+    },
+    {
+      "at": "2026-08-03T09:58:42.243789Z",
+      "disk_generation_sha256": "b295d2693ca863b2bdd6b17ae550d9594dfeb2f7492004c883472713af778773",
+      "reason": "selection_pending_adoption",
+      "started_pid": 67869
+    },
+    {
+      "at": "2026-08-03T10:11:01.120126Z",
+      "disk_generation_sha256": "e60eb0aaabc6b001a075067cad5534f29d0bc369e4b67cac2147160dd1899110",
+      "reason": "selection_pending_adoption",
+      "started_pid": 73739
+    },
+    {
+      "at": "2026-08-03T10:22:16.319441Z",
+      "disk_generation_sha256": "ecd94bce44e6db315f67dd1e12e016f3d5508d8b191a696b7bb2a8944f5fc42c",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 79029
+    },
+    {
+      "at": "2026-08-03T10:35:23.716609Z",
+      "disk_generation_sha256": "d1571e6cfa6b71604ee9b1a0c268532adda34f42c039a90d34df56e303782f2a",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 84792
+    },
+    {
+      "at": "2026-08-04T00:00:24.995048Z",
+      "disk_generation_sha256": "1a635510c87edaf413eded7d3adde45a0a919f99bf59852c7c18cdf100097106",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 49125
+    },
+    {
+      "at": "2026-08-04T00:13:10.558843Z",
+      "disk_generation_sha256": "5227f6feecde2047ba17c57513d9c01b8428a22752a89606da5d42406fe55a9f",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 54187
+    },
+    {
+      "at": "2026-08-04T00:42:59.663890Z",
+      "disk_generation_sha256": "25e702859c88ee2807b8aed2b382280efaa49734ca63860daef44b23cd5923c7",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 65135
+    },
+    {
+      "at": "2026-08-04T02:16:18.339437Z",
+      "disk_generation_sha256": "521deebd18ba0d64efedc77c8190113d5200502c18ac5e2f1277d8c926df6633",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 98054
+    },
+    {
+      "at": "2026-08-04T02:19:15.932366Z",
+      "disk_generation_sha256": "00342c386480879711d8cf178657315e4aa9eed8c2b2d5a923c25a27c765f9d1",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 98962
+    },
+    {
+      "at": "2026-08-04T02:39:55.551170Z",
+      "disk_generation_sha256": "f085d93e2f125cb2fa6c44451164c3732044b45c864003f7f6b8abb596c4baf0",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 8223
+    },
+    {
+      "at": "2026-08-04T12:57:14.475762Z",
+      "disk_generation_sha256": "8c024a006361c89f889f85ddb76d3fd886a31842cdf0a8d5858e54c8d196a4c8",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 64895
+    },
+    {
+      "at": "2026-08-04T13:19:16.320235Z",
+      "disk_generation_sha256": "ff3e4140c9cb8c0003271e3a89b3e0f63d5939b267d2438258fc2123c3dbe5c5",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 79221
+    },
+    {
+      "at": "2026-08-04T13:34:34.278506Z",
+      "disk_generation_sha256": "cfd0c90920a0c906ecb8cd3ea93787c5222faddbb10f766b9cd46e6e6ed9b561",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 88024
+    },
+    {
+      "at": "2026-08-04T13:56:59.800858Z",
+      "disk_generation_sha256": "37859565d864a93d5dfa492622b6e0f8452f56ab58361a9f1f83cdcef8b2736e",
+      "reason": "operator_approved_generation_reload",
+      "started_pid": 97031
+    },
+    {
+      "at": "2026-08-05T00:05:19.505157Z",
+      "disk_generation_sha256": "71547bd0e0523fe29848b5c7931164b2f3ad1000c0a52573f5d82e2148c38259",
+      "reason": "red_order_flow_generation_mismatch",
+      "started_pid": 68863
+    }
+  ],
+  "restart_required": false,
+  "rule": "restart only on red selection adoption, red order-flow generation mismatch, or guard unresponsive; 30m cooldown, max 3/day plus one generation adoption/day",
+  "schema_version": 1,
+  "selection_adoption_due": false,
+  "snapshot_of": "restart_actuator_decision_at_generated_at",
+  "stale": false,
+  "status": "WATCH",
+  "storm_escalated_today": false,
+  "storm_escalation_events": [
+    {
+      "at": "2026-08-04T12:57:31.660880Z",
+      "reason": "guard_unresponsive",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T13:19:25.729958Z",
+      "reason": "guard_unresponsive",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T13:34:07.519998Z",
+      "reason": "operator_approved_generation_reload",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T13:34:55.700348Z",
+      "reason": "operator_approved_generation_reload",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T14:52:21.412972Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T15:29:04.360269Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T17:54:37.402791Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T18:44:06.449613Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T18:59:19.205535Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T19:21:35.462232Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T19:28:26.348166Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T19:31:51.461702Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T19:46:03.853203Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T20:01:25.972456Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T20:04:33.844556Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T20:37:45.210859Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T22:13:48.945540Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T22:18:32.588443Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T23:10:04.821704Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    },
+    {
+      "at": "2026-08-04T23:38:02.501933Z",
+      "reason": "red_order_flow_generation_mismatch",
+      "status": "ESCALATE_RESTART_STORM"
+    }
+  ],
+  "storm_escalation_events_today": 0,
+  "storm_guard": {
+    "cooldown_clear": true,
+    "cooldown_remaining_s": 0.0,
+    "cooldown_s": 1800.0,
+    "count_basis": "all_RESTART_EXECUTED_events_regardless_of_reason",
+    "daily_cap_clear": true,
+    "excluded_non_storm_reasons": [],
+    "last_restart_at": "2026-08-05T00:05:19.505157Z",
+    "max_restarts_per_day": 3,
+    "restarts_today": 1
+  },
+  "superseded_by_guard_state": {
+    "authority": "after a restart, guard_code_identity in the live guard state is authoritative for the resident PID and loaded generation",
+    "path": "data/research/wallet_copy_live_guard_state.json"
+  }
+}

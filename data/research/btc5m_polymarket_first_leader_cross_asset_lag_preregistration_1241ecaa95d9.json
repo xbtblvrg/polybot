@@ -1,0 +1,74 @@
+{
+  "activation": {
+    "arbiter": "scripts/arbitrate_btc5m_promoted_cells.py",
+    "legacy_guard_watched_output": "data/research/btc5m_cross_exchange_promoted_cell_latest.json",
+    "pin": "singular_1usd_nonrefreshing_3600s"
+  },
+  "calibration_method": "first_valid_leader_or_with_conflict_abstain",
+  "checksum": "582ba4eaa6a37c73afe435eba97964c66a6824b209ea5b10a267643e6b236146",
+  "costs": {
+    "adverse_selection_per_share": 0.01,
+    "fee": "exact_embedded_buy_fee",
+    "slippage_per_share": 0.005
+  },
+  "economic_edge": "native_first_eth_or_sol_price_discovery_before_btc_outcome_reprice",
+  "entry_bounds": [
+    0.25,
+    0.5
+  ],
+  "entry_window_s": [
+    30,
+    180
+  ],
+  "features": {
+    "btc_max_reprice_fraction": 0.5,
+    "leader_min_microprice_displacement": 0.01,
+    "leader_min_notional_usd": 25.0,
+    "leader_min_price_levels": 2,
+    "leader_min_sign_imbalance": 0.6,
+    "leader_sweep_window_s": 3.0,
+    "max_leader_to_btc_lag_s": 2.0,
+    "max_receipt_gap_s": 5.0
+  },
+  "fill_model": "contemporaneous_observed_btc_executable_ask_and_size",
+  "forward_start_s": 1785005400,
+  "generation_checksum": "1241ecaa95d9975c6a7ee148a8f6fff265a2025d807f7833aa646556f56b8a0a",
+  "immutable": true,
+  "kind": "btc5m_polymarket_first_leader_cross_asset_lag_preregistration",
+  "live_orders_allowed": false,
+  "market_identity": {
+    "leaders": [
+      "eth-updown-5m-{window}",
+      "sol-updown-5m-{window}"
+    ],
+    "outcomes": [
+      "Up",
+      "Down"
+    ],
+    "target": "btc-updown-5m-{window}"
+  },
+  "matched_baseline": "same_first_leader_windows_with_immutable_empty_btc_cash_flows",
+  "method": "btc5m_polymarket_first_leader_cross_asset_lag_v1",
+  "model_checksum": "1241ecaa95d9975c6a7ee148a8f6fff265a2025d807f7833aa646556f56b8a0a",
+  "one_intent_per_window": true,
+  "order_usd": 1.0,
+  "paper_only": true,
+  "promotion": {
+    "positive_increment_vs_matched_no_trade": true,
+    "positive_post_cost_total_and_halves": true,
+    "raw_equals_terminal": true,
+    "single_guard_accepted_order_within_two_post_activation_windows": true,
+    "zero_identity_clock_lookahead_parity_disagreement": true
+  },
+  "registered_before_forward_outcome_inspection": true,
+  "schema_version": 1,
+  "signal_rule": "at_least_one_valid_leader_same_direction; opposite_valid_leaders_within_2s_abstain",
+  "source_schema": "immutable_native_trade_receipts_and_gap_bounded_dual_outcome_l2_v1",
+  "terminal_clock": {
+    "max_complete_windows": 6,
+    "required_resolutions": 10,
+    "sixth_terminal_deadline_s": 1785007170,
+    "zero_intent_complete_windows": 2
+  },
+  "training_cutoff_s": 1785004800
+}

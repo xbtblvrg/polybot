@@ -1,0 +1,586 @@
+{
+  "code_repair": {
+    "behavior_when_enabled": "selected member remains the only live-orders-eligible lane; every non-selected runtime member is evaluated through paper-only live-execution probe state each cycle, including selected-candidate gate-failure cycles",
+    "default_enabled": false,
+    "files": [
+      "scripts/run_wallet_copy_live_guard.py",
+      "tests/test_wallet_copy_core.py"
+    ],
+    "flag": "--active-set-evaluate-all-runtime-members-per-cycle",
+    "runtime_loaded_now": false,
+    "status": "BUILT_DORMANT_NOT_LOADED",
+    "tests": [
+      "tests/test_wallet_copy_core.py::test_active_set_all_runtime_member_probe_flag_evaluates_every_non_selected_member"
+    ]
+  },
+  "direction_id": "2026-07-14T20:16Z-fable-wave-repair-addendum",
+  "flow_stage": "PROMOTE/LIVE/SELF-DEV",
+  "generated_at": "2026-07-14T20:28:15Z",
+  "guard_cadence_table": [
+    {
+      "current_runtime_member": false,
+      "first_selected_at": "2026-07-14T17:04:02.995948+00:00",
+      "last_selected_at": "2026-07-14T18:00:06.696458+00:00",
+      "selected_cycles": 78,
+      "source_wallet": "0x59603775762a631d4bcd156980c0a174bbc4c2d2",
+      "wave_member": false
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T17:16:57.589652+00:00",
+      "last_selected_at": "2026-07-14T17:22:01.951297+00:00",
+      "selected_cycles": 38,
+      "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "wave_member": false
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T18:00:10.299325+00:00",
+      "last_selected_at": "2026-07-14T20:10:27.974067+00:00",
+      "selected_cycles": 276,
+      "source_wallet": "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+      "wave_member": true
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T18:00:30.059920+00:00",
+      "last_selected_at": "2026-07-14T20:08:39.585706+00:00",
+      "selected_cycles": 92,
+      "source_wallet": "0x2d7c9298b64713de86402bd8a41695e31865a945",
+      "wave_member": true
+    },
+    {
+      "current_runtime_member": false,
+      "first_selected_at": "2026-07-14T18:00:33.557062+00:00",
+      "last_selected_at": "2026-07-14T20:09:07.049573+00:00",
+      "selected_cycles": 92,
+      "source_wallet": "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e",
+      "wave_member": true
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T18:00:40.344149+00:00",
+      "last_selected_at": "2026-07-14T20:09:11.819296+00:00",
+      "selected_cycles": 92,
+      "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "wave_member": true
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T18:00:44.296095+00:00",
+      "last_selected_at": "2026-07-14T20:09:19.461608+00:00",
+      "selected_cycles": 92,
+      "source_wallet": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+      "wave_member": true
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T18:01:03.159914+00:00",
+      "last_selected_at": "2026-07-14T20:09:45.048053+00:00",
+      "selected_cycles": 184,
+      "source_wallet": "0x86de0516011e2ad7ce3abdc13577de8608db55c3",
+      "wave_member": false
+    },
+    {
+      "current_runtime_member": true,
+      "first_selected_at": "2026-07-14T20:10:34.719403+00:00",
+      "last_selected_at": "2026-07-14T20:28:08.779151+00:00",
+      "selected_cycles": 107,
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "wave_member": false
+    }
+  ],
+  "guard_runtime_snapshot": {
+    "blockers": [
+      "live_guard_candidate_not_pass"
+    ],
+    "candidate_id": "market_cohort_alive_94f98a2e7537",
+    "current_runtime_wallets": [
+      "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+      "0x80be724a3511017be131fdcd188296128fea7ee7",
+      "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+      "0x2d7c9298b64713de86402bd8a41695e31865a945",
+      "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+      "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "0x86de0516011e2ad7ce3abdc13577de8608db55c3"
+    ],
+    "fresh_runtime_member_selection": {
+      "applied": true,
+      "enabled": true,
+      "freshest_buy_lag_s": 115.901183,
+      "latest_admission_priority": {
+        "freshest_buy_lag_s": 26402.519562,
+        "max_lag_s": 60.0,
+        "reason": "latest_admission_lag_exceeds_max",
+        "skipped": true,
+        "wallet": "0x80be724a3511017be131fdcd188296128fea7ee7"
+      },
+      "reason": "runtime_member_freshest_buy_lag_fallback",
+      "selected_member_index": 6,
+      "selected_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+      "selection_priority_freeze": null,
+      "state": "/Users/belavarga/claudecode/polymarket-agent/data/research/wallet_copy_active_set_dataapi_poller_state.json"
+    },
+    "generated_at": "2026-07-14T20:28:08.779151+00:00",
+    "round_robin_selected_member_index": 6,
+    "selected_member_index": 6,
+    "selection_mode": "freshest_runtime_member_lag_fallback_single_guard",
+    "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537",
+    "status": "LIVE_GUARD_BLOCKED",
+    "temporal_excluded_wave_wallets": [
+      {
+        "candidate_id": "market_cohort_alive_4bef7b06c118",
+        "matched_slice": {
+          "label": "PROVEN-NEGATIVE",
+          "label_reason": "n=99 >= min_trades=3; roi=-23.239396 <= 0",
+          "pnl_usd": -94.72609,
+          "resolved_trades": 99,
+          "roi_pct": -23.239396,
+          "slice": "dead_band_18_22_utc"
+        },
+        "reason": "temporal_slice_dead_band_18_22_utc_proven_negative",
+        "source_wallet": "0xf07fabf154d537b266916d53f12a4bef7b06c118"
+      },
+      {
+        "candidate_id": "market_cohort_alive_82cf08651d9e",
+        "matched_slice": {
+          "label": "PROVEN-NEGATIVE",
+          "label_reason": "n=16 >= min_trades=3; roi=-5.615685 <= 0",
+          "pnl_usd": -8.63973,
+          "resolved_trades": 16,
+          "roi_pct": -5.615685,
+          "slice": "dead_band_18_22_utc"
+        },
+        "reason": "temporal_slice_dead_band_18_22_utc_proven_negative",
+        "source_wallet": "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e"
+      },
+      {
+        "candidate_id": "market_cohort_alive_d60c1dc7ab35",
+        "matched_slice": {
+          "label": "PROVEN-NEGATIVE",
+          "label_reason": "n=18 >= min_trades=3; roi=-4.245245 <= 0",
+          "pnl_usd": -3.102976,
+          "resolved_trades": 18,
+          "roi_pct": -4.245245,
+          "slice": "dead_band_18_22_utc"
+        },
+        "reason": "temporal_slice_dead_band_18_22_utc_proven_negative",
+        "source_wallet": "0x40138697bf1a0d655593f3be6237d60c1dc7ab35"
+      },
+      {
+        "candidate_id": "market_cohort_alive_1c844e71ce9d",
+        "matched_slice": {
+          "label": "PROVEN-NEGATIVE",
+          "label_reason": "n=32 >= min_trades=3; roi=-25.459221 <= 0",
+          "pnl_usd": -10.817618,
+          "resolved_trades": 32,
+          "roi_pct": -25.459221,
+          "slice": "dead_band_18_22_utc"
+        },
+        "reason": "temporal_slice_dead_band_18_22_utc_proven_negative",
+        "source_wallet": "0x32de91fa203321fa7735e7854f2b1c844e71ce9d"
+      },
+      {
+        "candidate_id": "market_cohort_alive_0589b9dd4791",
+        "matched_slice": {
+          "label": "PROVEN-NEGATIVE",
+          "label_reason": "n=367 >= min_trades=3; roi=-2.7309 <= 0",
+          "pnl_usd": -35.636654,
+          "resolved_trades": 367,
+          "roi_pct": -2.7309,
+          "slice": "dead_band_18_22_utc"
+        },
+        "reason": "temporal_slice_dead_band_18_22_utc_proven_negative",
+        "source_wallet": "0xf54209347a46f0f19fbd011efe9d0589b9dd4791"
+      }
+    ],
+    "temporal_slice_active_unproven": {
+      "blocker": "temporal_slice_active_unproven_basis",
+      "inadmissible_members": [
+        {
+          "candidate_id": "cohort_alive_admit_f418d3a1",
+          "evaluated_slices": [
+            {
+              "label": "PROVEN-POSITIVE",
+              "label_reason": "n=1724 >= min_trades=5; roi=1.932881 > 0",
+              "pnl_usd": 1281.6553,
+              "resolved_trades": 1724,
+              "roi_pct": 1.932881,
+              "slice": "weekday"
+            },
+            {
+              "label": "UNPROVEN",
+              "label_reason": "n=0 below min_trades=3; roi=None",
+              "pnl_usd": 0.0,
+              "resolved_trades": 0,
+              "roi_pct": null,
+              "slice": "dead_band_18_22_utc"
+            }
+          ],
+          "source_wallet": "0xf418d3a1a941292f9c8707d62a14980c5beb95a3",
+          "temporal_reason": "no_active_temporal_slice_proven_negative"
+        },
+        {
+          "candidate_id": "market_cohort_alive_96128fea7ee7",
+          "evaluated_slices": [
+            {
+              "label": "PROVEN-POSITIVE",
+              "label_reason": "n=135 >= min_trades=5; roi=13.978983 > 0",
+              "pnl_usd": 1036.063994,
+              "resolved_trades": 135,
+              "roi_pct": 13.978983,
+              "slice": "weekday"
+            },
+            {
+              "label": "UNPROVEN",
+              "label_reason": "n=0 below min_trades=3; roi=None",
+              "pnl_usd": 0.0,
+              "resolved_trades": 0,
+              "roi_pct": null,
+              "slice": "dead_band_18_22_utc"
+            }
+          ],
+          "source_wallet": "0x80be724a3511017be131fdcd188296128fea7ee7",
+          "temporal_reason": "no_active_temporal_slice_proven_negative"
+        }
+      ]
+    }
+  },
+  "kind": "wave_repair_attribution_addendum",
+  "members": [
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 94
+      },
+      "candidate_id": "market_cohort_alive_96128fea7ee7",
+      "cause": "in runtime roster and in early fallthrough attempts, but selected_cycles=0; latest-admission priority skipped it because freshest_buy_lag_s=26402.519562 exceeded max_lag_s=60, then dead_band_18_22_utc had UNPROVEN slice so it became non-selectable; source_activity at the 20:00 gate was zero",
+      "corrected_classification": "RUNTIME_PRESENT_ZERO_SELECTED_CYCLES_FRESHNESS_PRIORITY_THEN_TEMPORAL_UNPROVEN",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 0,
+      "first_selected_at": null,
+      "fresh_intents": 0,
+      "last_selected_at": null,
+      "latest_attempt_at": "2026-07-14T18:00:06.696458+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": null,
+      "latest_selected_status": null,
+      "ledger_orders": 0,
+      "original_classification": "NO_CYCLES_LANDED",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 94
+      },
+      "selected_cycles_from_1704_to_addendum": 0,
+      "selection_attempts_from_1704_to_addendum": 94,
+      "source_activity": {
+        "policy_eligible_rows": 0,
+        "policy_eligible_windows": 0,
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 0,
+        "source_active_windows": 0
+      },
+      "source_wallet": "0x80be724a3511017be131fdcd188296128fea7ee7"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 1114
+      },
+      "candidate_id": "market_cohort_alive_95e31865a945",
+      "cause": "source events arrived fresh, but selected-member cadence did not land inside the 30s freshness horizon for the eligible window(s)",
+      "corrected_classification": "SELECTED_MEMBER_CADENCE_MISSED_30S_FRESHNESS_OVERLAP",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 91,
+      "first_selected_at": "2026-07-14T18:00:30.059920+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:08:39.585706+00:00",
+      "latest_attempt_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_BLOCKED",
+      "latest_selected_status": "LIVE_GUARD_BLOCKED",
+      "ledger_orders": 0,
+      "original_classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 1114,
+        "PASS": 2
+      },
+      "selected_cycles_from_1704_to_addendum": 92,
+      "selection_attempts_from_1704_to_addendum": 1024,
+      "source_activity": {
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x2d7c9298b64713de86402bd8a41695e31865a945"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 292
+      },
+      "candidate_id": "market_cohort_alive_94f98a2e7537",
+      "cause": "runtime/fallthrough candidate before the clause gate, but no selected cycles until 2026-07-14T20:10:34.719403+00:00; its 17 policy-eligible windows ended by 20:07:08, so no 30s cycle overlap landed at the 20:00 artifact; selected attempts then failed status_live_admissible",
+      "corrected_classification": "LATE_SELECTED_AFTER_CLAUSE_GATE_STATUS_NOT_LIVE_ADMISSIBLE",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 0,
+      "first_selected_at": "2026-07-14T20:10:34.719403+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_origin": "selected_member",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_BLOCKED",
+      "latest_selected_status": "LIVE_GUARD_BLOCKED",
+      "ledger_orders": 0,
+      "original_classification": "NO_CYCLES_LANDED",
+      "pass_gate_status_counts": {
+        "FABLE_1554_3048_COMPLETE_HISTORY_1USD_PROBE_CONFIG_RELOAD": 292
+      },
+      "selected_cycles_from_1704_to_addendum": 107,
+      "selection_attempts_from_1704_to_addendum": 185,
+      "source_activity": {
+        "policy_eligible_rows": 307,
+        "policy_eligible_windows": 17,
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 17,
+        "source_active_windows": 17
+      },
+      "source_wallet": "0x3048d65321be3497164cdfc2996f94f98a2e7537"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 1297
+      },
+      "candidate_id": "market_cohort_alive_aeda7b217d5f",
+      "cause": "source events arrived fresh, but selected-member cadence did not land inside the 30s freshness horizon for the eligible window(s)",
+      "corrected_classification": "SELECTED_MEMBER_CADENCE_MISSED_30S_FRESHNESS_OVERLAP",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 272,
+      "first_selected_at": "2026-07-14T18:00:10.299325+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:10:27.974067+00:00",
+      "latest_attempt_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_RUNNING",
+      "latest_selected_status": "LIVE_GUARD_RUNNING",
+      "ledger_orders": 0,
+      "original_classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 1297,
+        "PASS": 4
+      },
+      "selected_cycles_from_1704_to_addendum": 276,
+      "selection_attempts_from_1704_to_addendum": 1025,
+      "source_activity": {
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 1008
+      },
+      "candidate_id": "market_cohort_alive_82cf08651d9e",
+      "cause": "source events arrived fresh, but selected-member cadence did not land inside the 30s freshness horizon for the eligible window(s)",
+      "corrected_classification": "SELECTED_MEMBER_CADENCE_MISSED_30S_FRESHNESS_OVERLAP",
+      "current_runtime_member": false,
+      "current_temporal_excluded": true,
+      "cycles_landed_in_gate_artifact": 91,
+      "first_selected_at": "2026-07-14T18:00:33.557062+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:09:07.049573+00:00",
+      "latest_attempt_at": "2026-07-14T20:09:49.429716+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_BLOCKED",
+      "latest_selected_status": "LIVE_GUARD_BLOCKED",
+      "ledger_orders": 0,
+      "original_classification": "SOURCE_ACTIVE_BUT_NO_FRESH_CYCLE_OVERLAP",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 1008
+      },
+      "selected_cycles_from_1704_to_addendum": 92,
+      "selection_attempts_from_1704_to_addendum": 916,
+      "source_activity": {
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_windows_with_cycle_fresh_overlap": 0,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0x5b1d976c356fc9d8929dce8f2e9282cf08651d9e"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 1114
+      },
+      "candidate_id": "market_cohort_alive_16c5f15ba419",
+      "cause": "cycle_fresh_overlap was true in the source artifact, but guard logs show LIVE_GUARD_BLOCKED with live_guard_candidate_not_pass; pass_gate failed_checks=[status_live_admissible] while live_protection_gate passed, so the requested single-seat-only reclass is not confirmed",
+      "corrected_classification": "LIVE_GUARD_STATUS_GATE_NOT_LIVE_ADMISSIBLE",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 91,
+      "first_selected_at": "2026-07-14T18:00:44.296095+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:09:19.461608+00:00",
+      "latest_attempt_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_BLOCKED",
+      "latest_selected_status": "LIVE_GUARD_BLOCKED",
+      "ledger_orders": 0,
+      "original_classification": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 1114,
+        "PASS": 2
+      },
+      "selected_cycles_from_1704_to_addendum": 92,
+      "selection_attempts_from_1704_to_addendum": 1024,
+      "source_activity": {
+        "policy_eligible_rows": 4,
+        "policy_eligible_windows": 2,
+        "policy_windows_with_cycle_fresh_overlap": 1,
+        "policy_windows_without_cycle_fresh_overlap": 1,
+        "source_active_windows": 2
+      },
+      "source_wallet": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419"
+    },
+    {
+      "blocker_counts": {
+        "live_guard_candidate_not_pass": 1115
+      },
+      "candidate_id": "market_cohort_alive_41206ad03db1",
+      "cause": "cycle_fresh_overlap was true in the source artifact, but guard logs show LIVE_GUARD_BLOCKED with live_guard_candidate_not_pass; pass_gate failed_checks=[status_live_admissible] while live_protection_gate passed, so the requested single-seat-only reclass is not confirmed",
+      "corrected_classification": "LIVE_GUARD_STATUS_GATE_NOT_LIVE_ADMISSIBLE",
+      "current_runtime_member": true,
+      "current_temporal_excluded": false,
+      "cycles_landed_in_gate_artifact": 91,
+      "first_selected_at": "2026-07-14T18:00:40.344149+00:00",
+      "fresh_intents": 0,
+      "last_selected_at": "2026-07-14T20:09:11.819296+00:00",
+      "latest_attempt_at": "2026-07-14T20:28:08.779151+00:00",
+      "latest_attempt_origin": "active_set_fallthrough",
+      "latest_live_protection_passed": true,
+      "latest_pass_gate_failed_checks": [
+        "status_live_admissible"
+      ],
+      "latest_selected_cycle_outcome": "LIVE_GUARD_BLOCKED",
+      "latest_selected_status": "LIVE_GUARD_BLOCKED",
+      "ledger_orders": 0,
+      "original_classification": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "pass_gate_status_counts": {
+        "FABLE_1704_MASS_ADMISSION_WAVE_TOP10_COMPLETE_HISTORY": 1115
+      },
+      "selected_cycles_from_1704_to_addendum": 92,
+      "selection_attempts_from_1704_to_addendum": 1023,
+      "source_activity": {
+        "policy_eligible_rows": 2,
+        "policy_eligible_windows": 1,
+        "policy_windows_with_cycle_fresh_overlap": 1,
+        "policy_windows_without_cycle_fresh_overlap": 0,
+        "source_active_windows": 1
+      },
+      "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1"
+    }
+  ],
+  "next_action": "ask Fable whether to add FABLE_1704/FABLE_1554 statuses to live-admissible set at managed restart, or keep measurement-only flag until midnight verdict",
+  "reclassification_updates": [
+    {
+      "candidate_id": "market_cohort_alive_16c5f15ba419",
+      "evidence": {
+        "blocker_counts": {
+          "live_guard_candidate_not_pass": 1114
+        },
+        "latest_live_protection_passed": true,
+        "latest_pass_gate_failed_checks": [
+          "status_live_admissible"
+        ],
+        "latest_selected_status": "LIVE_GUARD_BLOCKED",
+        "selected_cycles": 92
+      },
+      "from": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "single_seat_only_confirmed": false,
+      "source_wallet": "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419",
+      "to": "LIVE_GUARD_STATUS_GATE_NOT_LIVE_ADMISSIBLE"
+    },
+    {
+      "candidate_id": "market_cohort_alive_41206ad03db1",
+      "evidence": {
+        "blocker_counts": {
+          "live_guard_candidate_not_pass": 1115
+        },
+        "latest_live_protection_passed": true,
+        "latest_pass_gate_failed_checks": [
+          "status_live_admissible"
+        ],
+        "latest_selected_status": "LIVE_GUARD_BLOCKED",
+        "selected_cycles": 92
+      },
+      "from": "PIPELINE_NO_INTENTS_FROM_SOURCE_ACTIVITY",
+      "single_seat_only_confirmed": false,
+      "source_wallet": "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "to": "LIVE_GUARD_STATUS_GATE_NOT_LIVE_ADMISSIBLE"
+    }
+  ],
+  "schema_version": 1,
+  "source_artifacts": {
+    "active_set_overlay": "data/research/wallet_copy_active_set_auto_degrade_state.json",
+    "admitted_member_gate_3048": "data/research/admitted_member_gate_3048_20260714T2000Z.json",
+    "guard_events": "data/research/wallet_copy_live_guard_events.jsonl",
+    "guard_state": "data/research/wallet_copy_live_guard_state.json",
+    "wave_gate_attribution": "data/research/wave_gate_attribution_20260714T2000Z.json"
+  },
+  "status": "SELECTED_MEMBER_ONLY_CADENCE_CONFIRMED_FLAGGED_REPAIR_BUILT",
+  "summary": {
+    "all_member_flag_added": "--active-set-evaluate-all-runtime-members-per-cycle",
+    "all_member_flag_default": false,
+    "current_runtime_member_count": 8,
+    "current_wave_runtime_members": [
+      "0x80be724a3511017be131fdcd188296128fea7ee7",
+      "0x543d53f3a0cf5bab2c69435db764aeda7b217d5f",
+      "0x2d7c9298b64713de86402bd8a41695e31865a945",
+      "0xe88db6a8c559410a627a528264a441206ad03db1",
+      "0xb8b3bf91b58ce80e69b23366645c16c5f15ba419"
+    ],
+    "current_wave_temporal_excluded_count": 5,
+    "guard_evaluates_all_runtime_members_per_cycle_current": false,
+    "loaded_next_managed_restart_only": true,
+    "main_live_execution_selected_members_per_cycle": 1,
+    "pipeline_no_intents_corrected_classification_counts": {
+      "LIVE_GUARD_STATUS_GATE_NOT_LIVE_ADMISSIBLE": 2
+    },
+    "round_robin_or_freshness_single_selection_confirmed": true,
+    "single_seat_only_reclass_confirmed_for_pipeline_no_intents": false,
+    "status": "SELECTED_MEMBER_ONLY_CADENCE_CONFIRMED_FLAGGED_REPAIR_BUILT",
+    "zero_cycle_wallets_explained": 2
+  }
+}

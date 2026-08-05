@@ -1,0 +1,131 @@
+{
+  "cache_entries_after_probe": 2,
+  "cache_max_entries": 16,
+  "cache_min_bytes": 8388608,
+  "cache_mode": "explicit_cache_readonly_only",
+  "cycle_stage_evidence": {
+    "cycle_duration_s": 11.414848,
+    "cycle_started_at": "2026-07-18T16:21:33.298182Z",
+    "top_stage_timers": [
+      {
+        "duration_s": 3.269972,
+        "name": "live_execution"
+      },
+      {
+        "duration_s": 2.306913,
+        "name": "active_set_dataapi_poller"
+      },
+      {
+        "duration_s": 1.692613,
+        "name": "active_set_rtds_premerge"
+      },
+      {
+        "duration_s": 1.476749,
+        "name": "select_active_set_runtime"
+      },
+      {
+        "duration_s": 0.735288,
+        "name": "routing_shadow_validation"
+      }
+    ],
+    "total_s_before_state_write": 11.414848
+  },
+  "default_load_json_semantics": "uncached_new_object_per_successful_read",
+  "first_load_s": 0.826057,
+  "generated_at": "2026-07-18T16:21:49Z",
+  "hot_call_sites": [
+    {
+      "call": "previous_state = load_json(args.state, default={}, cache_readonly=True)",
+      "line": 9852,
+      "path": "scripts/run_wallet_copy_live_guard.py"
+    },
+    {
+      "call": "live_ledger = load_json(args.live_ledger_state, default={}, cache_readonly=True)",
+      "line": 10267,
+      "path": "scripts/run_wallet_copy_live_guard.py"
+    },
+    {
+      "call": "ledger_state = load_json(args.live_ledger_state, default={}, cache_readonly=True)",
+      "line": 10332,
+      "path": "scripts/run_wallet_copy_live_guard.py"
+    },
+    {
+      "call": "_strong_tier_usage loads live ledger cache_readonly=True",
+      "line": 1191,
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    },
+    {
+      "call": "_submitted_position_by_key loads live ledger cache_readonly=True",
+      "line": 1251,
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    },
+    {
+      "call": "_drop_already_live_submitted_intents loads live ledger cache_readonly=True",
+      "line": 3990,
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    },
+    {
+      "call": "_live_window_occupancy loads live ledger cache_readonly=True",
+      "line": 4010,
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    },
+    {
+      "call": "_inventory_order_status_by_intent_id loads live ledger cache_readonly=True",
+      "line": 4138,
+      "path": "scripts/run_wallet_copy_live_execution.py"
+    }
+  ],
+  "hot_file": "data/research/wallet_copy_live_execution_state.json",
+  "hot_file_order_rows": 2966,
+  "hot_file_size_bytes": 168496018,
+  "large_json_files": [
+    {
+      "path": "data/research/maker_first_btc5m_paper_state.json",
+      "size_bytes": 662319309
+    },
+    {
+      "path": "data/research/wallet_copy_history_state.json",
+      "size_bytes": 572762714
+    },
+    {
+      "path": "data/research/wallet_copy_discover_live_band_candidates_full_pool_replay.json",
+      "size_bytes": 262356121
+    },
+    {
+      "path": "data/research/operator_wallet_universe_research_state.json",
+      "size_bytes": 232310194
+    },
+    {
+      "path": "data/research/wallet_copy_active_set_fasttrack_candidates.json",
+      "size_bytes": 218764126
+    },
+    {
+      "path": "data/research/btc5m_late_window_penny_watcher_state.json",
+      "size_bytes": 212600331
+    },
+    {
+      "path": "data/research/weird_peak_exact_copy_paper_flow_state.json",
+      "size_bytes": 194488885
+    },
+    {
+      "path": "data/research/wallet_copy_discover_live_band_candidates.json",
+      "size_bytes": 191836628
+    },
+    {
+      "path": "configs/wallet_copy/wallets.json",
+      "size_bytes": 172133033
+    },
+    {
+      "path": "data/research/wallet_copy_live_execution_state.json",
+      "size_bytes": 168496018
+    },
+    {
+      "path": "data/research/e7_1_spot_open_paper_lane_state.json",
+      "size_bytes": 123183913
+    }
+  ],
+  "patch_status": "LIVE_READY_ON_GUARD_PROCESS_START",
+  "same_object": true,
+  "second_load_s": 4.4e-05,
+  "status": "PASS"
+}

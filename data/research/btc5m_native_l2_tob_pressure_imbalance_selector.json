@@ -1,0 +1,17 @@
+{
+  "active_capacity": false,
+  "cells": [],
+  "due": false,
+  "gate_pass": false,
+  "generated_at": "2026-07-25T19:54:31.616499+00:00",
+  "generation_checksum": "60b0b040eaada507570cf952cebdadbd9b7c5add3fef21ffe1223b97cb8a40d6",
+  "historical_arbiter_only": true,
+  "kind": "btc5m_cross_exchange_promoted_cell_selector_terminal_tombstone",
+  "live_orders_allowed": false,
+  "paper_only": true,
+  "schema_version": 1,
+  "selected": null,
+  "status": "TERMINAL_PARK_ZERO_INTENT_GENERATION",
+  "stop_writer": true,
+  "terminal_decision": "PARK_ZERO_INTENT_GENERATION"
+}
